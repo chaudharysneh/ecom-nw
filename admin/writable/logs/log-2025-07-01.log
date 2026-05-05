@@ -1,0 +1,232 @@
+INFO - 2025-07-01 11:03:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 11:03:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-07-01 11:03:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$user_model is deprecated in APPPATH/Controllers/Home.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2025-07-01 11:03:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$BlogModel is deprecated in APPPATH/Controllers/Home.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2025-07-01 11:03:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$EnquiryModel is deprecated in APPPATH/Controllers/Home.php on line 44.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2025-07-01 11:03:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$Allsettingsmodel is deprecated in APPPATH/Controllers/Home.php on line 45.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2025-07-01 11:03:37 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$user_model is deprecated in APPPATH/Controllers/Home.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2025-07-01 11:03:37 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$BlogModel is deprecated in APPPATH/Controllers/Home.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2025-07-01 11:03:37 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$EnquiryModel is deprecated in APPPATH/Controllers/Home.php on line 44.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2025-07-01 11:03:37 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$Allsettingsmodel is deprecated in APPPATH/Controllers/Home.php on line 45.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-07-01 11:03:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 11:03:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-07-01 11:03:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$user_model is deprecated in APPPATH/Controllers/Home.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2025-07-01 11:03:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$BlogModel is deprecated in APPPATH/Controllers/Home.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2025-07-01 11:03:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$EnquiryModel is deprecated in APPPATH/Controllers/Home.php on line 44.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2025-07-01 11:03:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$Allsettingsmodel is deprecated in APPPATH/Controllers/Home.php on line 45.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-07-01 11:03:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-07-01 11:03:41 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$user_model is deprecated in APPPATH/Controllers/Home.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2025-07-01 11:03:41 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$BlogModel is deprecated in APPPATH/Controllers/Home.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2025-07-01 11:03:41 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$EnquiryModel is deprecated in APPPATH/Controllers/Home.php on line 44.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2025-07-01 11:03:41 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$Allsettingsmodel is deprecated in APPPATH/Controllers/Home.php on line 45.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2025-07-01 11:03:51 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$user_model is deprecated in APPPATH/Controllers/Home.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2025-07-01 11:03:51 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$BlogModel is deprecated in APPPATH/Controllers/Home.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2025-07-01 11:03:51 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$EnquiryModel is deprecated in APPPATH/Controllers/Home.php on line 44.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2025-07-01 11:03:51 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$Allsettingsmodel is deprecated in APPPATH/Controllers/Home.php on line 45.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-07-01 11:03:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 11:03:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-07-01 11:03:51 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$user_model is deprecated in APPPATH/Controllers/Home.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2025-07-01 11:03:51 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$BlogModel is deprecated in APPPATH/Controllers/Home.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2025-07-01 11:03:51 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$EnquiryModel is deprecated in APPPATH/Controllers/Home.php on line 44.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2025-07-01 11:03:51 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$Allsettingsmodel is deprecated in APPPATH/Controllers/Home.php on line 45.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2025-07-01 11:03:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$user_model is deprecated in APPPATH/Controllers/Home.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2025-07-01 11:03:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$BlogModel is deprecated in APPPATH/Controllers/Home.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2025-07-01 11:03:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$EnquiryModel is deprecated in APPPATH/Controllers/Home.php on line 44.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2025-07-01 11:03:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$Allsettingsmodel is deprecated in APPPATH/Controllers/Home.php on line 45.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-07-01 11:03:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 11:03:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-07-01 11:03:56 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$user_model is deprecated in APPPATH/Controllers/Home.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2025-07-01 11:03:56 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$BlogModel is deprecated in APPPATH/Controllers/Home.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2025-07-01 11:03:56 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$EnquiryModel is deprecated in APPPATH/Controllers/Home.php on line 44.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2025-07-01 11:03:56 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$Allsettingsmodel is deprecated in APPPATH/Controllers/Home.php on line 45.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-07-01 11:03:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-07-01 11:03:57 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$user_model is deprecated in APPPATH/Controllers/Home.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2025-07-01 11:03:57 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$BlogModel is deprecated in APPPATH/Controllers/Home.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2025-07-01 11:03:57 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$EnquiryModel is deprecated in APPPATH/Controllers/Home.php on line 44.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2025-07-01 11:03:57 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$Allsettingsmodel is deprecated in APPPATH/Controllers/Home.php on line 45.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2025-07-01 11:04:04 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$user_model is deprecated in APPPATH/Controllers/Home.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2025-07-01 11:04:04 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$BlogModel is deprecated in APPPATH/Controllers/Home.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2025-07-01 11:04:04 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$EnquiryModel is deprecated in APPPATH/Controllers/Home.php on line 44.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2025-07-01 11:04:04 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$Allsettingsmodel is deprecated in APPPATH/Controllers/Home.php on line 45.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-07-01 11:04:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 11:04:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-07-01 11:04:04 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$user_model is deprecated in APPPATH/Controllers/Home.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2025-07-01 11:04:04 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$BlogModel is deprecated in APPPATH/Controllers/Home.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2025-07-01 11:04:04 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$EnquiryModel is deprecated in APPPATH/Controllers/Home.php on line 44.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2025-07-01 11:04:04 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$Allsettingsmodel is deprecated in APPPATH/Controllers/Home.php on line 45.
+ 1 SYSTEMPATH/CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
