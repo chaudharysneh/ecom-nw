@@ -44,6 +44,7 @@ class Autoload extends AutoloadConfig
         'Config'      => APPPATH . 'Config',
         'Stripe' => APPPATH . 'ThirdParty/stripe-php/vendor/stripe/stripe-php',
         'Razorpay' => APPPATH . 'Libraries/Razorpay/src',
+        'PHPMailer\PHPMailer' => ROOTPATH . 'PHPMailer/src',
         // 'Razorpay\Api' => APPPATH . 'Libraries/Razorpay/src/Api', 
     ];
 
