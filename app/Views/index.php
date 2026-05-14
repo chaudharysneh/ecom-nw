@@ -1,4 +1,5 @@
 <?= $this->include('header') ?>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 <!-- Slider Area -->
 <style>
     .product-action {
@@ -149,107 +150,304 @@
         }
     }
 
-    /* ----------- */
-    .category-container {
-        display: flex;
-        overflow-x: auto;
-        /* gap: 20px; */
-        gap: 5px;
-        padding: 0 50px;
-        /* Adjust space for buttons */
+    /* Swiper CSS */
+    .cat-swiper .swiper-wrapper {
+        display: flex !important;
     }
 
-    .scroll-btn {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: white;
-        color: black;
-        border: 2px solid #ddd;
-        border-radius: 50%;
-        font-size: 25px;
-        width: 40px;
-        height: 40px;
-        cursor: pointer;
-        z-index: 10;
-        transition: all ease 0.3s;
-        line-height: 13px;
-    }
-
-    .scroll-btn.left {
-        left: -40px;
-    }
-
-    .scroll-btn.right {
-        right: -40px;
-    }
-
-    .scroll-btn:hover {
-        border: 2px solid #F7941D;
-        color: #F7941D;
-    }
-
-    .scroll-btn:focus {
-        outline: none;
+    .cat-swiper .swiper-slide {
+        height: auto !important;
     }
 
     .single-category {
         flex-shrink: 0;
+    }
+
+    .category-area .swiper {
+        padding: 20px 0 !important;
+    }
+
+    .category-area .swiper-button-next,
+    .category-area .swiper-button-prev {
+        background-color: white;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        border: 1px solid #eee;
+        color: #666;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        top: 40%;
+        margin: 0;
+        z-index: 100;
+    }
+
+    .category-area .swiper-button-prev {
+        left: -15px !important;
+    }
+
+    .category-area .swiper-button-next {
+        right: -15px !important;
+    }
+
+    .category-area .swiper-button-next:after,
+    .category-area .swiper-button-prev:after {
+        font-size: 10px;
+        font-weight: bold;
+    }
+
+    .category-area .swiper-button-next:hover,
+    .category-area .swiper-button-prev:hover {
+        border-color: #F7941D;
+        color: #F7941D;
+    }
+
+    .category-area .section-title {
+        text-align: center;
+    }
+
+    .category-area .explore_title {
+        text-transform: uppercase;
+        font-size: 12px !important;
+        letter-spacing: 2px;
+        color: #888;
+        font-weight: 600;
+    }
+
+    .category-area .explore_title::before {
+        display: none !important;
+    }
+
+    .category-area h2 {
+        font-weight: 700;
+        color: #1a2b48;
+        font-size: 26px;
+    }
+
+    .img-cat {
+        width: 140px !important;
+        height: 140px !important;
+        background-color: white !important;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06) !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        padding: 8px !important;
+        transition: transform 0.3s ease;
+    }
+
+    .img-cat:hover {
+        transform: translateY(-5px);
+    }
+
+    .img-cat img {
+        height: 120px !important;
+        width: 120px !important;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .category-content h3 a {
+        font-weight: 700 !important;
+        color: #333 !important;
+        font-size: 15px !important;
+    }
+
+    /* Hero Slider Styles - Refined */
+    .hero-slider {
+        background-color: #f8f9fa !important;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .hero-slider .swiper-slide {
+        display: flex !important;
+        align-items: center !important;
+        /* min-height: 550px !important; */
+        padding: 40px 0 !important;
+        background: transparent !important;
+    }
+
+    .hero-slider .hero-text {
+        text-align: left !important;
+        padding-right: 30px;
+    }
+
+    .hero-slider .hero-text h1 {
+        font-family: 'Poppins', sans-serif !important;
+        font-size: 33px !important;
+        font-weight: 800 !important;
+        color: #1a2b48 !important; /* Navy color */
+        line-height: 1.2 !important;
+        margin-bottom: 25px !important;
+        text-transform: none !important;
+        letter-spacing: -1px !important;
+    }
+
+    .hero-slider .hero-text h1 span.highlight {
+        color: #F7941D !important; /* Orange highlight */
+        font-size: inherit !important;
+        font-weight: inherit !important;
+        display: inline-block !important;
+        vertical-align: baseline !important;
+    }
+
+    .hero-slider .hero-text p {
+        font-family: 'Poppins', sans-serif !important;
+        font-size: 18px !important;
+        color: #4a5568 !important;
+        margin-bottom: 40px !important;
+        max-width: 500px !important;
+        line-height: 1.6 !important;
+        font-weight: 400 !important;
+    }
+
+    .hero-slider .hero-text .button .btn {
+        background: #ff6700 !important;
+        color: #fff !important;
+        padding: 16px 40px !important;
+        border-radius: 12px !important;
+        font-weight: 700 !important;
+        text-transform: none !important;
+        transition: all 0.3s ease !important;
+        border: none !important;
+        display: inline-block !important;
+        font-size: 16px !important;
+        box-shadow: 0 4px 14px rgba(247, 148, 29, 0.3) !important;
+    }
+
+    .hero-slider .hero-text .button .btn:hover {
+        background: #e68512 !important;
+        transform: translateY(-3px) !important;
+        box-shadow: 0 6px 20px rgba(247, 148, 29, 0.4) !important;
+    }
+
+    .hero-slider .hero-image-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+    }
+
+    .hero-slider .hero-bg-shape {
+        position: absolute;
+        top: 50%;
+        right: -5%;
+        transform: translateY(-50%);
+        width: 110%;
+        height: 90%;
+        background: #edf2f7;
+        border-radius: 60px;
+        z-index: -1;
+    }
+
+    .hero-slider .hero-image-container img {
+        max-width: 100% !important;
+        height: auto !important;
+        border-radius: 24px !important;
+        /* box-shadow: 0 20px 50px rgba(0,0,0,0.1) !important; */
+    }
+
+    .hero-slider .swiper-pagination-bullet-active {
+        background: #F7941D !important;
+    }
+
+    .hero-slider .swiper-slide .row {
+        width: 100% !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+    }
+
+    @media (min-width: 992px) {
+        .hero-slider .swiper-slide .row {
+            flex-wrap: nowrap !important;
+        }
+        .hero-slider .hero-text {
+            flex: 0 0 50% !important;
+            max-width: 60% !important;
+        }
+        .hero-slider .hero-image-container {
+            flex: 0 0 50% !important;
+            /* max-width: 50% !important; */
+        }
+    }
+
+    @media (max-width: 991px) {
+        .hero-slider .swiper-slide {
+            flex-direction: column !important;
+            text-align: center !important;
+            padding: 60px 20px !important;
+            min-height: auto !important;
+        }
+        .hero-slider .hero-text {
+            margin-bottom: 40px !important;
+            padding-right: 0 !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            width: 100% !important;
+        }
+        .hero-slider .hero-text p {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+        .hero-slider .hero-text h1 {
+            font-size: 36px !important;
+        }
+        .hero-slider .hero-bg-shape {
+            width: 100% !important;
+            right: 0 !important;
+        }
+        .hero-slider .hero-image-container {
+            width: 100% !important;
+            display: block !important;
+        }
     }
 </style>
 <?php
 $AllsettingsModel = new \App\Models\Allsettingsmodel();
 $all_setting_data = $AllsettingsModel->first();
 ?>
-<section class="hero-slider">
-    <!-- Single Slider -->
-    <div class="active-slider owl-carousel">
-    <!-- <div class=""> -->
-
-        <?php
-        foreach ($banner as $ban) {
-        ?>
-            <div class="single-slider"
-                style="background-image:url('<?php echo base_url("admin/public/upload_images/" . $ban['BannerImg']); ?>');">
-                <div class="container">
-                    <div class="row no-gutters">
-                        <div class="col-lg-9 offset-lg-3 col-12">
-                            <div class="text-inner">
-                                <div class="row">
-                                    <div class="col-lg-7 col-12">
-
-                                        <div class="hero-text">
-                                            <!--<span>UP TO 50% OFF </span>-->
-                                            <h1><?php echo $ban['BannerTitle']; ?></h1>
-                                            <p><?php echo $ban['BannerText']; ?></p>
-                                            <?php
-                                            if (!empty($ban['BannerTitle'])) {
-                                            ?>
-                                                <div class="button">
-                                                    <a href="<?php echo $ban['BannerUrl']; ?>" class="btn">Shop Now!</a>
-                                                </div>
-                                            <?php
-                                            } else {
-                                            ?>
-                                            <?php
-                                            }
-                                            ?>
+<section class="hero-slider mt-2">
+    <div class="swiper hero-swiper">
+        <div class="swiper-wrapper">
+            <?php
+            foreach ($banner as $ban) {
+                ?>
+                <div class="swiper-slide">
+                    <div class="container">
+                        <div class="row align-items-center flex-nowrap-lg">
+                            <div class="col-lg-6 col-md-12 col-12">
+                                <div class="hero-text mt-0">
+                                    <?php $title = $ban['BannerTitle']; ?>
+                                    <h1><?php echo $title; ?></h1>
+                                    <p><?php echo $ban['BannerText']; ?></p>
+                                    <?php if (!empty($ban['BannerUrl'])) { ?>
+                                        <div class="button">
+                                            <a href="<?php echo $ban['BannerUrl']; ?>" class="btn">Shop Now</a>
                                         </div>
-
-                                    </div>
-
+                                    <?php } ?>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-12 d-none d-lg-block">
+                                <div class="hero-image-container">
+                                    <div class="hero-bg-shape"></div>
+                                    <img src="<?php echo base_url("admin/public/upload_images/" . $ban['BannerImg']); ?>"
+                                        alt="<?php echo $ban['BannerTitle']; ?>">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        <?php
-        }
-        ?>
+                <?php
+            }
+            ?>
+        </div>
+        <!-- Swiper Pagination -->
+        <div class="swiper-pagination"></div>
     </div>
-
-    <!--/ End Single Slider -->
 </section>
 <!--/ End Slider Area -->
 
@@ -259,8 +457,8 @@ $all_setting_data = $AllsettingsModel->first();
     <div class="container-fluid px-0">
         <div class="row">
             <div class="col-12 px-0">
-                <div class="section-title mb-4 mb-lg-0">
-                    <p class="explore_title mb-3 position-relative" style="font-size:20px;">Explore</p>
+                <div class="section-title mb-0">
+                    <p class="explore_title mb-2">Explore</p>
                     <h2 class="mb-0 pb-0">Shop By Categories</h2>
                 </div>
             </div>
@@ -268,49 +466,46 @@ $all_setting_data = $AllsettingsModel->first();
 
         <div class="row">
             <div class="col-12 pt-4 position-relative">
-                <!-- Left Button -->
-                <button class="scroll-btn left" onclick="scrollToLeft()">&#8249;</button>
-
-                <!-- Scrollable Container -->
-                <div id="cat-container" class="category-container d-flex overflow-auto px-4 px-lg-0"
-                    style="scroll-behavior: smooth;overflow: hidden;">
-                    <!-- Loop through each category -->
-                    <?php foreach ($category as $cat) { ?>
-                        <div class="single-category mb-4 mx-2">
-                            <div class="category-img d-flex align-items-center flex-column">
-                                <a href="<?php echo base_url('category/' . base64_encode($cat['CategoryID'])); ?>"
-                                    class="p-3 img-cat"
-                                    style="height:174px;width:175px; background-color: white;box-shadow: 0px 5px 9px 4px rgb(0 0 0 / 6%);border-radius:50%;">
-                                    <div class="">
-                                        <!-- Display category image -->
-                                        <?php if (!empty($cat['Catagoryimage'])) { ?>
-                                            <img class="default-img text-center"
-                                                src="<?php echo base_url(); ?>admin/public/upload_images/<?php echo $cat['Catagoryimage']; ?>"
-                                                alt="#"
-                                                style="object-fit:cover;object-position:center;height:142px; width:145px;border-radius:50%;">
-                                        <?php } else { ?>
-                                            <img class="default-img text-center"
-                                                src="<?php echo base_url(); ?>admin/public/upload_images/no_category.webp"
-                                                alt="#"
-                                                style="object-fit:cover;object-position:center;height:142px; width:145px;border-radius:50%;">
-                                        <?php } ?>
-                                    </div>
-                                </a>
-                                <div class="category-content">
-                                    <h3 class="h5 text-capitalize text-center mt-2">
+                <!-- Swiper Container -->
+                <div class="swiper-container-wrapper position-relative px-4">
+                    <div class="swiper cat-swiper">
+                        <div class="swiper-wrapper">
+                            <!-- Loop through each category -->
+                            <?php foreach ($category as $cat) { ?>
+                                <div class="swiper-slide single-category">
+                                    <div class="category-img d-flex align-items-center flex-column">
                                         <a href="<?php echo base_url('category/' . base64_encode($cat['CategoryID'])); ?>"
-                                            class="nav-link text-capitalize">
-                                            <?php echo $cat['CategoryName']; ?>
+                                            class="img-cat">
+                                            <div class="">
+                                                <!-- Display category image -->
+                                                <?php if (!empty($cat['Catagoryimage'])) { ?>
+                                                    <img class="default-img text-center"
+                                                        src="<?php echo base_url(); ?>admin/public/upload_images/<?php echo $cat['Catagoryimage']; ?>"
+                                                        alt="#">
+                                                <?php } else { ?>
+                                                    <img class="default-img text-center"
+                                                        src="<?php echo base_url(); ?>admin/public/upload_images/no_category.webp"
+                                                        alt="#">
+                                                <?php } ?>
+                                            </div>
                                         </a>
-                                    </h3>
+                                        <div class="category-content">
+                                            <h3 class="h5 text-capitalize text-center mt-2">
+                                                <a href="<?php echo base_url('category/' . base64_encode($cat['CategoryID'])); ?>"
+                                                    class="nav-link text-capitalize">
+                                                    <?php echo $cat['CategoryName']; ?>
+                                                </a>
+                                            </h3>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                            <?php } ?>
                         </div>
-                    <?php } ?>
+                    </div>
+                    <!-- Navigation Buttons (Moved outside Swiper) -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
-
-                <!-- Right Button -->
-                <button class="scroll-btn right" onclick="scrollToRight()">&#8250;</button>
             </div>
         </div>
     </div>
@@ -380,15 +575,15 @@ $all_setting_data = $AllsettingsModel->first();
                                             if ($prd['ProductType'] == 2) {
                                                 // Safely check for the keys in $varia_dt
                                                 $variationPrice = $varia_dt['Sale_VariationPrice'] ?? $varia_dt['VariationPrice'] ?? null;
-                                            ?>
+                                                ?>
                                                 <input type="hidden" name="price" value="<?php echo $variationPrice; ?>">
                                                 <input type="hidden" name="variationId"
                                                     value="<?php echo $varia_dt['VariationID'] ?? ''; ?>">
-                                            <?php
+                                                <?php
                                             } else {
-                                            ?>
+                                                ?>
                                                 <input type="hidden" name="price" value="<?php echo $prd['ProductPrice']; ?>">
-                                            <?php
+                                                <?php
                                             }
                                             ?>
 
@@ -415,18 +610,19 @@ $all_setting_data = $AllsettingsModel->first();
                                     } else {
                                         // Display sale price with original price crossed out
                                         echo $currency . $salePrice;
-                                    ?>
-                                        <span style="text-decoration: line-through; color: #7e7e7e; font-weight: 400; font-size: 16px;">
+                                        ?>
+                                        <span
+                                            style="text-decoration: line-through; color: #7e7e7e; font-weight: 400; font-size: 16px;">
                                             <?php echo $currency . $productPrice; ?>
                                         </span>
-                                    <?php
+                                        <?php
                                     }
                                     ?>
                                 </div>
 
                                 <!-- <div class="product-price">
                                     <span>$<?php //echo $prd['ProductType'] != 2 ? $prd['ProductPrice'] : ($pricearr ?? $varia_dt['Sale_VariationPrice'] ?? $varia_dt['VariationPrice']); 
-                                            ?></span>
+                                        ?></span>
                                 </div> -->
                             </div>
                         </div>
@@ -471,12 +667,13 @@ $all_setting_data = $AllsettingsModel->first();
                     <div class="tab-content" id="myTabContent">
                         <!-- Start Single Tab -->
                         <?php foreach ($category as $key => $cate) {
-                        ?>
+                            ?>
                             <div class="tab-pane fade show <?php if ($key == '0') {
-                                                                echo 'active';
-                                                            } else {
-                                                                echo '';
-                                                            } ?>" id="<?php echo $cate['CategoryID']; ?>" role="tabpanel">
+                                echo 'active';
+                            } else {
+                                echo '';
+                            } ?>" id="<?php echo $cate['CategoryID']; ?>"
+                                role="tabpanel">
                                 <div class="tab-single">
                                     <div class="row">
                                         <?php
@@ -487,7 +684,7 @@ $all_setting_data = $AllsettingsModel->first();
                                                 $counter++;
                                                 if ($counter > 4)
                                                     break;
-                                        ?>
+                                                ?>
                                                 <div class="col-xl-3 col-lg-4 col-md-4 col-12 mt-0">
                                                     <div class="single-product">
                                                         <div class="product-img">
@@ -507,28 +704,28 @@ $all_setting_data = $AllsettingsModel->first();
                                                                     $session = session();
                                                                     $user_id = $session->get('user_id');
                                                                     if (empty($user_id)) {
-                                                                    ?>
+                                                                        ?>
                                                                         <a href="#" data-toggle="modal" data-target="#exampleModal">
                                                                             <i class="m-0 ml-2 mr-3 pt-1 ti-heart"></i>
                                                                         </a>
                                                                         <?php
                                                                     } else {
                                                                         if (!empty($customers['Status']) && $customers['Status'] == 1 && $customers['ProductID'] == $prd['ProductID']) {
-                                                                        ?>
+                                                                            ?>
                                                                             <i class="add_wishlist added_wish d-none m-0 ml-2 mr-3 pt-1 mt-3 ti-heart"
                                                                                 id="add_wishlist" data-id="<?= $prd['ProductID'] ?>"></i>
                                                                             <i class="align-self-center m-0 mb-2 ml-2 mr-3 pt-1 remove_wishlist removed_wish ti-heart"
                                                                                 id="remove_wishlist" data-id="<?= $prd['ProductID'] ?>"
                                                                                 style="color:orange; font-size:14px;"></i>
-                                                                        <?php
+                                                                            <?php
                                                                         } else {
-                                                                        ?>
+                                                                            ?>
                                                                             <i class="add_wishlist added_wish m-0 ml-2 mr-3 pt-1 mt-3 ti-heart"
                                                                                 id="add_wishlist" data-id="<?= $prd['ProductID'] ?>"></i>
                                                                             <i class="align-self-center m-0 mb-2 ml-2 mr-3 pt-1 remove_wishlist removed_wish ti-heart d-none"
                                                                                 id="remove_wishlist" data-id="<?= $prd['ProductID'] ?>"
                                                                                 style="color:orange; font-size:14px;"></i>
-                                                                    <?php
+                                                                            <?php
                                                                         }
                                                                     }
                                                                     ?>
@@ -540,20 +737,20 @@ $all_setting_data = $AllsettingsModel->first();
                                                                         <input type="hidden" name="quantity" value="1">
                                                                         <?php
                                                                         if ($prd['ProductType'] != 2) {
-                                                                        ?>
+                                                                            ?>
                                                                             <input type="hidden" name="price" id="price"
                                                                                 value="<?php echo $prd['ProductPrice']; ?>">
-                                                                        <?php
+                                                                            <?php
                                                                         } else {
                                                                             $variations = new App\Models\Variationmodel();
                                                                             $varia_dt = $variations->where('ProductID', $prd['ProductID'])->first();
                                                                             $pricearr = $varia_dt['Sale_VariationPrice'] ?: $varia_dt['VariationPrice'];
-                                                                        ?>
+                                                                            ?>
                                                                             <input type="hidden" name="price" id="price"
                                                                                 value="<?php echo $pricearr; ?>">
                                                                             <input type="hidden" name="variationId"
                                                                                 value="<?php echo $varia_dt['VariationID']; ?>">
-                                                                        <?php
+                                                                            <?php
                                                                         }
                                                                         ?>
                                                                         <button type="submit" class="add_to_cart mt-3 m-1">Add to
@@ -578,11 +775,12 @@ $all_setting_data = $AllsettingsModel->first();
                                                                 if ($prd['ProductType'] != 2) {
                                                                     // Display sale price and original price
                                                                     echo $currency . $salePrice;
-                                                                ?>
-                                                                    <span style="text-decoration: line-through; color: #7e7e7e; font-weight: 400; font-size: 16px;">
+                                                                    ?>
+                                                                    <span
+                                                                        style="text-decoration: line-through; color: #7e7e7e; font-weight: 400; font-size: 16px;">
                                                                         <?php echo $currency . $productPrice; ?>
                                                                     </span>
-                                                                <?php
+                                                                    <?php
                                                                 } else {
                                                                     // Display price for variations
                                                                     $price = $pricearr ?? $varia_dt['Sale_VariationPrice'] ?? $varia_dt['VariationPrice'];
@@ -597,11 +795,11 @@ $all_setting_data = $AllsettingsModel->first();
                                                     </div>
 
                                                 </div>
-                                            <?php
+                                                <?php
                                             } else {
-                                            ?>
+                                                ?>
 
-                                        <?php
+                                                <?php
                                             }
                                         }
                                         ?>
@@ -751,7 +949,7 @@ $all_setting_data = $AllsettingsModel->first();
             <?php
             foreach ($blog as $bl) {
                 //   print_r($bl);
-            ?>
+                ?>
                 <div class="col-lg-4 col-md-6 col-12">
                     <!-- Start Single Blog  -->
                     <div class="shop-single-blog bg-white">
@@ -774,7 +972,7 @@ $all_setting_data = $AllsettingsModel->first();
                     </div>
                     <!-- End Single Blog  -->
                 </div>
-            <?php
+                <?php
             }
             ?>
         </div>
@@ -997,7 +1195,7 @@ if (!empty($paymentgateway)) {
                             <ul>
                                 <?php foreach ($resdt as $rsdata) { ?>
                                     <?php if ($rsdata['status'] == 1) { // Only display CMS topics with status = 1 
-                                    ?>
+                                                ?>
                                         <li class="<?= $first_part == $rsdata['CmsUrl'] ? 'active' : '' ?> mb-0">
                                             <a href="<?php echo base_url() . $rsdata['CmsUrl']; ?>">
                                                 <?php echo $rsdata['CmsTitle']; ?>
@@ -1014,7 +1212,7 @@ if (!empty($paymentgateway)) {
                             <ul>
                                 <?php foreach ($resdt as $rsdata) { ?>
                                     <?php if ($rsdata['status'] == 1) { // Only display CMS topics with status = 1 
-                                    ?>
+                                                ?>
                                         <li class="<?= $first_part == $rsdata['CmsUrl'] ? 'active' : '' ?>">
                                             <a href="<?php echo base_url() . $rsdata['CmsUrl']; ?>">
                                                 <?php echo $rsdata['CmsTitle']; ?>
@@ -1058,7 +1256,7 @@ if (!empty($paymentgateway)) {
                                 $dt = json_decode($data1);
                                 //   print_r($all_settings_data);
                                 //   die;
-
+                                
                                 $intagram = $dt->insta;
                                 $facebook = $dt->facebook;
                                 $twitter = $dt->twitter;
@@ -1076,48 +1274,48 @@ if (!empty($paymentgateway)) {
                                     <li class="soc">
                                         <?php
                                         if (isset($facebook_data->link)) {
-                                        ?>
+                                            ?>
                                             <a href="<?= $facebook_data->link ?>" target="_blank">
                                                 <?php if (isset($facebook_data->status) && ($facebook_data->status == 1)) {
-                                                ?>
+                                                    ?>
                                                     <i class="ti-facebook"></i>
-                                            <?php
+                                                    <?php
                                                 }
-                                            }
-                                            ?>
-                                            </a>
+                                        }
+                                        ?>
+                                        </a>
                                     </li>
 
                                     <!----------- Twitter =======-->
                                     <li class="soc">
                                         <?php
                                         if (isset($twitter_data->link)) {
-                                        ?>
+                                            ?>
                                             <a href="<?= $twitter_data->link ?>" target="_blank">
                                                 <?php if (isset($twitter_data->status) && ($twitter_data->status == 1)) {
-                                                ?>
+                                                    ?>
                                                     <i class="ti-twitter"></i>
-                                            <?php
+                                                    <?php
                                                 }
-                                            }
-                                            ?>
-                                            </a>
+                                        }
+                                        ?>
+                                        </a>
                                     </li>
 
                                     <!----------- Instagram =======-->
                                     <li class="soc">
                                         <?php
                                         if (isset($intagram_data->link)) {
-                                        ?>
+                                            ?>
                                             <a href="<?= $intagram_data->link; ?>" target="_blank">
                                                 <?php if (isset($intagram_data->status) && ($intagram_data->status == 1)) {
-                                                ?>
+                                                    ?>
                                                     <i class="ti-instagram"></i>
-                                            <?php
+                                                    <?php
                                                 }
-                                            }
-                                            ?>
-                                            </a>
+                                        }
+                                        ?>
+                                        </a>
                                     </li>
                                 </ul>
                                 <!--=========================-->
@@ -1155,7 +1353,7 @@ if (!empty($paymentgateway)) {
                             $dt = json_decode($data1);
                             //   print_r($all_settings_data);
                             //   die;
-
+                            
                             $intagram = $dt->insta;
                             $facebook = $dt->facebook;
                             $twitter = $dt->twitter;
@@ -1173,48 +1371,48 @@ if (!empty($paymentgateway)) {
                                 <li class="soc">
                                     <?php
                                     if (isset($facebook_data->link)) {
-                                    ?>
+                                        ?>
                                         <a href="<?= $facebook_data->link ?>" target="_blank">
                                             <?php if (isset($facebook_data->status) && ($facebook_data->status == 1)) {
-                                            ?>
+                                                ?>
                                                 <i class="ti-facebook"></i>
-                                        <?php
+                                                <?php
                                             }
-                                        }
-                                        ?>
-                                        </a>
+                                    }
+                                    ?>
+                                    </a>
                                 </li>
 
                                 <!----------- Twitter =======-->
                                 <li class="soc">
                                     <?php
                                     if (isset($twitter_data->link)) {
-                                    ?>
+                                        ?>
                                         <a href="<?= $twitter_data->link ?>" target="_blank">
                                             <?php if (isset($twitter_data->status) && ($twitter_data->status == 1)) {
-                                            ?>
+                                                ?>
                                                 <i class="ti-twitter"></i>
-                                        <?php
+                                                <?php
                                             }
-                                        }
-                                        ?>
-                                        </a>
+                                    }
+                                    ?>
+                                    </a>
                                 </li>
 
                                 <!----------- Instagram =======-->
                                 <li class="soc">
                                     <?php
                                     if (isset($intagram_data->link)) {
-                                    ?>
+                                        ?>
                                         <a href="<?= $intagram_data->link; ?>" target="_blank">
                                             <?php if (isset($intagram_data->status) && ($intagram_data->status == 1)) {
-                                            ?>
+                                                ?>
                                                 <i class="ti-instagram"></i>
-                                        <?php
+                                                <?php
                                             }
-                                        }
-                                        ?>
-                                        </a>
+                                    }
+                                    ?>
+                                    </a>
                                 </li>
                             </ul>
                             <!--=========================-->
@@ -1332,8 +1530,8 @@ if (!empty($paymentgateway)) {
 
 <script>
     var base_url = $("#base_url").val();
-    $(document).ready(function() {
-        $('.addtocartform').on('submit', function(e) {
+    $(document).ready(function () {
+        $('.addtocartform').on('submit', function (e) {
             $(".Color").css('border', '');
             $(".Size").css('border', '');
             $(".Material").css('border', '');
@@ -1380,7 +1578,7 @@ if (!empty($paymentgateway)) {
                 data: fd,
                 contentType: false,
                 processData: false,
-                success: function(response) {
+                success: function (response) {
                     // Parse the JSON response
                     var jsonObject = JSON.parse(response);
                     if (jsonObject.status === 'success') {
@@ -1408,13 +1606,13 @@ if (!empty($paymentgateway)) {
                         $("#modalProductPrice").text("$" + jsonObject.cart[jsonObject.cart.length - 1].unit_price);
 
                         // Show modal with updated product details
-                        setTimeout(function() {
+                        setTimeout(function () {
                             $("#cartModal").modal('show');
                             $('#semiTransparenDiv').css('display', 'none');
                         }, 2000);
                     }
                 },
-                error: function(xhr, status, error) {
+                error: function (xhr, status, error) {
                     // Handle error response
                     console.log(xhr.responseText);
                 }
@@ -1422,7 +1620,7 @@ if (!empty($paymentgateway)) {
 
         });
 
-        $("#login").on('click', function() {
+        $("#login").on('click', function () {
             var email = $("#email").val();
             var password = $("#password").val();
             var regEx = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
@@ -1452,7 +1650,7 @@ if (!empty($paymentgateway)) {
                         password: password
                     },
                     dataType: 'json',
-                    success: function(data) {
+                    success: function (data) {
                         if (data == 1) {
                             window.location.href = 'my_account';
                         } else {
@@ -1464,7 +1662,7 @@ if (!empty($paymentgateway)) {
         });
     });
 
-    $(document).on("click", ".removeItem", function(e) {
+    $(document).on("click", ".removeItem", function (e) {
         e.preventDefault();
 
         var itemId = $(this).data("id");
@@ -1475,7 +1673,7 @@ if (!empty($paymentgateway)) {
             data: {
                 itemId: itemId
             },
-            success: function(response) {
+            success: function (response) {
                 // Handle the response
                 var jsonObject = JSON.parse(response);
                 if (jsonObject.status === "success") {
@@ -1543,7 +1741,7 @@ if (!empty($paymentgateway)) {
                         $(".shopping-summery tbody tr#" + jsonObject.itemid).remove();
 
                     }
-                    setTimeout(function() {
+                    setTimeout(function () {
                         $('#semiTransparenDiv').css('display', 'none');
                         //$('.loader').css('display','none');
                     }, 2000);
@@ -1554,14 +1752,14 @@ if (!empty($paymentgateway)) {
 
                 }
             },
-            error: function(xhr, textStatus, errorThrown) {
+            error: function (xhr, textStatus, errorThrown) {
                 console.log("Error: " + errorThrown);
             }
         });
     });
 
-    $(document).ready(function() {
-        $(".removeCoupon").on("click", function(e) {
+    $(document).ready(function () {
+        $(".removeCoupon").on("click", function (e) {
             e.preventDefault();
             var couponCode = $("#couponCode").val();
 
@@ -1571,7 +1769,7 @@ if (!empty($paymentgateway)) {
                 data: {
                     couponCode: couponCode
                 },
-                success: function(response) {
+                success: function (response) {
                     // Handle the response
                     var jsondt = JSON.parse(response);
                     if (jsondt.status === "success") {
@@ -1615,7 +1813,7 @@ if (!empty($paymentgateway)) {
                         $(".coupondata").html('<span class="error text-danger">Please enter a valid coupon code.</span>');
                     }
                 },
-                error: function(xhr, textStatus, errorThrown) {
+                error: function (xhr, textStatus, errorThrown) {
                     console.log("Error: " + errorThrown);
                 }
             });
@@ -1624,7 +1822,7 @@ if (!empty($paymentgateway)) {
 
 
 
-        $(".apllyCouponForm").on("submit", function(e) {
+        $(".apllyCouponForm").on("submit", function (e) {
             e.preventDefault();
 
             var couponCode = $("#couponCode").val();
@@ -1641,7 +1839,7 @@ if (!empty($paymentgateway)) {
                 url: "applyCoupon",
                 method: "POST",
                 data: formData,
-                success: function(response) {
+                success: function (response) {
                     // Parse the JSON response
                     try {
                         var jsondt = JSON.parse(response);
@@ -1697,7 +1895,7 @@ if (!empty($paymentgateway)) {
                         $(".coupondata").html('<span class="error text-danger">An unexpected error occurred.</span>');
                     }
                 },
-                error: function(xhr, textStatus, errorThrown) {
+                error: function (xhr, textStatus, errorThrown) {
                     console.log("Error: " + errorThrown);
                     $(".coupondata").html('<span class="error text-danger">An error occurred while applying the coupon. Please try again.</span>');
                 }
@@ -1706,7 +1904,7 @@ if (!empty($paymentgateway)) {
 
 
 
-        $(".btn-number").on('click', function(e) {
+        $(".btn-number").on('click', function (e) {
             var button = $(this);
             var qtyInput = button.closest('.input-group').find('.input-number');
             var id = button.data('id');
@@ -1726,7 +1924,7 @@ if (!empty($paymentgateway)) {
         });
 
 
-        $(".updateCartbtn").on("click", function(e) {
+        $(".updateCartbtn").on("click", function (e) {
             e.preventDefault();
             var form = document.getElementById('cartProductList');
             var formData = new FormData(form);
@@ -1737,7 +1935,7 @@ if (!empty($paymentgateway)) {
                 data: formData,
                 processData: false,
                 contentType: false,
-                success: function(response) {
+                success: function (response) {
                     var jsonObject = JSON.parse(response);
                     console.log(jsonObject);
                     if (jsonObject.status === "success") {
@@ -1783,7 +1981,7 @@ if (!empty($paymentgateway)) {
                         $('#semiTransparenDiv').css('display', 'none'); // Ensure overlay is hidden
                     }
                 },
-                error: function(xhr, textStatus, errorThrown) {
+                error: function (xhr, textStatus, errorThrown) {
                     console.log("Error: " + errorThrown);
                     $('#semiTransparenDiv').css('display', 'none'); // Hide the overlay in case of error
                 }
@@ -1792,7 +1990,7 @@ if (!empty($paymentgateway)) {
 
 
 
-        $("select[name='CountryID']").on("change", function(e) {
+        $("select[name='CountryID']").on("change", function (e) {
             e.preventDefault();
             var CountryID = $(this).val();
             var formData = new FormData();
@@ -1804,7 +2002,7 @@ if (!empty($paymentgateway)) {
                 data: formData,
                 processData: false,
                 contentType: false,
-                success: function(response) {
+                success: function (response) {
                     const states = JSON.parse(response);
                     // Get the select element
                     var stateSelect = $("#state-province");
@@ -1817,7 +2015,7 @@ if (!empty($paymentgateway)) {
                     option.text('Select');
                     stateSelect.append(option);
                     // Iterate over the states
-                    states.forEach(function(state) {
+                    states.forEach(function (state) {
                         // Create a new option element
                         var option = $("<option></option>");
 
@@ -1830,7 +2028,7 @@ if (!empty($paymentgateway)) {
                     });
 
                 },
-                error: function(xhr, textStatus, errorThrown) {
+                error: function (xhr, textStatus, errorThrown) {
                     console.log("Error: " + errorThrown);
                 }
             });
@@ -1852,7 +2050,7 @@ if (!empty($paymentgateway)) {
         card.mount('#card-element');
 
         // Handle real-time validation errors from the card Element.
-        card.addEventListener('change', function(event) {
+        card.addEventListener('change', function (event) {
             var displayError = document.getElementById('card-errors');
             if (event.error) {
                 displayError.textContent = event.error.message;
@@ -1881,7 +2079,7 @@ if (!empty($paymentgateway)) {
 
 
 
-        $(document).on("click", ".btncheck", function() {
+        $(document).on("click", ".btncheck", function () {
             "use strict";
             removeDynamicElements();
             var flag = 1;
@@ -1973,7 +2171,7 @@ if (!empty($paymentgateway)) {
 
                     ajxurl = baseurl + 'checkout/stripe_payment';
 
-                    stripe.createToken(card).then(function(result) {
+                    stripe.createToken(card).then(function (result) {
                         if (result.error) {
                             $('#semiTransparenDiv').css('display', 'none');
                             // Inform the user if there was an error.
@@ -2043,7 +2241,7 @@ if (!empty($paymentgateway)) {
                         notes: {
                             soolegal_order_id: orderno,
                         },
-                        handler: function(transaction) {
+                        handler: function (transaction) {
                             document.getElementById('razorpay_payment_id').value = transaction.razorpay_payment_id;
                             var baseurl = $("#baseurl").val();
                             ajxurl = baseurl + 'checkout/razorpay_payment';
@@ -2052,7 +2250,7 @@ if (!empty($paymentgateway)) {
                             document.getElementById('checkoutsubmiform').submit();
                         },
                         "modal": {
-                            "ondismiss": function() {
+                            "ondismiss": function () {
                                 location.reload()
                             }
                         }
@@ -2096,7 +2294,7 @@ if (!empty($paymentgateway)) {
                 data: formData,
                 processData: false,
                 contentType: false,
-                success: function(response) {
+                success: function (response) {
                     // If response is a JSON string, parse it
                     if (typeof response === "string") {
                         response = JSON.parse(response);
@@ -2106,7 +2304,7 @@ if (!empty($paymentgateway)) {
 
                     if (response.status == '1') {
                         $(".succ_msg").html('<div class="alert alert-success">Your order has been placed successfully.</div>');
-                        setTimeout(function() {
+                        setTimeout(function () {
                             var url = baseurl + 'order_success';
                             if (patment_method == 'stripe') {
                                 var OrderNumber = response.data.OrderNumber;
@@ -2128,7 +2326,7 @@ if (!empty($paymentgateway)) {
                         $(".succ_msg").html('<div class="alert alert-danger">Error placing order. Please try again.</div>');
                     }
                 },
-                error: function(xhr, textStatus, errorThrown) {
+                error: function (xhr, textStatus, errorThrown) {
                     console.log("Error: " + errorThrown);
                 }
             });
@@ -2136,7 +2334,7 @@ if (!empty($paymentgateway)) {
 
 
 
-        $('input.payment_method[type="radio"]').on('click', function() {
+        $('input.payment_method[type="radio"]').on('click', function () {
             if ($(this).val() == 'paypal') {
                 $("form#checkoutsubmiform").attr('action', 'https://www.sandbox.paypal.com/cgi-bin/webscr');
                 // $("button").attr('type','submit');
@@ -2161,7 +2359,7 @@ if (!empty($paymentgateway)) {
             // 			}
         });
 
-        $(".btncheck_old").on('click', function() {
+        $(".btncheck_old").on('click', function () {
             var patment_method = $("input[name='patment_method']:checked").val();
 
             if ($("#fname").val() == "") {
@@ -2236,97 +2434,111 @@ if (!empty($paymentgateway)) {
 
 </html>
 
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 <script>
-    const container = document.getElementById("cat-container");
-
-    function scrollToLeft() {
-        container.scrollBy({
-            left: -300,
-            behavior: "smooth"
+    $(document).ready(function () {
+        var heroSwiper = new Swiper(".hero-swiper", {
+            loop: true,
+            speed: 800,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            // pagination: {
+            //     el: ".swiper-pagination",
+            //     clickable: true,
+            // },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
         });
-    }
 
-    function scrollToRight() {
-        container.scrollBy({
-            left: 300,
-            behavior: "smooth"
-        });
-    }
-
-
-    $('.add_to_carts').on('submit', function(e) {
-        // alert('634543643');
-
-        var Color = $(".Color").val();
-        var Size = $(".Size").val();
-        var Material = $(".Material").val();
-
-        var form = $(this);
-        // var url = form.attr('action');
-        // var data = form.serialize();
-
-        if (Color == '') {
-            $(".Color").focus();
-            $(".Color").css('border', '1px solid red');
-        } else {
-            $(".Color").css('border', '');
-        }
-        if (Size == '') {
-            $(".Size").focus();
-            $(".Size").css('border', '1px solid red');
-        } else {
-            $(".Size").css('border', '');
-        }
-        if (Material == '') {
-            $(".Material").focus();
-            $(".Material").css('border', '1px solid red');
-        } else {
-            $(".Material").css('border', '');
-
-            //$('.overlay').css('display','block');
-            $('#semiTransparenDiv').css('display', 'block');
-            // Perform AJAX request
-            let myform = document.getElementById('addtocartform');
-            let fd = new FormData(myform);
-
-            $.ajax({
-                type: 'POST',
-                url: 'addToCart',
-                data: fd,
-                dataType: 'json',
-                success: function(response) {
-                    console.log(response);
-                    // Handle the response
-                    var jsonObject = JSON.parse(response);
-                    if (jsonObject.status === 'success') {
-                        console.log(jsonObject.status);
-                        //   $('ul.shopping-list').html(jsonObject.cart);
-                        $(".total-count").text(jsonObject.CartTotals);
-                        $(".dropdown-cart-header span").text(jsonObject.CartTotals + " Items");
-                        var html = '';
-                        for (var i = 0; i < jsonObject.cart.length; i++) {
-                            html += '<li id="' + jsonObject.cart[i].id + '">' +
-                                '<a href="javascript:void(0)"  class="remove removeItem" data-id="' + jsonObject.cart[i].id + '" title="Remove this item"><i class="fa fa-remove"></i></a>' +
-                                '<a class="cart-img" href="javascript:void(0)"><img src="' + jsonObject.cart[i].ProductImage + '" alt="javascript:void(0)"></a>' +
-                                '<h4><a href="/single_product/' + jsonObject.cart[i].id + '">' + jsonObject.cart[i].name + '</a></h4>' +
-                                '<p class="quantity">' + jsonObject.cart[i].quantity + 'x - <span class="amount">$' + jsonObject.cart[i].unit_price + '</span></p>' +
-                                '</li>';
-                        }
-                        $(".total-amount").text("$" + jsonObject.total_item);
-                        setTimeout(function() {
-                            $("#cartModal").modal('show');
-                            $('#semiTransparenDiv').css('display', 'none');
-                        }, 2000);
-
-                    } else {
-
-                    }
+        var swiper = new Swiper(".cat-swiper", {
+            slidesPerView: 2,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
                 },
-                error: function(xhr, status, error) {
-                    // Handle error response
-                    console.log(xhr.responseText);
-                }
-            });
-        }
+                768: {
+                    slidesPerView: 4,
+                    spaceBetween: 15,
+                },
+                1024: {
+                    slidesPerView: 7,
+                    spaceBetween: 20,
+                },
+            },
+        });
     });
 </script>
+
+
+$('.add_to_carts').on('submit', function(e) {
+// alert('634543643');
+
+var Color = $(".Color").val();
+var Size = $(".Size").val();
+var Material = $(".Material").val();
+
+var form = $(this);
+// var url = form.attr('action');
+// var data = form.serialize();
+
+if (Color == '') {
+$(".Color").focus();
+$(".Color").css('border', '1px solid red');
+} else {
+$(".Color").css('border', '');
+}
+if (Size == '') {
+$(".Size").focus();
+$(".Size").css('border', '1px solid red');
+} else {
+$(".Size").css('border', '');
+}
+if (Material == '') {
+$(".Material").focus();
+$(".Material").css('border', '1px solid red');
+} else {
+$(".Material").css('border', '');
+
+//$('.overlay').css('display','block');
+$('#semiTransparenDiv').css('display', 'block');
+// Perform AJAX request
+let myform = document.getElementById('addtocartform');
+let fd = new FormData(myform);
+
+$.ajax({
+type: 'POST',
+url: 'addToCart',
+data: fd,
+dataType: 'json',
+success: function(response) {
+console.log(response);
+// Handle the response
+var jsonObject = JSON.parse(response);
+if (jsonObject.status === 'success') {
+console.log(jsonObject.status);
+// $('ul.shopping-list').html(jsonObject.cart);
+$(".total-count").text(jsonObject.CartTotals);
+$(".dropdown-cart-header span").text(jsonObject.CartTotals + " Items");
+var html = '';
+for (var i = 0; i < jsonObject.cart.length; i++) { html +='<li id="' + jsonObject.cart[i].id + '">'
+    + '<a href="javascript:void(0)"  class="remove removeItem" data-id="' + jsonObject.cart[i].id
+    + '" title="Remove this item"><i class="fa fa-remove"></i></a>'
+    + '<a class="cart-img" href="javascript:void(0)"><img src="' + jsonObject.cart[i].ProductImage
+    + '" alt="javascript:void(0)"></a>' + '<h4><a href="/single_product/' + jsonObject.cart[i].id + '">' +
+    jsonObject.cart[i].name + '</a></h4>' + '<p class="quantity">' + jsonObject.cart[i].quantity
+    + 'x - <span class="amount">$' + jsonObject.cart[i].unit_price + '</span></p>' + '</li>' ; }
+    $(".total-amount").text("$" + jsonObject.total_item); setTimeout(function() { $("#cartModal").modal('show');
+    $('#semiTransparenDiv').css('display', 'none' ); }, 2000); } else { } }, error: function(xhr, status, error) { //
+    Handle error response console.log(xhr.responseText); } }); } }); </script>
