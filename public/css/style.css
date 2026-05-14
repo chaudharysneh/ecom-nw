@@ -448,7 +448,7 @@
   font-size: 15px;
   color: #f7941d;
   position: relative;
-  top: 3px;
+  top: 1px;
 }
 
 .header.shop .right-content {
@@ -1251,7 +1251,7 @@
   display: inline-block;
   padding: 0;
   margin: 0;
-  top: 20px;
+  /* top: 20px; */
   float: right;
   position: relative;
 }
