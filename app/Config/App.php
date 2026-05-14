@@ -18,9 +18,9 @@ class App extends BaseConfig
      *    http://example.com/
      */
     // public string $baseURL = 'https://ecomweb.fableadtechnolabs.com/';
-    public string $baseURL = 'https://ecom-demo.fableadtech.com/';
+    // public string $baseURL = 'https://ecom-demo.fableadtech.com/';
 
-    // public string $baseURL = 'http://localhost/ecom-fablead/';
+    public string $baseURL = 'http://localhost/ecom-nw/';
 
 
     /**
