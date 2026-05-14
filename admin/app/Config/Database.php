@@ -25,28 +25,29 @@ class Database extends Config
      * The default database connection.
      */
     public array $default = [
-        'DSN'      => '',
+        'DSN' => '',
         'hostname' => 'localhost',
-        // 'username' => 'dummyin2_ecdevus',
-        'username' => 'u573967329_ecomdevusr',
-        // 'password' => 'v&^v$h+_KlP*',
-        'password' => 'KNwLzS@Ji0/',
-        // 'username' => 'root',
-        // 'password' => '',
-        // 'database' => 'dummyin2_ecomweb',
-        'database' => 'u573967329_ecomdemoweb',
+        // 'username' => 'dummyin2_ecdevus', old panel
+        // 'username' => 'u573967329_ecomdevusr',
+        // 'password' => 'v&^v$h+_KlP*', old panel
+        // 'password' => 'KNwLzS@Ji0/',
+        'username' => 'root',
+        'password' => '',
+        'database' => 'ecom-nw',
+        // 'database' => 'dummyin2_ecomweb', old panel
+        // 'database' => 'u573967329_ecomdemoweb',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,
-        'DBDebug'  => true,
-        'charset'  => 'utf8',
+        'DBDebug' => true,
+        'charset' => 'utf8',
         'DBCollat' => 'utf8_general_ci',
-        'swapPre'  => '',
-        'encrypt'  => false,
+        'swapPre' => '',
+        'encrypt' => false,
         'compress' => false,
         'strictOn' => false,
         'failover' => [],
-        'port'     => 3306,
+        'port' => 3306,
     ];
 
     /**
@@ -54,23 +55,23 @@ class Database extends Config
      * running PHPUnit database tests.
      */
     public array $tests = [
-        'DSN'         => '',
-        'hostname'    => '127.0.0.1',
-        'username'    => '',
-        'password'    => '',
-        'database'    => ':memory:',
-        'DBDriver'    => 'SQLite3',
-        'DBPrefix'    => 'db_',  // Needed to ensure we're working correctly with prefixes live. DO NOT REMOVE FOR CI DEVS
-        'pConnect'    => false,
-        'DBDebug'     => true,
-        'charset'     => 'utf8',
-        'DBCollat'    => 'utf8_general_ci',
-        'swapPre'     => '',
-        'encrypt'     => false,
-        'compress'    => false,
-        'strictOn'    => false,
-        'failover'    => [],
-        'port'        => 3306,
+        'DSN' => '',
+        'hostname' => '127.0.0.1',
+        'username' => '',
+        'password' => '',
+        'database' => ':memory:',
+        'DBDriver' => 'SQLite3',
+        'DBPrefix' => 'db_', // Needed to ensure we're working correctly with prefixes live. DO NOT REMOVE FOR CI DEVS
+        'pConnect' => false,
+        'DBDebug' => true,
+        'charset' => 'utf8',
+        'DBCollat' => 'utf8_general_ci',
+        'swapPre' => '',
+        'encrypt' => false,
+        'compress' => false,
+        'strictOn' => false,
+        'failover' => [],
+        'port' => 3306,
         'foreignKeys' => true,
         'busyTimeout' => 1000,
     ];
