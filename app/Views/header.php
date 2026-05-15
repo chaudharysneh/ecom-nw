@@ -322,7 +322,7 @@ $all_setting_data = $AllsettingsModel->first();
             background: #fff;
             border: 1px solid #e5e5e5 !important;
             border-radius: 30px !important;
-            height: 50px !important;
+            height: 40px !important;
             line-height: 48px !important;
             padding: 0 5px;
             display: flex;
@@ -344,8 +344,8 @@ $all_setting_data = $AllsettingsModel->first();
             background: transparent;
         }
         .header.shop .search-bar .btnn {
-            width: 65px !important;
-            height: 48px !important;
+            width: 55px !important;
+            height: 40px !important;
             background: #ff6700 !important;
             color: #fff !important;
             border-radius: 40px !important;
@@ -629,7 +629,7 @@ $all_setting_data = $AllsettingsModel->first();
             </div>
         </div>
         <!-- End Topbar -->
-        <div class="middle-inner py-3">
+        <div class="middle-inner">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-md-2">
