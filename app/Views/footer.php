@@ -95,422 +95,165 @@ $all_setting_data = $AllsettingsModel->first();
 
 
 
-<footer class="footer">
-
-	<!-- Start Shop Services Area -->
-	<section class="shop-services section home">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-3 col-md-6 col-6 pl-0">
-					<!-- Start Single Service -->
-					<div class="single-service">
-						<i class="ti-rocket"></i>
-						<h4>Free Shipping</h4>
-						<p class="mt-0">Orders over <?php echo $all_setting_data['currency']; ?>100</p>
-					</div>
-					<!-- End Single Service -->
-				</div>
-				<div class="col-lg-3 col-md-6 col-6 pl-0">
-					<!-- Start Single Service -->
-					<div class="single-service">
-						<i class="ti-reload"></i>
-						<h4>Free Return</h4>
-						<p class="mt-0">Within 30 days returns</p>
-					</div>
-					<!-- End Single Service -->
-				</div>
-				<div class="col-lg-3 col-md-6 col-6 pl-0">
-					<!-- Start Single Service -->
-					<div class="single-service">
-						<i class="ti-lock"></i>
-						<h4>Secure Payment</h4>
-						<p class="mt-0">100% secure payment</p>
-					</div>
-					<!-- End Single Service -->
-				</div>
-				<div class="col-lg-3 col-md-6 col-6 pl-0">
-					<!-- Start Single Service -->
-					<div class="single-service">
-						<i class="ti-tag"></i>
-						<h4>Best Piece</h4>
-						<p class="mt-0">Gauranteed price</p>
-					</div>
-					<!-- End Single Service -->
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End Shop Services Area -->
-
-	<!-- Start Shop Newsletter  -->
-	<section class="shop-newsletter section pt-4 pb-0">
-		<div class="container">
-			<div class="inner-top">
-				<div class="row">
-					<div class="col-lg-8 offset-lg-2 col-12">
-						<!-- Start Newsletter Inner -->
-						<div class="inner">
-							<h4>Newsletter</h4>
-							<p class="my-2"> Subscribe to our newsletter</p>
-							<form id="add_subscribe" method="post" target="_blank" class="newsletter-inner">
-								<div>
-									<input type="hidden" name="baseurl" id="baseurl" value="<?php echo base_url(); ?>">
-									<input name="email" id="send_email" class="send_email"
-										placeholder="Your email address" required="" type="email">
-									<button type="submit" class="btn send_email_data">Subscribe</button>
-									<p id="msg" class="pl-3 text-left"></p>
-								</div>
-
-							</form>
-						</div>
-						<!-- End Newsletter Inner -->
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End Shop Newsletter -->
-
-
-	<!-- Footer Top -->
-	<div class="footer-top section pt-4 pb-4">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-5 col-md-6 col-12">
-					<div class="single-footer about">
-						<!-- Mobile view: collapse behavior -->
-						<h4 class="d-block d-lg-none mb-0" data-bs-toggle="collapse" data-bs-target="#aboutSection"
-							aria-expanded="false">
-							<?= $all_setting_data['Title'] ?? ''; ?>
-							<span class="bi-chevron-down float-right text-white"></span>
-						</h4>
-						<div class="collapse d-lg-none" id="aboutSection">
-							<p class=" text text-capitalize"><?= $all_setting_data['Description'] ?? ''; ?></p>
-
-						</div>
-
-						<!-- Desktop view: visible section -->
-						<div class="d-none d-lg-block">
-							<h4><?= $all_setting_data['Title'] ?? ''; ?></h4>
-							<p class="mt-0 text text-capitalize"><?= $all_setting_data['Description'] ?? ''; ?></p>
-
-							<div class="download-app">
-								<p class="mt-1 text-capitalize" style="font-size:14px;color:white;">Download the app for
-									free</p>
-								<a href="https://play.google.com/store/games?hl=en_IN">
-									<img src="https://assets.pharmeasy.in/apothecary/images/googlePlay.svg?dim=360x0"
-										alt="Google Play" class="img-fluid me-2" style="max-width: 110px;">
-								</a>
-								<a href="https://www.apple.com/in/app-store/">
-									<img src="https://assets.pharmeasy.in/apothecary/images/appStore.svg?dim=256x0"
-										alt="App Store" class="img-fluid" style="max-width: 100px;">
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-2 col-md-6 col-12">
-					<!-- Single Widget -->
-					<div class="single-footer links">
-						<!-- Mobile view: collapsible section -->
-						<h4 class="d-block d-lg-none mb-0" data-bs-toggle="collapse"
-							data-bs-target="#informationSection" aria-expanded="false">
-							Information <span class="bi-chevron-down float-right"></span>
-						</h4>
-					 <div class="collapse d-lg-none" id="informationSection">
-                            <ul class="mt-1">
-                                <li class="mt-2"><a href="<?php echo base_url('about_us'); ?>">About Us</a></li>
-                                <li class="<?= $first_part == 'contact' ? 'active' : '' ?> mb-0">
-                                    <a href="<?php echo base_url('contact'); ?>">Contact Us</a>
-                                </li>
-                                <li class="mt-2"><a href="<?php echo base_url('blog'); ?>">Blog</a></li>
-                            </ul>
+<footer class="footer modern-footer">
+    <!-- Start Shop Services Area -->
+    <section class="shop-services pt-5 pb-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="modern-service-item">
+                        <div class="service-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                        <div class="service-text">
+                            <h4>Free Shipping</h4>
+                            <p>Orders over <?php echo $all_setting_data['currency']; ?>100</p>
                         </div>
-
-						<!-- Desktop view: visible section -->
-					<div class="d-none d-lg-block">
-                            <h4>Information</h4>
-                            <ul>
-                               <li class="mt-2"><a href="<?php echo base_url('about_us'); ?>">About Us</a></li>
-                                <li class="<?= $first_part == 'contact' ? 'active' : '' ?>">
-                                    <a href="<?php echo base_url('contact'); ?>">Contact Us</a>
-                                </li>
-                                <li class="mt-2"><a href="<?php echo base_url('blog'); ?>">Blog</a></li>
-                            </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="modern-service-item">
+                        <div class="service-icon"><i class="fa-solid fa-arrow-rotate-left"></i></div>
+                        <div class="service-text">
+                            <h4>Free Return</h4>
+                            <p>Within 30 days returns</p>
                         </div>
-					</div>
-					<!-- End Single Widget -->
-				</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="modern-service-item">
+                        <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <div class="service-text">
+                            <h4>Secure Payment</h4>
+                            <p>100% secure payment</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="modern-service-item">
+                        <div class="service-icon"><i class="fa-solid fa-gem"></i></div>
+                        <div class="service-text">
+                            <h4>Best Piece</h4>
+                            <p>Guaranteed price</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-				<div class="col-lg-2 col-md-6 col-12">
-					<div class="single-footer links">
-						<h4 class="d-block d-lg-none mb-0" data-bs-toggle="collapse" data-bs-target="#policySection"
-							aria-expanded="false">Our Policies <span class="bi-chevron-down float-right"></span></h4>
-						<div class="collapse d-lg-none" id="policySection">
-							<ul>
-								 <?php foreach ($resdt as $rsdata) { ?>
-                                    <?php if ($rsdata['status'] == 1) { // Only display CMS topics with status = 1 ?>
-                                        <li class="<?= $first_part == $rsdata['CmsUrl'] ? 'active' : '' ?> mb-0">
-                                            <a href="<?php echo base_url() . $rsdata['CmsUrl']; ?>">
-                                                <?php echo $rsdata['CmsTitle']; ?>
-                                            </a>
-                                        </li>
-                                    <?php } ?>
-                                <?php } ?>
-							</ul>
-						</div>
+    <!-- Start Shop Newsletter -->
+    <section class="footer-newsletter pt-5 pb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <div class="newsletter-content">
+                        <h2 class="text-white mb-3">Join Our Newsletter</h2>
+                        <p class="text-white-50 mb-4">Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>
+                        <form id="add_subscribe" method="post" class="modern-newsletter-form">
+                            <input type="hidden" name="baseurl" value="<?php echo base_url(); ?>">
+                            <div class="input-group mb-2">
+                                <input name="email" class="form-control" placeholder="Your email address" required type="email">
+                                <button type="submit" class="btn btn-primary send_email_data">Subscribe Now</button>
+                            </div>
+                            <p id="msg" class="text-left mt-2"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-						<!-- Desktop view: visible section -->
-						<div class="d-none d-lg-block">
-							<h4>Our Policies</h4>
-							<ul>
-								 <?php foreach ($resdt as $rsdata) { ?>
-                                    <?php if ($rsdata['status'] == 1) { // Only display CMS topics with status = 1 ?>
-                                        <li class="<?= $first_part == $rsdata['CmsUrl'] ? 'active' : '' ?>">
-                                            <a href="<?php echo base_url() . $rsdata['CmsUrl']; ?>">
-                                                <?php echo $rsdata['CmsTitle']; ?>
-                                            </a>
-                                        </li>
-                                    <?php } ?>
-                                <?php } ?>
-							</ul>
-						</div>
-					</div>
-				</div>
+    <!-- Footer Top -->
+    <div class="footer-top pt-5 pb-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget about-widget">
+                        <div class="footer-logo mb-4">
+                            <?php 
+                            $settings = new App\Models\Settings();
+                            $sett_data = $settings->get()->getRow();
+                            ?>
+                            <a href="<?php echo base_url(); ?>">
+                                <img src="<?php echo base_url('admin/public/upload_images/' . $sett_data->Logo); ?>" alt="logo" style="max-height: 45px;">
+                            </a>
+                        </div>
+                        <p class="mb-4"><?= $all_setting_data['Description'] ?? 'Providing high-quality furniture and home decor solutions for a modern lifestyle.'; ?></p>
+                        <div class="app-buttons d-flex gap-2">
+                            <a href="#"><img src="https://assets.pharmeasy.in/apothecary/images/googlePlay.svg?dim=360x0" alt="Google Play"></a>
+                            <a href="#"><img src="https://assets.pharmeasy.in/apothecary/images/appStore.svg?dim=256x0" alt="App Store"></a>
+                        </div>
+                    </div>
+                </div>
 
-				<div class="col-lg-3 col-md-6 col-12">
-					<div class="single-footer social">
-						<h4 class="d-block d-lg-none mb-0" data-bs-toggle="collapse" data-bs-target="#contactSection"
-							aria-expanded="false">
-							Get In Touch <span class="bi-chevron-down float-right"></span>
-						</h4>
-						<div class="collapse d-lg-none" id="contactSection">
-							<ul class="mt-1">
-								<li class="mb-2 d-flex align-items-baseline text-capitalize text-white"
-									style="display: flex; align-items: center;">
-									<i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i>
-									<!-- Address icon -->
-									<?= $all_setting_data['Address'] ?? ''; ?>
-								</li>
-								<li class="mb-2 d-flex align-items-center text-white"
-									style="display: flex; align-items: center;">
-									<i class="fas fa-envelope" style="margin-right: 8px;"></i> <!-- Email icon -->
-									<a
-										href="mailto:<?= $all_setting_data['Email'] ?? ''; ?>"><?= $all_setting_data['Email'] ?? ''; ?></a>
-								</li>
-								<li class="mb-2 d-flex align-items-center" style="display: flex; align-items: center;">
-									<i class="fab fa-whatsapp" style="margin-right: 8px;"></i>
-									<a href="https://wa.me/<?= $all_setting_data['Phone'] ?? ''; ?>"
-										target="_blank">+<?= $all_setting_data['Phone'] ?? ''; ?></a>
-								</li>
-								<!----------------------->
-								<?php
-								$data1 = $all_setting_data['Links'];
-								$dt = json_decode($data1);
-								//   print_r($all_settings_data);
-								//   die;
-								
-								$intagram = $dt->insta;
-								$facebook = $dt->facebook;
-								$twitter = $dt->twitter;
-								$checkout = $dt->checkout;
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-widget">
+                        <h4 class="widget-title">Information</h4>
+                        <ul class="footer-links">
+                            <li><a href="<?php echo base_url('about_us'); ?>">About Us</a></li>
+                            <li><a href="<?php echo base_url('contact'); ?>">Contact Us</a></li>
+                            <li><a href="<?php echo base_url('blog'); ?>">Our Blog</a></li>
+                            <li><a href="#">Track Order</a></li>
+                        </ul>
+                    </div>
+                </div>
 
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-widget">
+                        <h4 class="widget-title">Our Policies</h4>
+                        <ul class="footer-links">
+                            <?php foreach ($resdt as $rsdata) { 
+                                if ($rsdata['status'] == 1) { ?>
+                                    <li><a href="<?php echo base_url() . $rsdata['CmsUrl']; ?>"><?php echo $rsdata['CmsTitle']; ?></a></li>
+                                <?php } 
+                            } ?>
+                        </ul>
+                    </div>
+                </div>
 
-								$intagram_data = json_decode($intagram);
-								$facebook_data = json_decode($facebook);
-								$twitter_data = json_decode($twitter);
-								$checkout_data = json_decode($checkout);
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget contact-widget">
+                        <h4 class="widget-title">Get In Touch</h4>
+                        <ul class="contact-info">
+                            <li><i class="fa-solid fa-location-dot"></i> <?= $all_setting_data['Address'] ?? ''; ?></li>
+                            <li><i class="fa-solid fa-envelope"></i> <a href="mailto:<?= $all_setting_data['Email'] ?? ''; ?>"><?= $all_setting_data['Email'] ?? ''; ?></a></li>
+                            <li><i class="fa-solid fa-phone"></i> <a href="tel:<?= $all_setting_data['Phone'] ?? ''; ?>">+<?= $all_setting_data['Phone'] ?? ''; ?></a></li>
+                        </ul>
+                        <div class="footer-social mt-4">
+                            <?php
+                            $links = json_decode($all_setting_data['Links'] ?? '{}', true);
+                            $facebook = json_decode($links['facebook'] ?? '{}', true);
+                            $twitter = json_decode($links['twitter'] ?? '{}', true);
+                            $insta = json_decode($links['insta'] ?? '{}', true);
+                            ?>
+                            <?php if (!empty($facebook['link']) && $facebook['status'] == 1) { ?>
+                                <a href="<?= $facebook['link'] ?>" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                            <?php } ?>
+                            <?php if (!empty($twitter['link']) && $twitter['status'] == 1) { ?>
+                                <a href="<?= $twitter['link'] ?>" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                            <?php } ?>
+                            <?php if (!empty($insta['link']) && $insta['status'] == 1) { ?>
+                                <a href="<?= $insta['link'] ?>" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            <?php } ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-								?>
-								<ul>
-									<!-------- Facebook ===-->
-									<li class="soc">
-										<?php
-										if (isset($facebook_data->link)) {
-											?>
-											<a href="<?= $facebook_data->link ?>" target="_blank">
-												<?php if (isset($facebook_data->status) && ($facebook_data->status == 1)) {
-													?>
-													<i class="ti-facebook"></i>
-													<?php
-												}
-										}
-										?>
-										</a>
-									</li>
-
-									<!----------- Twitter =======-->
-									<li class="soc">
-										<?php
-										if (isset($twitter_data->link)) {
-											?>
-											<a href="<?= $twitter_data->link ?>" target="_blank">
-												<?php if (isset($twitter_data->status) && ($twitter_data->status == 1)) {
-													?>
-													<i class="ti-twitter"></i>
-													<?php
-												}
-										}
-										?>
-										</a>
-									</li>
-
-									<!----------- Instagram =======-->
-									<li class="soc">
-										<?php
-										if (isset($intagram_data->link)) {
-											?>
-											<a href="<?= $intagram_data->link; ?>" target="_blank">
-												<?php if (isset($intagram_data->status) && ($intagram_data->status == 1)) {
-													?>
-													<i class="ti-instagram"></i>
-													<?php
-												}
-										}
-										?>
-										</a>
-									</li>
-								</ul>
-								<!--=========================-->
-							</ul>
-						</div>
-
-						<!-- Desktop view: visible section -->
-						<div class="d-none d-lg-block">
-							<h4>Get In Touch</h4>
-							<div class="contact">
-								<ul style="list-style-type: none; padding: 0;">
-									<li class="mb-2 d-flex align-items-baseline text-capitalize"
-										style="display: flex; align-items: center;">
-										<i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i>
-										<!-- Address icon -->
-										<?= $all_setting_data['Address'] ?? ''; ?>
-									</li>
-									<li class="mb-2 d-flex align-items-center"
-										style="display: flex; align-items: center;">
-										<i class="fas fa-envelope" style="margin-right: 8px;"></i> <!-- Email icon -->
-										<a
-											href="mailto:<?= $all_setting_data['Email'] ?? ''; ?>"><?= $all_setting_data['Email'] ?? ''; ?></a>
-									</li>
-									<li class="mb-2 d-flex align-items-center"
-										style="display: flex; align-items: center;">
-										<i class="fab fa-whatsapp" style="margin-right: 8px;"></i>
-										<a href="https://wa.me/<?= $all_setting_data['Phone'] ?? ''; ?>"
-											target="_blank">+<?= $all_setting_data['Phone'] ?? ''; ?></a>
-									</li>
-								</ul>
-							</div>
-							<!----------------------->
-							<?php
-							$data1 = $all_setting_data['Links'];
-							$dt = json_decode($data1);
-							//   print_r($all_settings_data);
-							//   die;
-							
-							$intagram = $dt->insta;
-							$facebook = $dt->facebook;
-							$twitter = $dt->twitter;
-							$checkout = $dt->checkout;
-
-
-							$intagram_data = json_decode($intagram);
-							$facebook_data = json_decode($facebook);
-							$twitter_data = json_decode($twitter);
-							$checkout_data = json_decode($checkout);
-
-							?>
-							<ul>
-								<!-------- Facebook ===-->
-								<li class="soc">
-									<?php
-									if (isset($facebook_data->link)) {
-										?>
-										<a href="<?= $facebook_data->link ?>" target="_blank">
-											<?php if (isset($facebook_data->status) && ($facebook_data->status == 1)) {
-												?>
-												<i class="ti-facebook"></i>
-												<?php
-											}
-									}
-									?>
-									</a>
-								</li>
-
-								<!----------- Twitter =======-->
-								<li class="soc">
-									<?php
-									if (isset($twitter_data->link)) {
-										?>
-										<a href="<?= $twitter_data->link ?>" target="_blank">
-											<?php if (isset($twitter_data->status) && ($twitter_data->status == 1)) {
-												?>
-												<i class="ti-twitter"></i>
-												<?php
-											}
-									}
-									?>
-									</a>
-								</li>
-
-								<!----------- Instagram =======-->
-								<li class="soc">
-									<?php
-									if (isset($intagram_data->link)) {
-										?>
-										<a href="<?= $intagram_data->link; ?>" target="_blank">
-											<?php if (isset($intagram_data->status) && ($intagram_data->status == 1)) {
-												?>
-												<i class="ti-instagram"></i>
-												<?php
-											}
-									}
-									?>
-									</a>
-								</li>
-							</ul>
-							<!--=========================-->
-
-						</div>
-
-						<div class="download-app d-block d-lg-none">
-							<p class="mb-2 text-capitalize text-warning">Download the app for free</p>
-							<a href="https://play.google.com/store/games?hl=en_IN">
-								<img src="https://assets.pharmeasy.in/apothecary/images/googlePlay.svg?dim=360x0"
-									alt="Google Play" class="img-fluid me-2" style="max-width: 140px;">
-							</a>
-							<a href="https://www.apple.com/in/app-store/">
-								<img src="https://assets.pharmeasy.in/apothecary/images/appStore.svg?dim=256x0"
-									alt="App Store" class="img-fluid" style="max-width: 140px;">
-							</a>
-						</div>
-
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End Footer Top -->
-	<div class="copyright">
-		<div class="container">
-			<div class="inner">
-				<div class="row">
-					<div class="col-lg-6 col-12">
-						<div class="left">
-							<p>Copyright © <?php echo date('Y'); ?> <a href="#" target="_blank">E-Commerce</a> - All
-								Rights Reserved.</p>
-
-						</div>
-					</div>
-					<div class="col-lg-6 col-12">
-						<div class="right">
-							<img src="<?php echo base_url(); ?>public/images/payments.png" alt="#">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+    <!-- Copyright -->
+    <div class="footer-copyright pt-4 pb-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">© <?php echo date('Y'); ?> <strong><?= $all_setting_data['Title'] ?? 'FurniLife'; ?></strong>. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <img src="<?php echo base_url(); ?>public/images/payments.png" alt="Payment Methods" style="max-height: 30px;">
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>
 <!-- /End Footer Area -->
 

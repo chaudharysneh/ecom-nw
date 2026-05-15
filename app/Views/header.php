@@ -61,442 +61,27 @@ $all_setting_data = $AllsettingsModel->first();
     <!-- Eshop StyleSheet -->
     <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/reset.css">
     <!-- <link rel="stylesheet" href="<?// echo base_url(); ?>public/css/style.css"> -->
-     <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/style.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/style.css?v=<?php echo time(); ?>">
 
     <!-- <link rel="stylesheet" href="<?// echo base_url(); ?>public/css/responsive.css"> -->
-     <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/responsive.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/responsive.css?v=<?php echo time(); ?>">
 
     <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/jquery-ui.css">
     <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css" integrity="sha512-ELV+xyi8IhEApPS/pSj66+Jiw+sOT1Mqkzlh8ExXihe4zfqbWkxPRi8wptXIO9g73FSlhmquFlUOuMSoXz5IRw==" crossorigin="anonymous" referrerpolicy="no-referrer" />-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    
-     <!-- Google Analytics Script -->
+
+    <!-- Google Analytics Script -->
     <?php if (!empty($all_setting_data['google_analytics'])): ?>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $all_setting_data['google_analytics']; ?>"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+        <script async
+            src="https://www.googletagmanager.com/gtag/js?id=<?php echo $all_setting_data['google_analytics']; ?>"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
 
-        gtag('config', '<?php echo $all_setting_data['google_analytics']; ?>');
-    </script>
+            gtag('config', '<?php echo $all_setting_data['google_analytics']; ?>');
+        </script>
     <?php endif; ?>
-    
-    <style>
-        #country-list {
-            float: left;
-            list-style: none;
-            padding: 0;
-            width: 105%;
-            position: absolute;
-            z-index: 10000000;
-        }
-
-        #country-list li {
-            padding: 10px;
-            background: #ffffff;
-            /*border-bottom: #bbb9b9 1px solid;*/
-            cursor: pointer;
-            height: 220px;
-
-        }
-
-        #country-list li p {
-            float: left;
-            text-align: justify;
-        }
-
-        #country-list li h5 {
-            float: left;
-            color: #f7941d;
-        }
-
-        .loader-backdrop {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            /* Semi-transparent background */
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            /* Ensure it appears above other content */
-        }
-
-        .loader {
-            border: 16px solid #f3f3f3;
-            border-radius: 50%;
-            border-top: 16px solid #3498db;
-            width: 120px;
-            height: 120px;
-            /*z-index: 10000;*/
-            display: none;
-            /*position: fixed;*/
-            margin-left: 50%;
-            -webkit-animation: spin 2s linear infinite;
-            animation: spin 2s linear infinite;
-        }
-
-        .swal2-popup {
-            background: #fff !important;
-        }
-
-        .swal2-backdrop-show {
-            background: rgb(255 255 255 / 50%);
-        }
-
-        p.desc {
-            margin-top: 2px;
-        }
-
-        @-webkit-keyframes spin {
-            0% {
-                -webkit-transform: rotate(0deg);
-            }
-
-            100% {
-                -webkit-transform: rotate(360deg);
-            }
-        }
-
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        .overlay {
-            display: none;
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            z-index: 1000;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            background: rgba(0, 0, 0, .7);
-            opacity: 0.5;
-            filter: alpha(opacity=50);
-        }
-
-        #semiTransparenDiv {
-            width: 100%;
-
-            /*-Lets Center the Spinner-*/
-            position: fixed;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-
-            /*Centering my shade */
-            margin-bottom: 40px;
-            margin-top: 60px;
-
-            background-color: rgba(255, 255, 255, 0.7);
-            z-index: 9999;
-            display: none;
-        }
-
-        @-webkit-keyframes spin {
-            from {
-                -webkit-transform: rotate(0deg);
-            }
-
-            to {
-                -webkit-transform: rotate(360deg);
-            }
-        }
-
-        @keyframes spin {
-            from {
-                transform: rotate(0deg);
-            }
-
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        #semiTransparenDiv::after {
-            content: '';
-            display: block;
-            position: absolute;
-            left: 48%;
-            top: 40%;
-            width: 80px;
-            height: 80px;
-            border-style: solid;
-            border: 5px solid black;
-            border-top-color: #6CC4EE;
-            border-width: 7px;
-            border-radius: 50%;
-            -webkit-animation: spin .8s linear infinite;
-
-            /* Lets make it go round */
-            animation: spin .8s linear infinite;
-        }
-
-
-
-        ul#country-list {
-            overflow-y: scroll;
-            overflow-y: hidden;
-            max-height: 54vh;
-        }
-
-        .mbsize {
-            color: #f7941d;
-        }
-
-        .hh2 {
-            display: none;
-        }
-
-        @media only screen and (max-width: 450px) {
-            .hh1 {
-                display: none;
-            }
-
-            .hh2 {
-                display: block;
-            }
-        }
-
-
-        .header.shop .search-bar {
-            height: 41px !important;
-            line-height: 41px !important;
-            border-radius: 20px;
-        }
-
-        /* --- Custom Styles to match Image --- */
-        .header.shop {
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            position: relative;
-            z-index: 100;
-        }
-        .header.shop .topbar {
-
-            background: #fff;
-            /* border-bottom: 1px solid #f1f1f1; */
-            padding: 10px 0;
-        }
-        .header.shop .topbar .list-main li {
-            color: #444;
-            font-size: 13px;
-            font-weight: 500;
-        }
-        .header.shop .topbar .list-main li i {
-            color: #ff6700;
-            margin-right: 6px;
-            font-size: 14px;
-        }
-        .header.shop .topbar .list-main li a {
-            color: #444;
-        }
-        .header.shop .topbar .right-content .list-main {
-            justify-content: flex-end;
-        }
-
-        .header.shop .middle-inner .row {
-            display: flex;
-            align-items: center;
-        }
-        .header.shop .logo img {
-            max-height: 60px;
-            width: auto;
-        }
-        .header.shop .search-bar-top {
-            margin: 0;
-        }
-        .header.shop .search-bar {
-            background: #fff;
-            border: 1px solid #e5e5e5 !important;
-            border-radius: 30px !important;
-            height: 40px !important;
-            line-height: 48px !important;
-            padding: 0 5px;
-            display: flex;
-            align-items: center;
-        }
-        .header.shop .search-bar form {
-            display: flex;
-            width: 100%;
-            height: 100%;
-            align-items: center;
-        }
-        .header.shop .search-bar input {
-            border: none !important;
-            height: 100% !important;
-            padding: 0 25px !important;
-            font-size: 14px;
-            color: #666;
-            flex-grow: 1;
-            background: transparent;
-        }
-        .header.shop .search-bar .btnn {
-            width: 55px !important;
-            height: 40px !important;
-            background: #ff6700 !important;
-            color: #fff !important;
-            border-radius: 40px !important;
-            border: none !important;
-            display: flex !important;
-            align-items: center;
-            justify-content: center;
-            padding: 0 !important;
-            margin-right: 4px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            /* position: static !important; */
-            line-height: 1 !important;
-        }
-        .header.shop .search-bar .btnn i {
-            font-size: 18px;
-            color: #fff;
-        }
-
-        .header.shop .right-bar {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            top: 0 !important;
-            gap: 25px;
-        }
-        .header.shop .right-bar .sinlge-bar {
-            margin: 0;
-        }
-        .header.shop .right-bar .sinlge-bar a {
-            font-size: 22px;
-            color: #333;
-            transition: color 0.3s ease;
-            display: block;
-        }
-        .header.shop .right-bar .sinlge-bar a:hover {
-            color: #ff6700;
-        }
-        .header.shop .right-bar .shopping {
-            position: relative;
-        }
-        .header.shop .right-bar .total-count {
-            position: absolute;
-            top: -5px;
-            right: -10px;
-            background: #ff6700;
-            color: #fff;
-            width: 18px;
-            height: 18px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 10px;
-            font-weight: 700;
-            border: 2px solid #fff;
-        }
-
-        .header.shop .header-inner {
-            background: #fff;
-            padding: 0;
-            border-top: 1px solid #f1f1f1;
-        }
-        .header.shop .all-category {
-            background: transparent !important;
-            padding: 0 !important;
-        }
-        .header.shop .cat-heading {
-            background: transparent !important;
-            color: #333 !important;
-            font-size: 15px;
-            font-weight: 600;
-            padding: 15px 0;
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            box-shadow: none !important;
-            border: none !important;
-            border-radius: 0 !important;
-            margin: 0 !important;
-        }
-        .header.shop .cat-heading i {
-            margin-right: 12px;
-            font-size: 20px;
-            color: #333 !important;
-        }
-        .header.shop .menu-area {
-            display: flex;
-            /* justify-content: center; */
-        }
-        .header.shop .nav li {
-            margin: 0 18px;
-            background: transparent !important;
-            border: none !important;
-        }
-        .header.shop .nav li a {
-            color: #333 !important;
-            font-size: 14px;
-            font-weight: 600;
-            padding: 0 0 18px 0;
-            display: block;
-            text-transform: none;
-            position: relative;
-            background: transparent !important;
-            box-shadow: none !important;
-            border: none !important;
-            border-radius: 0 !important;
-        }
-        .header.shop .nav li.active a {
-            color: #ff6700 !important;
-            background: transparent !important;
-        }
-        .header.shop .nav li.active a::after {
-            content: '';
-            position: absolute;
-            bottom: 12px;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: #ff6700;
-            display: block;
-            z-index: 10;
-        }
-        .header.shop .nav li a:hover {
-            color: #ff6700 !important;
-            background: transparent !important;
-        }
-
-        /* Ensure vertical centering in middle bar */
-        .header.shop .middle-inner .container > .row {
-            display: flex;
-            align-items: center;
-        }
-        .header.shop .middle-inner .row > div {
-            display: flex;
-            align-items: center;
-        }
-        .header.shop .right-bar {
-            width: 100%;
-            justify-content: flex-end;
-            margin: 0;
-            padding: 0;
-        }
-        .header.shop .search-bar-top {
-            width: 100%;
-        }
-
-
-
-    </style>
-    
 </head>
 
 <body class="js">
@@ -516,212 +101,93 @@ $all_setting_data = $AllsettingsModel->first();
 
     <!-- Header -->
     <header class="header shop">
-        <!-- Topbar -->
-        <div class="topbar">
-            <div class="container">
-                <div class="row hh1">
-                    <div class="col-lg-5 col-md-12 col-12">
-                        <!-- Top Left -->
-                        <div class="top-left">
-                            <ul class="list-main">
-                                <li>
-                                    <i class="fa fa-phone"></i>
-                                    <a style="font-weight: 700;" href="tel:<?php echo $sett_data->Phone; ?>"><?php echo $sett_data->Phone; ?></a>
-                                </li>
-                                <li>
-                                    <i class="fa fa-envelope-o"></i>
-                                    <a style="font-weight: 700;" href="mailto:<?php echo $sett_data->Email; ?>"><?php echo $sett_data->Email; ?></a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!--/ End Top Left -->
-                    </div>
-                    <div class="col-lg-7 col-md-12 col-12">
-                        <!-- Top Right -->
-                        <div class="right-content">
-                            <ul class="list-main">
-                                <?php
-                                $session = session();
-                                $usertype = $session->get('type');
-
-                                if (!empty($usertype)) {
-                                    ?>
-                                    <li><i class="fa-regular fa-user"></i> <a style="font-weight: 700;" href="<?php echo base_url('my_account'); ?>">My
-                                            Account</a></li>
-                                    <?php
-                                } else {
-                                    ?>
-                                    <li><i class="fa-regular fa-user"></i> <a style="font-weight: 700;" href="<?php echo base_url('login'); ?>">My Account</a>
-                                    </li>
-                                    <?php
-                                }
-                                ?>
-
-                                <?php
-                                if (empty($usertype)) {
-                                    ?>
-                                    <li><i class="fa-solid fa-power-off"></i> <a style="font-weight: 700;" href="<?php echo base_url(
-                                        'login'
-                                    ); ?>">Login</a></li>
-                                    <?php
-                                } else {
-                                    ?>
-                                    <li><i class="fa-solid fa-power-off"></i> <a style="font-weight: 700;" href="<?php echo base_url(
-                                        'logout'
-                                    ); ?>">Logout</a></li>
-                                    <?php
-                                }
-                                ?>
-                            </ul>
-                        </div>
-                        <!--End Top Right -->
-                    </div>
+        <div class="container-fluid p-0">
+            <div class="topbar-inner">
+                <div class="left-content">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <span>Free Installation on select products</span>
                 </div>
-                <div class="row hh2">
-
-                    <!-- Top Left -->
-                    <div class="col-lg-5 col-md-12 col-12" style="">
-                        <ul class="list-main justify-content-between" style="display:flex">
-                            <!--+950-801-582-->
-                            <li><i class="ti-headphone-alt"></i><?php echo $sett_data->Phone; ?></li>
-                            <li><i class="ti-email"></i> <?php echo $sett_data->Email; ?></li>
-                            <?php
-                            $session = session();
-                            $usertype = $session->get('type');
-                            // print_r($usertype);
-                            
-                            if (!empty($usertype)) {
-                                ?>
-                                <li><a href="<?php echo base_url('my_account'); ?>"><i class="ti-user mbsize"
-                                            style="color: #f7941d;"></i></a></li>
-
-
-                                <?php
-                            } else {
-                                ?>
-                                <li><a href="<?php echo base_url('login'); ?>"><i class="ti-user mbsize"
-                                            style="color: #f7941d;"></i></a></li>
-                                <?php
-                            }
+                <div class="right-content">
+                    <ul class="list-main">
+                        <li><a href="<?php echo base_url('track_order'); ?>"><i class="fa-regular fa-clock"></i> Track
+                                Order</a></li>
+                        <li><a href="<?php echo base_url('help_center'); ?>"><i
+                                    class="fa-regular fa-circle-question"></i> Help Center</a></li>
+                        <?php
+                        $session = session();
+                        $usertype = $session->get('type');
+                        if (!empty($usertype)) {
                             ?>
-
+                            <li><a href="<?php echo base_url('my_account'); ?>"><i class="fa-regular fa-user"></i> My
+                                    Account</a></li>
+                            <li><a href="<?php echo base_url('logout'); ?>"><i class="fa-solid fa-power-off"></i> Logout</a>
+                            </li>
                             <?php
-                            $session = session();
-                            $usertype = $session->get('type');
-
-                            if (empty($usertype)) {
-                                ?>
-                                <li><a href="<?php echo base_url(
-                                    'login'
-                                ); ?>"><i class="ti-power-off" style="color: #f7941d;"></i></a></li>
-                                <?php
-                            } else {
-                                ?>
-                                <li><a href="<?php echo base_url(
-                                    'logout'
-                                ); ?>"><i class="ti-power-off" style="color: #f7941d;"></i></a></li>
-                                <?php
-                            }
+                        } else {
                             ?>
-                        </ul>
-                    </div>
+                            <li><i class="fa-regular fa-user"></i> <a href="<?php echo base_url('login'); ?>">Login</a> / <a
+                                    href="<?php echo base_url('register'); ?>">Sign Up</a></li>
+                            <?php
+                        }
+                        ?>
+                    </ul>
                 </div>
             </div>
         </div>
+
         <!-- End Topbar -->
-        <div class="middle-inner">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-2">
+        <!-- <div class="middle-inner"> -->
+            <div class="container-fluid">
+                <div class="row align-items-center" style="padding: 15px 30px;">
+                    <div class="col-lg-2 col-md-3 col-12 p-0">
                         <!-- Logo -->
-                        <div class="logo mt-0">
+                        <div class="logo">
                             <a href="<?php echo base_url(); ?>">
                                 <img src="<?php echo base_url('admin/public/upload_images/' . $sett_data->Logo); ?>"
-                                    height="100" width="100" />
+                                    alt="logo" />
                             </a>
-                            <h4><?php //echo $sett_data->Title; ?><a href="<?php echo base_url('/'); ?>"></a></h4>
                         </div>
                         <!--/ End Logo -->
-                        <!-- Search Form -->
-                        <div class="crt-resp d-block d-lg-none d-md-none"
-                            style=" position: absolute; right: 81px; top: 20px; color : #f7941d">
-                            <?php
-
-                            $CartObj = new App\Controllers\Cart;
-                            $CartTotals = (object) $CartObj->calculateCartTotals();
-                            $cart = session()->get('cart');
-
-                            $totalCartItem = 0;
-
-                            if (!is_null($cart) && is_array($cart)) {
-                                $totalCartItem = count($cart);
-                            }
-                            ?>
-                            <a href="<?php echo base_url('cart'); ?>" class="single-icon"><i
-                                    class="fa-solid fa-cart-shopping"></i></a>
-                            <span class="total-count badge"
-                                style="height:14px;width:14px;line-height: 9px;"><?php echo $totalCartItem; ?></span>
-                        </div>
-
-
-                        <div class="search-top">
-                            <div class="top-search" style="color: #f7941d;"><a href="#0"><i class="ti-search"></i></a>
-                            </div>
-                            <!-- Search Form -->
-                            <div class="search-top">
-                                <form class="search-form" action="<?php echo base_url('product'); ?>">
-                                    <input type="text" placeholder="Search here..." id="serch_catt" name="search"
-                                        autocomplete="off">
-                                    <button value="search" type="submit" id="search_prdd"><i
-                                            class="ti-search"></i></button>
-                                </form>
-                            </div>
-                            <!--/ End Search Form -->
-                        </div>
-                        <!--/ End Search Form -->
                         <div class="mobile-nav"></div>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-12">
-                        <div class="search-bar-top">
-                            <div class="search-bar">
-                                <form action="<?php echo base_url('product'); ?>">
-                                    <input name="search" id="serch_cat" placeholder="Search products here..."
-                                        type="text" autocomplete="off" maxlength="50">
-                                    <button type="submit" class="btnn" id="search_prd"><i
-                                            class="fa fa-search"></i></button>
-                                    <div id="suggesstion-box"></div>
-                                </form>
-                            </div>
+                    <div class="col-lg-7 col-md-6 col-12 p-0">
+                        <div class="search-bar-pill">
+                            <form action="<?php echo base_url('product'); ?>" method="get">
+                                <div class="category-dropdown">
+                                    <select name="category" class="category-select">
+                                        <option value="">All Categories</option>
+                                        <?php if (isset($catdata)):
+                                            foreach ($catdata as $cate): ?>
+                                                <option value="<?php echo $cate['CategoryID']; ?>">
+                                                    <?php echo $cate['CategoryName']; ?></option>
+                                            <?php endforeach; endif; ?>
+                                    </select>
+                                </div>
+                                <input name="search" id="serch_cat"
+                                    placeholder="Search for furniture, decor and more..." type="text"
+                                    autocomplete="off">
+                                <button type="submit" class="search-btn-brown"><i class="fa fa-search"></i></button>
+                            </form>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-12">
+                    <div class="col-lg-3 col-md-3 col-12 p-0">
                         <div class="right-bar">
                             <!-- Wishlist -->
                             <div class="sinlge-bar">
-                                <?php
-                                if (!empty($usertype)) {
-                                    ?>
-                                    <a href="<?php echo base_url('wishlist'); ?>" class="single-icon"><i class="fa-regular fa-heart"></i></a>
-                                    <?php
-                                } else {
-                                    ?>
-                                    <a href="#" data-toggle="modal" data-target="#exampleModal" class="single-icon"><i class="fa-regular fa-heart"></i></a>
-                                    <?php
-                                }
-                                ?>
-                            </div>
-
-                            <!-- Notification/Message -->
-                            <div class="sinlge-bar">
-                                <a href="javascript:void(0)" class="single-icon"><i class="fa-regular fa-comment"></i></a>
+                                <?php if (!empty($usertype)): ?>
+                                    <a href="<?php echo base_url('wishlist'); ?>"><i class="fa-regular fa-heart"></i>
+                                        Wishlist</a>
+                                <?php else: ?>
+                                    <a href="#" data-toggle="modal" data-target="#exampleModal"><i
+                                            class="fa-regular fa-heart"></i> Wishlist</a>
+                                <?php endif; ?>
                             </div>
 
                             <!-- Cart -->
                             <div class="sinlge-bar shopping">
                                 <a href="<?php echo base_url('cart'); ?>" class="single-icon">
-                                    <i class="fa-solid fa-bag-shopping"></i>
+                                    <i class="fa-solid fa-bag-shopping"></i> Cart
                                     <?php
-                                    $CartObj = new App\Controllers\Cart;
                                     $cart = session()->get('cart');
                                     $totalCartItem = (!is_null($cart) && is_array($cart)) ? count($cart) : 0;
                                     ?>
@@ -756,7 +222,8 @@ $all_setting_data = $AllsettingsModel->first();
                                                             href="<?php echo base_url($item['slug'] . "/" . 'product_detail/' . base64_encode($item['id'])); ?>"><?php echo $item['name']; ?></a>
                                                     </h4>
                                                     <p class="quantity"><?php echo $item['quantity']; ?>x - <span
-                                                            class="amount"><?php echo $all_setting_data['currency']; ?><?php echo $item['unit_price']; ?></span></p>
+                                                            class="amount"><?php echo $all_setting_data['currency']; ?><?php echo $item['unit_price']; ?></span>
+                                                    </p>
                                                 </li>
                                                 <?php
                                             }
@@ -783,7 +250,8 @@ $all_setting_data = $AllsettingsModel->first();
                                         <div class="bottom">
                                             <div class="total">
                                                 <span>Total</span>
-                                                <span class="total-amount"><?php echo $all_setting_data['currency']; ?><?php echo $CartTotals->subtotal; ?></span>
+                                                <span
+                                                    class="total-amount"><?php echo $all_setting_data['currency']; ?><?php echo $CartTotals->subtotal; ?></span>
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6 ">
@@ -811,12 +279,13 @@ $all_setting_data = $AllsettingsModel->first();
         </div>
         <!-- Header Inner -->
         <div class="header-inner">
-            <div class="container pm-2">
+            <div class="container-fluid" style="padding: 0px 30px;">
                 <div class="cat-nav-head">
-                    <div class="row">
-                        <div class="col-lg-3">
-                            <div class="all-category">
-                                <h3 class="cat-heading p-0"><i class="fa-solid fa-bars" aria-hidden="true"></i>Categories</h3>
+                    <div class="row align-items-center">
+                        <div class="col-lg-2 col-12">
+                            <div class="all-category-v2">
+                                <h3 class="cat-heading p-0"><i class="fa fa-bars"></i>Categories <i
+                                        class="fa fa-angle-down"></i></h3>
                                 <ul class="main-category">
                                     <?php
                                     foreach ($catdata as $cate) {
@@ -875,7 +344,7 @@ $all_setting_data = $AllsettingsModel->first();
                         </div>
 
                         <!--===========================-->
-                        <div class="col-lg-9 col-12">
+                        <div class="col-lg-8 col-12">
                             <div class="menu-area">
                                 <!-- Main Menu -->
                                 <nav class="navbar navbar-expand-lg">
@@ -917,6 +386,15 @@ $all_setting_data = $AllsettingsModel->first();
                                     </div>
                                 </nav>
                                 <!--/ End Main Menu -->
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-12">
+                            <div class="delivery-info">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <div class="delivery-text">
+                                    <span class="delivery-label">Deliver to</span>
+                                    <span class="delivery-location">Chicago, USA</span>
+                                </div>
                             </div>
                         </div>
                     </div>
