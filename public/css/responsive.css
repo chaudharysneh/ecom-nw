@@ -81,37 +81,22 @@
 	}
 
 	.header.shop .search-bar {
-		height: 45px;
+		height: 48px !important;
+		width: 100% !important;
 	}
 
-	.header.shop .nice-select {
-		height: 44px;
-		line-height: 44px;
-		font-size: 13px;
-	}
-
-	.header.shop .nice-select .list li {
-		font-size: 13px;
-	}
-
-	.header.shop .search-bar .btnn {
-		height: 45px;
-		line-height: 45px;
-		font-size: 14px;
-	}
-
-	.header.shop .search-bar {
-		width: 445px;
+	.header.shop .search-bar select {
+		padding: 0 25px 0 15px;
+		min-width: 120px;
 	}
 
 	.header.shop .search-bar input {
-		padding: 0 52px 0 20px;
-		width: 264px;
-		height: auto;
-		font-size: 13px;
+		padding: 0 15px !important;
+		width: auto;
 	}
 
-	.header.shop .all-category {
+	.header.shop .all-category,
+	.header.shop .all-category-v2 {
 		display: none;
 	}
 
@@ -569,7 +554,7 @@
 		display: none !important;
 	}
 
-	.header.shop .search-bar-top {
+	.header.shop .search-bar-top, .header.shop .search-bar-pill {
 		display: none;
 	}
 
@@ -638,15 +623,16 @@
 	}
 
 	.header.shop .search-bar {
-		width: 445px;
+		width: 100% !important;
+		height: 48px !important;
 	}
 
 	.header.shop .search-bar input {
-		padding: 0 52px 0 20px;
-		width: 264px;
+		padding: 0 15px !important;
 	}
 
-	.header.shop .all-category {
+	.header.shop .all-category,
+	.header.shop .all-category-v2 {
 		display: none;
 	}
 

@@ -256,7 +256,7 @@
 
     /* Hero Slider Styles - Refined */
     .hero-slider {
-        background-color: #f8f9fa !important;
+        background-color: #f4f1ef !important;
         overflow: hidden;
         position: relative;
     }
@@ -481,22 +481,33 @@ $all_setting_data = $AllsettingsModel->first();
             foreach ($banner as $ban) {
                 ?>
                 <div class="swiper-slide">
-                    <div class="container">
-                        <div class="row align-items-center flex-nowrap-lg">
-                            <div class="col-lg-6 col-md-12 col-12">
-                                <div class="hero-text mt-0">
-                                    <h1><?php echo $ban['BannerTitle']; ?></h1>
-                                    <p><?php echo $ban['BannerText']; ?></p>
-                                    <?php if (!empty($ban['BannerUrl'])) { ?>
-                                        <div class="button"><a href="<?php echo $ban['BannerUrl']; ?>" class="btn">Shop Now</a>
-                                        </div>
-                                    <?php } ?>
+                    <div class="hero-slide-item">
+                        <div class="container-fluid">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 col-md-12 col-12">
+                                    <div class="hero-content">
+                                        <span class="sub-title">MODERN LIVING</span>
+                                        <h1 class="main-title"><?php echo $ban['BannerTitle']; ?></h1>
+                                        <p class="description"><?php echo $ban['BannerText']; ?></p>
+                                        <?php if (!empty($ban['BannerUrl'])) { ?>
+                                            <div class="hero-button">
+                                                <a href="<?php echo $ban['BannerUrl']; ?>" class="btn-shop-now">
+                                                    Shop Now <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                        <?php } ?>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-6 col-md-12 col-12 d-none d-lg-block">
-                                <div class="hero-image-container">
-                                    <img src="<?php echo base_url("admin/public/upload_images/" . $ban['BannerImg']); ?>"
-                                        alt="<?php echo $ban['BannerTitle']; ?>">
+                                <div class="col-lg-6 col-md-12 col-12 d-none d-lg-block">
+                                    <div class="hero-img-wrap">
+                                        <img src="<?php echo base_url("admin/public/upload_images/" . $ban['BannerImg']); ?>"
+                                            alt="">
+                                        <div class="sale-badge">
+                                            <span class="up-to">UP TO</span>
+                                            <span class="percent">40%</span>
+                                            <span class="off">OFF</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -509,372 +520,263 @@ $all_setting_data = $AllsettingsModel->first();
         <!-- Swiper Pagination -->
         <div class="swiper-pagination"></div>
         <!-- Swiper Navigation -->
-        <div class="swiper-button-prev hero-button-prev"></div>
-        <div class="swiper-button-next hero-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
     </div>
 </section>
 <!--/ End Slider Area -->
 
 <!-- -------------- Categories ------------- -->
-
-<div class="category-area most-popular pt-4 pb-0">
-    <div class="container-fluid px-0">
-        <div class="row">
-            <div class="col-12 px-0">
-                <div class="section-title mb-0">
-                    <p class="explore_title mb-2">Explore</p>
-                    <h2 class="mb-0 pb-0">Shop By Categories</h2>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12 pt-4 position-relative">
-                <!-- Swiper Container -->
-                <div class="swiper-container-wrapper position-relative px-4">
-                    <div class="swiper cat-swiper">
-                        <div class="swiper-wrapper">
-                            <!-- Loop through each category -->
-                            <?php foreach ($category as $cat) { ?>
-                                <div class="swiper-slide single-category">
-                                    <div class="category-img d-flex align-items-center flex-column">
-                                        <a href="<?php echo base_url('category/' . base64_encode($cat['CategoryID'])); ?>"
-                                            class="img-cat">
-                                            <div class="">
-                                                <!-- Display category image -->
-                                                <?php if (!empty($cat['Catagoryimage'])) { ?>
-                                                    <img class="default-img text-center"
-                                                        src="<?php echo base_url(); ?>admin/public/upload_images/<?php echo $cat['Catagoryimage']; ?>"
-                                                        alt="#">
-                                                <?php } else { ?>
-                                                    <img class="default-img text-center"
-                                                        src="<?php echo base_url(); ?>admin/public/upload_images/no_category.webp"
-                                                        alt="#">
-                                                <?php } ?>
-                                            </div>
-                                        </a>
-                                        <div class="category-content">
-                                            <h3 class="h5 text-capitalize text-center mt-2">
-                                                <a href="<?php echo base_url('category/' . base64_encode($cat['CategoryID'])); ?>"
-                                                    class="nav-link text-capitalize">
-                                                    <?php echo $cat['CategoryName']; ?>
-                                                </a>
-                                            </h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            <?php } ?>
-                        </div>
-                    </div>
-                    <!-- Navigation Buttons (Moved outside Swiper) -->
-                    <div class="swiper-button-next cat-button-next"></div>
-                    <div class="swiper-button-prev cat-button-prev"></div>
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- --------------------------- -->
-
-
-<!-- Start New arivals Area -->
-<div class="product-area most-popular pb-3">
-    <div class="container px-0">
-        <div class="row">
-            <div class="col-12 px-0">
-                <div class="section-title mb-4 mb-lg-0 text-center">
-                    <p class="explore_title mb-3 position-relative" style="font-size:20px;">Explore</p>
-                    <h2 class="mb-0 pb-0">New Arrivals</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row" style="margin-top: -25px;">
-            <div class="col-12 px-0">
-                <div class="owl-carousel popular-slider px-4 px-lg-0">
-                    <!-- Start Single Product -->
-                    <?php foreach ($recent_products as $prd) { ?>
-                        <div class="single-product mb-4">
-                            <div class="product-img">
-                                <a href="<?php echo base_url($prd['slug'] . "/product_detail/" . base64_encode($prd['ProductID'])); ?>"
-                                    class="text-center py-3" style="height:190px; width:auto; background-color: white;">
-                                    <div style="background-color: white; height: 100%; width: 100%;">
-                                        <?php
-                                        $jsondt = json_decode($prd['ProductImage']);
-                                        if (!empty($jsondt)) { ?>
-                                            <img class="default-img text-center"
-                                                src="<?php echo base_url(); ?>admin/public/assets/img/product_images/<?php echo $jsondt[0]; ?>"
-                                                alt="#"
-                                                style="object-fit:contain;object-position:center;height:90%; width:90%;">
-                                        <?php } else { ?>
-                                            <img class="default-img text-center"
-                                                src="<?php echo base_url(); ?>admin/public/assets/img/product_images/placeholder.jpg"
-                                                alt="#"
-                                                style="object-fit:contain;object-position:center;height:90%; width:90%;">
-                                        <?php } ?>
-                                    </div>
-                                    <span class="out-of-stock">New</span>
-                                </a>
-                                <div class="button-head">
-                                    <div class="product-action">
-                                        <?php $session = session();
-                                        $user_id = $session->get('user_id');
-                                        if (empty($user_id)) { ?>
-                                            <a href="#" data-toggle="modal" data-target="#exampleModal"><i
-                                                    class="m-0 ml-2 mr-2 ti-heart"></i></a>
-                                        <?php } else { ?>
-                                            <i class="add_wishlist added_wish m-0 mr-4 mt-3 pt-1 ti-heart <?php echo !empty($customers['Status']) && $customers['Status'] == 1 && $customers['ProductID'] == $prd['ProductID'] ? 'd-none' : ''; ?>"
-                                                id="add_wishlist" data-id="<?= $prd['ProductID'] ?>"></i>
-                                            <i class="align-self-center m-0 mb-2 mr-4 pt-1 remove_wishlist removed_wish ti-heart <?php echo !empty($customers['Status']) && $customers['Status'] == 1 && $customers['ProductID'] == $prd['ProductID'] ? '' : 'd-none'; ?>"
-                                                id="remove_wishlist" data-id="<?= $prd['ProductID'] ?>"
-                                                style="color: orange; font-size: 14px;"></i>
-                                        <?php } ?>
-                                    </div>
-                                    <div class="product-action-2">
-                                        <form class="addtocartform" action="/addToCart" method="POST">
-                                            <input type="hidden" name="productId" value="<?php echo $prd['ProductID']; ?>">
-                                            <input type="hidden" name="quantity" value="1">
-
-                                            <?php
-                                            // Check if it's a variable product
-                                            if ($prd['ProductType'] == 2) {
-                                                // Safely check for the keys in $varia_dt
-                                                $variationPrice = $varia_dt['Sale_VariationPrice'] ?? $varia_dt['VariationPrice'] ?? null;
-                                                ?>
-                                                <input type="hidden" name="price" value="<?php echo $variationPrice; ?>">
-                                                <input type="hidden" name="variationId"
-                                                    value="<?php echo $varia_dt['VariationID'] ?? ''; ?>">
-                                                <?php
-                                            } else {
-                                                ?>
-                                                <input type="hidden" name="price" value="<?php echo $prd['ProductPrice']; ?>">
-                                                <?php
-                                            }
-                                            ?>
-
-                                            <button type="submit" class="add_to_cart mt-3 m-1">Add to cart</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-content">
-                                <h3 class="text-capitalize"><a href="#"
-                                        style="display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><?php echo $prd['ProductName']; ?></a>
-                                </h3>
-
-                                <div class="product-price">
-                                    <?php
-                                    $productPrice = $prd['ProductPrice'];
-                                    $salePrice = $prd['Sale_ProductPrice'];
-                                    $currency = $all_setting_data['currency'];
-
-                                    if (!empty($varia_dt[$prd['ProductID']])) {
-                                        // If variation exists, display variation price
-                                        $price = $varia_dt[$prd['ProductID']]['Sale_VariationPrice'] ?? $varia_dt[$prd['ProductID']]['VariationPrice'];
-                                        echo $currency . $price;
-                                    } else {
-                                        // Display sale price with original price crossed out
-                                        echo $currency . $salePrice;
-                                        ?>
-                                        <span
-                                            style="text-decoration: line-through; color: #7e7e7e; font-weight: 400; font-size: 16px;">
-                                            <?php echo $currency . $productPrice; ?>
-                                        </span>
-                                        <?php
-                                    }
-                                    ?>
-                                </div>
-
-                                <!-- <div class="product-price">
-                                    <span>$<?php //echo $prd['ProductType'] != 2 ? $prd['ProductPrice'] : ($pricearr ?? $varia_dt['Sale_VariationPrice'] ?? $varia_dt['VariationPrice']); 
-                                        ?></span>
-                                </div> -->
-                            </div>
-                        </div>
-                    <?php } ?>
-                    <!-- End Single Product -->
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- End New arivals Area -->
-
-<!-- Start Product Area -->
-<div class="product-area pb-3">
+<div class="category-area pt-5 pb-4">
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="section-title mb-3 text-center">
-                    <p class="explore_title mb-3 position-relative" style="font-size:20px;">Explore</p>
-                    <h2 class="mb-0 pb-0 ">Trending Item</h2>
+                <div class="section-header text-center mb-5">
+                    <span class="sub-title">Explore</span>
+                    <h2 class="main-title">Shop By Categories</h2>
                 </div>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-12 position-relative">
+                <div class="swiper cat-swiper">
+                    <div class="swiper-wrapper">
+                        <?php foreach ($category as $index => $cat) { 
+                            $colors = ['#f7941d', '#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#ffeead'];
+                            $icons = ['fa-shirt', 'fa-shoe-prints', 'fa-laptop', 'fa-mobile-screen-button', 'fa-headphones', 'fa-gamepad', 'fa-puzzle-piece', 'fa-clock'];
+                            $color = $colors[$index % count($colors)];
+                            $icon = $icons[$index % count($icons)];
+                        ?>
+                            <div class="swiper-slide">
+                                <div class="category-card text-center">
+                                    <a href="<?php echo base_url('category/' . base64_encode($cat['CategoryID'])); ?>" class="category-img-link">
+                                        <div class="category-circle">
+                                            <?php if (!empty($cat['Catagoryimage'])) { ?>
+                                                <img src="<?php echo base_url(); ?>admin/public/upload_images/<?php echo $cat['Catagoryimage']; ?>" alt="">
+                                            <?php } else { ?>
+                                                <img src="<?php echo base_url(); ?>admin/public/upload_images/no_category.webp" alt="">
+                                            <?php } ?>
+                                            <div class="category-icon-badge" style="background-color: <?php echo $color; ?>;">
+                                                <i class="fa-solid <?php echo $icon; ?>"></i>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="category-info mt-3">
+                                        <h3><a href="<?php echo base_url('category/' . base64_encode($cat['CategoryID'])); ?>"><?php echo $cat['CategoryName']; ?></a></h3>
+                                        <p class="product-count">Explore Products</p>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php } ?>
+                    </div>
+                </div>
+                <!-- Swiper Navigation -->
+                <div class="cat-button-prev"><i class="fa fa-angle-left"></i></div>
+                <div class="cat-button-next"><i class="fa fa-angle-right"></i></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Start New Arrivals Area -->
+<div class="product-area pt-5 pb-4">
+    <div class="container">
+        <div class="row align-items-center mb-4">
+            <div class="col-md-6 col-8">
+                <div class="section-header text-left">
+                    <span class="sub-title">Explore</span>
+                    <h2 class="main-title">New Arrivals</h2>
+                </div>
+            </div>
+            <div class="col-md-6 col-4 text-right">
+                <a href="<?php echo base_url('product'); ?>" class="btn-view-all">View All <i class="fa fa-angle-right"></i></a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 position-relative">
+                <div class="swiper product-swiper">
+                    <div class="swiper-wrapper pt-2">
+                        <?php foreach ($recent_products as $prd) { 
+                            $jsondt = json_decode($prd['ProductImage']);
+                            $price = $prd['Sale_ProductPrice'] ?? $prd['ProductPrice'] ?? 0;
+                            $oldPrice = $prd['ProductPrice'] ?? 0;
+                        ?>
+                            <div class="swiper-slide">
+                                <div class="modern-product-card">
+                                    <div class="product-header">
+                                        <span class="badge-new">NEW</span>
+                                        <div class="wishlist-action">
+                                            <?php $user_id = session()->get('user_id');
+                                            if (empty($user_id)) { ?>
+                                                <a href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa-regular fa-heart"></i></a>
+                                            <?php } else { ?>
+                                                <i class="add_wishlist fa-regular fa-heart" data-id="<?= $prd['ProductID'] ?>"></i>
+                                            <?php } ?>
+                                        </div>
+                                    </div>
+                                    <a href="<?php echo base_url($prd['slug'] . "/product_detail/" . base64_encode($prd['ProductID'])); ?>" class="product-img-wrap">
+                                        <?php if (!empty($jsondt)) { ?>
+                                            <img src="<?php echo base_url(); ?>admin/public/assets/img/product_images/<?php echo $jsondt[0]; ?>" alt="">
+                                        <?php } else { ?>
+                                            <img src="<?php echo base_url(); ?>admin/public/assets/img/product_images/placeholder.jpg" alt="">
+                                        <?php } ?>
+                                    </a>
+                                    <div class="product-body">
+                                        <div class="product-rating">
+                                            <div class="stars">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                            <span class="review-count">(128)</span>
+                                        </div>
+                                        <h3 class="product-title">
+                                            <a href="<?php echo base_url($prd['slug'] . "/product_detail/" . base64_encode($prd['ProductID'])); ?>">
+                                                <?php echo $prd['ProductName']; ?>
+                                            </a>
+                                        </h3>
+                                        <div class="product-price">
+                                            <span class="current-price">€<?php echo number_format($price, 2); ?></span>
+                                            <?php if ($oldPrice > $price) { ?>
+                                                <span class="old-price">€<?php echo number_format($oldPrice, 2); ?></span>
+                                            <?php } ?>
+                                        </div>
+                                        <div class="product-buttons">
+                                            <form class="addtocartform" action="/addToCart" method="POST">
+                                                <input type="hidden" name="productId" value="<?php echo $prd['ProductID']; ?>">
+                                                <input type="hidden" name="quantity" value="1">
+                                                <input type="hidden" name="price" value="<?php echo $price; ?>">
+                                                <button type="submit" class="btn-add-cart">
+                                                    <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+                                                </button>
+                                            </form>
+                                            <a href="<?php echo base_url($prd['slug'] . "/product_detail/" . base64_encode($prd['ProductID'])); ?>" class="btn-buy-now">Buy Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php } ?>
+                    </div>
+                </div>
+                <!-- Navigation -->
+                <div class="prod-button-prev"><i class="fa fa-angle-left"></i></div>
+                <div class="prod-button-next"><i class="fa fa-angle-right"></i></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Start Trending Items Area -->
+<div class="product-area pt-4 pb-5">
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <div class="section-header">
+                    <span class="sub-title">Explore</span>
+                    <h2 class="main-title">Trending Items</h2>
+                </div>
+            </div>
+        </div>
+        
         <div class="row">
             <div class="col-12">
                 <div class="product-info">
-                    <div class="nav-main">
-                        <!-- Tab Nav -->
-                        <ul class="nav nav-tabs mb-0 mb-lg-4" id="myTab" role="tablist">
+                    <div class="nav-main mb-4">
+                        <ul class="nav nav-tabs justify-content-center border-0" id="myTab" role="tablist">
                             <?php foreach (array_slice($category, 0, 5) as $key => $cate) { ?>
                                 <li class="nav-item">
-                                    <a class="nav-link <?php echo $key == 0 ? 'active' : ''; ?>" data-toggle="tab"
+                                    <a class="nav-link modern-tab-link <?php echo $key == 0 ? 'active' : ''; ?>" data-toggle="tab"
                                         href="#<?php echo $cate['CategoryID']; ?>" role="tab">
                                         <?php echo $cate['CategoryName']; ?>
                                     </a>
                                 </li>
                             <?php } ?>
                         </ul>
-                        <!--/ End Tab Nav -->
                     </div>
+                    
                     <div class="tab-content" id="myTabContent">
-                        <!-- Start Single Tab -->
-                        <?php foreach ($category as $key => $cate) {
-                            ?>
-                            <div class="tab-pane fade show <?php if ($key == '0') {
-                                echo 'active';
-                            } else {
-                                echo '';
-                            } ?>" id="<?php echo $cate['CategoryID']; ?>" role="tabpanel">
-                                <div class="tab-single">
-                                    <div class="row">
-                                        <?php
-                                        $products = $prod[$cate['CategoryID']];
-                                        $counter = 0;
-                                        foreach ($products as $prd) {
-                                            if (!empty($prd['ProductImage'])) {
-                                                $counter++;
-                                                if ($counter > 4)
-                                                    break;
-                                                ?>
-                                                <div class="col-xl-3 col-lg-4 col-md-4 col-12 mt-0">
-                                                    <div class="single-product">
-                                                        <div class="product-img">
-                                                            <a href="<?php echo base_url($prd['slug'] . "/" . 'product_detail/' . base64_encode($prd['ProductID'])); ?>"
-                                                                class="text-center py-3" style="height:190px; width:auto;">
-                                                                <?php
-                                                                $prdimage = json_decode($prd['ProductImage']);
-                                                                $singleimg = $prdimage[0];
-                                                                $imgSrc = !empty($singleimg) ? base_url('admin/public/assets/img/product_images/' . $singleimg) : base_url('admin/public/assets/img/product_images/1686203341_1d5ea750350c2370cd69.jpg');
-                                                                ?>
-                                                                <img class="default-img" src="<?php echo $imgSrc; ?>" alt="#"
-                                                                    style="object-fit:contain;height:90%; width:90%;">
-                                                            </a>
-                                                            <div class="button-head">
-                                                                <div class="product-action">
-                                                                    <?php
-                                                                    $session = session();
-                                                                    $user_id = $session->get('user_id');
-                                                                    if (empty($user_id)) {
-                                                                        ?>
-                                                                        <a href="#" data-toggle="modal" data-target="#exampleModal">
-                                                                            <i class="m-0 ml-2 mr-3 pt-1 ti-heart"></i>
-                                                                        </a>
-                                                                        <?php
-                                                                    } else {
-                                                                        if (!empty($customers['Status']) && $customers['Status'] == 1 && $customers['ProductID'] == $prd['ProductID']) {
-                                                                            ?>
-                                                                            <i class="add_wishlist added_wish d-none m-0 ml-2 mr-3 pt-1 mt-3 ti-heart"
-                                                                                id="add_wishlist" data-id="<?= $prd['ProductID'] ?>"></i>
-                                                                            <i class="align-self-center m-0 mb-2 ml-2 mr-3 pt-1 remove_wishlist removed_wish ti-heart"
-                                                                                id="remove_wishlist" data-id="<?= $prd['ProductID'] ?>"
-                                                                                style="color:orange; font-size:14px;"></i>
-                                                                            <?php
-                                                                        } else {
-                                                                            ?>
-                                                                            <i class="add_wishlist added_wish m-0 ml-2 mr-3 pt-1 mt-3 ti-heart"
-                                                                                id="add_wishlist" data-id="<?= $prd['ProductID'] ?>"></i>
-                                                                            <i class="align-self-center m-0 mb-2 ml-2 mr-3 pt-1 remove_wishlist removed_wish ti-heart d-none"
-                                                                                id="remove_wishlist" data-id="<?= $prd['ProductID'] ?>"
-                                                                                style="color:orange; font-size:14px;"></i>
-                                                                            <?php
-                                                                        }
-                                                                    }
-                                                                    ?>
-                                                                </div>
-                                                                <div class="product-action-2">
-                                                                    <form class="addtocartform" action="/addToCart" method="POST">
-                                                                        <input type="hidden" name="productId"
-                                                                            value="<?php echo $prd['ProductID']; ?>">
-                                                                        <input type="hidden" name="quantity" value="1">
-                                                                        <?php
-                                                                        if ($prd['ProductType'] != 2) {
-                                                                            ?>
-                                                                            <input type="hidden" name="price" id="price"
-                                                                                value="<?php echo $prd['ProductPrice']; ?>">
-                                                                            <?php
-                                                                        } else {
-                                                                            $variations = new App\Models\Variationmodel();
-                                                                            $varia_dt = $variations->where('ProductID', $prd['ProductID'])->first();
-                                                                            $pricearr = $varia_dt['Sale_VariationPrice'] ?: $varia_dt['VariationPrice'];
-                                                                            ?>
-                                                                            <input type="hidden" name="price" id="price"
-                                                                                value="<?php echo $pricearr; ?>">
-                                                                            <input type="hidden" name="variationId"
-                                                                                value="<?php echo $varia_dt['VariationID']; ?>">
-                                                                            <?php
-                                                                        }
-                                                                        ?>
-                                                                        <button type="submit" class="add_to_cart mt-3 m-1">Add to
-                                                                            cart</button>
-                                                                    </form>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="product-content"
-                                                            style="overflow:hidden; white-space:nowrap; text-align: left;">
-                                                            <h3 class="text-capitalize">
-                                                                <a href="<?php echo base_url('product_detail/' . $prd['ProductID']); ?>"
-                                                                    style="display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><?php echo $prd['ProductName']; ?></a>
-                                                            </h3>
-                                                            <div class="product-price">
-                                                                <?php
-                                                                $productPrice = $prd['ProductPrice'];
-                                                                $salePrice = $prd['Sale_ProductPrice'];
-                                                                $currency = $all_setting_data['currency'];
-
-                                                                if ($prd['ProductType'] != 2) {
-                                                                    // Display sale price and original price
-                                                                    echo $currency . $salePrice;
-                                                                    ?>
-                                                                    <span
-                                                                        style="text-decoration: line-through; color: #7e7e7e; font-weight: 400; font-size: 16px;">
-                                                                        <?php echo $currency . $productPrice; ?>
-                                                                    </span>
-                                                                    <?php
-                                                                } else {
-                                                                    // Display price for variations
-                                                                    $price = $pricearr ?? $varia_dt['Sale_VariationPrice'] ?? $varia_dt['VariationPrice'];
-                                                                    echo $currency . $price;
-                                                                }
-                                                                ?>
-                                                            </div>
-
-
-
-                                                        </div>
+                        <?php foreach ($category as $key => $cate) { ?>
+                            <div class="tab-pane fade show <?php echo $key == 0 ? 'active' : ''; ?>" id="<?php echo $cate['CategoryID']; ?>" role="tabpanel">
+                                <div class="row g-4">
+                                    <?php
+                                    $products = $prod[$cate['CategoryID']];
+                                    $counter = 0;
+                                    foreach ($products as $prd) {
+                                        if (!empty($prd['ProductImage'])) {
+                                            $counter++;
+                                            if ($counter > 4) break;
+                                            
+                                            $jsondt = json_decode($prd['ProductImage']);
+                                            $price = $prd['Sale_ProductPrice'] ?? $prd['ProductPrice'] ?? 0;
+                                            $oldPrice = $prd['ProductPrice'] ?? 0;
+                                    ?>
+                                        <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                                            <div class="modern-product-card">
+                                                <div class="product-header">
+                                                    <span class="badge-new">TRENDING</span>
+                                                    <div class="wishlist-action">
+                                                        <?php $user_id = session()->get('user_id');
+                                                        if (empty($user_id)) { ?>
+                                                            <a href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa-regular fa-heart"></i></a>
+                                                        <?php } else { ?>
+                                                            <i class="add_wishlist fa-regular fa-heart" data-id="<?= $prd['ProductID'] ?>"></i>
+                                                        <?php } ?>
                                                     </div>
-
                                                 </div>
-                                                <?php
-                                            } else {
-                                                ?>
-
-                                                <?php
-                                            }
-                                        }
-                                        ?>
-
-                                    </div>
+                                                <a href="<?php echo base_url($prd['slug'] . "/product_detail/" . base64_encode($prd['ProductID'])); ?>" class="product-img-wrap">
+                                                    <?php if (!empty($jsondt)) { ?>
+                                                        <img src="<?php echo base_url(); ?>admin/public/assets/img/product_images/<?php echo $jsondt[0]; ?>" alt="">
+                                                    <?php } else { ?>
+                                                        <img src="<?php echo base_url(); ?>admin/public/assets/img/product_images/placeholder.jpg" alt="">
+                                                    <?php } ?>
+                                                </a>
+                                                <div class="product-body">
+                                                    <div class="product-rating">
+                                                        <div class="stars">
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                        </div>
+                                                        <span class="review-count">(<?php echo rand(50, 200); ?>)</span>
+                                                    </div>
+                                                    <h3 class="product-title">
+                                                        <a href="<?php echo base_url($prd['slug'] . "/product_detail/" . base64_encode($prd['ProductID'])); ?>">
+                                                            <?php echo $prd['ProductName']; ?>
+                                                        </a>
+                                                    </h3>
+                                                    <div class="product-price">
+                                                        <span class="current-price">€<?php echo number_format($price, 2); ?></span>
+                                                        <?php if ($oldPrice > $price) { ?>
+                                                            <span class="old-price">€<?php echo number_format($oldPrice, 2); ?></span>
+                                                        <?php } ?>
+                                                    </div>
+                                                    <div class="product-buttons">
+                                                        <form class="addtocartform" action="/addToCart" method="POST">
+                                                            <input type="hidden" name="productId" value="<?php echo $prd['ProductID']; ?>">
+                                                            <input type="hidden" name="quantity" value="1">
+                                                            <input type="hidden" name="price" value="<?php echo $price; ?>">
+                                                            <button type="submit" class="btn-add-cart">
+                                                                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+                                                            </button>
+                                                        </form>
+                                                        <a href="<?php echo base_url($prd['slug'] . "/product_detail/" . base64_encode($prd['ProductID'])); ?>" class="btn-buy-now">Buy Now</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php } } ?>
                                 </div>
                             </div>
-                        <?php }
-                        ?>
-                        <!--/ End Single Tab -->
-
+                        <?php } ?>
                     </div>
                 </div>
             </div>
@@ -883,162 +785,138 @@ $all_setting_data = $AllsettingsModel->first();
 </div>
 <!-- End Product Area -->
 
-<!-- Start Most Popular -->
-<div class="product-area most-popular pt-3 pb-3">
-    <div class="container px-0">
-        <div class="row">
-            <div class="col-12 px-0">
-                <div class="section-title mb-4 mb-lg-0 text-center">
-                    <p class="explore_title mb-3 position-relative" style="font-size:20px;">Explore</p>
-                    <h2 class="mb-0 pb-0 position-relative  best-sellers-title">Best Sellers</h2>
+<!-- Start Best Sellers Area -->
+<div class="product-area pt-4 pb-5">
+    <div class="container">
+        <div class="row align-items-center mb-4">
+            <div class="col-md-6 col-8">
+                <div class="section-header text-left">
+                    <span class="sub-title">Explore</span>
+                    <h2 class="main-title">Best Sellers</h2>
                 </div>
+            </div>
+            <div class="col-md-6 col-4 text-right">
+                <a href="<?php echo base_url('product'); ?>" class="btn-view-all">View All <i class="fa fa-angle-right"></i></a>
             </div>
         </div>
 
-
-        <!--<div class="row" style="    margin-top: -40px;">-->
-        <div class="row" style="margin-top: -25px;">
-            <div class="col-12 px-0">
-                <div class="owl-carousel popular-slider px-4 px-lg-0">
-                    <!-- Start Single Product -->
-                    <?php foreach ($allproduct as $prddt) { ?>
-                        <div class="single-product mb-4">
-                            <div class="product-img">
-                                <a href="<?php echo base_url($prddt['slug'] . "/" . 'product_detail/' . base64_encode($prddt['ProductID'])); ?>"
-                                    class="text-center py-3" style="height:190px; width:auto; background-color: white;">
-                                    <div style="background-color: white; height: 100%; width: 100%;">
-                                        <?php
-                                        $jsondt = json_decode($prddt['ProductImage']);
-                                        if (!empty($jsondt)) { ?>
-                                            <img class="default-img text-center"
-                                                src="<?php echo base_url(); ?>admin/public/assets/img/product_images/<?php echo $jsondt[0]; ?>"
-                                                alt="#"
-                                                style="object-fit:contain;object-position:center;height:90%; width:90%;">
-                                        <?php } else { ?>
-                                            <img class="default-img text-center"
-                                                src="<?php echo base_url(); ?>admin/public/assets/img/product_images/placeholder.jpg"
-                                                alt="#"
-                                                style="object-fit:contain;object-position:center;height:90%; width:90%;">
-                                        <?php } ?>
-                                    </div>
-                                    <span class="out-of-stock">Hot</span>
-                                </a>
-                                <div class="button-head">
-                                    <div class="product-action">
-                                        <?php $session = session();
-                                        $user_id = $session->get('user_id');
-                                        if (empty($user_id)) { ?>
-                                            <a href="#" data-toggle="modal" data-target="#exampleModal"><i
-                                                    class="m-0 ml-2 mr-2 ti-heart"></i></a>
-                                        <?php } else { ?>
-                                            <i class="add_wishlist added_wish m-0 mr-4 mt-3 pt-1 ti-heart <?php echo !empty($customers['Status']) && $customers['Status'] == 1 && $customers['ProductID'] == $prddt['ProductID'] ? 'd-none' : ''; ?>"
-                                                id="add_wishlist" data-id="<?= $prddt['ProductID'] ?>"></i>
-                                            <i class="align-self-center m-0 mb-2 mr-4 pt-1 remove_wishlist removed_wish ti-heart <?php echo !empty($customers['Status']) && $customers['Status'] == 1 && $customers['ProductID'] == $prddt['ProductID'] ? '' : 'd-none'; ?>"
-                                                id="remove_wishlist" data-id="<?= $prddt['ProductID'] ?>"
-                                                style="color: orange; font-size: 14px;"></i>
-                                        <?php } ?>
-                                    </div>
-                                    <div class="product-action-2">
-                                        <form class="addtocartform" action="/addToCart" method="POST">
-                                            <input type="hidden" name="productId"
-                                                value="<?php echo $prddt['ProductID']; ?>">
-                                            <input type="hidden" name="quantity" value="1">
-                                            <input type="hidden" name="price"
-                                                value="<?php echo $prddt['ProductType'] != 2 ? $prddt['ProductPrice'] : ($pricearr ?? $varia_dt['Sale_VariationPrice'] ?? $varia_dt['VariationPrice']); ?>">
-                                            <?php if ($prddt['ProductType'] == 2) { ?>
-                                                <input type="hidden" name="variationId"
-                                                    value="<?php echo $varia_dt['VariationID']; ?>">
+        <div class="row">
+            <div class="col-12 position-relative">
+                <div class="swiper best-swiper pt-2">
+                    <div class="swiper-wrapper">
+                        <?php foreach ($allproduct as $prddt) { 
+                            $jsondt = json_decode($prddt['ProductImage']);
+                            $price = $prddt['Sale_ProductPrice'] ?? $prddt['ProductPrice'] ?? 0;
+                            $oldPrice = $prddt['ProductPrice'] ?? 0;
+                        ?>
+                            <div class="swiper-slide">
+                                <div class="modern-product-card">
+                                    <div class="product-header">
+                                        <span class="badge-new" style="background: #f7941d;">HOT</span>
+                                        <div class="wishlist-action">
+                                            <?php $user_id = session()->get('user_id');
+                                            if (empty($user_id)) { ?>
+                                                <a href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa-regular fa-heart"></i></a>
+                                            <?php } else { ?>
+                                                <i class="add_wishlist fa-regular fa-heart" data-id="<?= $prddt['ProductID'] ?>"></i>
                                             <?php } ?>
-                                            <button type="submit" class="add_to_cart mt-3 m-1">Add to cart</button>
-                                        </form>
+                                        </div>
+                                    </div>
+                                    <a href="<?php echo base_url($prddt['slug'] . "/product_detail/" . base64_encode($prddt['ProductID'])); ?>" class="product-img-wrap">
+                                        <?php if (!empty($jsondt)) { ?>
+                                            <img src="<?php echo base_url(); ?>admin/public/assets/img/product_images/<?php echo $jsondt[0]; ?>" alt="">
+                                        <?php } else { ?>
+                                            <img src="<?php echo base_url(); ?>admin/public/assets/img/product_images/placeholder.jpg" alt="">
+                                        <?php } ?>
+                                    </a>
+                                    <div class="product-body">
+                                        <div class="product-rating">
+                                            <div class="stars">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                            <span class="review-count">(<?php echo rand(100, 500); ?>)</span>
+                                        </div>
+                                        <h3 class="product-title">
+                                            <a href="<?php echo base_url($prddt['slug'] . "/product_detail/" . base64_encode($prddt['ProductID'])); ?>">
+                                                <?php echo $prddt['ProductName']; ?>
+                                            </a>
+                                        </h3>
+                                        <div class="product-price">
+                                            <span class="current-price">€<?php echo number_format($price, 2); ?></span>
+                                            <?php if ($oldPrice > $price) { ?>
+                                                <span class="old-price">€<?php echo number_format($oldPrice, 2); ?></span>
+                                            <?php } ?>
+                                        </div>
+                                        <div class="product-buttons">
+                                            <form class="addtocartform" action="/addToCart" method="POST">
+                                                <input type="hidden" name="productId" value="<?php echo $prddt['ProductID']; ?>">
+                                                <input type="hidden" name="quantity" value="1">
+                                                <input type="hidden" name="price" value="<?php echo $price; ?>">
+                                                <button type="submit" class="btn-add-cart">
+                                                    <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+                                                </button>
+                                            </form>
+                                            <a href="<?php echo base_url($prddt['slug'] . "/product_detail/" . base64_encode($prddt['ProductID'])); ?>" class="btn-buy-now">Buy Now</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="product-content">
-                                <h3 class="text-capitalize"><a href="#"
-                                        style="display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><?php echo $prddt['ProductName']; ?></a>
-                                </h3>
-                                <div class="product-price">
-                                    <?php
-                                    $currency = $all_setting_data['currency'];
-                                    $productPrice = $prddt['ProductPrice'];
-                                    $salePrice = $prddt['Sale_ProductPrice'];
-                                    ?>
-
-                                    <span>
-                                        <?php
-                                        if ($prddt['ProductType'] != 2) {
-                                            // Check if sale price exists and is less than the product price
-                                            if (!empty($salePrice) && $salePrice < $productPrice) {
-                                                // Show sale price with original price struck through
-                                                echo $currency . $salePrice;
-                                                echo ' <span style="text-decoration: line-through; color: #7e7e7e; font-weight: 400; font-size: 16px;">';
-                                                echo $currency . $productPrice;
-                                                echo '</span>';
-                                            } else {
-                                                // No sale price, show product price
-                                                echo $currency . $productPrice;
-                                            }
-                                        } else {
-                                            // Handle variable product prices
-                                            $variationPrice = $pricearr ?? $varia_dt['Sale_VariationPrice'] ?? $varia_dt['VariationPrice'];
-                                            echo $currency . $variationPrice;
-                                        }
-                                        ?>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    <?php } ?>
-                    <!-- End Single Product -->
+                        <?php } ?>
+                    </div>
                 </div>
+                <!-- Navigation -->
+                <div class="best-button-prev"><i class="fa fa-angle-left"></i></div>
+                <div class="best-button-next"><i class="fa fa-angle-right"></i></div>
             </div>
         </div>
     </div>
 </div>
 <!-- End Most Popular Area -->
 
-<!-- Start Shop Blog  -->
-<section class="pt-0 section shop-blog mb-0 mb-lg-4">
+<!-- Start Shop Blog Area -->
+<section class="shop-blog pt-4 pb-5">
     <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="section-title mb-4 text-center">
-                    <p class="explore_title mb-3 position-relative" style="font-size:20px;">Explore</p>
-                    <h2 class="mb-0 pb-0">From Our Blog</h2>
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <div class="section-header">
+                    <span class="sub-title">Explore</span>
+                    <h2 class="main-title">From Our Blog</h2>
                 </div>
             </div>
         </div>
-        <div class="row mt-1 px-4 px-lg-0">
-            <?php
-            foreach ($blog as $bl) {
-                //   print_r($bl);
-                ?>
+        <div class="row g-4">
+            <?php foreach ($blog as $bl) { 
+                $blog_title = $bl['title'];
+                $blog_String = str_replace(' ', '_', $blog_title);
+                $blog_link = base_url() . "blog/" . $bl['CategoryName'] . "/" . $blog_String . "/" . base64_encode($bl['id']) . "/" . base64_encode($bl['category']);
+            ?>
                 <div class="col-lg-4 col-md-6 col-12">
-                    <!-- Start Single Blog  -->
-                    <div class="shop-single-blog bg-white">
-                        <?php
-                        $blog_title = $bl['title'];
-                        $blog_String = str_replace(' ', '_', $blog_title);
-                        ?>
-                        <a
-                            href="<?= base_url(); ?>blog/<?= $bl['CategoryName']; ?>/<?= $blog_String; ?>/<?= base64_encode($bl['id']); ?>/<?= base64_encode($bl['category']); ?>">
-                            <img src="<?php echo base_url(); ?>admin/public/upload_images/<?php echo $bl['image']; ?>"
-                                alt="#" class="rounded-top"></a>
-                        <div class="content" style="height:112px; padding:0px 12px;">
-                            <p class="date"><?php echo date("d M, Y", strtotime($bl['updated_at'])); ?></p>
-                            <a href="<?= base_url(); ?>blog/<?= $bl['CategoryName']; ?>/<?= $blog_String; ?>/<?= base64_encode($bl['id']); ?>/<?= base64_encode($bl['category']); ?>"
-                                class="title"><?php echo $bl['title']; ?></a>
-                            <a href="<?= base_url(); ?>blog/<?= $bl['CategoryName']; ?>/<?= $blog_String; ?>/<?= base64_encode($bl['id']); ?>/<?= base64_encode($bl['category']); ?>"
-                                class="more-btn">Continue Reading</a>
-
+                    <div class="modern-blog-card">
+                        <div class="blog-img-wrap">
+                            <a href="<?php echo $blog_link; ?>">
+                                <img src="<?php echo base_url(); ?>admin/public/upload_images/<?php echo $bl['image']; ?>" alt="<?php echo $bl['title']; ?>">
+                            </a>
+                            <div class="blog-date">
+                                <span><?php echo date("d", strtotime($bl['updated_at'])); ?></span>
+                                <small><?php echo date("M", strtotime($bl['updated_at'])); ?></small>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <h3 class="blog-title">
+                                <a href="<?php echo $blog_link; ?>"><?php echo $bl['title']; ?></a>
+                            </h3>
+                            <p class="blog-excerpt">Discover the latest trends and insights in modern furniture design and home decor...</p>
+                            <a href="<?php echo $blog_link; ?>" class="btn-read-more">
+                                Continue Reading <i class="fa fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
-                    <!-- End Single Blog  -->
                 </div>
-                <?php
-            }
-            ?>
+            <?php } ?>
         </div>
     </div>
 </section>
@@ -1107,7 +985,7 @@ if (!empty($paymentgateway)) {
 <!-- Start Footer Area -->
 <!-- Start Shop Services Area -->
 <section class="shop-services section home">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-lg-3 col-md-6 col-6 pl-0">
                 <!-- Start Single Service -->
@@ -1152,7 +1030,7 @@ if (!empty($paymentgateway)) {
 
 <!-- Start Shop Newsletter  -->
 <section class="shop-newsletter section pt-4 pb-0">
-    <div class="container">
+    <div class="container-fluid">
         <div class="inner-top">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2 col-12">
@@ -1182,7 +1060,7 @@ if (!empty($paymentgateway)) {
 <footer class="footer">
     <!-- Footer Top -->
     <div class="footer-top section pt-4 pb-4">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-5 col-md-6 col-12">
                     <div class="single-footer about">
@@ -1502,7 +1380,7 @@ if (!empty($paymentgateway)) {
     </div>
     <!-- End Footer Top -->
     <div class="copyright">
-        <div class="container">
+        <div class="container-fluid">
             <div class="inner">
                 <div class="row">
                     <div class="col-lg-6 col-12">
@@ -2522,8 +2400,8 @@ if (!empty($paymentgateway)) {
         });
 
         var swiper = new Swiper(".cat-swiper", {
-            slidesPerView: 2,
-            spaceBetween: 10,
+            slidesPerView: 6,
+            spaceBetween: 30,
             navigation: {
                 nextEl: ".cat-button-next",
                 prevEl: ".cat-button-prev",
@@ -2531,16 +2409,46 @@ if (!empty($paymentgateway)) {
             breakpoints: {
                 0: {
                     slidesPerView: 2,
-                    spaceBetween: 10,
+                    spaceBetween: 15,
                 },
                 768: {
                     slidesPerView: 4,
-                    spaceBetween: 15,
-                },
-                1024: {
-                    slidesPerView: 7,
                     spaceBetween: 20,
                 },
+                1024: {
+                    slidesPerView: 6,
+                    spaceBetween: 30,
+                },
+            },
+        });
+
+        var productSwiper = new Swiper(".product-swiper", {
+            slidesPerView: 1,
+            spaceBetween: 25,
+            navigation: {
+                nextEl: ".prod-button-next",
+                prevEl: ".prod-button-prev",
+            },
+            breakpoints: {
+                576: { slidesPerView: 2 },
+                768: { slidesPerView: 3 },
+                992: { slidesPerView: 4 },
+                1200: { slidesPerView: 4 },
+            },
+        });
+
+        var bestSwiper = new Swiper(".best-swiper", {
+            slidesPerView: 1,
+            spaceBetween: 25,
+            navigation: {
+                nextEl: ".best-button-next",
+                prevEl: ".best-button-prev",
+            },
+            breakpoints: {
+                576: { slidesPerView: 2 },
+                768: { slidesPerView: 3 },
+                992: { slidesPerView: 4 },
+                1200: { slidesPerView: 4 },
             },
         });
 
