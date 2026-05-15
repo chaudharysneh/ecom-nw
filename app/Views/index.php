@@ -278,7 +278,8 @@
         font-family: 'Poppins', sans-serif !important;
         font-size: 33px !important;
         font-weight: 800 !important;
-        color: #1a2b48 !important; /* Navy color */
+        color: #1a2b48 !important;
+        /* Navy color */
         line-height: 1.2 !important;
         margin-bottom: 25px !important;
         text-transform: none !important;
@@ -286,7 +287,8 @@
     }
 
     .hero-slider .hero-text h1 span.highlight {
-        color: #F7941D !important; /* Orange highlight */
+        color: #F7941D !important;
+        /* Orange highlight */
         font-size: inherit !important;
         font-weight: inherit !important;
         display: inline-block !important;
@@ -344,14 +346,69 @@
     }
 
     .hero-slider .hero-image-container img {
-        max-width: 100% !important;
-        height: auto !important;
+        width: 100% !important;
+        height: 300px !important;
+        object-fit: cover !important;
         border-radius: 24px !important;
-        /* box-shadow: 0 20px 50px rgba(0,0,0,0.1) !important; */
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    @media (max-width: 991px) {
+        .hero-slider .hero-image-container img {
+            height: 300px !important;
+        }
     }
 
     .hero-slider .swiper-pagination-bullet-active {
         background: #F7941D !important;
+    }
+
+    /* Hero Navigation Buttons */
+    .hero-slider .hero-button-next,
+    .hero-slider .hero-button-prev {
+        width: 48px;
+        height: 48px;
+        background-color: white;
+        border-radius: 50%;
+        color: #1a2b48;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-slider .hero-button-next:after,
+    .hero-slider .hero-button-prev:after {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .hero-slider .hero-button-next:hover,
+    .hero-slider .hero-button-prev:hover {
+        background-color: #F7941D;
+        color: white;
+        box-shadow: 0 6px 20px rgba(247, 148, 29, 0.4);
+    }
+
+    .hero-slider .hero-button-prev {
+        left: 30px !important;
+    }
+
+    .hero-slider .hero-button-next {
+        right: 30px !important;
+    }
+
+    @media (max-width: 991px) {
+
+        .hero-slider .hero-button-next,
+        .hero-slider .hero-button-prev {
+            display: none;
+        }
     }
 
     .hero-slider .swiper-slide .row {
@@ -364,10 +421,12 @@
         .hero-slider .swiper-slide .row {
             flex-wrap: nowrap !important;
         }
+
         .hero-slider .hero-text {
             flex: 0 0 50% !important;
             max-width: 60% !important;
         }
+
         .hero-slider .hero-image-container {
             flex: 0 0 50% !important;
             /* max-width: 50% !important; */
@@ -381,6 +440,7 @@
             padding: 60px 20px !important;
             min-height: auto !important;
         }
+
         .hero-slider .hero-text {
             margin-bottom: 40px !important;
             padding-right: 0 !important;
@@ -389,17 +449,21 @@
             align-items: center !important;
             width: 100% !important;
         }
+
         .hero-slider .hero-text p {
             margin-left: auto !important;
             margin-right: auto !important;
         }
+
         .hero-slider .hero-text h1 {
             font-size: 36px !important;
         }
+
         .hero-slider .hero-bg-shape {
             width: 100% !important;
             right: 0 !important;
         }
+
         .hero-slider .hero-image-container {
             width: 100% !important;
             display: block !important;
@@ -421,19 +485,16 @@ $all_setting_data = $AllsettingsModel->first();
                         <div class="row align-items-center flex-nowrap-lg">
                             <div class="col-lg-6 col-md-12 col-12">
                                 <div class="hero-text mt-0">
-                                    <?php $title = $ban['BannerTitle']; ?>
-                                    <h1><?php echo $title; ?></h1>
+                                    <h1><?php echo $ban['BannerTitle']; ?></h1>
                                     <p><?php echo $ban['BannerText']; ?></p>
                                     <?php if (!empty($ban['BannerUrl'])) { ?>
-                                        <div class="button">
-                                            <a href="<?php echo $ban['BannerUrl']; ?>" class="btn">Shop Now</a>
+                                        <div class="button"><a href="<?php echo $ban['BannerUrl']; ?>" class="btn">Shop Now</a>
                                         </div>
                                     <?php } ?>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12 col-12 d-none d-lg-block">
                                 <div class="hero-image-container">
-                                    <div class="hero-bg-shape"></div>
                                     <img src="<?php echo base_url("admin/public/upload_images/" . $ban['BannerImg']); ?>"
                                         alt="<?php echo $ban['BannerTitle']; ?>">
                                 </div>
@@ -447,6 +508,9 @@ $all_setting_data = $AllsettingsModel->first();
         </div>
         <!-- Swiper Pagination -->
         <div class="swiper-pagination"></div>
+        <!-- Swiper Navigation -->
+        <div class="swiper-button-prev hero-button-prev"></div>
+        <div class="swiper-button-next hero-button-next"></div>
     </div>
 </section>
 <!--/ End Slider Area -->
@@ -503,8 +567,9 @@ $all_setting_data = $AllsettingsModel->first();
                         </div>
                     </div>
                     <!-- Navigation Buttons (Moved outside Swiper) -->
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next cat-button-next"></div>
+                    <div class="swiper-button-prev cat-button-prev"></div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </div>
@@ -672,8 +737,7 @@ $all_setting_data = $AllsettingsModel->first();
                                 echo 'active';
                             } else {
                                 echo '';
-                            } ?>" id="<?php echo $cate['CategoryID']; ?>"
-                                role="tabpanel">
+                            } ?>" id="<?php echo $cate['CategoryID']; ?>" role="tabpanel">
                                 <div class="tab-single">
                                     <div class="row">
                                         <?php
@@ -2440,12 +2504,20 @@ if (!empty($paymentgateway)) {
             loop: true,
             speed: 800,
             autoplay: {
-                delay: 5000,
+                delay: 50000,
                 disableOnInteraction: false,
             },
             effect: 'fade',
             fadeEffect: {
                 crossFade: true
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
             },
         });
 
@@ -2453,8 +2525,8 @@ if (!empty($paymentgateway)) {
             slidesPerView: 2,
             spaceBetween: 10,
             navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+                nextEl: ".cat-button-next",
+                prevEl: ".cat-button-prev",
             },
             breakpoints: {
                 0: {
