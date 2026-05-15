@@ -410,7 +410,7 @@
 $AllsettingsModel = new \App\Models\Allsettingsmodel();
 $all_setting_data = $AllsettingsModel->first();
 ?>
-<section class="hero-slider mt-2">
+<section class="hero-slider">
     <div class="swiper hero-swiper">
         <div class="swiper-wrapper">
             <?php
@@ -2430,9 +2430,6 @@ if (!empty($paymentgateway)) {
 
     });
 </script>
-</body>
-
-</html>
 
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -2446,10 +2443,6 @@ if (!empty($paymentgateway)) {
                 delay: 5000,
                 disableOnInteraction: false,
             },
-            // pagination: {
-            //     el: ".swiper-pagination",
-            //     clickable: true,
-            // },
             effect: 'fade',
             fadeEffect: {
                 crossFade: true
@@ -2478,67 +2471,79 @@ if (!empty($paymentgateway)) {
                 },
             },
         });
+
+        $('.addtocartform').on('submit', function (e) {
+            e.preventDefault();
+
+            var Color = $(this).find(".Color").val();
+            var Size = $(this).find(".Size").val();
+            var Material = $(this).find(".Material").val();
+
+            if (Color === '') {
+                $(this).find(".Color").focus().css('border', '1px solid red');
+                return;
+            } else {
+                $(this).find(".Color").css('border', '');
+            }
+
+            if (Size === '') {
+                $(this).find(".Size").focus().css('border', '1px solid red');
+                return;
+            } else {
+                $(this).find(".Size").css('border', '');
+            }
+
+            if (Material === '') {
+                $(this).find(".Material").focus().css('border', '1px solid red');
+                return;
+            } else {
+                $(this).find(".Material").css('border', '');
+            }
+
+            $('#semiTransparenDiv').css('display', 'block');
+
+            let fd = new FormData(this);
+
+            $.ajax({
+                type: 'POST',
+                url: '/addToCart',
+                data: fd,
+                dataType: 'json',
+                processData: false,
+                contentType: false,
+                success: function (response) {
+                    console.log(response);
+                    if (response.status === 'success') {
+                        $(".total-count").text(response.CartTotals);
+                        $(".dropdown-cart-header span").text(response.CartTotals + " Items");
+
+                        var html = '';
+                        for (var i = 0; i < response.cart.length; i++) {
+                            html += '<li id="' + response.cart[i].id + '">'
+                                + '<a href="javascript:void(0)" class="remove removeItem" data-id="' + response.cart[i].id
+                                + '" title="Remove this item"><i class="fa fa-remove"></i></a>'
+                                + '<a class="cart-img" href="javascript:void(0)"><img src="' + response.cart[i].ProductImage
+                                + '" alt="javascript:void(0)"></a>' + '<h4><a href="/single_product/' + response.cart[i].id + '">' +
+                                response.cart[i].name + '</a></h4>' + '<p class="quantity">' + response.cart[i].quantity
+                                + 'x - <span class="amount">$' + response.cart[i].unit_price + '</span></p>' + '</li>';
+                        }
+                        $('ul.shopping-list').html(html);
+                        $(".total-amount").text("$" + response.total_item);
+
+                        setTimeout(function () {
+                            $("#cartModal").modal('show');
+                            $('#semiTransparenDiv').css('display', 'none');
+                        }, 2000);
+                    }
+                },
+                error: function (xhr, status, error) {
+                    console.log(xhr.responseText);
+                    $('#semiTransparenDiv').css('display', 'none');
+                }
+            });
+        });
     });
 </script>
+</body>
 
-
-$('.add_to_carts').on('submit', function(e) {
-// alert('634543643');
-
-var Color = $(".Color").val();
-var Size = $(".Size").val();
-var Material = $(".Material").val();
-
-var form = $(this);
-// var url = form.attr('action');
-// var data = form.serialize();
-
-if (Color == '') {
-$(".Color").focus();
-$(".Color").css('border', '1px solid red');
-} else {
-$(".Color").css('border', '');
-}
-if (Size == '') {
-$(".Size").focus();
-$(".Size").css('border', '1px solid red');
-} else {
-$(".Size").css('border', '');
-}
-if (Material == '') {
-$(".Material").focus();
-$(".Material").css('border', '1px solid red');
-} else {
-$(".Material").css('border', '');
-
-//$('.overlay').css('display','block');
-$('#semiTransparenDiv').css('display', 'block');
-// Perform AJAX request
-let myform = document.getElementById('addtocartform');
-let fd = new FormData(myform);
-
-$.ajax({
-type: 'POST',
-url: 'addToCart',
-data: fd,
-dataType: 'json',
-success: function(response) {
-console.log(response);
-// Handle the response
-var jsonObject = JSON.parse(response);
-if (jsonObject.status === 'success') {
-console.log(jsonObject.status);
-// $('ul.shopping-list').html(jsonObject.cart);
-$(".total-count").text(jsonObject.CartTotals);
-$(".dropdown-cart-header span").text(jsonObject.CartTotals + " Items");
-var html = '';
-for (var i = 0; i < jsonObject.cart.length; i++) { html +='<li id="' + jsonObject.cart[i].id + '">'
-    + '<a href="javascript:void(0)"  class="remove removeItem" data-id="' + jsonObject.cart[i].id
-    + '" title="Remove this item"><i class="fa fa-remove"></i></a>'
-    + '<a class="cart-img" href="javascript:void(0)"><img src="' + jsonObject.cart[i].ProductImage
-    + '" alt="javascript:void(0)"></a>' + '<h4><a href="/single_product/' + jsonObject.cart[i].id + '">' +
-    jsonObject.cart[i].name + '</a></h4>' + '<p class="quantity">' + jsonObject.cart[i].quantity
-    + 'x - <span class="amount">$' + jsonObject.cart[i].unit_price + '</span></p>' + '</li>' ; }
-    $(".total-amount").text("$" + jsonObject.total_item); setTimeout(function() { $("#cartModal").modal('show');
-    $('#semiTransparenDiv').css('display', 'none' ); }, 2000); } else { } }, error: function(xhr, status, error) { //
-    Handle error response console.log(xhr.responseText); } }); } }); </script>
+</html>
