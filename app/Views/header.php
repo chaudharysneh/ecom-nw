@@ -425,7 +425,7 @@ $all_setting_data = $AllsettingsModel->first();
                 </div>
                 <div class="modal-body d-flex align-items-center justify-content-center" style=" border-radius: 10px;">
                     <div class="text-center">
-                        <h4 style="font-size: 14px; font-weight: 500; color: #F7941D; margin-bottom: 5px;"></h4>
+                        <h4 style="font-size: 14px; font-weight: 500; color: #4a3427; margin-bottom: 5px;"></h4>
                         <h3
                             style="font-size: 22px; color: #333; margin-bottom: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
                             Product has been added to cart.
@@ -462,7 +462,7 @@ $all_setting_data = $AllsettingsModel->first();
             <div class="m-auto modal-content w-50">
                 <!-- Modal Header -->
                 <div class="text-center"
-                    style="background:#f7941d;border-top-left-radius:5px;border-top-right-radius:5px;">
+                    style="background:#4a3427;border-top-left-radius:5px;border-top-right-radius:5px;">
                     <h2 class="my-2 text-white">Login</h2>
                     <button type="button" id="clsbtn" class="close text-white" data-dismiss="modal"
                         style="margin-top: -35px;opacity:1;"><i class="fa-solid fa-xmark pr-3"
@@ -495,7 +495,7 @@ $all_setting_data = $AllsettingsModel->first();
                         <!-- Additional links -->
                         <div class="mt-3">
                             <p class="mb-2 text-dark">Don't have an account?
-                                <a href="<?php echo base_url('register'); ?>" style="color: #f7941d;">Register here</a>
+                                <a href="<?php echo base_url('register'); ?>" style="color: #4a3427;">Register here</a>
                             </p>
                         </div>
 
