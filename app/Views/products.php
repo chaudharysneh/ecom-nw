@@ -1,5 +1,18 @@
 <?= $this->include('header') ?>
 <style>
+  :root {
+    --primary-color: #f7941d;
+    --secondary-color: #8b6f47;
+    --light-bg: #f8f9fa;
+    --border-color: #e0e0e0;
+    --text-dark: #2c3e50;
+    --text-light: #7f8c8d;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
   .main-category {
     display: none;
   }
@@ -8,221 +21,776 @@
     text-transform: capitalize !important;
   }
 
-  .range-slider {
-    /*top:30px;*/
-    /*width: 230px;*/
-    /*text-align: center;*/
-    /*position: relative;*/
-    top: 45px;
-    /* width: 230px; */
-    text-align: center;
-    position: relative;
-    background: #f7941d;
-    border: 1px solid transparent;
-    height: 3px;
-    border-radius: 0px;
-
-  }
-
-  .rangeValues {
-    /* display: block;
-    margin-top: -30px; */
-    display: block;
-    margin-top: -55px;
-    font-size: 15px;
-    color: #000000c4;
-    border-radius: 5px;
-    padding: 5px;
-    box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.25);
-  }
-
-  /* ------------------ */
-  .ui-slider .ui-slider-handle {
-    width: 1.4em !important;
-    height: 1.4em !important;
-  }
-
-  /* ============================== */
-
-  input[name=range] {
-    -webkit-appearance: none;
-    border: 1px solid white;
-    width: 240px;
-    position: absolute;
-    left: 0;
-  }
-
-  input[name=range]::-webkit-slider-runnable-track {
-    width: 240px;
-    height: 5px;
-    background: #ddd;
+  /* ===== SIDEBAR STYLES ===== */
+  .sidebar-menu {
     border: none;
-    border-radius: 3px;
-
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background: #fff;
   }
 
-  input[name=range]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    border: none;
-    height: 16px;
-    width: 16px;
-    border-radius: 50%;
-    background: #21c1ff;
-    margin-top: -4px;
-    cursor: pointer;
-    position: relative;
-    z-index: 1;
+  .sidebar-menu .card-body {
+    padding: 1.25rem;
   }
 
-  input[name=range]:focus {
-    outline: none;
+  .sidebar-menu .card-title {
+    color: var(--text-dark);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 16px;
   }
 
-  input[name=range]:focus::-webkit-slider-runnable-track {
-    background: #ccc;
+  .category-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
 
-  input[name=range]::-moz-range-track {
-    width: 300px;
-    height: 5px;
-    background: #ddd;
-    border: none;
-    border-radius: 3px;
+  .category-menu li {
+    margin-bottom: 0;
   }
 
-  input[name=range]::-moz-range-thumb {
-    border: none;
-    height: 16px;
-    width: 16px;
-    border-radius: 50%;
-    background: #21c1ff;
-
+  .category-menu .nav-link {
+    padding: 0.6rem 0;
+    color: var(--text-dark);
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+    font-size: 13px;
+    font-weight: 500;
   }
 
-
-  /*hide the outline behind the border*/
-
-  input[name=range]:-moz-focusring {
-    outline: 1px solid white;
-    outline-offset: -1px;
-  }
-
-  input[name=range]::-ms-track {
-    width: 300px;
-    height: 5px;
-    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+  .category-menu .nav-link:hover {
+    border-left-color: var(--primary-color);
+    color: var(--primary-color);
     background: transparent;
-    /*leave room for the larger thumb to overflow with a transparent border */
-    border-color: transparent;
-    border-width: 6px 0;
-    /*remove default tick marks*/
-    color: transparent;
-    z-index: -4;
-
-  }
-
-  input[name=range]::-ms-fill-lower {
-    background: #777;
-    border-radius: 10px;
-  }
-
-  input[name=range]::-ms-fill-upper {
-    background: #ddd;
-    border-radius: 10px;
-  }
-
-  input[name=range]::-ms-thumb {
-    border: none;
-    height: 16px;
-    width: 16px;
-    border-radius: 50%;
-    background: #21c1ff;
-  }
-
-  input[name=range]:focus::-ms-fill-lower {
-    background: #888;
-  }
-
-  input[name=range]:focus::-ms-fill-upper {
-    background: #ccc;
-
-  }
-
-  .bbb_deals_image img.product_image {
-    max-width: 100%;
-    max-height: 100%;
-    /* height: 130px; */
-    width: auto;
-    object-fit: contain;
-    height: 130px;
-  }
-
-  .modal-content {
-    border-radius: 8px !important;
-  }
-
-  .ui-slider-horizontal .ui-slider-handle {
-    top: -0.68em;
-    margin-left: -.6em;
-  }
-
-  .ui-slider-horizontal .ui-slider-handle:focus-visible {
-    outline: none;
-  }
-
-  .ui-slider-range {
-    left: 0%;
-    width: 100%;
-    background: #f7941d !important;
-  }
-
-  .ui-slider-handle {
-    left: 100%;
-    border-radius: 50%;
-    background: #fff !important;
-    /* border: none !important; */
-    border: 6px solid #f7941d !important;
+    padding-left: 0.4rem;
   }
 
   .category-menu .badge {
-    /* background-color: #f7941d; */
-    color: #f7941d;
+    color: var(--primary-color);
     font-weight: 600;
-    font-size: 80%;
+    font-size: 11px;
+    background: transparent;
   }
 
-  .cat-link:hover {
-    box-shadow: -2px -1px 7px 3px rgb(238 238 238);
+  .category-menu hr {
+    margin: 0.4rem 0;
+    opacity: 0.2;
   }
 
-  .ct-heart i {
-    color: #999999;
-    font-size: 20px;
-    transition: all ease 0.3s;
+  /* ===== PRICE FILTER ===== */
+  .price-filter-section {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+    margin-bottom: 0;
   }
 
-  .ct-heart {
+  .price-filter-section h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+  }
+
+  .price-inputs {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 0.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .price-inputs input {
+    padding: 0.4rem 0.5rem;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 3px;
+    font-size: 11px;
+    color: var(--text-dark);
+    text-align: center;
+    background: #f9f9f9 !important;
+    width: 100%;
+    box-shadow: none !important;
+  }
+
+  .price-inputs input:focus {
+    border-color: var(--primary-color) !important;
+    outline: none !important;
+    box-shadow: 0 0 0 2px rgba(247, 148, 29, 0.1) !important;
+  }
+
+  /* Remove any red borders from jQuery UI or other sources */
+  .price-filter-section *,
+  .price-range-wrapper *,
+  .simple-range-container * {
+    border-color: var(--border-color) !important;
+  }
+
+  .price-filter-section *:focus,
+  .price-range-wrapper *:focus,
+  .simple-range-container *:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  .price-separator {
+    color: var(--text-light);
+    font-weight: 600;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .price-range-wrapper {
+    position: relative;
+    margin: 1.5rem 0;
+    border: none !important;
+  }
+
+  .simple-range-container {
+    position: relative;
+    margin: 1rem 0;
+    border: none !important;
+  }
+
+  .simple-slider {
+    width: 100%;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none !important;
+    padding: 0 !important;
+    cursor: pointer;
+    z-index: 10;
+    position: relative;
+  }
+
+  /* Modern slider track with gradient */
+  .simple-slider::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(to right, var(--primary-color) 0%, var(--primary-color) var(--value, 50%), #e0e0e0 var(--value, 50%), #e0e0e0 100%);
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .simple-slider::-moz-range-track {
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(to right, var(--primary-color) 0%, var(--primary-color) var(--value, 50%), #e0e0e0 var(--value, 50%), #e0e0e0 100%);
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .simple-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(247, 148, 29, 0.4);
+    transition: all 0.3s ease;
+    border: 3px solid #fff;
+    z-index: 10;
+    position: relative;
+    margin-top: -8px;
+  }
+
+  .simple-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+    box-shadow: 0 4px 12px rgba(247, 148, 29, 0.6);
+  }
+
+  .simple-slider::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    cursor: pointer;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 8px rgba(247, 148, 29, 0.4);
+    transition: all 0.3s ease;
+    z-index: 10;
+    position: relative;
+  }
+
+  .simple-slider::-moz-range-thumb:hover {
+    transform: scale(1.15);
+    box-shadow: 0 4px 12px rgba(247, 148, 29, 0.6);
+  }
+
+  .range-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    font-size: 11px;
+    color: var(--text-light);
+  }
+
+  .rangeValues {
+    display: block;
+    font-size: 12px;
+    color: var(--text-dark);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    text-align: center;
+  }
+
+  /* Override reset.css and other conflicting styles */
+  .price-range-wrapper input[type="range"] {
+    border: none !important;
+    padding: 0 !important;
+    background: transparent !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+  }
+
+  .price-range-wrapper input[type="range"]:focus {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Hide default range input styling completely */
+  .price-range-wrapper input[type="range"]::-webkit-slider-runnable-track {
+    background: transparent !important;
+    border: none !important;
+  }
+
+  .price-range-wrapper input[type="range"]::-moz-range-track {
+    background: transparent !important;
+    border: none !important;
+  }
+
+  /* Hide jQuery UI slider elements that might be created */
+  .price-range-wrapper .ui-slider,
+  .price-range-wrapper .ui-slider-range,
+  .price-range-wrapper .ui-slider-handle,
+  .price-range-wrapper .ui-slider-horizontal {
+    display: none !important;
+    visibility: hidden !important;
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+
+  /* ===== PAGINATION STYLING ===== */
+  .pagination-wrapper {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .pagination .page-item {
+    margin: 0;
+  }
+
+  .pagination .page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
     height: 40px;
-    width: 40px;
-    line-height: 47px;
-    background: #ffffff;
-    border-radius: 5px;
+    padding: 0;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background: #fff;
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+
+  .pagination .page-link:hover {
+    background: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(247, 148, 29, 0.3);
+  }
+
+  .pagination .page-item.active .page-link {
+    background: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+    font-weight: 600;
+  }
+
+  .pagination .page-item.disabled .page-link {
+    background: #f5f5f5;
+    color: var(--text-light);
+    border-color: var(--border-color);
+    cursor: not-allowed;
+  }
+
+  /* ===== SORT DROPDOWN STYLING ===== */
+  .sort-section select {
+    padding: 0.5rem 2rem 0.5rem 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background: #fff;
+    color: var(--text-dark);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%232c3e50' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+  }
+
+  .sort-section select:hover {
+    border-color: var(--primary-color);
+  }
+
+  .sort-section select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(247, 148, 29, 0.1);
+  }
+
+  /* ===== PRODUCT CARD STYLING ===== */
+  .product-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 0 0 0.5rem 0;
+    line-height: 1.4;
+  }
+
+  .product-name a {
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .product-name a:hover {
+    color: var(--primary-color);
+  }
+
+  .product-price {
+    margin-bottom: 0.75rem;
+  }
+
+  .product-price .current-price {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+
+  .product-price .original-price {
+    font-size: 14px;
+    color: var(--text-light);
+    text-decoration: line-through;
+    margin-left: 0.5rem;
+  }
+
+  /* ===== PRODUCTS SECTION ===== */
+  .products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1rem 1.5rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .products-header .category-info {
+    font-size: 13px;
+    color: var(--text-light);
+  }
+
+  .products-header .category-info strong {
+    color: var(--text-dark);
+    font-weight: 600;
+  }
+
+  .sort-section {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .sort-section label {
+    font-weight: 600;
+    color: var(--text-dark);
+    margin: 0;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .sort-section select {
+    padding: 0.4rem 0.6rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: #fff;
+    color: var(--text-dark);
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .sort-section select:hover,
+  .sort-section select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+  }
+
+  /* ===== PRODUCT CARD ===== */
+  .product-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .product-image-wrapper {
+    position: relative;
+    background: #f5f5f5;
+    width: 100%;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .product-image-wrapper a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .product-image-wrapper img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+
+  .product-card:hover .product-image-wrapper img {
+    transform: scale(1.08);
+  }
+
+  .wishlist-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #fff;
     border: 1px solid #ddd;
-    padding-right: 10px !important;
-    transition: all ease 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
   }
 
-  .ct-heart:hover {
-    background-color: #f7941d;
-    border: 1px solid #f7941d;
+  .wishlist-btn:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
   }
 
-  .ct-heart:hover i {
+  .wishlist-btn i {
+    color: #999;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+
+  .wishlist-btn:hover i {
     color: #fff;
   }
-  
-  .ct-heart:hover .remove_wishlist {
-      color:white !important;
+
+  .wishlist-btn.active i {
+    color: var(--primary-color);
+  }
+
+  .wishlist-btn.active:hover i {
+    color: #fff;
+  }
+
+  /* ===== PRODUCT INFO ===== */
+  .product-info {
+    padding: 1.25rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-price {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    order: -1;
+  }
+
+  .product-price .current-price {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+
+  .product-price .original-price {
+    font-size: 12px;
+    color: #999;
+    text-decoration: line-through;
+  }
+
+  .product-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+    text-transform: capitalize;
+  }
+
+  .product-availability {
+    margin-bottom: 0.75rem;
+    display: none;
+  }
+
+  .availability-bar {
+    height: 3px;
+    background: #e0e0e0;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .availability-bar span {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), #ffa500);
+    border-radius: 2px;
+  }
+
+  /* ===== PRODUCT ACTIONS ===== */
+  .product-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: auto;
+  }
+
+  .add-to-cart-btn {
+    flex: 1;
+    padding: 0.65rem 1rem;
+    background: var(--secondary-color);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: capitalize;
+  }
+
+  .add-to-cart-btn:hover {
+    background: #7a5f3f;
+    box-shadow: 0 2px 8px rgba(139, 111, 71, 0.3);
+  }
+
+  .add-to-cart-btn:active {
+    transform: scale(0.98);
+  }
+
+  /* ===== PAGINATION ===== */
+  .pagination-wrapper {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 2.5rem 0 !important;
+    width: 100% !important;
+  }
+
+  .pagination-wrapper .pagination {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: 0.25rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .pagination-wrapper .pagination .page-item {
+    display: inline-flex !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+    flex-shrink: 0 !important;
+  }
+
+  .pagination-wrapper .pagination .page-item .page-link {
+    min-width: 32px !important;
+    height: 32px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 4px !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+    border: 1px solid #ddd !important;
+    color: #333 !important;
+    text-decoration: none !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    background: #fff !important;
+    line-height: 1 !important;
+    margin: 0 !important;
+  }
+
+  .pagination-wrapper .pagination .page-item .page-link:hover {
+    border-color: var(--primary-color) !important;
+    color: var(--primary-color) !important;
+    background: rgba(247, 148, 29, 0.05) !important;
+    text-decoration: none !important;
+  }
+
+  .pagination-wrapper .pagination .page-item.active .page-link {
+    background: var(--primary-color) !important;
+    color: #fff !important;
+    border-color: var(--primary-color) !important;
+  }
+
+  .pagination-wrapper .pagination .page-item.disabled .page-link {
+    opacity: 0.5 !important;
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+  }
+
+  .pagination-wrapper .pagination .page-item.disabled .page-link:hover {
+    border-color: #ddd !important;
+    color: #333 !important;
+    background: #fff !important;
+  }
+
+  /* Override Bootstrap pagination styles */
+  .pagination-wrapper .pagination .page-link:focus {
+    box-shadow: none !important;
+    z-index: auto !important;
+  }
+
+  /* ===== NO PRODUCTS ===== */
+  .no-products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  .no-products img {
+    max-width: 300px;
+    margin-bottom: 2rem;
+    opacity: 0.8;
+  }
+
+  .no-products h5 {
+    color: var(--text-light);
+    font-size: 18px;
+    margin: 0;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    .products-header {
+      flex-direction: column;
+      gap: 0.75rem;
+      align-items: flex-start;
+      padding: 1rem;
+    }
+
+    .sort-section {
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .sort-section select {
+      width: 100%;
+    }
+
+    .product-card {
+      margin-bottom: 1rem;
+    }
+
+    .sidebar-menu {
+      margin-bottom: 1.5rem;
+    }
+
+    .pagination-wrapper .pagination .page-item .page-link {
+      min-width: 28px !important;
+      height: 28px !important;
+      font-size: 11px !important;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .product-info {
+      padding: 0.9rem;
+    }
+
+    .product-name {
+      font-size: 13px;
+    }
+
+    .product-price .current-price {
+      font-size: 15px;
+    }
+
+    .add-to-cart-btn {
+      font-size: 12px;
+      padding: 0.55rem 0.8rem;
+    }
+
+    .pagination-wrapper .pagination .page-item .page-link {
+      min-width: 24px !important;
+      height: 24px !important;
+      font-size: 10px !important;
+    }
+
+    .pagination-wrapper .pagination {
+      gap: 0.15rem !important;
+    }
   }
 </style>
 
@@ -231,337 +799,325 @@ $AllsettingsModel = new \App\Models\Allsettingsmodel();
 $all_setting_data = $AllsettingsModel->first();
 ?>
 
-<section class="">
+<section class="products-section">
+  <div class="container-fluid">
+    <div class="row g-4">
+      <!-- SIDEBAR -->
+      <div class="col-lg-2">
+        <!-- Categories -->
+        <div class="card sidebar-menu mb-4">
+          <div class="card-body">
+            <button class="btn d-lg-none w-100 rounded d-flex justify-content-between align-items-center"
+              type="button" data-toggle="collapse" data-target="#categoryDropdown" aria-expanded="false"
+              aria-controls="categoryDropdown">
+              <span>Categories</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
 
-  <div class="">
-    <div class="container-fluid px-0">
-      <div class="row no-gutters px-5">
-
-        <div class="col-lg-2">
-          <!--
-              *** MENUS AND FILTERS ***
-              _________________________________________________________
-              -->
-
-
-          <div class="card sidebar-menu mb-4" style="margin-top:1.2rem;">
-            <div class="card-body">
-              <button class="btn d-lg-none w-100 rounded d-flex justify-content-between align-items-center"
-                type="button" data-toggle="collapse" data-target="#categoryDropdown" aria-expanded="false"
-                aria-controls="categoryDropdown">
-                <span>Categories</span>
-                <i class="fas fa-chevron-down"></i> <!-- Dropdown icon -->
-              </button>
-
-              <!-- Collapsible category list -->
-              <div class="collapse d-lg-block" id="categoryDropdown">
-                <ul class="nav nav-pills flex-column category-menu">
-                  <?php foreach ($cat as $key => $catdata) { ?>
-                    <li>
-                      <a href="<?php echo base_url('category/' . base64_encode($catdata['CategoryID'])); ?>"
-                        class="nav-link cat-link text-capitalize">
-                        <i class="fa-chevron-right fa-solid mr-1" style="font-size: 12px; color: #f7941d; "></i>
-                        <?php echo wordwrap($catdata['CategoryName'], 20, "<br>\n"); ?>
-                        <span class="badge float-right">
-                          (<?php echo $countcat[$key]; ?>)
-                        </span>
-                      </a>
-                    </li>
-                    <hr class="m-0" style="background:#eee;"> <!-- Horizontal rule below each item -->
-                  <?php } ?>
-                </ul>
-              </div>
+            <div class="collapse d-lg-block" id="categoryDropdown">
+              <h3 class="card-title mb-3">Categories</h3>
+              <ul class="nav nav-pills flex-column category-menu">
+                <?php foreach ($cat as $key => $catdata) { ?>
+                  <li>
+                    <a href="<?php echo base_url('category/' . base64_encode($catdata['CategoryID'])); ?>"
+                      class="nav-link cat-link text-capitalize">
+                      <i class="fa-chevron-right fa-solid mr-2" style="font-size: 12px;"></i>
+                      <?php echo wordwrap($catdata['CategoryName'], 20, "<br>\n"); ?>
+                      <span class="badge float-right">
+                        (<?php echo $countcat[$key]; ?>)
+                      </span>
+                    </a>
+                  </li>
+                  <hr class="m-0">
+                <?php } ?>
+              </ul>
             </div>
           </div>
-
-
-
-          <div class="card sidebar-menu mb-4 d-none d-lg-block" style="box-shadow:none !important;">
-            <div class=" py-2 px-0" style="border-bottom: 1px solid black;">
-              <h3 class="h4 card-title" style="font-size:21px;font-weight:600;">Price</h3>
-            </div>
-            <div class="card-body" style="height:100px;">
-              <div class="range-slider">
-                <span class="rangeValues"></span>
-                <input value="<?php if (!empty($minimum_price))
-                  echo $minimum_price;
-                else
-                  echo '0'; ?>" min="0" max="50000" step="500" name="range" type="hidden">
-                <input value="<?php if (!empty($maximum_price))
-                  echo $maximum_price;
-                else
-                  echo '50000'; ?>" min="0" max="50000" step="500" name="range" type="hidden">
-                <input type="hidden" id="hidden_minimum_price" value="<?php if (isset($minimum_price)) {
-                  echo $minimum_price;
-                } else {
-                  echo '0';
-                } ?>" />
-                <input type="hidden" id="hidden_maximum_price" value="<?php if (isset($maximum_price)) {
-                  echo $maximum_price;
-                } else {
-                  echo '50000';
-                } ?>" />
-
-              </div>
-            </div>
-          </div>
-
-          <!-- *** MENUS AND FILTERS END ***-->
-
         </div>
 
-
-        <!-- <div class="col-lg-10 col-12 pl-5 justify-content-center"> -->
-        <div class="col-lg-10 col-12 pl-0 pl-lg-4 justify-content-center">
-          <div class="text-inner">
-
-            <div class="box info-bar py-0 py-lg-2 mt-0 mt-lg-4 mb-0 mb-sm-1">
-              <div class="row d-flex align-items-center flex-row">
-                <div class="col-md-6 col-lg-6 col-6 products-showing">
-                  <p class="mt-0">Category:
-                    <strong class="mx-1">All products</strong>
-                  </p>
-                  <!--Showing <strong>12</strong> of <strong>25</strong> products-->
+        <!-- Price Filter -->
+        <div class="card sidebar-menu d-none d-lg-block">
+          <div class="card-body">
+            <div class="price-filter-section">
+              <h3>Price Range</h3>
+              <div class="price-inputs">
+                <input type="text" id="price_min_display" placeholder="Min" readonly style="background: #f5f5f5;">
+                <span class="price-separator">-</span>
+                <input type="text" id="price_max_display" placeholder="Max" readonly style="background: #f5f5f5;">
+              </div>
+              <div class="price-range-wrapper">
+                <span class="rangeValues"></span>
+                <div class="simple-range-container">
+                  <input type="range" id="price_range" min="0" max="50000" step="500" value="25000" class="simple-slider">
+                  <div class="range-labels">
+                    <span>€0</span>
+                    <span>€50000</span>
+                  </div>
                 </div>
-                <!-- <div class="col-md-12 col-lg-6 products-number-sort"> -->
-                <div class="col-md-6 col-lg-6 col-6 products-number-sort d-flex justify-content-end ">
-                  <form class="form-inline d-block d-lg-flex justify-content-between flex-column flex-md-row">
-                    <div class="products-number">
-                      <!--<strong>Show</strong><a href="#" class="btn btn-sm category-btn active">12</a><a href="#" class="btn category-btn btn-sm">24</a><a href="#" class="btn category-btn btn-sm">All</a><span>products</span>-->
-                    </div>
-                    <!-- <div class="products-sort-by mt-2 mt-lg-0 form-group"> -->
-                    <div class="products-sort-by mt-3 mt-lg-0 form-group d-flex align-items-center">
-                      <!-- <strong class="m-0 mr-3">Sort by</strong> -->
-                      <strong class="m-0 mr-3 d-none d-lg-block">Sort By</strong>
-                      <select name="sort-by" class="form-control price_change">
-                        <option value="">Price</option>
-                        <option value="ASC" <?php if ($sort == 'ASC')
-                          echo 'selected'; ?>>Low to high</option>
-                        <option value="DESC" <?php if ($sort == 'DESC')
-                          echo 'selected'; ?>>High to low</option>
-                      </select>
-                    </div>
-                  </form>
-                </div>
+                <input type="hidden" id="hidden_minimum_price" value="0" />
+                <input type="hidden" id="hidden_maximum_price" value="50000" />
               </div>
             </div>
-
-
-
-            <div class="row filter_data">
-              <?php
-              if (!empty($product)) {
-                //  print_r($product);
-                foreach ($product as $prd) {
-                  //if(!empty($prd['ProductImage']))
-                  //{
-                  ?>
-                  <!-- <div class="col-md-4 product_col"> -->
-                  <div class="col-lg-3 col-md-4 col-12 product_col">
-                    <div class="bbb_deals">
-                      <div class="bbb_deals_title"></div>
-
-                      <div class="bbb_deals_slider_container">
-                        <div class="bbb_deals_item">
-                          <a
-                            href="<?php echo base_url($prd['slug'] . "/" . 'product_detail/' . base64_encode($prd['ProductID'])); ?>">
-                            <div class="bbb_deals_image text-center">
-                              <?php
-                              $jsondt = json_decode($prd['ProductImage']);
-                              if (!empty($jsondt)) {
-                                ?>
-                                <img src="<?php echo base_url('admin/public/assets/img/product_images/' . $jsondt[0]); ?>"
-                                  alt="#" class="product_image">
-                                <?php
-                              } else {
-                                ?>
-                                <img src="<?php echo base_url('admin/public/assets/img/product_images/18.jpg'); ?>" alt="#"
-                                  class="product_image">
-                                <?php
-                              }
-                              ?>
-                            </div>
-                            <div class="bbb_deals_content">
-                              <div class="bbb_deals_info_line d-flex flex-column justify-content-start">
-                                <div class="bbb_deals_item_name text-capitalize">
-                                  <p style="font-size:13px;font-weight:500;">
-                                    <?php
-                                    $product_name = $prd['ProductName'];
-                                    $limited_name = implode(' ', array_slice(explode(' ', $product_name), 0, 3));
-                                    echo $limited_name;
-                                    ?>
-                                  </p>
-                                </div>
-                                <div class="bbb_deals_item_price">
-                                  <?php
-                                  if ($prd['ProductType'] != 2) {
-                                    $productPrice = $prd['ProductPrice'];
-                                    $salePrice = $prd['Sale_ProductPrice'];
-                                    ?>
-                                    <span><?php echo $all_setting_data['currency']; ?><?php echo $salePrice; ?></span>
-                                    <span
-                                      style="text-decoration: line-through; color: #7e7e7e; font-weight: 400; font-size: 13px;">
-                                      <?php echo $all_setting_data['currency']; ?>      <?php echo $productPrice; ?>
-                                    </span>
-                                    <?php
-                                  } else {
-                                    $variations = new App\Models\Variationmodel();
-                                    $varia_dt = $variations->where('ProductID', $prd['ProductID'])->first();
-                                    $pricearr = $varia_dt['Sale_VariationPrice'];
-                                    if ($pricearr == null || $pricearr == 0) {
-                                      $pricearr = $varia_dt['VariationPrice'];
-                                    }
-                                    ?>
-                                    <span><?php echo $all_setting_data['currency']; ?><?php echo $pricearr; ?></span>
-                                    <?php
-                                  }
-                                  ?>
-                                </div>
-                              </div>
-                              <div class="available">
-                                <input type="hidden" name="quantity" id="<?php echo $prd['ProductID']; ?>" value="1"
-                                  class="quantity form-control">
-                                <div class="available_bar"><span style="width:17%"></span></div>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-
-
-                      <div class="row px-2 mt-3 pb-3">
-
-                        <!--<a href="<?php echo base_url(); ?>product_detail/<?php echo $prd['ProductID'] ?>" class="btn link-text mt-3 m-1 view_btn">View Details</a>-->
-                        <div class="col-lg-10 col-md-10 col-6 p-0">
-
-                          <div class="product-action-2">
-                            <form class="addtocartform" action="<?= base_url('addToCart') ?>" method="POST">
-                              <input type="hidden" name="productId" value="<?php echo $prd['ProductID']; ?>">
-                              <input type="hidden" name="quantity" value="1" min="1">
-                              <?php
-                              if ($prd['ProductType'] != 2) {
-                                ?>
-
-                                <input type="hidden" name="price" id="price" value="<?php echo $prd['ProductPrice']; ?>">
-                                <?php
-                              } else {
-                                //  $pricearr=[];
-                                $variations = new App\Models\Variationmodel();
-                                $varia_dt = $variations->where('ProductID', $prd['ProductID'])->first();
-                                $pricearr = $varia_dt['Sale_VariationPrice'];
-                                if ($pricearr == null || $pricearr == 0) {
-                                  $pricearr = $varia_dt['VariationPrice'];
-
-                                }
-
-                                ?>
-
-                                <input type="hidden" name="price" id="price" value="<?php echo $pricearr; ?>">
-                                <input type="hidden" name="variationId" value="<?php echo $varia_dt['VariationID']; ?>">
-
-                                <?php
-                              }
-                              ?>
-
-
-                              <button class="btn cart_btn add_cart link-text mt-0 rounded" type="submit">
-                                Add to Cart
-                              </button>
-
-                            </form>
-                          </div>
-
-                        </div>
-                        <div class="col-lg-2 col-md-2 px-0 col-6 align-self-center text-right ct-heart">
-                          <?php
-
-                          $session = session();
-                          $user_id = $session->get('user_id');
-
-
-                          if (empty($user_id)) {
-                            ?>
-                            <a href="#" data-toggle="modal" data-target="#exampleModal"><i class="ti-heart"></i></a>
-
-                            <?php
-                          } else {
-                            if (!empty($wishlist['Status']) && $wishlist['Status'] == 1 && $wishlist['ProductID'] == $prd['ProductID']) {
-                              ?>
-                              <i class="add_wishlist mt-2 align-self-center ti-heart added_wish d-none" id="add_wishlist"
-                                data-id="<?= $prd['ProductID'] ?>"></i>
-                              <i class="align-self-center  remove_wishlist removed_wish ti-heart " id="remove_wishlist"
-                                 data-id="<?= $prd['ProductID'] ?>" style="
-                                color: orange;"></i>
-
-                              <?php
-                            } else {
-                              ?>
-                              <i class="add_wishlist mt-2 align-self-center ti-heart added_wish" id="add_wishlist"
-                                data-id="<?= $prd['ProductID'] ?>"></i>
-                              <i class="align-self-center  remove_wishlist removed_wish ti-heart d-none" id="remove_wishlist"
-                                data-id="<?= $prd['ProductID'] ?>" style="color: orange;"></i>
-                              <?php
-
-                            }
-                          }
-                          ?>
-                          <div class="wishlistdata"></div>
-
-                        </div>
-
-
-                      </div>
-                    </div>
-                  </div>
-
-
-                  <?php
-
-                }
-              } else {
-                ?>
-
-
-                <!-- ------------------- -->
-                <div class="col-lg-12 d-flex align-items-center justify-content-center flex-column">
-                  <!--<div><i class="fas fa-search"></i></div>-->
-                  <img
-                    src="https://cdni.iconscout.com/illustration/premium/thumb/no-product-illustration-download-in-svg-png-gif-file-formats--ecommerce-package-empty-box-online-shopping-pack-e-commerce-illustrations-6632286.png"
-                    alt="NOt found" class="auto" style="height:275px;" />
-                  <h5 class="text-center text-muted mb-3" style="margin-top:5px;">Oops! No matches found for
-                    "<?php echo htmlspecialchars($search_term); ?>"</h5>
-                </div>
-                <!-- ============= -->
-                <?php
-              }
-              ?>
-            </div>
-
-            <div class="row justify-content-center pb-3" id="pagination_link">
-              <?php if ($pager):
-                ?>
-                <?php $pagi_path = 'product'; ?>
-                <?php $pager->setPath($pagi_path); ?>
-                <?= $pager->links() ?>
-              <?php endif; ?>
-            </div>
-
-
           </div>
         </div>
       </div>
+
+      <!-- PRODUCTS -->
+      <div class="col-lg-10">
+        <!-- Header -->
+        <div class="products-header">
+          <div class="category-info">
+            Category: <strong>All products</strong>
+          </div>
+          <div class="sort-section">
+            <label for="sort-by">Sort By:</label>
+            <select name="sort-by" id="sort-by" class="price_change">
+              <option value="">Price</option>
+              <option value="ASC" <?php if ($sort == 'ASC')
+                echo 'selected'; ?>>Low to high</option>
+              <option value="DESC" <?php if ($sort == 'DESC')
+                echo 'selected'; ?>>High to low</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="row filter_data g-4">
+          <?php
+          if (!empty($product)) {
+            foreach ($product as $prd) {
+              ?>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="product-card">
+                  <!-- Image Section -->
+                  <div class="product-image-wrapper">
+                    <a href="<?php echo base_url($prd['slug'] . "/" . 'product_detail/' . base64_encode($prd['ProductID'])); ?>"
+                      class="w-100 h-100 d-flex align-items-center justify-content-center">
+                      <?php
+                      $jsondt = json_decode($prd['ProductImage']);
+                      if (!empty($jsondt)) {
+                        ?>
+                        <img src="<?php echo base_url('admin/public/assets/img/product_images/' . $jsondt[0]); ?>"
+                          alt="<?php echo $prd['ProductName']; ?>" class="product_image">
+                        <?php
+                      } else {
+                        ?>
+                        <img src="<?php echo base_url('admin/public/assets/img/product_images/18.jpg'); ?>"
+                          alt="<?php echo $prd['ProductName']; ?>" class="product_image">
+                        <?php
+                      }
+                      ?>
+                    </a>
+
+                    <!-- Wishlist Button -->
+                    <div class="wishlist-btn <?php
+                    $session = session();
+                    $user_id = $session->get('user_id');
+                    if (!empty($user_id) && !empty($wishlist['Status']) && $wishlist['Status'] == 1 && $wishlist['ProductID'] == $prd['ProductID']) {
+                      echo 'active';
+                    }
+                    ?>" <?php if (empty($user_id)) { ?>data-toggle="modal" data-target="#exampleModal"<?php } ?>>
+                      <?php
+                      if (empty($user_id)) {
+                        ?>
+                        <i class="ti-heart"></i>
+                        <?php
+                      } else {
+                        if (!empty($wishlist['Status']) && $wishlist['Status'] == 1 && $wishlist['ProductID'] == $prd['ProductID']) {
+                          ?>
+                          <i class="remove_wishlist ti-heart" data-id="<?= $prd['ProductID'] ?>"></i>
+                          <?php
+                        } else {
+                          ?>
+                          <i class="add_wishlist ti-heart" data-id="<?= $prd['ProductID'] ?>"></i>
+                          <?php
+                        }
+                      }
+                      ?>
+                    </div>
+                  </div>
+
+                  <!-- Product Info -->
+                  <div class="product-info">
+                    <!-- Product Name (Shows First, Bold) -->
+                    <h3 class="product-name">
+                      <a href="<?php echo base_url($prd['slug'] . "/" . 'product_detail/' . base64_encode($prd['ProductID'])); ?>"
+                        style="color: inherit; text-decoration: none;">
+                        <?php
+                        $product_name = $prd['ProductName'];
+                        $limited_name = implode(' ', array_slice(explode(' ', $product_name), 0, 3));
+                        echo $limited_name;
+                        ?>
+                      </a>
+                    </h3>
+
+                    <!-- Price (Shows Second) -->
+                    <div class="product-price">
+                      <?php
+                      if ($prd['ProductType'] != 2) {
+                        $productPrice = $prd['ProductPrice'];
+                        $salePrice = $prd['Sale_ProductPrice'];
+                        ?>
+                        <span class="current-price"><?php echo $all_setting_data['currency']; ?><?php echo $salePrice; ?></span>
+                        <span class="original-price"><?php echo $all_setting_data['currency']; ?><?php echo $productPrice; ?></span>
+                        <?php
+                      } else {
+                        $variations = new App\Models\Variationmodel();
+                        $varia_dt = $variations->where('ProductID', $prd['ProductID'])->first();
+                        $pricearr = $varia_dt['Sale_VariationPrice'];
+                        if ($pricearr == null || $pricearr == 0) {
+                          $pricearr = $varia_dt['VariationPrice'];
+                        }
+                        ?>
+                        <span class="current-price"><?php echo $all_setting_data['currency']; ?><?php echo $pricearr; ?></span>
+                        <?php
+                      }
+                      ?>
+                    </div>
+
+                    <!-- Availability -->
+                    <div class="product-availability">
+                      <div class="availability-bar">
+                        <span style="width:17%"></span>
+                      </div>
+                    </div>
+
+                    <!-- Add to Cart Button -->
+                    <div class="product-actions">
+                      <form class="addtocartform w-100" action="<?= base_url('addToCart') ?>" method="POST">
+                        <input type="hidden" name="productId" value="<?php echo $prd['ProductID']; ?>">
+                        <input type="hidden" name="quantity" value="1" min="1">
+                        <?php
+                        if ($prd['ProductType'] != 2) {
+                          ?>
+                          <input type="hidden" name="price" id="price" value="<?php echo $prd['ProductPrice']; ?>">
+                          <?php
+                        } else {
+                          $variations = new App\Models\Variationmodel();
+                          $varia_dt = $variations->where('ProductID', $prd['ProductID'])->first();
+                          $pricearr = $varia_dt['Sale_VariationPrice'];
+                          if ($pricearr == null || $pricearr == 0) {
+                            $pricearr = $varia_dt['VariationPrice'];
+                          }
+                          ?>
+                          <input type="hidden" name="price" id="price" value="<?php echo $pricearr; ?>">
+                          <input type="hidden" name="variationId" value="<?php echo $varia_dt['VariationID']; ?>">
+                          <?php
+                        }
+                        ?>
+                        <button class="add-to-cart-btn w-100" type="submit">
+                          Add to Cart
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <?php
+            }
+          } else {
+            ?>
+            <div class="col-12">
+              <div class="no-products">
+                <img src="https://cdni.iconscout.com/illustration/premium/thumb/no-product-illustration-download-in-svg-png-gif-file-formats--ecommerce-package-empty-box-online-shopping-pack-e-commerce-illustrations-6632286.png"
+                  alt="No products found" />
+                <h5>Oops! No matches found for "<?php echo htmlspecialchars($search_term); ?>"</h5>
+              </div>
+            </div>
+            <?php
+          }
+          ?>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination-wrapper">
+          <?php if ($pager): ?>
+            <?php $pagi_path = 'product'; ?>
+            <?php $pager->setPath($pagi_path); ?>
+            <?= $pager->links() ?>
+          <?php endif; ?>
+        </div>
+      </div>
     </div>
-
-
   </div>
-  </div>
-  </div>
-  </div>
-
-
-  </div>
-
 </section>
 
-
 <?= $this->include('footer') ?>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Enhanced pagination styling
+  const paginationWrapper = document.querySelector('.pagination-wrapper');
+  if (paginationWrapper) {
+    const pagination = paginationWrapper.querySelector('.pagination');
+    if (pagination) {
+      // Ensure proper Bootstrap pagination classes
+      pagination.classList.add('pagination', 'justify-content-center');
+      
+      // Style individual pagination items
+      const items = pagination.querySelectorAll('li');
+      items.forEach(item => {
+        item.classList.add('page-item');
+        
+        const link = item.querySelector('a, span');
+        if (link) {
+          link.classList.add('page-link');
+          
+          // Add hover effects
+          link.addEventListener('mouseenter', function() {
+            if (!item.classList.contains('active') && !item.classList.contains('disabled')) {
+              this.style.borderColor = '#7a5f3f';
+              this.style.color = '#7a5f3f';
+              this.style.background = 'rgba(247, 148, 29, 0.05)';
+            }
+          });
+          
+          link.addEventListener('mouseleave', function() {
+            if (!item.classList.contains('active')) {
+              this.style.borderColor = '#ddd';
+              this.style.color = '#333';
+              this.style.background = '#fff';
+            }
+          });
+        }
+      });
+    }
+  }
+
+  // Simple price range slider functionality
+  const priceSlider = document.getElementById('price_range');
+  const minDisplay = document.getElementById('price_min_display');
+  const maxDisplay = document.getElementById('price_max_display');
+  const rangeValues = document.querySelector('.rangeValues');
+
+  if (priceSlider && minDisplay && maxDisplay) {
+    function updatePriceDisplay() {
+      const currency = '<?php echo $all_setting_data['currency']; ?>';
+      const maxPrice = parseInt(priceSlider.value);
+      const minPrice = 0; // Always start from 0
+      const maxValue = parseInt(priceSlider.max);
+      const percentage = (maxPrice / maxValue) * 100;
+
+      minDisplay.value = currency + minPrice;
+      maxDisplay.value = currency + maxPrice;
+      if (rangeValues) {
+        rangeValues.textContent = currency + minPrice + ' - ' + currency + maxPrice;
+      }
+
+      // Update gradient track
+      priceSlider.style.setProperty('--value', percentage + '%');
+
+      // Update hidden inputs for form submission
+      const hiddenMin = document.getElementById('hidden_minimum_price');
+      const hiddenMax = document.getElementById('hidden_maximum_price');
+      if (hiddenMin) hiddenMin.value = minPrice;
+      if (hiddenMax) hiddenMax.value = maxPrice;
+    }
+
+    priceSlider.addEventListener('input', updatePriceDisplay);
+    
+    // Initial update
+    updatePriceDisplay();
+  }
+});
+</script>
