@@ -9,7 +9,7 @@
   }
 
   .range-slider1 {
-        top: 45px;
+    top: 45px;
     text-align: center;
     position: relative;
     background: #f7941d;
@@ -159,6 +159,7 @@
     background: #fff !important;
     border: 6px solid #f7941d !important;
   }
+
   .category-menu .badge {
     /* background-color: #f7941d; */
     color: #f7941d;
@@ -166,36 +167,35 @@
     font-size: 80%;
   }
 
-  .ct-heart i{
-  color:#999999;
-  font-size: 20px;
-  transition: all ease 0.3s;
-}
-
-.ct-heart{
-  height: 40px;
-   width: 40px; 
-   line-height: 47px; 
-   background: #ffffff; 
-   border-radius: 5px;
-   border:1px solid #ddd;
-   padding-right:10px !important;
-   transition: all ease 0.3s;
-}
-
-.ct-heart:hover{
-  background-color: #f7941d;
-  border:1px solid #f7941d;
-}
-
-.ct-heart:hover i{
-  color:#fff;
-}
-
- .ct-heart:hover .remove_wishlist {
-      color:white !important;
+  .ct-heart i {
+    color: #999999;
+    font-size: 20px;
+    transition: all ease 0.3s;
   }
 
+  .ct-heart {
+    height: 40px;
+    width: 40px;
+    line-height: 47px;
+    background: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding-right: 10px !important;
+    transition: all ease 0.3s;
+  }
+
+  .ct-heart:hover {
+    background-color: #f7941d;
+    border: 1px solid #f7941d;
+  }
+
+  .ct-heart:hover i {
+    color: #fff;
+  }
+
+  .ct-heart:hover .remove_wishlist {
+    color: white !important;
+  }
 </style>
 <?php
 $AllsettingsModel = new \App\Models\Allsettingsmodel();
@@ -229,14 +229,14 @@ $all_setting_data = $AllsettingsModel->first();
                     <li>
                       <a href="<?php echo base_url('category/' . base64_encode($catdata['CategoryID'])); ?>"
                         class="nav-link text-capitalize">
-                        <i class="fa-chevron-right fa-solid mr-1" style="font-size: 12px; color: #f7941d; "></i>
-                        <?php echo wordwrap($catdata['CategoryName'], 20, "<br>\n"); ?>
+                        <i class="fa-chevron-right fa-solid mr-1"></i>
+                        <span
+                          style="flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"><?php echo $catdata['CategoryName']; ?></span>
                         <span class="badge float-right">
                           (<?php echo $countcat[$key]; ?>)
                         </span>
                       </a>
                     </li>
-                    <hr class="m-0" style="background:#eee;"> <!-- Horizontal rule below each item -->
                   <?php } ?>
                 </ul>
               </div>
@@ -251,7 +251,7 @@ $all_setting_data = $AllsettingsModel->first();
           <!-- ===================== -->
 
           <div class="card sidebar-menu mb-4 d-none d-lg-block" style="box-shadow:none !important;">
-              <div class=" py-2 px-0" style="border-bottom: 1px solid black;">
+            <div class=" py-2 px-0" style="border-bottom: 1px solid black;">
               <h3 class="h4 card-title" style="font-size:21px;font-weight:600;">Price</h3>
 
             </div>
@@ -261,23 +261,19 @@ $all_setting_data = $AllsettingsModel->first();
                 <input value="<?php if (!empty($minimum_price))
                   echo $minimum_price;
                 else
-                  echo '0'; ?>" min="0"
-                  max="50000" step="500" name="range" type="hidden">
+                  echo '0'; ?>" min="0" max="50000" step="500" name="range" type="hidden">
                 <input value="<?php if (!empty($maximum_price))
                   echo $maximum_price;
                 else
-                  echo '50000'; ?>" min="0"
-                  max="50000" step="500" name="range" type="hidden">
-                <input type="hidden" id="hidden_minimum_price"
-                  value="<?php if (!empty($minimum_price))
-                    echo $minimum_price;
-                  else
-                    echo '0'; ?>" />
-                <input type="hidden" id="hidden_maximum_price"
-                  value="<?php if (!empty($maximum_price))
-                    echo $maximum_price;
-                  else
-                    echo '50000'; ?>" />
+                  echo '50000'; ?>" min="0" max="50000" step="500" name="range" type="hidden">
+                <input type="hidden" id="hidden_minimum_price" value="<?php if (!empty($minimum_price))
+                  echo $minimum_price;
+                else
+                  echo '0'; ?>" />
+                <input type="hidden" id="hidden_maximum_price" value="<?php if (!empty($maximum_price))
+                  echo $maximum_price;
+                else
+                  echo '50000'; ?>" />
               </div>
             </div>
           </div>
@@ -347,12 +343,12 @@ $all_setting_data = $AllsettingsModel->first();
                                   ?>
                                   <img src="<?php echo base_url('admin/public/assets/img/product_images/' . $jsondt[0]); ?>"
                                     alt="#" class="product_image">
-                                <?php
+                                  <?php
                                 } else {
                                   ?>
                                   <img src="<?php echo base_url('admin/public/assets/img/product_images/18.jpg'); ?>" alt="#"
                                     class="product_image">
-                                <?php
+                                  <?php
                                 }
                                 ?>
                               </div>
@@ -373,12 +369,13 @@ $all_setting_data = $AllsettingsModel->first();
                                     $salePrice = $resdt['Sale_ProductPrice'];
                                     ?>
                                     <div class="bbb_deals_item_price">
-                                     <span><?php echo $all_setting_data['currency']; ?><?php echo $salePrice; ?></span>
-                                    <span style="text-decoration: line-through; color: #7e7e7e; font-weight: 400; font-size: 13px;">
-                                    <?php echo $all_setting_data['currency']; ?><?php echo $productPrice; ?>
-                                    </span>
+                                      <span><?php echo $all_setting_data['currency']; ?><?php echo $salePrice; ?></span>
+                                      <span
+                                        style="text-decoration: line-through; color: #7e7e7e; font-weight: 400; font-size: 13px;">
+                                        <?php echo $all_setting_data['currency']; ?>        <?php echo $productPrice; ?>
+                                      </span>
                                     </div>
-                                  <?php
+                                    <?php
                                   } else {
                                     $pricearr = [];
                                     foreach ($varprod as $vardt) {
@@ -386,8 +383,9 @@ $all_setting_data = $AllsettingsModel->first();
                                     }
                                     ?>
                                     <div class="bbb_deals_item_price">
-                                      <?php echo $all_setting_data['currency']; ?><?php echo array_sum($pricearr); ?></div>
-                                  <?php
+                                      <?php echo $all_setting_data['currency']; ?>        <?php echo array_sum($pricearr); ?>
+                                    </div>
+                                    <?php
                                   }
                                   ?>
                                 </div>
@@ -429,7 +427,7 @@ $all_setting_data = $AllsettingsModel->first();
                               ?>
                               <a href="#" data-toggle="modal" data-target="#exampleModal"><i class="ti-heart"></i></a>
 
-                            <?php
+                              <?php
                             } else {
                               if (!empty($wishlist['Status']) && $wishlist['Status'] == 1 && $wishlist['ProductID'] == $resdt['ProductID']) {
                                 ?>
@@ -438,7 +436,7 @@ $all_setting_data = $AllsettingsModel->first();
                                 <i class="align-self-center  remove_wishlist removed_wish ti-heart " id="remove_wishlist"
                                   data-id="<?= $resdt['ProductID'] ?>" style="color: orange;"></i>
 
-                              <?php
+                                <?php
                               } else {
                                 ?>
                                 <i class="add_wishlist ti-heart mt-2 align-self-center added_wish" id="add_wishlist"
@@ -456,7 +454,7 @@ $all_setting_data = $AllsettingsModel->first();
                         </div>
                       </div>
                     </div>
-                  <?php
+                    <?php
                   } else {
                     ?>
 
@@ -481,7 +479,7 @@ $all_setting_data = $AllsettingsModel->first();
                     alt="NOt found" class="auto" style="height:275px;" />
                   <h5 class="text-center text-muted mb-3" style="margin-top:5px;">Oops! No matches found</h5>
                 </div>
-              <?php
+                <?php
               }
               ?>
 

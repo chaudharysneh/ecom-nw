@@ -549,7 +549,7 @@ $all_setting_data = $AllsettingsModel->first();
                             $icon = $icons[$index % count($icons)];
                         ?>
                             <div class="swiper-slide">
-                                <div class="category-card text-center">
+                                <div class="category-card text-center" style="--category-accent: <?php echo $color; ?>; --category-delay: <?php echo number_format(($index % 6) * 0.14, 2, '.', ''); ?>s;">
                                     <a href="<?php echo base_url('category/' . base64_encode($cat['CategoryID'])); ?>" class="category-img-link">
                                         <div class="category-circle">
                                             <?php if (!empty($cat['Catagoryimage'])) { ?>
@@ -982,80 +982,7 @@ if (!empty($paymentgateway)) {
     bottom: 0;
 } */
 </style>
-<!-- Start Footer Area -->
-<!-- Start Shop Services Area -->
-<section class="shop-services section home">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-3 col-md-6 col-6 pl-0">
-                <!-- Start Single Service -->
-                <div class="single-service">
-                    <i class="ti-rocket"></i>
-                    <h4>Free Shipping</h4>
-                    <p class="mt-0">Orders over 100</p>
-                </div>
-                <!-- End Single Service -->
-            </div>
-            <div class="col-lg-3 col-md-6 col-6 pl-0">
-                <!-- Start Single Service -->
-                <div class="single-service">
-                    <i class="ti-reload"></i>
-                    <h4>Free Return</h4>
-                    <p class="mt-0">Within 30 days returns</p>
-                </div>
-                <!-- End Single Service -->
-            </div>
-            <div class="col-lg-3 col-md-6 col-6 pl-0">
-                <!-- Start Single Service -->
-                <div class="single-service">
-                    <i class="ti-lock"></i>
-                    <h4>Secure Payment</h4>
-                    <p class="mt-0">100% secure payment</p>
-                </div>
-                <!-- End Single Service -->
-            </div>
-            <div class="col-lg-3 col-md-6 col-6 pl-0">
-                <!-- Start Single Service -->
-                <div class="single-service">
-                    <i class="ti-tag"></i>
-                    <h4>Best Piece</h4>
-                    <p class="mt-0">Gauranteed price</p>
-                </div>
-                <!-- End Single Service -->
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End Shop Services Area -->
-
-<!-- Start Shop Newsletter  -->
-<section class="shop-newsletter section pt-4 pb-0">
-    <div class="container-fluid">
-        <div class="inner-top">
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2 col-12">
-                    <!-- Start Newsletter Inner -->
-                    <div class="inner">
-                        <h4>Newsletter</h4>
-                        <p class="my-2"> Subscribe to our newsletter</p>
-                        <form id="add_subscribe" method="post" target="_blank" class="newsletter-inner">
-                            <div>
-                                <input type="hidden" name="baseurl" id="baseurl" value="<?php echo base_url(); ?>">
-                                <input name="email" id="send_email" class="send_email" placeholder="Your email address"
-                                    required="" type="email">
-                                <button type="submit" class="btn send_email_data">Subscribe</button>
-                                <p id="msg" class="pl-3 text-left"></p>
-                            </div>
-
-                        </form>
-                    </div>
-                    <!-- End Newsletter Inner -->
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End Shop Newsletter -->
+<?php include 'footer_content.php'; goto homepage_footer_scripts; ?>
 
 <footer class="footer">
     <!-- Footer Top -->
@@ -1401,6 +1328,7 @@ if (!empty($paymentgateway)) {
     </div>
 </footer>
 <!-- /End Footer Area -->
+<?php homepage_footer_scripts: ?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css">
 <!-- jQuery UI library -->
@@ -2401,7 +2329,7 @@ if (!empty($paymentgateway)) {
 
         var swiper = new Swiper(".cat-swiper", {
             slidesPerView: 6,
-            spaceBetween: 30,
+            spaceBetween: 20,
             navigation: {
                 nextEl: ".cat-button-next",
                 prevEl: ".cat-button-prev",
@@ -2413,11 +2341,11 @@ if (!empty($paymentgateway)) {
                 },
                 768: {
                     slidesPerView: 4,
-                    spaceBetween: 20,
+                    spaceBetween: 18,
                 },
                 1024: {
                     slidesPerView: 6,
-                    spaceBetween: 30,
+                    spaceBetween: 20,
                 },
             },
         });

@@ -87,6 +87,8 @@ if (!empty($paymentgateway)) {
 </style>
 
 
+<?php include 'footer_content.php'; goto footer_scripts; ?>
+
 <!-- Start Footer Area -->
 <?php
 $AllsettingsModel = new \App\Models\Allsettingsmodel();
@@ -141,21 +143,33 @@ $all_setting_data = $AllsettingsModel->first();
     </section>
 
     <!-- Start Shop Newsletter -->
-    <section class="footer-newsletter pt-5 pb-5">
+    <section class="footer-newsletter">
+        <div class="footer-ambient footer-ambient-one"></div>
+        <div class="footer-ambient footer-ambient-two"></div>
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <div class="newsletter-content">
+                <div class="col-xl-8 col-lg-10 text-center">
+                    <div class="newsletter-content footer-reveal">
+                        <span class="newsletter-kicker">Fresh drops, early access, better deals</span>
                         <h2 class="text-white mb-3">Join Our Newsletter</h2>
-                        <p class="text-white-50 mb-4">Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>
+                        <p class="text-white-50 mb-4">Get curated offers, new arrivals, and limited-time furniture deals before everyone else.</p>
                         <form id="add_subscribe" method="post" class="modern-newsletter-form">
                             <input type="hidden" name="baseurl" value="<?php echo base_url(); ?>">
-                            <div class="input-group mb-2">
+                            <div class="newsletter-input-wrap mb-2">
+                                <i class="fa-regular fa-envelope"></i>
                                 <input name="email" class="form-control" placeholder="Your email address" required type="email">
-                                <button type="submit" class="btn btn-primary send_email_data">Subscribe Now</button>
+                                <button type="submit" class="btn btn-primary send_email_data">
+                                    Subscribe Now
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
                             </div>
                             <p id="msg" class="text-left mt-2"></p>
                         </form>
+                        <div class="newsletter-trust">
+                            <span><i class="fa-solid fa-lock"></i> No spam</span>
+                            <span><i class="fa-solid fa-tag"></i> Exclusive offers</span>
+                            <span><i class="fa-solid fa-box-open"></i> New arrival alerts</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -163,11 +177,11 @@ $all_setting_data = $AllsettingsModel->first();
     </section>
 
     <!-- Footer Top -->
-    <div class="footer-top pt-5 pb-5">
+    <div class="footer-top">
         <div class="container">
-            <div class="row g-4">
+            <div class="row g-4 align-items-start">
                 <div class="col-lg-4 col-md-6">
-                    <div class="footer-widget about-widget">
+                    <div class="footer-widget about-widget footer-reveal footer-reveal-delay-1">
                         <div class="footer-logo mb-4">
                             <?php 
                             $settings = new App\Models\Settings();
@@ -178,6 +192,10 @@ $all_setting_data = $AllsettingsModel->first();
                             </a>
                         </div>
                         <p class="mb-4"><?= $all_setting_data['Description'] ?? 'Providing high-quality furniture and home decor solutions for a modern lifestyle.'; ?></p>
+                        <div class="footer-mini-stats">
+                            <span><strong>24/7</strong> Support</span>
+                            <span><strong>30D</strong> Returns</span>
+                        </div>
                         <div class="app-buttons d-flex gap-2">
                             <a href="#"><img src="https://assets.pharmeasy.in/apothecary/images/googlePlay.svg?dim=360x0" alt="Google Play"></a>
                             <a href="#"><img src="https://assets.pharmeasy.in/apothecary/images/appStore.svg?dim=256x0" alt="App Store"></a>
@@ -186,7 +204,7 @@ $all_setting_data = $AllsettingsModel->first();
                 </div>
 
                 <div class="col-lg-2 col-md-6">
-                    <div class="footer-widget">
+                    <div class="footer-widget footer-reveal footer-reveal-delay-2">
                         <h4 class="widget-title">Information</h4>
                         <ul class="footer-links">
                             <li><a href="<?php echo base_url('about_us'); ?>">About Us</a></li>
@@ -198,7 +216,7 @@ $all_setting_data = $AllsettingsModel->first();
                 </div>
 
                 <div class="col-lg-2 col-md-6">
-                    <div class="footer-widget">
+                    <div class="footer-widget footer-reveal footer-reveal-delay-3">
                         <h4 class="widget-title">Our Policies</h4>
                         <ul class="footer-links">
                             <?php foreach ($resdt as $rsdata) { 
@@ -211,12 +229,21 @@ $all_setting_data = $AllsettingsModel->first();
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <div class="footer-widget contact-widget">
+                    <div class="footer-widget contact-widget footer-reveal footer-reveal-delay-4">
                         <h4 class="widget-title">Get In Touch</h4>
                         <ul class="contact-info">
-                            <li><i class="fa-solid fa-location-dot"></i> <?= $all_setting_data['Address'] ?? ''; ?></li>
-                            <li><i class="fa-solid fa-envelope"></i> <a href="mailto:<?= $all_setting_data['Email'] ?? ''; ?>"><?= $all_setting_data['Email'] ?? ''; ?></a></li>
-                            <li><i class="fa-solid fa-phone"></i> <a href="tel:<?= $all_setting_data['Phone'] ?? ''; ?>">+<?= $all_setting_data['Phone'] ?? ''; ?></a></li>
+                            <li>
+                                <span class="contact-icon"><i class="fa-solid fa-location-dot"></i></span>
+                                <span><?= $all_setting_data['Address'] ?? ''; ?></span>
+                            </li>
+                            <li>
+                                <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
+                                <a href="mailto:<?= $all_setting_data['Email'] ?? ''; ?>"><?= $all_setting_data['Email'] ?? ''; ?></a>
+                            </li>
+                            <li>
+                                <span class="contact-icon"><i class="fa-solid fa-phone"></i></span>
+                                <a href="tel:<?= $all_setting_data['Phone'] ?? ''; ?>">+<?= $all_setting_data['Phone'] ?? ''; ?></a>
+                            </li>
                         </ul>
                         <div class="footer-social mt-4">
                             <?php
@@ -242,7 +269,7 @@ $all_setting_data = $AllsettingsModel->first();
     </div>
 
     <!-- Copyright -->
-    <div class="footer-copyright pt-4 pb-4">
+    <div class="footer-copyright">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 text-center text-md-start">
@@ -257,6 +284,7 @@ $all_setting_data = $AllsettingsModel->first();
 </footer>
 <!-- /End Footer Area -->
 
+<?php footer_scripts: ?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css">
 <!-- jQuery UI library -->

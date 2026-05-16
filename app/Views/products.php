@@ -1,8 +1,8 @@
 <?= $this->include('header') ?>
 <style>
   :root {
-    --primary-color: #f7941d;
-    --secondary-color: #8b6f47;
+    --primary-color: #4a3427;
+    --secondary-color: #4a3427;
     --light-bg: #f8f9fa;
     --border-color: #e0e0e0;
     --text-dark: #2c3e50;
@@ -21,29 +21,45 @@
     text-transform: capitalize !important;
   }
 
+  .listing-shell {
+    --sidebar-width: 270px;
+  }
+
+  .listing-sidebar {
+    flex: 0 0 var(--sidebar-width);
+    max-width: var(--sidebar-width);
+  }
+
+  .listing-content {
+    flex: 1 1 calc(100% - var(--sidebar-width));
+    max-width: calc(100% - var(--sidebar-width));
+  }
+
   /* ===== SIDEBAR STYLES ===== */
   .sidebar-menu {
     border: none;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
     background: #fff;
   }
 
   .sidebar-menu .card-body {
-    padding: 1.25rem;
+    padding: 1.5rem;
   }
 
   .sidebar-menu .card-title {
     color: var(--text-dark);
     font-weight: 700;
     margin-bottom: 1rem;
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   .category-menu {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: grid;
+    gap: 0.5rem;
   }
 
   .category-menu li {
@@ -51,42 +67,65 @@
   }
 
   .category-menu .nav-link {
-    padding: 0.6rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
     color: var(--text-dark);
-    border-left: 3px solid transparent;
-    transition: all 0.3s ease;
-    font-size: 13px;
+    background: #fff;
+    border: 1px solid #f0f2f5;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    font-size: 0.92rem;
     font-weight: 500;
+    white-space: nowrap;
   }
 
   .category-menu .nav-link:hover {
-    border-left-color: var(--primary-color);
     color: var(--primary-color);
-    background: transparent;
-    padding-left: 0.4rem;
+    background: rgba(74, 52, 39, 0.06);
+    border-color: rgba(74, 52, 39, 0.12);
+    transform: translateX(3px);
+    box-shadow: 0 6px 16px rgba(74, 52, 39, 0.08);
+  }
+
+  .category-menu .nav-link i {
+    color: var(--primary-color);
+    margin-right: 0.75rem;
+    transition: transform 0.2s ease;
+  }
+
+  .category-menu .nav-link:hover i {
+    transform: translateX(2px);
   }
 
   .category-menu .badge {
     color: var(--primary-color);
-    font-weight: 600;
-    font-size: 11px;
-    background: transparent;
+    font-weight: 700;
+    font-size: 0.8rem;
+    background: rgba(74, 52, 39, 0.08);
+    border-radius: 999px;
+    padding: 0.25rem 0.65rem;
+    min-width: 42px;
+    margin-left: auto;
+    text-align: center;
+    flex: 0 0 auto;
+    float: none !important;
   }
 
   .category-menu hr {
-    margin: 0.4rem 0;
-    opacity: 0.2;
+    display: none;
   }
 
   /* ===== PRICE FILTER ===== */
   .price-filter-section {
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 1rem;
+    border-bottom: none;
+    padding-bottom: 0;
     margin-bottom: 0;
   }
 
   .price-filter-section h3 {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 700;
     color: var(--text-dark);
     margin-bottom: 1rem;
@@ -96,26 +135,34 @@
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    gap: 0.2rem;
+    gap: 0.75rem;
     margin-bottom: 1rem;
   }
 
   .price-inputs input {
-    padding: 0.4rem 0.5rem;
+    padding: 0.75rem 0.85rem;
     border: 1px solid var(--border-color) !important;
-    border-radius: 3px;
-    font-size: 11px;
+    border-radius: 12px;
+    font-size: 0.92rem;
     color: var(--text-dark);
     text-align: center;
-    background: #f9f9f9 !important;
+    background: #f8fafc !important;
     width: 100%;
     box-shadow: none !important;
+    transition: all 0.2s ease;
   }
 
   .price-inputs input:focus {
     border-color: var(--primary-color) !important;
     outline: none !important;
-    box-shadow: 0 0 0 2px rgba(247, 148, 29, 0.1) !important;
+    box-shadow: 0 0 0 3px rgba(74, 52, 39, 0.1) !important;
+  }
+
+  .price-separator {
+    color: var(--text-light);
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-align: center;
   }
 
   /* Remove any red borders from jQuery UI or other sources */
@@ -186,40 +233,40 @@
   .simple-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     border-radius: 50%;
     background: var(--primary-color);
     cursor: pointer;
-    box-shadow: 0 2px 8px rgba(247, 148, 29, 0.4);
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(74, 52, 39, 0.3);
+    transition: all 0.2s ease;
     border: 3px solid #fff;
     z-index: 10;
     position: relative;
-    margin-top: -8px;
+    margin-top: -7px;
   }
 
   .simple-slider::-webkit-slider-thumb:hover {
-    transform: scale(1.15);
-    box-shadow: 0 4px 12px rgba(247, 148, 29, 0.6);
+    transform: scale(1.2);
+    box-shadow: 0 8px 20px rgba(74, 52, 39, 0.35);
   }
 
   .simple-slider::-moz-range-thumb {
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     border-radius: 50%;
     background: var(--primary-color);
     cursor: pointer;
     border: 3px solid #fff;
-    box-shadow: 0 2px 8px rgba(247, 148, 29, 0.4);
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(74, 52, 39, 0.3);
+    transition: all 0.2s ease;
     z-index: 10;
     position: relative;
   }
 
   .simple-slider::-moz-range-thumb:hover {
-    transform: scale(1.15);
-    box-shadow: 0 4px 12px rgba(247, 148, 29, 0.6);
+    transform: scale(1.2);
+    box-shadow: 0 8px 20px rgba(74, 52, 39, 0.35);
   }
 
   .range-labels {
@@ -369,21 +416,25 @@
   }
 
   /* ===== PRODUCT CARD STYLING ===== */
-  .product-name {
-    font-size: 14px;
+  .product-name,
+  .product-title {
+    font-size: 1.12rem;
     font-weight: 700;
     color: var(--text-dark);
-    margin: 0 0 0.5rem 0;
-    line-height: 1.4;
+    margin: 0 0 0.7rem 0;
+    line-height: 1.38;
+    letter-spacing: -0.01em;
   }
 
-  .product-name a {
+  .product-name a,
+  .product-title a {
     color: var(--text-dark);
     text-decoration: none;
     transition: color 0.3s ease;
   }
 
-  .product-name a:hover {
+  .product-name a:hover,
+  .product-title a:hover {
     color: var(--primary-color);
   }
 
@@ -441,19 +492,28 @@
   }
 
   .sort-section select {
-    padding: 0.4rem 0.6rem;
+    min-width: 150px;
+    padding: 0.65rem 2.25rem 0.65rem 0.9rem;
     border: 1px solid var(--border-color);
-    border-radius: 4px;
+    border-radius: 12px;
     background: #fff;
     color: var(--text-dark);
     font-size: 13px;
+    font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%234a3427' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.85rem center;
+    box-shadow: 0 6px 16px rgba(74, 52, 39, 0.06);
   }
 
   .sort-section select:hover,
   .sort-section select:focus {
-    border-color: var(--primary-color);
+    border-color: rgba(74, 52, 39, 0.24);
+    box-shadow: 0 10px 24px rgba(74, 52, 39, 0.1);
     outline: none;
   }
 
@@ -571,12 +631,13 @@
     text-decoration: line-through;
   }
 
-  .product-name {
-    font-size: 14px;
-    font-weight: 600;
+  .product-name,
+  .product-title {
+    font-size: 1.12rem;
+    font-weight: 700;
     color: var(--text-dark);
     margin-bottom: 0.75rem;
-    line-height: 1.3;
+    line-height: 1.38;
     text-transform: capitalize;
   }
 
@@ -732,6 +793,12 @@
 
   /* ===== RESPONSIVE ===== */
   @media (max-width: 768px) {
+    .listing-sidebar,
+    .listing-content {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
     .products-header {
       flex-direction: column;
       gap: 0.75rem;
@@ -769,8 +836,9 @@
       padding: 0.9rem;
     }
 
-    .product-name {
-      font-size: 13px;
+    .product-name,
+    .product-title {
+      font-size: 1rem;
     }
 
     .product-price .current-price {
@@ -799,16 +867,16 @@ $AllsettingsModel = new \App\Models\Allsettingsmodel();
 $all_setting_data = $AllsettingsModel->first();
 ?>
 
-<section class="products-section">
+<section class="products-section product-listing-page">
   <div class="container-fluid">
-    <div class="row g-4">
+    <div class="row g-4 listing-shell">
       <!-- SIDEBAR -->
-      <div class="col-lg-2">
+      <div class="col-lg-2 listing-sidebar">
         <!-- Categories -->
         <div class="card sidebar-menu mb-4">
           <div class="card-body">
-            <button class="btn d-lg-none w-100 rounded d-flex justify-content-between align-items-center"
-              type="button" data-toggle="collapse" data-target="#categoryDropdown" aria-expanded="false"
+            <button class="btn d-lg-none w-100 rounded d-flex justify-content-between align-items-center" type="button"
+              data-toggle="collapse" data-target="#categoryDropdown" aria-expanded="false"
               aria-controls="categoryDropdown">
               <span>Categories</span>
               <i class="fas fa-chevron-down"></i>
@@ -821,14 +889,14 @@ $all_setting_data = $AllsettingsModel->first();
                   <li>
                     <a href="<?php echo base_url('category/' . base64_encode($catdata['CategoryID'])); ?>"
                       class="nav-link cat-link text-capitalize">
-                      <i class="fa-chevron-right fa-solid mr-2" style="font-size: 12px;"></i>
-                      <?php echo wordwrap($catdata['CategoryName'], 20, "<br>\n"); ?>
-                      <span class="badge float-right">
+                      <i class="fa-chevron-right fa-solid mr-2"></i>
+                      <span
+                        style="flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"><?php echo $catdata['CategoryName']; ?></span>
+                      <span class="badge">
                         (<?php echo $countcat[$key]; ?>)
                       </span>
                     </a>
                   </li>
-                  <hr class="m-0">
                 <?php } ?>
               </ul>
             </div>
@@ -848,14 +916,17 @@ $all_setting_data = $AllsettingsModel->first();
               <div class="price-range-wrapper">
                 <span class="rangeValues"></span>
                 <div class="simple-range-container">
-                  <input type="range" id="price_range" min="0" max="50000" step="500" value="25000" class="simple-slider">
+                  <input type="range" id="price_range" min="0" max="50000" step="500"
+                    value="<?php if (isset($maximum_price) && $maximum_price !== '') { echo $maximum_price; } else { echo '0'; } ?>"
+                    class="simple-slider">
                   <div class="range-labels">
                     <span>€0</span>
                     <span>€50000</span>
                   </div>
                 </div>
                 <input type="hidden" id="hidden_minimum_price" value="0" />
-                <input type="hidden" id="hidden_maximum_price" value="50000" />
+                <input type="hidden" id="hidden_maximum_price"
+                  value="<?php if (isset($maximum_price) && $maximum_price !== '') { echo $maximum_price; } else { echo '0'; } ?>" />
               </div>
             </div>
           </div>
@@ -863,7 +934,7 @@ $all_setting_data = $AllsettingsModel->first();
       </div>
 
       <!-- PRODUCTS -->
-      <div class="col-lg-10">
+      <div class="col-lg-10 listing-content">
         <!-- Header -->
         <div class="products-header">
           <div class="category-info">
@@ -885,38 +956,18 @@ $all_setting_data = $AllsettingsModel->first();
         <div class="row filter_data g-4">
           <?php
           if (!empty($product)) {
+            $session = session();
+            $user_id = $session->get('user_id');
             foreach ($product as $prd) {
+              $price = $prd['Sale_ProductPrice'] ?? $prd['ProductPrice'] ?? 0;
+              $oldPrice = $prd['ProductPrice'] ?? 0;
               ?>
               <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                <div class="product-card">
-                  <!-- Image Section -->
-                  <div class="product-image-wrapper">
-                    <a href="<?php echo base_url($prd['slug'] . "/" . 'product_detail/' . base64_encode($prd['ProductID'])); ?>"
-                      class="w-100 h-100 d-flex align-items-center justify-content-center">
-                      <?php
-                      $jsondt = json_decode($prd['ProductImage']);
-                      if (!empty($jsondt)) {
-                        ?>
-                        <img src="<?php echo base_url('admin/public/assets/img/product_images/' . $jsondt[0]); ?>"
-                          alt="<?php echo $prd['ProductName']; ?>" class="product_image">
-                        <?php
-                      } else {
-                        ?>
-                        <img src="<?php echo base_url('admin/public/assets/img/product_images/18.jpg'); ?>"
-                          alt="<?php echo $prd['ProductName']; ?>" class="product_image">
-                        <?php
-                      }
-                      ?>
-                    </a>
-
-                    <!-- Wishlist Button -->
-                    <div class="wishlist-btn <?php
-                    $session = session();
-                    $user_id = $session->get('user_id');
-                    if (!empty($user_id) && !empty($wishlist['Status']) && $wishlist['Status'] == 1 && $wishlist['ProductID'] == $prd['ProductID']) {
-                      echo 'active';
-                    }
-                    ?>" <?php if (empty($user_id)) { ?>data-toggle="modal" data-target="#exampleModal"<?php } ?>>
+                <div class="product-card modern-product-card">
+                  <div class="product-header">
+                    <div></div>
+                    <div class="wishlist-action" <?php if (empty($user_id)) { ?>data-toggle="modal"
+                        data-target="#exampleModal" <?php } ?>>
                       <?php
                       if (empty($user_id)) {
                         ?>
@@ -937,54 +988,51 @@ $all_setting_data = $AllsettingsModel->first();
                     </div>
                   </div>
 
-                  <!-- Product Info -->
-                  <div class="product-info">
-                    <!-- Product Name (Shows First, Bold) -->
-                    <h3 class="product-name">
-                      <a href="<?php echo base_url($prd['slug'] . "/" . 'product_detail/' . base64_encode($prd['ProductID'])); ?>"
-                        style="color: inherit; text-decoration: none;">
-                        <?php
-                        $product_name = $prd['ProductName'];
-                        $limited_name = implode(' ', array_slice(explode(' ', $product_name), 0, 3));
-                        echo $limited_name;
-                        ?>
+                  <a href="<?php echo base_url($prd['slug'] . "/" . 'product_detail/' . base64_encode($prd['ProductID'])); ?>"
+                    class="product-img-wrap">
+                    <?php
+                    $jsondt = json_decode($prd['ProductImage']);
+                    if (!empty($jsondt)) {
+                      ?>
+                      <img src="<?php echo base_url('admin/public/assets/img/product_images/' . $jsondt[0]); ?>"
+                        alt="<?php echo $prd['ProductName']; ?>">
+                      <?php
+                    } else {
+                      ?>
+                      <img src="<?php echo base_url('admin/public/assets/img/product_images/18.jpg'); ?>"
+                        alt="<?php echo $prd['ProductName']; ?>">
+                      <?php
+                    }
+                    ?>
+                  </a>
+
+                  <div class="product-body">
+                    <div class="product-rating">
+                      <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                      </div>
+                      <span class="review-count">(128)</span>
+                    </div>
+                    <h3 class="product-title">
+                      <a
+                        href="<?php echo base_url($prd['slug'] . "/" . 'product_detail/' . base64_encode($prd['ProductID'])); ?>">
+                        <?php echo $prd['ProductName']; ?>
                       </a>
                     </h3>
-
-                    <!-- Price (Shows Second) -->
                     <div class="product-price">
-                      <?php
-                      if ($prd['ProductType'] != 2) {
-                        $productPrice = $prd['ProductPrice'];
-                        $salePrice = $prd['Sale_ProductPrice'];
-                        ?>
-                        <span class="current-price"><?php echo $all_setting_data['currency']; ?><?php echo $salePrice; ?></span>
-                        <span class="original-price"><?php echo $all_setting_data['currency']; ?><?php echo $productPrice; ?></span>
-                        <?php
-                      } else {
-                        $variations = new App\Models\Variationmodel();
-                        $varia_dt = $variations->where('ProductID', $prd['ProductID'])->first();
-                        $pricearr = $varia_dt['Sale_VariationPrice'];
-                        if ($pricearr == null || $pricearr == 0) {
-                          $pricearr = $varia_dt['VariationPrice'];
-                        }
-                        ?>
-                        <span class="current-price"><?php echo $all_setting_data['currency']; ?><?php echo $pricearr; ?></span>
-                        <?php
-                      }
-                      ?>
+                      <span
+                        class="current-price"><?php echo $all_setting_data['currency']; ?><?php echo number_format($price, 2); ?></span>
+                      <?php if ($oldPrice > $price) { ?>
+                        <span
+                          class="old-price"><?php echo $all_setting_data['currency']; ?><?php echo number_format($oldPrice, 2); ?></span>
+                      <?php } ?>
                     </div>
-
-                    <!-- Availability -->
-                    <div class="product-availability">
-                      <div class="availability-bar">
-                        <span style="width:17%"></span>
-                      </div>
-                    </div>
-
-                    <!-- Add to Cart Button -->
-                    <div class="product-actions">
-                      <form class="addtocartform w-100" action="<?= base_url('addToCart') ?>" method="POST">
+                    <div class="product-buttons">
+                      <form class="addtocartform" action="<?= base_url('addToCart') ?>" method="POST">
                         <input type="hidden" name="productId" value="<?php echo $prd['ProductID']; ?>">
                         <input type="hidden" name="quantity" value="1" min="1">
                         <?php
@@ -1005,10 +1053,14 @@ $all_setting_data = $AllsettingsModel->first();
                           <?php
                         }
                         ?>
-                        <button class="add-to-cart-btn w-100" type="submit">
-                          Add to Cart
+                        <button class="btn-add-cart" type="submit">
+                          <i class="fa-solid fa-cart-shopping"></i> Add to Cart
                         </button>
                       </form>
+                      <a href="<?php echo base_url($prd['slug'] . "/" . 'product_detail/' . base64_encode($prd['ProductID'])); ?>"
+                        class="btn-buy-now">
+                        Buy Now
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -1019,7 +1071,8 @@ $all_setting_data = $AllsettingsModel->first();
             ?>
             <div class="col-12">
               <div class="no-products">
-                <img src="https://cdni.iconscout.com/illustration/premium/thumb/no-product-illustration-download-in-svg-png-gif-file-formats--ecommerce-package-empty-box-online-shopping-pack-e-commerce-illustrations-6632286.png"
+                <img
+                  src="https://cdni.iconscout.com/illustration/premium/thumb/no-product-illustration-download-in-svg-png-gif-file-formats--ecommerce-package-empty-box-online-shopping-pack-e-commerce-illustrations-6632286.png"
                   alt="No products found" />
                 <h5>Oops! No matches found for "<?php echo htmlspecialchars($search_term); ?>"</h5>
               </div>
@@ -1045,79 +1098,79 @@ $all_setting_data = $AllsettingsModel->first();
 <?= $this->include('footer') ?>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Enhanced pagination styling
-  const paginationWrapper = document.querySelector('.pagination-wrapper');
-  if (paginationWrapper) {
-    const pagination = paginationWrapper.querySelector('.pagination');
-    if (pagination) {
-      // Ensure proper Bootstrap pagination classes
-      pagination.classList.add('pagination', 'justify-content-center');
-      
-      // Style individual pagination items
-      const items = pagination.querySelectorAll('li');
-      items.forEach(item => {
-        item.classList.add('page-item');
-        
-        const link = item.querySelector('a, span');
-        if (link) {
-          link.classList.add('page-link');
-          
-          // Add hover effects
-          link.addEventListener('mouseenter', function() {
-            if (!item.classList.contains('active') && !item.classList.contains('disabled')) {
-              this.style.borderColor = '#7a5f3f';
-              this.style.color = '#7a5f3f';
-              this.style.background = 'rgba(247, 148, 29, 0.05)';
-            }
-          });
-          
-          link.addEventListener('mouseleave', function() {
-            if (!item.classList.contains('active')) {
-              this.style.borderColor = '#ddd';
-              this.style.color = '#333';
-              this.style.background = '#fff';
-            }
-          });
-        }
-      });
+  document.addEventListener('DOMContentLoaded', function () {
+    // Enhanced pagination styling
+    const paginationWrapper = document.querySelector('.pagination-wrapper');
+    if (paginationWrapper) {
+      const pagination = paginationWrapper.querySelector('.pagination');
+      if (pagination) {
+        // Ensure proper Bootstrap pagination classes
+        pagination.classList.add('pagination', 'justify-content-center');
+
+        // Style individual pagination items
+        const items = pagination.querySelectorAll('li');
+        items.forEach(item => {
+          item.classList.add('page-item');
+
+          const link = item.querySelector('a, span');
+          if (link) {
+            link.classList.add('page-link');
+
+            // Add hover effects
+            link.addEventListener('mouseenter', function () {
+              if (!item.classList.contains('active') && !item.classList.contains('disabled')) {
+                this.style.borderColor = '#7a5f3f';
+                this.style.color = '#7a5f3f';
+                this.style.background = 'rgba(247, 148, 29, 0.05)';
+              }
+            });
+
+            link.addEventListener('mouseleave', function () {
+              if (!item.classList.contains('active')) {
+                this.style.borderColor = '#ddd';
+                this.style.color = '#333';
+                this.style.background = '#fff';
+              }
+            });
+          }
+        });
+      }
     }
-  }
 
-  // Simple price range slider functionality
-  const priceSlider = document.getElementById('price_range');
-  const minDisplay = document.getElementById('price_min_display');
-  const maxDisplay = document.getElementById('price_max_display');
-  const rangeValues = document.querySelector('.rangeValues');
+    // Simple price range slider functionality
+    const priceSlider = document.getElementById('price_range');
+    const minDisplay = document.getElementById('price_min_display');
+    const maxDisplay = document.getElementById('price_max_display');
+    const rangeValues = document.querySelector('.rangeValues');
 
-  if (priceSlider && minDisplay && maxDisplay) {
-    function updatePriceDisplay() {
-      const currency = '<?php echo $all_setting_data['currency']; ?>';
-      const maxPrice = parseInt(priceSlider.value);
-      const minPrice = 0; // Always start from 0
-      const maxValue = parseInt(priceSlider.max);
-      const percentage = (maxPrice / maxValue) * 100;
+    if (priceSlider && minDisplay && maxDisplay) {
+      function updatePriceDisplay() {
+        const currency = '<?php echo $all_setting_data['currency']; ?>';
+        const maxPrice = parseInt(priceSlider.value);
+        const minPrice = 0; // Always start from 0
+        const maxValue = parseInt(priceSlider.max);
+        const percentage = (maxPrice / maxValue) * 100;
 
-      minDisplay.value = currency + minPrice;
-      maxDisplay.value = currency + maxPrice;
-      if (rangeValues) {
-        rangeValues.textContent = currency + minPrice + ' - ' + currency + maxPrice;
+        minDisplay.value = currency + minPrice;
+        maxDisplay.value = currency + maxPrice;
+        if (rangeValues) {
+          rangeValues.textContent = currency + minPrice + ' - ' + currency + maxPrice;
+        }
+
+        // Update gradient track
+        priceSlider.style.setProperty('--value', percentage + '%');
+
+        // Update hidden inputs for form submission
+        const hiddenMin = document.getElementById('hidden_minimum_price');
+        const hiddenMax = document.getElementById('hidden_maximum_price');
+        if (hiddenMin) hiddenMin.value = minPrice;
+        if (hiddenMax) hiddenMax.value = maxPrice;
       }
 
-      // Update gradient track
-      priceSlider.style.setProperty('--value', percentage + '%');
+      priceSlider.addEventListener('input', updatePriceDisplay);
 
-      // Update hidden inputs for form submission
-      const hiddenMin = document.getElementById('hidden_minimum_price');
-      const hiddenMax = document.getElementById('hidden_maximum_price');
-      if (hiddenMin) hiddenMin.value = minPrice;
-      if (hiddenMax) hiddenMax.value = maxPrice;
+      // Initial update
+      updatePriceDisplay();
     }
-
-    priceSlider.addEventListener('input', updatePriceDisplay);
-    
-    // Initial update
-    updatePriceDisplay();
-  }
-});
+  });
 </script>
