@@ -219,6 +219,9 @@ class Product extends BaseController
     {
         $data['all_product_data'] = $this->Productmodel->where('ProductID',$id)->first();
         $data['all_variation_data'] = $this->Variation->where('ProductID',$id)->findAll();
+        
+        $CartCon = new \App\Controllers\Cart();
+        $data['CartTotals'] = (object) $CartCon->calculateCartTotals();
 
         return view('single-product', $data);
     }
@@ -311,6 +314,9 @@ class Product extends BaseController
             }
             
             $data['all_review_data'] = $this->Reviewmodel->where('ProductID',$id)->findAll();
+            
+            $CartCon = new \App\Controllers\Cart();
+            $data['CartTotals'] = (object) $CartCon->calculateCartTotals();
     //   echo"<pre>";print_r($data); die;
         return view('single_product',$data);
     }
