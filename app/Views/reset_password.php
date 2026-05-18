@@ -213,82 +213,320 @@
 
     
 <style>
-  .main-category{
+  /* Base Overrides */
+  .main-category {
     display: none;
   }
-   .form-control {
-    display: block;
-    width: 100%;
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    line-height: 1.9 !important;
-    color: #495057;
-    background-color: #fff;
-    background-image: none;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: 0.25rem;
-    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-}
   
+  input:not([type=range]) {
+    padding: 10px 15px !important;
+  }
+
+  /* Premium Ambient Background matching mockup */
+  .security-bg-section {
+    background: #f5efe6;
+    padding: 60px 0;
+    min-height: calc(100vh - 160px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 5px;
+  }
+
+  /* White Card form container */
+  .card-registration {
+    border: none;
+    border-radius: 24px;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(74, 52, 39, 0.02);
+    height: 100%;
+  }
+
+  /* Cozy Left Image Corner wrapper */
+  .left-image-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .left-hero-image {
+    width: 100%;
+    height: 100%;
+    min-height: 480px;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Centered Lock Circle decoration */
+  .lock-circle-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .lock-circle {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background-color: #f7edd6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lock-circle i {
+    font-size: 28px;
+    color: #8c6239;
+  }
+
+  /* Mockup Headings styling */
+  .security-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+    text-align: center;
+    letter-spacing: -0.5px;
+  }
+
+  .security-desc {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14.5px;
+    color: #666;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 30px;
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Modern Input Group with built-in icons styling */
+  .form-outline {
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .form-outline label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    display: block;
+    letter-spacing: 0.1px;
+  }
+
+  .input-icon-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .input-icon-wrapper i {
+    position: absolute;
+    left: 18px;
+    color: #888;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    pointer-events: none;
+  }
+
+  .input-icon-wrapper .form-control {
+    padding-left: 48px !important;
+    height: 52px;
+    border-radius: 10px;
+    border: 1px solid rgba(74, 52, 39, 0.15) !important;
+    font-size: 14.5px;
+    color: #333;
+    background: #ffffff;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .input-icon-wrapper .form-control:focus {
+    border-color: #8d5736 !important;
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(140, 98, 57, 0.06) !important;
+  }
+
+  .input-icon-wrapper .form-control:focus + i {
+    color: #8d5736;
+  }
+
+  /* Custom error message styling */
+  span[id$="_err"].text-danger {
+    font-size: 13px;
+    margin-top: 8px;
+    display: block;
+    font-weight: 600;
+    color: #dc3545 !important;
+    animation: slideDown 0.3s ease;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Premium Buttons */
+  .btn.update_password_btn {
+    width: 100%;
+    padding: 14px 28px !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    border-radius: 10px !important;
+    transition: all 0.3s ease !important;
+    border: none !important;
+    background: #8c6239 !important;
+    color: #fff !important;
+    box-shadow: 0 6px 18px rgba(140, 98, 57, 0.15) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .btn.update_password_btn:hover {
+    background: #73512e !important;
+    box-shadow: 0 10px 25px rgba(140, 98, 57, 0.25) !important;
+    transform: translateY(-1px);
+    color: #fff !important;
+  }
+
+  /* OR Divider */
+  .divider-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 0;
+  }
+
+  .divider-line {
+    flex: 1;
+    height: 1px;
+    background-color: rgba(74, 52, 39, 0.1);
+  }
+
+  .divider-text {
+    font-size: 12px;
+    font-weight: 600;
+    color: #999;
+    padding: 0 15px;
+    letter-spacing: 1px;
+  }
+
+  .back-to-login {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1a1a1a;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .back-to-login:hover {
+    color: #8c6239;
+  }
 </style>
 
-<section class="vh-100">
-  <div class="container py-5 h-100">
-    <div class="row align-items-center justify-content-center h-100">
-      
-        <?php
-           if($forget_password_key!=NULL){
-        ?> 
-        
-      <div class="col-md-4 col-lg-4 col-xl-4">
-        <div class="text-center mb-3">
-                  <h2>Reset Password</h2>
+<section class="security-bg-section">
+  <div class="container">
+      <div class="row align-items-center no-gutters">
+        <!-- Left Image block matching exact mockup scene -->
+        <div class="col-md-6 d-none d-md-block pr-md-4">
+          <div class="left-image-container">
+            <img src="<?php echo base_url('public/images/register_left.png'); ?>" alt="Cozy furniture corner" class="left-hero-image" />
+          </div>
+        </div>
+
+        <!-- Right Form block matching mockup white card -->
+        <div class="col-md-6 col-lg-6 pl-md-4">
+          <?php if($forget_password_key != NULL) { ?>
+            <div class="card card-registration">
+              <div class="card-body p-4 p-md-5">
+                <!-- Lock circle badge -->
+                <div class="lock-circle-wrapper">
+                  <div class="lock-circle">
+                    <i class="fa-solid fa-lock"></i>
+                  </div>
                 </div>
-        <div class="card p-4">
-        <form id="reset_password_form">
-             <input type="hidden" id="base_url" value="<?php echo base_url(); ?>">
-                    <input type="hidden" name="userid" id="userid" value="<?php echo $UserID; ?>">
-                    <input type="hidden" name="reset_password_key" id="reset_password_key" value="<?php echo $reset_password_key; ?>">
-                    
-          <!-- Email input -->
-          <div class="form-outline mb-2 password">
-             <!--<label class="form-label" for="form1Example13">Password</label>-->
-             <input type="password" name="new_password" id="new_password" class="form-control form-control-lg" placeholder="New Password" aria-label="Password">
-                      <span id="new_password_err"></span>
-          </div>
 
-      
-          <div class="form-outline mb-2 password">
-            <!--<label class="form-label" for="form1Example23">Confirm Password</label>-->
-            <input type="password" name="confirm_password" id="confirm_password" class="form-control form-control-lg" placeholder="Confirm Password" aria-label="Password">
-                      <span id="confirm_password_err"></span>
-          </div>
+                <!-- Title & description -->
+                <h2 class="security-title">Reset Password</h2>
+                <p class="security-desc">Enter your new password below to reset your password and protect your account.</p>
 
-          <div class="mb-4">
-            <!-- Checkbox -->
-            <!--<div class="form-check pl-4">
-              <input class="form-check-input" type="checkbox" value="" id="form1Example3"  />
-              <label class="form-check-label" for="form1Example3"> Remember me </label>
-            </div>-->
-            <!-- <a href="#!">Forgot password?</a> -->
-          </div>
+                <!-- Server feedback messages -->
+                <div id="msg" class="mb-3 font-weight-bold text-center" style="font-size: 14.5px; display: none;"></div>
 
-          <!-- Submit button -->
-          <button type="button" name="submit" id="" class="btn btn-block update_password_btn rounded">Update Password</button>
+                <form id="reset_password_form">
+                  <input type="hidden" id="base_url" value="<?php echo base_url(); ?>">
+                  <input type="hidden" name="userid" id="userid" value="<?php echo $UserID; ?>">
+                  <input type="hidden" name="reset_password_key" id="reset_password_key" value="<?php echo $reset_password_key; ?>">
 
-       
+                  <!-- New Password input -->
+                  <div class="form-outline password">
+                    <label class="form-label" for="new_password">New Password</label>
+                    <div class="input-icon-wrapper">
+                      <i class="fa-solid fa-lock"></i>
+                      <input type="password" name="new_password" id="new_password" class="form-control" placeholder="••••••••" />
+                    </div>
+                    <span id="new_password_err"></span>
+                  </div>
 
+                  <!-- Confirm Password input -->
+                  <div class="form-outline password">
+                    <label class="form-label" for="confirm_password">Confirm Password</label>
+                    <div class="input-icon-wrapper">
+                      <i class="fa-solid fa-lock"></i>
+                      <input type="password" name="confirm_password" id="confirm_password" class="form-control" placeholder="••••••••" />
+                    </div>
+                    <span id="confirm_password_err"></span>
+                  </div>
 
+                  <!-- Submit button with arrow -->
+                  <button type="button" name="submit" class="mt-4 btn update_password_btn">
+                    Update Password <i class="fa-solid fa-arrow-right-long"></i>
+                  </button>
 
-        </form>
+                  <!-- OR separation divider -->
+                  <div class="divider-wrapper">
+                    <div class="divider-line"></div>
+                    <span class="divider-text">OR</span>
+                    <div class="divider-line"></div>
+                  </div>
+
+                  <!-- Back to Login -->
+                  <div class="text-center">
+                    <a class="back-to-login" href="<?php echo base_url(); ?>login">
+                      <i class="fa-solid fa-arrow-left-long"></i> Back to Login
+                    </a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          <?php } else { ?>
+            <div class="text-center p-5 card card-registration">
+              <div class="card-body">
+                <i class="fa-solid fa-circle-exclamation fa-4x text-danger mb-4"></i>
+                <h3 class="text-danger font-weight-bold mb-2">Link Has Expired</h3>
+                <p class="text-muted mb-4">This password reset link is invalid or has already been used. Please request a new link.</p>
+                <a class="btn" href="<?php echo base_url(); ?>forget_password" style="background: #8c6239; border: none; padding: 14px 30px; border-radius: 10px; font-weight: 600; color: #fff; box-shadow: 0 6px 18px rgba(140, 98, 57, 0.15);">Request New Link</a>
+              </div>
+            </div>
+          <?php } ?>
+        </div>
       </div>
-      </div>
-      <?php }else{ ?>
-            <span class="fa-2x text-danger">Link has expired</span>
-         <?php } ?>
     </div>
-  </div>
 </section>
 <?= $this->include('footer') ?>
 <script>
