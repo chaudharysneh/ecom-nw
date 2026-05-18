@@ -3654,7 +3654,7 @@
 
 .shopping-cart {
   background: #fff;
-  padding: 0px 0;
+  padding: 15px 30px;
 }
 
 .shopping-summery thead .main-hading {
@@ -3779,13 +3779,9 @@
 }
 
 .shopping-cart .qty .input-number {
-  border: 1px solid #eceded;
-  width: 100%;
   text-align: center;
-  height: 45px;
   border-radius: 0;
   overflow: hidden;
-  padding: 0px 45px;
 }
 
 .shopping-summery tbody .total-amount {
@@ -8019,8 +8015,8 @@ ul#country-list {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
-    padding: 10px;
+    /* margin-bottom: 20px; */
+    padding: 5px;
 }
 
 .product-img-wrap img {
