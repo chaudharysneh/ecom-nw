@@ -258,11 +258,109 @@
         right: 30px !important;
     }
 
+    .new-arrivals-area {
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(135deg, #fff7ef 0%, #ffffff 58%, #fff2e1 100%);
+        isolation: isolate;
+    }
+
+    .new-arrivals-area::before,
+    .new-arrivals-area::after {
+        content: "";
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: contain;
+        pointer-events: none;
+        z-index: -1;
+        opacity: 0.65;
+    }
+
+    .new-arrivals-area::before {
+        top: -40px;
+        left: -30px;
+        width: 230px;
+        height: 230px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'%3E%3Ccircle cx='120' cy='120' r='118' fill='%23f7941d' fill-opacity='0.08'/%3E%3Cpath d='M44 130C79 82 129 56 194 52' stroke='%23f7941d' stroke-width='10' stroke-linecap='round' stroke-opacity='0.28' fill='none'/%3E%3Cpath d='M66 170C104 129 144 112 204 110' stroke='%231a2b48' stroke-width='8' stroke-linecap='round' stroke-opacity='0.12' fill='none'/%3E%3C/svg%3E");
+    }
+
+    .new-arrivals-area::after {
+        right: -20px;
+        bottom: 30px;
+        width: 280px;
+        height: 180px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 180'%3E%3Cpath d='M18 138C54 70 116 32 198 26C231 24 258 29 282 42' stroke='%23f7941d' stroke-width='10' stroke-linecap='round' stroke-opacity='0.24' fill='none'/%3E%3Cpath d='M90 156C134 110 176 92 266 92' stroke='%231a2b48' stroke-width='8' stroke-linecap='round' stroke-opacity='0.1' fill='none'/%3E%3Ccircle cx='238' cy='44' r='18' fill='%23f7941d' fill-opacity='0.12'/%3E%3C/svg%3E");
+    }
+
+    .best-sellers-area {
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(135deg, #fffdf8 0%, #fff5ea 45%, #ffffff 100%);
+        isolation: isolate;
+    }
+
+    .best-sellers-area::before,
+    .best-sellers-area::after {
+        content: "";
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: contain;
+        pointer-events: none;
+        z-index: -1;
+        opacity: 0.7;
+    }
+
+    .best-sellers-area::before {
+        top: 20px;
+        right: -40px;
+        width: 250px;
+        height: 250px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 260'%3E%3Ccircle cx='130' cy='130' r='112' fill='%23f7941d' fill-opacity='0.07'/%3E%3Ccircle cx='130' cy='130' r='86' stroke='%23f7941d' stroke-width='10' stroke-opacity='0.18' fill='none'/%3E%3Cpath d='M74 96L130 58L186 96V164L130 202L74 164Z' stroke='%231a2b48' stroke-width='8' stroke-linejoin='round' stroke-opacity='0.12' fill='none'/%3E%3C/svg%3E");
+    }
+
+    .best-sellers-area::after {
+        left: -10px;
+        bottom: 25px;
+        width: 260px;
+        height: 150px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 280 160'%3E%3Cpath d='M14 124C44 82 82 54 132 42C179 30 222 35 268 58' stroke='%23f7941d' stroke-width='10' stroke-linecap='round' stroke-opacity='0.22' fill='none'/%3E%3Cpath d='M24 146H156' stroke='%231a2b48' stroke-width='8' stroke-linecap='round' stroke-opacity='0.1'/%3E%3Ccircle cx='196' cy='104' r='12' fill='%23f7941d' fill-opacity='0.12'/%3E%3Ccircle cx='230' cy='82' r='7' fill='%231a2b48' fill-opacity='0.08'/%3E%3C/svg%3E");
+    }
+
     @media (max-width: 991px) {
 
         .hero-slider .hero-button-next,
         .hero-slider .hero-button-prev {
             display: none;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .new-arrivals-area::before {
+            width: 160px;
+            height: 160px;
+            top: -25px;
+            left: -20px;
+        }
+
+        .new-arrivals-area::after {
+            width: 180px;
+            height: 120px;
+            right: -25px;
+            bottom: 10px;
+        }
+
+        .best-sellers-area::before {
+            width: 170px;
+            height: 170px;
+            top: 10px;
+            right: -35px;
+        }
+
+        .best-sellers-area::after {
+            width: 170px;
+            height: 100px;
+            left: -20px;
+            bottom: 10px;
         }
     }
 
@@ -437,7 +535,7 @@ $all_setting_data = $AllsettingsModel->first();
 
 
 <!-- Start New Arrivals Area -->
-<div class="product-area pt-5 pb-4">
+<div class="product-area pt-5 pb-4 new-arrivals-area">
     <div class="container">
         <div class="row align-items-center mb-4">
             <div class="col-md-6 col-8">
@@ -641,7 +739,7 @@ $all_setting_data = $AllsettingsModel->first();
 <!-- End Product Area -->
 
 <!-- Start Best Sellers Area -->
-<div class="product-area pt-4 pb-5">
+<div class="product-area pt-4 pb-5 best-sellers-area">
     <div class="container">
         <div class="row align-items-center mb-4">
             <div class="col-md-6 col-8">

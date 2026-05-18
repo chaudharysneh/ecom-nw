@@ -641,6 +641,7 @@ $(document).on("click", ".removeItem", function (e) {
                     $(".total-count").text(jsonObject.CartTotals); // Update total count
                     $(".dropdown-cart-header span").text(jsonObject.CartTotals + " Items"); // Update header count
                     $(".total-amount").text(currency + jsonObject.total_item); // Update total price
+                    $(".cart-table-subtotal-val").text(currency + parseFloat(jsonObject.total_item).toFixed(2));
 
                     // Update order summary
                     var formattedShippingCost =
@@ -936,7 +937,7 @@ $(document).on("click", ".removeItem", function (e) {
 
 		$(".btn-number").on('click', function (e) {
 			var button = $(this);
-			var qtyInput = button.closest('.input-group').find('.input-number');
+			var qtyInput = button.closest('.quantity-control, .input-group').find('.input-number');
 			var id = button.data('id');
 			var price = button.data('price');
 			var qty = parseFloat(qtyInput.val());
@@ -950,7 +951,18 @@ $(document).on("click", ".removeItem", function (e) {
 			}
 
 			var total = qtyInput.val() * price;
-			$(".total_amount[data-id='" + id + "'] span").html(currency + total);
+			$(".total_amount[data-id='" + id + "'] span").html(currency + total.toFixed(2));
+
+			// Recalculate table subtotal instantly
+			var subtotal = 0;
+			$(".shopping-summery tbody tr").not(".cart-subtotal-row").each(function() {
+				var rowTotalText = $(this).find(".total_amount span").text();
+				var rowTotalVal = parseFloat(rowTotalText.replace(/[^0-9.-]+/g,"")) || 0;
+				subtotal += rowTotalVal;
+			});
+			if (subtotal > 0) {
+				$(".cart-table-subtotal-val").text(currency + subtotal.toFixed(2));
+			}
 		});
 
 		// 		$(".updateCartbtn").on("click", function(e) {
@@ -1075,6 +1087,7 @@ $(document).on("click", ".removeItem", function (e) {
 
 						$('ul.shopping-list').html(html);
 						$(".total-amount").text(currency + parseFloat(jsonObject.total_item).toFixed(2));
+						$(".cart-table-subtotal-val").text(currency + parseFloat(jsonObject.total_item).toFixed(2));
 
 						var formattedShippingCost;
 						if (jsonObject.shippingCost === 0) {
