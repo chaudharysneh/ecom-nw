@@ -246,6 +246,10 @@ $all_setting_data = $AllsettingsModel->first();
                                     ?>
                                     <?php
                                     if ($totalCartItem > 0) {
+                                        if (!isset($CartTotals) || !is_object($CartTotals)) {
+                                            $CartCon = new \App\Controllers\Cart();
+                                            $CartTotals = (object) $CartCon->calculateCartTotals();
+                                        }
                                         ?>
                                         <div class="bottom">
                                             <div class="total">

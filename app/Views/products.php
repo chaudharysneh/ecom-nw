@@ -971,16 +971,16 @@ $all_setting_data = $AllsettingsModel->first();
                       <?php
                       if (empty($user_id)) {
                         ?>
-                        <i class="ti-heart"></i>
+                        <i class="fa-regular fa-heart"></i>
                         <?php
                       } else {
                         if (!empty($wishlist['Status']) && $wishlist['Status'] == 1 && $wishlist['ProductID'] == $prd['ProductID']) {
                           ?>
-                          <i class="remove_wishlist ti-heart" data-id="<?= $prd['ProductID'] ?>"></i>
+                          <i class="remove_wishlist fa-regular fa-heart" data-id="<?= $prd['ProductID'] ?>"></i>
                           <?php
                         } else {
                           ?>
-                          <i class="add_wishlist ti-heart" data-id="<?= $prd['ProductID'] ?>"></i>
+                          <i class="add_wishlist fa-regular fa-heart" data-id="<?= $prd['ProductID'] ?>"></i>
                           <?php
                         }
                       }

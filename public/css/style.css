@@ -7556,7 +7556,7 @@ ul#country-list {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background: #4a3427;
+    background: #8C4E2D;
     color: #fff !important;
     padding: 10px 25px;
     border-radius: 8px;
@@ -7573,7 +7573,7 @@ ul#country-list {
 }
 
 .btn-shop-now:hover {
-    background: #5d4131 !important;
+    background: #754024 !important;
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(74, 52, 39, 0.3);
 }
@@ -7710,7 +7710,7 @@ ul#country-list {
 }
 /* --- Category Slider Modernization --- */
 .section-header .sub-title {
-    color: #4a3427;
+    color: #8C4E2D;
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 2px;
@@ -7962,7 +7962,7 @@ ul#country-list {
 }
 
 .btn-view-all:hover {
-    background: #4a3427;
+    background: #754024;
     color: #fff !important;
     transform: translateX(3px);
 }
@@ -8011,7 +8011,7 @@ ul#country-list {
 }
 
 .wishlist-action i:hover {
-    color: #4a3427;
+    color: #8C4E2D;
 }
 
 .product-img-wrap {
@@ -8088,7 +8088,7 @@ ul#country-list {
 .current-price {
     font-size: 18px;
     font-weight: 600;
-    color: #4a3427;
+    color: #8C4E2D;
 }
 
 .old-price {
@@ -8105,8 +8105,8 @@ ul#country-list {
 
 .btn-add-cart {
     background: #fff;
-    color: #4a3427;
-    border: 1px solid #4a3427;
+    color: #8C4E2D;
+    border: 1px solid #8C4E2D;
     padding: 0 12px;
     height: 40px;
     border-radius: 8px;
@@ -8122,13 +8122,13 @@ ul#country-list {
 }
 
 .btn-add-cart:hover {
-    background: #4a3427;
+    background: #8C4E2D;
     color: #fff;
-    box-shadow: 0 5px 15px rgba(74, 52, 39, 0.2);
+    box-shadow: 0 5px 15px rgba(140, 78, 45, 0.2);
 }
 
 .btn-buy-now {
-    background: #4a3427;
+    background: #8C4E2D;
     color: #fff !important;
     padding: 0 12px;
     height: 40px;
@@ -8145,8 +8145,8 @@ ul#country-list {
 }
 
 .btn-buy-now:hover {
-    background: #36261c;
-    box-shadow: 0 5px 15px rgba(74, 52, 39, 0.2);
+    background: #754024;
+    box-shadow: 0 5px 15px rgba(140, 78, 45, 0.2);
 }
 
 /* Shared compact product listing layout for All Products and New In */
