@@ -7379,7 +7379,7 @@ ul#country-list {
     left: 0;
     width: 100%;
     z-index: 9999 !important;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .all-category-v2:hover .main-category {
@@ -7732,6 +7732,8 @@ ul#country-list {
         radial-gradient(circle at top left, rgba(247, 148, 29, 0.08), transparent 34%),
         radial-gradient(circle at top right, rgba(74, 52, 39, 0.06), transparent 28%),
         linear-gradient(180deg, #ffffff 0%, #fffaf5 100%);
+    padding-left: 60px;
+    padding-right: 60px;
 }
 
 .category-area .container {
@@ -7908,14 +7910,39 @@ ul#country-list {
     color: #fff;
 }
 
-
 @media (max-width: 1200px) {
+    .category-area {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    
     .category-area .container {
-        max-width: calc(100vw - 24px);
+        max-width: 100%;
     }
 
-    .cat-button-prev { left: -18px; }
-    .cat-button-next { right: -18px; }
+    .cat-button-prev { left: -38px; }
+    .cat-button-next { right: -38px; }
+}
+
+@media (max-width: 991px) {
+    .category-area {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .cat-button-prev { left: -28px; }
+    .cat-button-next { right: -28px; }
+}
+
+@media (max-width: 576px) {
+    .category-area {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .cat-button-prev, .cat-button-next {
+        display: none !important;
+    }
 }
 
 /* --- Modern Product Card Styles --- */
