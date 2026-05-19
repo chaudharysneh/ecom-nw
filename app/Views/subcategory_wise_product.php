@@ -413,7 +413,7 @@ $all_setting_data = $AllsettingsModel->first();
                         <div class="row px-2 mt-3 pb-3">
                         <div class="col-lg-10 col-md-10 col-6 p-0">
                         <div class="button d-flex text-start">
-                            <form class="addtocartform" action="/addToCart" method="POST">
+                            <form class="addtocartform" action="<?= base_url('addToCart') ?>" method="POST">
                               <input type="hidden" name="productId" value="<?php echo $resdt['ProductID']; ?>">
                               <input type="hidden" name="quantity" value="1" min="1">
                               <!--<a href="<?php //echo base_url('cart'); ?>" class="btn cart_btn link-text mt-3 m-1">Add to Cart</a>-->

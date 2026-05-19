@@ -586,7 +586,6 @@ class Cart extends BaseController
                 // 'tax' => number_format($CartTotals->tax, 2),
                 'tax' => number_format($tax, 2),
                 'itemid' => $itemId,
-                'DiscountPrice' => $DiscountPrice,
                 'totalWithShipping' => $CartTotals->totalWithShipping,
                 'isShippingEnabled' => $isShippingEnabled,
                 'isTaxEnabled' => $isTaxEnabled,
@@ -907,7 +906,7 @@ class Cart extends BaseController
         // print_r($cart);die;
 
         if ($couponCode) {
-            $AllsettingsModel = new \App\Models\Allsettingsmodel();
+            $AllsettingsModel = new Allsettingsmodel();
             $settings = $AllsettingsModel->first(); // Assuming you only need the first record
             $CouponModel = new CouponModel();
 

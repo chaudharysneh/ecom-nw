@@ -601,7 +601,7 @@ $all_setting_data = $AllsettingsModel->first();
                                             <?php } ?>
                                         </div>
                                         <div class="product-buttons">
-                                            <form class="addtocartform" action="/addToCart" method="POST">
+                                            <form class="addtocartform" action="<?= base_url('addToCart') ?>" method="POST">
                                                 <input type="hidden" name="productId" value="<?php echo $prd['ProductID']; ?>">
                                                 <input type="hidden" name="quantity" value="1">
                                                 <input type="hidden" name="price" value="<?php echo $price; ?>">
@@ -713,7 +713,7 @@ $all_setting_data = $AllsettingsModel->first();
                                                         <?php } ?>
                                                     </div>
                                                     <div class="product-buttons">
-                                                        <form class="addtocartform" action="/addToCart" method="POST">
+                                                        <form class="addtocartform" action="<?= base_url('addToCart') ?>" method="POST">
                                                             <input type="hidden" name="productId" value="<?php echo $prd['ProductID']; ?>">
                                                             <input type="hidden" name="quantity" value="1">
                                                             <input type="hidden" name="price" value="<?php echo $price; ?>">
@@ -805,7 +805,7 @@ $all_setting_data = $AllsettingsModel->first();
                                             <?php } ?>
                                         </div>
                                         <div class="product-buttons">
-                                            <form class="addtocartform" action="/addToCart" method="POST">
+                                            <form class="addtocartform" action="<?= base_url('addToCart') ?>" method="POST">
                                                 <input type="hidden" name="productId" value="<?php echo $prddt['ProductID']; ?>">
                                                 <input type="hidden" name="quantity" value="1">
                                                 <input type="hidden" name="price" value="<?php echo $price; ?>">
@@ -2365,9 +2365,12 @@ if (!empty($paymentgateway)) {
 
             let fd = new FormData(this);
 
+            var form = $(this);
+            var url = form.attr('action') || '<?= base_url('addToCart') ?>';
+
             $.ajax({
                 type: 'POST',
-                url: '/addToCart',
+                url: url,
                 data: fd,
                 dataType: 'json',
                 processData: false,

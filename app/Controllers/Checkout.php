@@ -83,9 +83,9 @@ class Checkout extends BaseController
         $this->CouponModel = new CouponModel($db);
         $this->NotificationModel = new NotificationModel($db);
         
-        $this->apiContext = new \PayPal\Rest\ApiContext
+        $this->apiContext = new ApiContext
         (
-            new \PayPal\Auth\OAuthTokenCredential(
+            new OAuthTokenCredential(
                 'AZWspDqjd4Qbe4q1zpui7DkmCtleGaFg9DPLKhS4JdRDb1g9N9ESZbl_Xnk5APRslzCYuwCRglzI3Oji',     // PayPal Client ID
                 'EKDw16rdkIa1SYOmX4cdAFfBzJKVweTQeAJ0iIbwuJMvSl9ZuP3okAEFv3A5x1VCsScH1KlGWjRyHUcp'  // PayPal Client Secret
             )
