@@ -427,6 +427,36 @@
 $AllsettingsModel = new \App\Models\Allsettingsmodel();
 $all_setting_data = $AllsettingsModel->first();
 ?>
+
+<!-- -------------- Static Hero Section ------------- -->
+<section class="hero-static-area" style="background-color: #f4f1ef; position: relative; overflow: hidden; padding: 70px 0; min-height: 500px; display: flex; align-items: center;">
+    <div class="container-fluid">
+        <div class="row align-items-center position-relative">
+            <div class="col-lg-6 col-md-12 col-12">
+                <div class="hero-content pl-md-5 pl-3" style="z-index: 10; position: relative;">
+                    <span class="sub-title" style="color: #8c4e2d; font-weight: bold; font-size: 13px; letter-spacing: 2px; text-transform: uppercase;">MODERN LIVING</span>
+                    <h1 class="main-title" style="font-size: 46px; font-weight: 800; color: #2d2a26; margin-top: 15px; margin-bottom: 25px; line-height: 1.1;">Quality Products, Better<br>Living</h1>
+                    <p class="description" style="color: #666; font-size: 16px; margin-bottom: 35px; max-width: 450px; line-height: 1.6;">Discover a wide range of handpicked products that bring convenience, style, and value to your everyday life.</p>
+                    <div class="hero-button">
+                        <a href="<?php echo base_url('shop'); ?>" class="btn-shop-now" style="background-color: #8c4e2d; color: white; padding: 14px 34px; border-radius: 8px; font-weight: 600; font-size: 15px; text-decoration: none; transition: background 0.3s ease; box-shadow: 0 4px 15px rgba(140, 78, 45, 0.2);">
+                            Shop Now <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-12 d-none d-lg-block" style="position: absolute; right: 0; top: -70px; height: calc(100% + 140px); width: 55%; z-index: 1;">
+                <div class="hero-img-wrap" style="height: 100%; width: 100%;">
+                    <img src="<?php echo base_url('admin/public/upload_images/modern_hero_products.png'); ?>" 
+                         alt="Hero Quality Products" 
+                         style="width: 100%; height: 100%; object-fit: cover; object-position: center; mask-image: linear-gradient(to right, transparent 0%, black 30%); -webkit-mask-image: linear-gradient(to right, transparent 0%, black 30%);">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Old Slider Area (Commented Out as requested) -->
+<!-- 
 <section class="hero-slider">
     <div class="swiper hero-swiper">
         <div class="swiper-wrapper">
@@ -470,13 +500,12 @@ $all_setting_data = $AllsettingsModel->first();
             }
             ?>
         </div>
-        <!-- Swiper Pagination -->
         <div class="swiper-pagination"></div>
-        <!-- Swiper Navigation -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
     </div>
 </section>
+-->
 <!--/ End Slider Area -->
 
 <!-- -------------- Categories ------------- -->
