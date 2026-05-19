@@ -384,7 +384,7 @@
         
         <!-- Left Image block matching exact mockup scene with headers -->
         <div class="col-md-5 d-none d-md-block pr-md-4 register-left-content">
-          <span class="left-kicker">Join FurniLife</span>
+          <span class="left-kicker">Join Fablead</span>
           <h2 class="left-title">Create Your Account</h2>
           <p class="left-desc">Sign up to explore stylish furniture, track orders, and enjoy exclusive offers tailored for you.</p>
           <div class="left-image-container">
