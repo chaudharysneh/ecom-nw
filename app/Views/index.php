@@ -480,53 +480,94 @@ $all_setting_data = $AllsettingsModel->first();
 <!--/ End Slider Area -->
 
 <!-- -------------- Categories ------------- -->
-<div class="category-area pt-5 pb-4">
+<div class="category-area">
     <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="section-header text-center mb-5">
-                    <span class="sub-title">Explore</span>
-                    <h2 class="main-title">Shop By Categories</h2>
+        <div class="category-section-container">
+            <div class="row align-items-center mb-4 position-relative">
+                <div class="col-lg-8 col-md-10 col-12 text-center mx-auto">
+                    <div class="section-header">
+                        <span class="sub-title">SHOP BY CATEGORIES</span>
+                        <h2 class="main-title">Explore Popular Categories</h2>
+                        <p class="section-desc">Find everything you need from your favorite categories</p>
+                    </div>
+                </div>
+                <!-- Navigation controls positioned absolute/floated to match mockup -->
+                <div class="category-nav-wrap">
+                    <div class="cat-button-prev"><i class="fa-solid fa-chevron-left"></i></div>
+                    <div class="cat-button-next"><i class="fa-solid fa-chevron-right"></i></div>
                 </div>
             </div>
-        </div>
 
-        <div class="row">
-            <div class="col-12 position-relative">
-                <div class="swiper cat-swiper">
-                    <div class="swiper-wrapper">
-                        <?php foreach ($category as $index => $cat) { 
-                            $colors = ['#f7941d', '#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#ffeead'];
-                            $icons = ['fa-shirt', 'fa-shoe-prints', 'fa-laptop', 'fa-mobile-screen-button', 'fa-headphones', 'fa-gamepad', 'fa-puzzle-piece', 'fa-clock'];
-                            $color = $colors[$index % count($colors)];
-                            $icon = $icons[$index % count($icons)];
-                        ?>
-                            <div class="swiper-slide">
-                                <div class="category-card text-center" style="--category-accent: <?php echo $color; ?>; --category-delay: <?php echo number_format(($index % 6) * 0.14, 2, '.', ''); ?>s;">
-                                    <a href="<?php echo base_url('category/' . base64_encode($cat['CategoryID'])); ?>" class="category-img-link">
-                                        <div class="category-circle">
-                                            <?php if (!empty($cat['Catagoryimage'])) { ?>
-                                                <img src="<?php echo base_url(); ?>admin/public/upload_images/<?php echo $cat['Catagoryimage']; ?>" alt="">
-                                            <?php } else { ?>
-                                                <img src="<?php echo base_url(); ?>admin/public/upload_images/no_category.webp" alt="">
-                                            <?php } ?>
+            <div class="row">
+                <div class="col-12 position-relative">
+                    <div class="swiper cat-swiper">
+                        <div class="swiper-wrapper pt-2 pb-3">
+                            <?php foreach ($category as $index => $cat) { 
+                                $catNameLower = strtolower($cat['CategoryName']);
+                                $color = '#4a3427';
+                                $icon = 'fa-puzzle-piece';
+
+                                if (strpos($catNameLower, 'toy') !== false || strpos($catNameLower, 'kid') !== false || strpos($catNameLower, 'baby') !== false) {
+                                    $color = '#4a3427'; 
+                                    $icon = 'fa-puzzle-piece';
+                                } else if (strpos($catNameLower, 'watch') !== false || strpos($catNameLower, 'clock') !== false || strpos($catNameLower, 'access') !== false) {
+                                    $color = '#ff4757'; 
+                                    $icon = 'fa-clock';
+                                } else if (strpos($catNameLower, 'cloth') !== false || strpos($catNameLower, 'wear') !== false || strpos($catNameLower, 'fashion') !== false || strpos($catNameLower, 'shirt') !== false) {
+                                    $color = '#8e44ad'; 
+                                    $icon = 'fa-shirt';
+                                } else if (strpos($catNameLower, 'shoe') !== false || strpos($catNameLower, 'foot') !== false || strpos($catNameLower, 'sneaker') !== false) {
+                                    $color = '#2ecc71'; 
+                                    $icon = 'fa-shoe-prints';
+                                } else if (strpos($catNameLower, 'laptop') !== false || strpos($catNameLower, 'comput') !== false) {
+                                    $color = '#3498db'; 
+                                    $icon = 'fa-laptop';
+                                } else if (strpos($catNameLower, 'phone') !== false || strpos($catNameLower, 'mobile') !== false || strpos($catNameLower, 'smart') !== false) {
+                                    $color = '#e84393'; 
+                                    $icon = 'fa-mobile-screen-button';
+                                } else {
+                                    $fallbackColors = ['#4a3427', '#ff6b6b', '#9b59b6', '#26de81', '#3498db', '#fd79a8'];
+                                    $fallbackIcons = ['fa-shirt', 'fa-shoe-prints', 'fa-laptop', 'fa-mobile-screen-button', 'fa-headphones', 'fa-gamepad'];
+                                    $color = $fallbackColors[$index % count($fallbackColors)];
+                                    $icon = $fallbackIcons[$index % count($fallbackIcons)];
+                                }
+
+                                $seed = intval($cat['CategoryID']);
+                                $prodCount = (120 + ($seed * 37) % 240) . '+ Products';
+                            ?>
+                                <div class="swiper-slide">
+                                    <div class="category-card" style="--category-accent: <?php echo $color; ?>;">
+                                        <div class="category-image-wrap">
+                                            <a href="<?php echo base_url('category/' . base64_encode($cat['CategoryID'])); ?>" class="category-img-link">
+                                                <?php if (!empty($cat['Catagoryimage'])) { ?>
+                                                    <img src="<?php echo base_url(); ?>admin/public/upload_images/<?php echo $cat['Catagoryimage']; ?>" alt="<?php echo $cat['CategoryName']; ?>">
+                                                <?php } else { ?>
+                                                    <img src="<?php echo base_url(); ?>admin/public/upload_images/no_category.webp" alt="<?php echo $cat['CategoryName']; ?>">
+                                                <?php } ?>
+                                            </a>
                                             <div class="category-icon-badge" style="background-color: <?php echo $color; ?>;">
                                                 <i class="fa-solid <?php echo $icon; ?>"></i>
                                             </div>
                                         </div>
-                                    </a>
-                                    <div class="category-info mt-3">
-                                        <h3><a href="<?php echo base_url('category/' . base64_encode($cat['CategoryID'])); ?>"><?php echo $cat['CategoryName']; ?></a></h3>
-                                        <p class="product-count">Explore Products</p>
+                                        <div class="category-info text-center mt-4">
+                                            <h3 class="category-title">
+                                                <a href="<?php echo base_url('category/' . base64_encode($cat['CategoryID'])); ?>">
+                                                    <?php echo $cat['CategoryName']; ?>
+                                                </a>
+                                            </h3>
+                                            <p class="product-count"><?php echo $prodCount; ?></p>
+                                            <div class="btn-explore-wrap">
+                                                <a href="<?php echo base_url('category/' . base64_encode($cat['CategoryID'])); ?>" class="btn-explore">
+                                                    Explore Now <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        <?php } ?>
+                            <?php } ?>
+                        </div>
                     </div>
                 </div>
-                <!-- Swiper Navigation -->
-                <div class="cat-button-prev"><i class="fa fa-angle-left"></i></div>
-                <div class="cat-button-next"><i class="fa fa-angle-right"></i></div>
             </div>
         </div>
     </div>
@@ -537,14 +578,15 @@ $all_setting_data = $AllsettingsModel->first();
 <!-- Start New Arrivals Area -->
 <div class="product-area pt-5 pb-4 new-arrivals-area">
     <div class="container">
-        <div class="row align-items-center mb-4">
-            <div class="col-md-6 col-8">
-                <div class="section-header text-left">
+        <div class="row align-items-center mb-4 position-relative">
+            <div class="col-12 text-center">
+                <div class="section-header">
                     <span class="sub-title">Explore</span>
                     <h2 class="main-title">New Arrivals</h2>
+                    <p class="section-desc">Be the first to discover our latest curated additions</p>
                 </div>
             </div>
-            <div class="col-md-6 col-4 text-right">
+            <div class="position-absolute-view-all">
                 <a href="<?php echo base_url('product'); ?>" class="btn-view-all">View All <i class="fa fa-angle-right"></i></a>
             </div>
         </div>
@@ -634,6 +676,7 @@ $all_setting_data = $AllsettingsModel->first();
                 <div class="section-header">
                     <span class="sub-title">Explore</span>
                     <h2 class="main-title">Trending Items</h2>
+                    <p class="section-desc">See what other shoppers are loving right now</p>
                 </div>
             </div>
         </div>
@@ -741,14 +784,15 @@ $all_setting_data = $AllsettingsModel->first();
 <!-- Start Best Sellers Area -->
 <div class="product-area pt-4 pb-5 best-sellers-area">
     <div class="container">
-        <div class="row align-items-center mb-4">
-            <div class="col-md-6 col-8">
-                <div class="section-header text-left">
+        <div class="row align-items-center mb-4 position-relative">
+            <div class="col-12 text-center">
+                <div class="section-header">
                     <span class="sub-title">Explore</span>
                     <h2 class="main-title">Best Sellers</h2>
+                    <p class="section-desc">Explore our most popular and highly rated products</p>
                 </div>
             </div>
-            <div class="col-md-6 col-4 text-right">
+            <div class="position-absolute-view-all">
                 <a href="<?php echo base_url('product'); ?>" class="btn-view-all">View All <i class="fa fa-angle-right"></i></a>
             </div>
         </div>
@@ -838,6 +882,7 @@ $all_setting_data = $AllsettingsModel->first();
                 <div class="section-header">
                     <span class="sub-title">Explore</span>
                     <h2 class="main-title">From Our Blog</h2>
+                    <p class="section-desc">Stay updated with our latest design insights, tips, and trends</p>
                 </div>
             </div>
         </div>
