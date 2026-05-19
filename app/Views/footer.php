@@ -52,17 +52,12 @@ if (!empty($paymentgateway)) {
 		}
 	}
 }
-
-
 ?>
-
 
 <style>
 	.send_email:focus-visible {
 		outline: none;
 	}
-
-
 
 	@media (min-width: 2721px) {
 		.footer {
@@ -79,13 +74,7 @@ if (!empty($paymentgateway)) {
 			width: 100%;
 		}
 	}
-
-	/* .footer {
-	position: relative;
-	bottom: 0;
-} */
 </style>
-
 
 <?php include 'footer_content.php'; goto footer_scripts; ?>
 
