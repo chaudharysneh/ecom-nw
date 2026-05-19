@@ -7,17 +7,24 @@ $all_setting_data = $AllsettingsModel->first();
 <!-- Elegant Scoped Styles for Shopping Cart -->
 <style>
 	:root {
-		--primary-color: #8C4E2D; /* Sophisticated warm brown signature */
+		--primary-color: #8C4E2D;
+		/* Sophisticated warm brown signature */
 		--primary-hover: #753E22;
-		--bg-beige: #F9F7F5; /* Soft sophisticated backdrop */
+		--bg-beige: #F9F7F5;
+		/* Soft sophisticated backdrop */
 		--card-bg: #FFFFFF;
-		--text-main: #2A2421; /* Deep charcoal */
-		--text-muted: #7E7672; /* Warm gray */
+		--text-main: #2A2421;
+		/* Deep charcoal */
+		--text-muted: #7E7672;
+		/* Warm gray */
 		--text-light: #A09690;
-		--border-color: #ECE9E6; /* Premium warm borders */
-		--accent-green: #2E7D32; /* In Stock & Free shipping Badge */
+		--border-color: #ECE9E6;
+		/* Premium warm borders */
+		--accent-green: #2E7D32;
+		/* In Stock & Free shipping Badge */
 		--accent-green-bg: #E8F5E9;
-		--accent-red: #D32F2F; /* Delete hover */
+		--accent-red: #D32F2F;
+		/* Delete hover */
 		--accent-red-bg: #FFEBEE;
 		--paypal-bg: #FFF2CC;
 		--paypal-border: #FFE599;
@@ -40,45 +47,42 @@ $all_setting_data = $AllsettingsModel->first();
 
 	/* --- Breadcrumbs Redesign --- */
 	.breadcrumbs {
-		/* background: transparent !important; */
 		padding: 15px 30px !important;
 		border: none !important;
 	}
 
-	.bread-list {
+	.product-breadcrumbs {
 		display: flex;
 		align-items: center;
+		flex-wrap: wrap;
 		gap: 8px;
-		list-style: none;
-		padding: 0;
-		margin: 0;
+		font-size: 14px;
+		color: #7D7873;
+		font-family: 'Poppins', sans-serif;
 	}
 
-	.bread-list li {
-		font-size: 13px;
-		font-weight: 500;
-		font-family: var(--font-outfit);
-	}
-
-	.bread-list li a {
-		color: var(--text-light);
+	.product-breadcrumbs a {
+		color: #7D7873;
 		text-decoration: none;
-		transition: var(--transition-smooth);
+		transition: color 0.2s ease;
+		font-family: 'Poppins', sans-serif;
 	}
 
-	.bread-list li a:hover {
-		color: var(--primary-color);
+	.product-breadcrumbs a:hover {
+		color: #8C4E2D;
 	}
 
-	.bread-list li i {
+	.product-breadcrumbs .separator {
 		font-size: 10px;
-		color: var(--text-light);
-		margin-left: 8px;
+		color: #C0BAB4;
+		display: flex;
+		align-items: center;
 	}
 
-	.bread-list li.active a {
-		color: var(--text-main);
-		font-weight: 600;
+	.product-breadcrumbs .current-product {
+		color: #2D2A26;
+		font-weight: 500;
+		font-family: 'Poppins', sans-serif;
 	}
 
 	/* --- Page Header --- */
@@ -515,7 +519,7 @@ $all_setting_data = $AllsettingsModel->first();
 		padding: 10px 0;
 	}
 
-	.order-summary-table td, 
+	.order-summary-table td,
 	.order-summary-table th {
 		padding: 0 !important;
 		border: none !important;
@@ -668,23 +672,29 @@ $all_setting_data = $AllsettingsModel->first();
 		border: 1px solid var(--border-color);
 		box-shadow: var(--shadow-soft);
 		text-align: center;
-		margin-bottom: 40px;
+		margin-bottom: 24px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		min-height: 480px;
 	}
 
 	.empty-cart-title {
 		font-family: var(--font-outfit);
-		font-size: 24px;
+		font-size: 26px;
 		font-weight: 700;
 		color: var(--text-main);
-		margin: 16px 0 8px 0;
+		margin: 16px 0 12px 0;
 	}
 
 	.empty-cart-desc {
-		font-size: 15px;
+		font-size: 14px;
 		color: var(--text-muted);
-		line-height: 1.6;
-		max-width: 400px;
-		margin: 0 auto 30px auto;
+		line-height: 1.5;
+		max-width: 440px;
+		margin: 0 auto 24px auto;
 	}
 
 	.empty-cart-btn {
@@ -714,7 +724,11 @@ $all_setting_data = $AllsettingsModel->first();
 		padding: 24px;
 		border: 1px solid var(--border-color);
 		box-shadow: var(--shadow-soft);
-		margin-bottom: 30px;
+		margin-bottom: 24px;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 	}
 
 	.recommendations-title {
@@ -726,8 +740,6 @@ $all_setting_data = $AllsettingsModel->first();
 		display: flex;
 		align-items: center;
 		gap: 8px;
-		border-bottom: 1px solid var(--border-color);
-		padding-bottom: 10px;
 	}
 
 	.recommendations-list {
@@ -740,19 +752,17 @@ $all_setting_data = $AllsettingsModel->first();
 		display: flex;
 		align-items: center;
 		gap: 16px;
-		padding-bottom: 20px;
-		border-bottom: 1px solid var(--border-color);
+		margin-bottom: 20px;
 	}
 
 	.rec-item:last-child {
-		border-bottom: none;
-		padding-bottom: 0;
+		margin-bottom: 0;
 	}
 
 	.rec-img-wrap {
-		width: 70px;
-		height: 70px;
-		border-radius: var(--border-radius-md);
+		width: 110px;
+		height: 110px;
+		border-radius: 12px;
 		border: 1px solid var(--border-color);
 		overflow: hidden;
 		flex-shrink: 0;
@@ -773,16 +783,21 @@ $all_setting_data = $AllsettingsModel->first();
 	.rec-details {
 		flex: 1;
 		min-width: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 4px;
 	}
 
 	.rec-name {
 		font-family: var(--font-outfit);
 		font-size: 14px;
 		font-weight: 600;
-		margin: 0 0 4px 0;
+		margin: 0;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
+		width: 100%;
 	}
 
 	.rec-name a {
@@ -800,8 +815,8 @@ $all_setting_data = $AllsettingsModel->first();
 		align-items: center;
 		gap: 4px;
 		font-size: 11px;
-		color: #F8A41E;
-		margin-bottom: 4px;
+		color: #EAA034;
+		margin-bottom: 8px;
 	}
 
 	.rec-rating span {
@@ -817,7 +832,7 @@ $all_setting_data = $AllsettingsModel->first();
 	}
 
 	.rec-price .curr-price {
-		font-size: 14px;
+		font-size: 15px;
 		font-weight: 700;
 		color: var(--primary-color);
 	}
@@ -830,27 +845,29 @@ $all_setting_data = $AllsettingsModel->first();
 
 	.rec-action {
 		flex-shrink: 0;
+		margin-top: 4px;
 	}
 
 	.rec-add-btn {
 		background: transparent;
-		border: 1px solid var(--primary-color);
+		border: 1px solid #C4A493;
 		color: var(--primary-color);
 		font-family: var(--font-outfit);
 		font-size: 12px;
 		font-weight: 600;
-		padding: 6px 14px;
-		border-radius: 30px;
+		padding: 6px 16px;
+		border-radius: 6px;
 		cursor: pointer;
 		display: inline-flex;
 		align-items: center;
-		gap: 4px;
+		gap: 6px;
 		transition: var(--transition-smooth);
 	}
 
 	.rec-add-btn:hover {
 		background: var(--primary-color);
-		color: #FFF;
+		color: #FFF !important;
+		border-color: var(--primary-color);
 		transform: translateY(-1px);
 	}
 
@@ -881,16 +898,18 @@ $all_setting_data = $AllsettingsModel->first();
 
 	/* --- Responsive Mobile Overrides --- */
 	@media (max-width: 991px) {
-		.cart-card, 
+
+		.cart-card,
 		.sidebar-checkout-card {
 			padding: 20px;
 		}
 	}
 
 	@media (max-width: 767px) {
-		.shopping-summery, 
-		.shopping-summery tbody, 
-		.shopping-summery tr, 
+
+		.shopping-summery,
+		.shopping-summery tbody,
+		.shopping-summery tr,
 		.shopping-summery td {
 			display: block !important;
 			width: 100% !important;
@@ -946,7 +965,7 @@ $all_setting_data = $AllsettingsModel->first();
 			font-family: var(--font-outfit);
 		}
 
-		.shopping-summery td.product-col::before, 
+		.shopping-summery td.product-col::before,
 		.shopping-summery td.action::before {
 			display: none !important;
 		}
@@ -964,15 +983,10 @@ $all_setting_data = $AllsettingsModel->first();
 <!-- Breadcrumbs -->
 <div class="breadcrumbs">
 	<div class="container-fluid">
-		<div class="row">
-			<div class="col-12">
-				<div class="bread-inner">
-					<ul class="bread-list">
-						<li><a href="<?php echo base_url('/'); ?>">Home<i class="ti-arrow-right"></i></a></li>
-						<li class="active"><a href="<?php echo base_url('cart'); ?>">Cart</a></li>
-					</ul>
-				</div>
-			</div>
+		<div class="product-breadcrumbs">
+			<a href="<?php echo base_url(); ?>"><i class="fa-solid fa-house m-2"></i>Home</a>
+			<span class="separator"><i class="fa-solid fa-chevron-right"></i></span>
+			<span class="current-product">Cart</span>
 		</div>
 	</div>
 </div>
@@ -980,17 +994,22 @@ $all_setting_data = $AllsettingsModel->first();
 <!-- Main Shopping Cart Section -->
 <div class="shopping-cart">
 	<div class="container-fluid">
-		
-		<?php if (!empty($cart)) { ?>
-			<!-- Redesigned Populated Cart Header -->
-			<div class="cart-page-header">
-				<div>
-					<h1 class="cart-title">Your Cart <span class="cart-count-badge">(<?php echo count($cart); ?> <?php echo count($cart) == 1 ? 'Item' : 'Items'; ?>)</span></h1>
-				</div>
+
+		<!-- Redesigned Page Header -->
+		<div class="cart-page-header">
+			<div>
+				<h1 class="cart-title">Your Cart <span
+						class="cart-count-badge">(<?php echo !empty($cart) ? count($cart) : 0; ?>
+						<?php echo (!empty($cart) && count($cart) == 1) ? 'Item' : 'Items'; ?>)</span></h1>
+			</div>
+			<?php if (!empty($cart)) { ?>
 				<a href="<?php echo base_url('product'); ?>" class="continue-shopping-link">
 					Continue Shopping <i class="fa-solid fa-arrow-right"></i>
 				</a>
-			</div>
+			<?php } ?>
+		</div>
+
+		<?php if (!empty($cart)) { ?>
 
 			<div class="row">
 				<!-- Left Column: Products List Card & Coupon Card -->
@@ -1003,20 +1022,20 @@ $all_setting_data = $AllsettingsModel->first();
 										<th>Product</th>
 										<th>Price</th>
 										<th class="text-center">Quantity</th>
-										<th>Total</th> 
+										<th>Total</th>
 										<th></th>
 									</tr>
 								</thead>
 								<tbody>
-									<?php    
+									<?php
 									foreach ($cart as $item) {
 										$imgurl = !empty($item['ProductImage']) ? $item['ProductImage'] : '';
-										
+
 										// Safely resolve Price and Subtotal per product item
 										$itemUnitPrice = 0;
 										$isVariationProduct = empty($item['price']);
 										$itemVarId = '';
-										
+
 										if (!$isVariationProduct) {
 											$itemUnitPrice = $item['unit_price'];
 											$itemTotal = $item['total'];
@@ -1025,7 +1044,7 @@ $all_setting_data = $AllsettingsModel->first();
 											$variations = new App\Models\Variationmodel();
 											$varia_dt = $variations->where('ProductID', $item['id'])->first();
 											$itemVarId = $varia_dt['VariationID'] ?? '';
-											
+
 											$pricearr = [];
 											$varia_dt_all = $variations->where('ProductID', $item['id'])->get()->getResult('array');
 											foreach ($varia_dt_all as $vardt) {
@@ -1041,11 +1060,13 @@ $all_setting_data = $AllsettingsModel->first();
 											<td class="product-col" data-title="Product">
 												<div class="cart-product-layout">
 													<div class="product-img-wrap">
-														<img src="<?php echo $imgurl; ?>" alt="<?php echo htmlspecialchars($item['name']); ?>">
+														<img src="<?php echo $imgurl; ?>"
+															alt="<?php echo htmlspecialchars($item['name']); ?>">
 													</div>
 													<div class="product-info-wrap">
 														<h3 class="product-des-title">
-															<a href="<?php echo base_url($item['slug'] . "/" . 'product_detail/' . base64_encode($item['id'])); ?>">
+															<a
+																href="<?php echo base_url($item['slug'] . "/" . 'product_detail/' . base64_encode($item['id'])); ?>">
 																<?php echo $item['name']; ?>
 															</a>
 														</h3>
@@ -1064,36 +1085,46 @@ $all_setting_data = $AllsettingsModel->first();
 													</div>
 												</div>
 											</td>
-											
+
 											<!-- Price Cell -->
 											<td class="price" data-title="Price">
 												<span><?php echo $all_setting_data['currency']; ?><?php echo number_format($itemUnitPrice, 2); ?></span>
 											</td>
-											
+
 											<!-- Qty Selector -->
 											<td class="qty" data-title="Quantity">
 												<div class="quantity-control">
-													<button type="button" class="btn-number" data-type="minus" data-id="<?php echo $itemId; ?>" data-price="<?php echo $itemUnitPrice; ?>" data-field="quant[<?php echo $itemId; ?>]">
+													<button type="button" class="btn-number" data-type="minus"
+														data-id="<?php echo $itemId; ?>"
+														data-price="<?php echo $itemUnitPrice; ?>"
+														data-field="quant[<?php echo $itemId; ?>]">
 														<i class="fa-solid fa-minus"></i>
 													</button>
-													<input type="text" name="quant[<?php echo $itemId; ?>]" class="input-number" data-min="1" data-max="100" value="<?php echo $item['quantity']; ?>" readonly>
-													<button type="button" class="btn-number" data-type="plus" data-id="<?php echo $itemId; ?>" data-price="<?php echo $itemUnitPrice; ?>" data-field="quant[<?php echo $itemId; ?>]">
+													<input type="text" name="quant[<?php echo $itemId; ?>]" class="input-number"
+														data-min="1" data-max="100" value="<?php echo $item['quantity']; ?>"
+														readonly>
+													<button type="button" class="btn-number" data-type="plus"
+														data-id="<?php echo $itemId; ?>"
+														data-price="<?php echo $itemUnitPrice; ?>"
+														data-field="quant[<?php echo $itemId; ?>]">
 														<i class="fa-solid fa-plus"></i>
 													</button>
 												</div>
 												<?php if ($isVariationProduct && !empty($itemVarId)) { ?>
-													<input type="hidden" name="variationId[<?php echo $itemId; ?>]" value="<?php echo $itemVarId; ?>">
+													<input type="hidden" name="variationId[<?php echo $itemId; ?>]"
+														value="<?php echo $itemVarId; ?>">
 												<?php } ?>
 											</td>
-											
+
 											<!-- Item Total Cell -->
 											<td class="total_amount" data-title="Total" data-id="<?php echo $item['id']; ?>">
 												<span><?php echo $all_setting_data['currency']; ?><?php echo number_format($itemTotal, 2); ?></span>
 											</td>
-											
+
 											<!-- Action Remove Cell -->
 											<td class="action">
-												<button type="button" class="remove-item-btn removeItem" data-id="<?php echo $item['id']; ?>">
+												<button type="button" class="remove-item-btn removeItem"
+													data-id="<?php echo $item['id']; ?>">
 													<i class="fa-regular fa-trash-can"></i>
 												</button>
 											</td>
@@ -1101,14 +1132,19 @@ $all_setting_data = $AllsettingsModel->first();
 										<?php
 									}
 									?>
-									
+
 									<!-- Subtotal row inside the tbody -->
 									<tr class="cart-subtotal-row" style="background: transparent;">
-										<td colspan="3" class="text-right" style="font-family: var(--font-outfit); font-weight: 600; font-size: 15px; color: var(--text-main); border-top: 1px solid var(--border-color); padding: 20px 16px !important; text-align: right;">Subtotal</td>
-										<td class="cart-table-subtotal-val text-left" style="font-family: var(--font-outfit); font-weight: 700; font-size: 18px; color: var(--primary-color); border-top: 1px solid var(--border-color); padding: 20px 16px !important;">
-											<?php echo $all_setting_data['currency']; ?><?php echo number_format($CartTotals->subtotal, 2); ?>
+										<td colspan="3" class="text-right"
+											style="font-family: var(--font-outfit); font-weight: 600; font-size: 15px; color: var(--text-main); border-top: 1px solid var(--border-color); padding: 20px 16px !important; text-align: right;">
+											Subtotal</td>
+										<td class="cart-table-subtotal-val text-left"
+											style="font-family: var(--font-outfit); font-weight: 700; font-size: 18px; color: var(--primary-color); border-top: 1px solid var(--border-color); padding: 20px 16px !important;">
+											<?php echo $all_setting_data['currency']; ?>	<?php echo number_format($CartTotals->subtotal, 2); ?>
 										</td>
-										<td style="border-top: 1px solid var(--border-color); padding: 20px 16px !important;"></td>
+										<td
+											style="border-top: 1px solid var(--border-color); padding: 20px 16px !important;">
+										</td>
 									</tr>
 								</tbody>
 							</table>
@@ -1118,17 +1154,19 @@ $all_setting_data = $AllsettingsModel->first();
 
 					<!-- Coupon Card (Footer Row of Left Column) -->
 					<div class="coupon-card-footer mb-4">
-						<?php 
+						<?php
 						$couponCode = "";
 						if (session()->has('couponCode')) {
 							$couponCode = session()->get('couponCode');
 						}
 						?>
-						
+
 						<!-- Active Coupon Pill -->
-						<div id="removeCouponForm" class="applied-coupon-pill" style="<?php echo ($couponCode == "") ? 'display:none' : ''; ?>">
+						<div id="removeCouponForm" class="applied-coupon-pill"
+							style="<?php echo ($couponCode == "") ? 'display:none' : ''; ?>">
 							<div class="applied-coupon-info">
-								<i class="fa-solid fa-square-check"></i> Coupon: <span class="couponname"><?= htmlspecialchars($couponCode); ?></span>
+								<i class="fa-solid fa-square-check"></i> Coupon: <span
+									class="couponname"><?= htmlspecialchars($couponCode); ?></span>
 							</div>
 							<button type="button" class="remove-coupon-btn removeCoupon">
 								<i class="fa-solid fa-circle-xmark"></i>
@@ -1136,21 +1174,25 @@ $all_setting_data = $AllsettingsModel->first();
 						</div>
 
 						<!-- Coupon Apply Form -->
-						<form id="apllyCouponForm" class="apllyCouponForm" action="POST" style="<?php echo ($couponCode != "") ? 'display:none' : ''; ?>">
+						<form id="apllyCouponForm" class="apllyCouponForm" action="POST"
+							style="<?php echo ($couponCode != "") ? 'display:none' : ''; ?>">
 							<div class="d-flex align-items-center justify-content-between w-100 flex-wrap gap-3">
 								<div class="align-items-center gap-2">
 									<i class="fa-solid fa-tag" style="color: var(--primary-color); font-size: 16px;"></i>
-									<span style="font-weight: 600; font-size: 14px; color: var(--text-main);">Have a coupon code?</span>
+									<span style="font-weight: 600; font-size: 14px; color: var(--text-main);">Have a coupon
+										code?</span>
 								</div>
 								<div class="align-items-center gap-2">
-									<input type="text" placeholder="Enter coupon code" value="<?php echo htmlspecialchars($couponCode); ?>" name="couponCode" id="couponCode" class="coupon-input">
+									<input type="text" placeholder="Enter coupon code"
+										value="<?php echo htmlspecialchars($couponCode); ?>" name="couponCode"
+										id="couponCode" class="coupon-input">
 									<button type="submit" class="coupon-apply-btn">Apply</button>
 								</div>
 							</div>
 						</form>
 
 						<div class="coupondata"></div>
-						
+
 						<!-- Show All Coupons Toggle List -->
 						<?php if (!empty($coupons)) { ?>
 							<div class="mt-2 text-right">
@@ -1158,17 +1200,20 @@ $all_setting_data = $AllsettingsModel->first();
 									Show All Coupons <i class="fa-solid fa-chevron-down"></i>
 								</button>
 							</div>
-							
+
 							<div class="all_copouns" style="display:none;">
 								<ul class="coupon-list">
 									<?php foreach ($coupons as $coupon) { ?>
 										<li class="coupon-item">
 											<div class="coupon-item-card">
 												<div>
-													<div class="coupon-item-code"><?= htmlspecialchars(strlen($coupon['CouponCode']) > 15 ? substr($coupon['CouponCode'], 0, 15) . '...' : $coupon['CouponCode']); ?></div>
+													<div class="coupon-item-code">
+														<?= htmlspecialchars(strlen($coupon['CouponCode']) > 15 ? substr($coupon['CouponCode'], 0, 15) . '...' : $coupon['CouponCode']); ?>
+													</div>
 													<div class="coupon-item-lbl">Exclusive Code</div>
 												</div>
-												<button type="button" class="selectCouponBtn" data-coupon-code="<?= htmlspecialchars($coupon['CouponCode']); ?>">Apply</button>
+												<button type="button" class="selectCouponBtn"
+													data-coupon-code="<?= htmlspecialchars($coupon['CouponCode']); ?>">Apply</button>
 											</div>
 										</li>
 									<?php } ?>
@@ -1187,15 +1232,17 @@ $all_setting_data = $AllsettingsModel->first();
 				<div class="col-lg-4 col-12">
 					<div class="sidebar-checkout-card">
 						<h4 class="sidebar-card-title">Order Summary</h4>
-						
+
 						<!-- Summary Table -->
 						<table class="table order-summary-table">
 							<tbody>
 								<tr>
-									<td>Subtotal (<?php echo count($cart); ?> <?php echo count($cart) == 1 ? 'item' : 'items'; ?>)</td>
-									<th><?php echo $all_setting_data['currency']; ?><?php echo number_format($CartTotals->subtotal, 2); ?></th>
+									<td>Subtotal (<?php echo count($cart); ?>
+										<?php echo count($cart) == 1 ? 'item' : 'items'; ?>)</td>
+									<th><?php echo $all_setting_data['currency']; ?><?php echo number_format($CartTotals->subtotal, 2); ?>
+									</th>
 								</tr>
-								
+
 								<?php if ($isShippingEnabled) { ?>
 									<tr>
 										<td>Shipping</td>
@@ -1214,20 +1261,23 @@ $all_setting_data = $AllsettingsModel->first();
 								<?php if ($isTaxEnabled) { ?>
 									<tr>
 										<td>Tax</td>
-										<th><?php echo $all_setting_data['currency']; ?><?php echo number_format($CartTotals->tax, 2); ?></th>
+										<th><?php echo $all_setting_data['currency']; ?><?php echo number_format($CartTotals->tax, 2); ?>
+										</th>
 									</tr>
 								<?php } ?>
 
 								<?php if ($CartTotals->DiscountPrice > 0) { ?>
 									<tr class="Discount">
 										<td>Discount</td>
-										<th>-<?php echo $all_setting_data['currency']; ?><?php echo number_format($CartTotals->DiscountPrice, 2); ?></th>
+										<th>-<?php echo $all_setting_data['currency']; ?><?php echo number_format($CartTotals->DiscountPrice, 2); ?>
+										</th>
 									</tr>
 								<?php } ?>
-								
+
 								<tr class="total">
 									<td>Total</td>
-									<th><?php echo $all_setting_data['currency']; ?><?php echo number_format($CartTotals->totalWithShipping, 2); ?></th>
+									<th><?php echo $all_setting_data['currency']; ?><?php echo number_format($CartTotals->totalWithShipping, 2); ?>
+									</th>
 								</tr>
 							</tbody>
 						</table>
@@ -1235,7 +1285,9 @@ $all_setting_data = $AllsettingsModel->first();
 						<!-- Discount Saving Notification inside Order Summary -->
 						<?php if ($CartTotals->DiscountPrice > 0) { ?>
 							<div class="savings-notification">
-								You saved <?php echo $all_setting_data['currency']; ?><?php echo number_format($CartTotals->DiscountPrice, 2); ?> on this order
+								You saved
+								<?php echo $all_setting_data['currency']; ?>		<?php echo number_format($CartTotals->DiscountPrice, 2); ?>
+								on this order
 							</div>
 						<?php } ?>
 
@@ -1244,9 +1296,10 @@ $all_setting_data = $AllsettingsModel->first();
 							<a href="<?php echo base_url('checkout'); ?>" class="checkout-primary-btn">
 								<i class="fa-solid fa-lock" style="font-size: 13px;"></i> Proceed to Checkout
 							</a>
-							
+
 							<button type="button" class="checkout-paypal-btn">
-								Pay with <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" style="height: 18px; margin-left: 4px; vertical-align: middle;">
+								Pay with <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg"
+									alt="PayPal" style="height: 18px; margin-left: 4px; vertical-align: middle;">
 							</button>
 						</div>
 
@@ -1283,20 +1336,23 @@ $all_setting_data = $AllsettingsModel->first();
 					</div>
 				</div>
 			</div>
-			
+
 		<?php } else { ?>
-			
-			<!-- Redesigned Empty Cart State Layout -->
-			<div class="row justify-content-center">
-				<div class="col-lg-6 col-md-8 col-12">
+
+			<div class="row">
+				<!-- Left Column: Redesigned Empty Cart State Layout -->
+				<div class="col-lg-8 col-12">
 					<div class="empty-cart-card">
 						<!-- Premium custom SVG empty cart illustration -->
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="160" height="160" class="mb-4 d-inline-block">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="160" height="160"
+							class="mb-4 d-inline-block">
 							<circle cx="100" cy="100" r="80" fill="#F5F2EE" />
 							<!-- Potted plant on left -->
 							<path d="M55,120 L65,120 L62,135 L58,135 Z" fill="#8C4E2D" />
-							<path d="M60,119 C55,108 50,112 52,118 C48,110 44,115 48,120 C54,120 58,120 60,119 Z" fill="#1D9B5E" opacity="0.8" />
-							<path d="M60,119 C65,108 70,112 68,118 C72,110 76,115 72,120 C66,120 62,120 60,119 Z" fill="#1D9B5E" />
+							<path d="M60,119 C55,108 50,112 52,118 C48,110 44,115 48,120 C54,120 58,120 60,119 Z"
+								fill="#1D9B5E" opacity="0.8" />
+							<path d="M60,119 C65,108 70,112 68,118 C72,110 76,115 72,120 C66,120 62,120 60,119 Z"
+								fill="#1D9B5E" />
 							<!-- Cardboard boxes on right -->
 							<polygon points="125,125 145,120 145,135 125,140" fill="#D7C4B7" />
 							<polygon points="125,125 145,120 135,115 115,120" fill="#E8DCD3" />
@@ -1305,8 +1361,10 @@ $all_setting_data = $AllsettingsModel->first();
 							<polygon points="140,110 155,107 148,103 133,106" fill="#E8DCD3" opacity="0.9" />
 							<polygon points="133,106 140,110 140,123 133,119" fill="#C5B1A2" opacity="0.9" />
 							<!-- Basket frame -->
-							<path d="M75,80 L80,105 L120,105 L128,75 L75,75 Z" fill="none" stroke="#2A2421" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-							<path d="M70,70 L75,75 L130,75 L135,90" fill="none" stroke="#2A2421" stroke-width="3" stroke-linecap="round" />
+							<path d="M75,80 L80,105 L120,105 L128,75 L75,75 Z" fill="none" stroke="#2A2421" stroke-width="3"
+								stroke-linecap="round" stroke-linejoin="round" />
+							<path d="M70,70 L75,75 L130,75 L135,90" fill="none" stroke="#2A2421" stroke-width="3"
+								stroke-linecap="round" />
 							<line x1="88" y1="105" x2="88" y2="125" stroke="#2A2421" stroke-width="3" />
 							<line x1="112" y1="105" x2="112" y2="125" stroke="#2A2421" stroke-width="3" />
 							<circle cx="88" cy="128" r="8" fill="#FFFFFF" stroke="#2A2421" stroke-width="3" />
@@ -1314,87 +1372,94 @@ $all_setting_data = $AllsettingsModel->first();
 							<circle cx="112" cy="128" r="8" fill="#FFFFFF" stroke="#2A2421" stroke-width="3" />
 							<circle cx="112" cy="128" r="3" fill="#2A2421" />
 						</svg>
-						
-						<h3 class="empty-cart-title">Your shopping cart is empty</h3>
-						<p class="empty-cart-desc">Before you proceed to checkout, you must add some product items to your shopping cart. You'll find a lot of interesting furniture and decor on our shop catalog.</p>
-						
+
+						<h3 class="empty-cart-title">Your cart is empty</h3>
+						<p class="empty-cart-desc">Looks like you haven't added anything to your cart yet.<br>Explore our
+							collection and find something you'll love.</p>
+
 						<a href="<?php echo base_url('product'); ?>" class="empty-cart-btn">
-							Continue Shopping <i class="fa-solid fa-arrow-right"></i>
+							<i class="fa-solid fa-arrow-left"></i>
+							 Continue Shopping
 						</a>
 					</div>
 				</div>
-			</div>
 
-			<!-- Dynamic live product recommendations column ("You may like") -->
-			<div class="row justify-content-center mt-4">
-				<div class="col-lg-6 col-md-8 col-12">
+				<!-- Right Column: Recommendations Sidebar -->
+				<div class="col-lg-4 col-12">
 					<div class="recommendations-sidebar">
-						<h4 class="recommendations-title">
-							<i class="fa-solid fa-wand-magic-sparkles" style="color: var(--primary-color);"></i> You may like
-						</h4>
-						
+						<h4 class="recommendations-title">You may like</h4>
+
 						<div class="recommendations-list">
 							<?php
 							$ProductModel = new \App\Models\Productmodel();
-							$recommendedProducts = $ProductModel->where('ProductLive', 1)->orderBy('ProductID', 'DESC')->limit(3)->findAll();
-							
+							$recommendedProducts = $ProductModel->where('ProductLive', 1)->orderBy('ProductID', 'DESC')->limit(3)->get()->getResultArray();
+
 							if (!empty($recommendedProducts)) {
 								foreach ($recommendedProducts as $recPrd) {
 									$recImages = json_decode($recPrd['ProductImage']);
-									$recImgUrl = !empty($recImages) 
-										? base_url('admin/public/assets/img/product_images/' . $recImages[0]) 
+									$recImgUrl = !empty($recImages)
+										? base_url('admin/public/assets/img/product_images/' . $recImages[0])
 										: base_url('admin/public/assets/img/product_images/18.jpg');
-									
+
 									$recPrice = $recPrd['Sale_ProductPrice'] ?? $recPrd['ProductPrice'] ?? 0;
 									$recOldPrice = $recPrd['ProductPrice'] ?? 0;
 									?>
 									<div class="rec-item">
-										<a href="<?php echo base_url($recPrd['slug'] . "/" . 'product_detail/' . base64_encode($recPrd['ProductID'])); ?>" class="rec-img-wrap">
-											<img src="<?php echo $recImgUrl; ?>" alt="<?php echo htmlspecialchars($recPrd['ProductName']); ?>">
+										<a href="<?php echo base_url($recPrd['slug'] . "/" . 'product_detail/' . base64_encode($recPrd['ProductID'])); ?>"
+											class="rec-img-wrap">
+											<img src="<?php echo $recImgUrl; ?>"
+												alt="<?php echo htmlspecialchars($recPrd['ProductName']); ?>">
 										</a>
-										
+
 										<div class="rec-details">
 											<h5 class="rec-name">
-												<a href="<?php echo base_url($recPrd['slug'] . "/" . 'product_detail/' . base64_encode($recPrd['ProductID'])); ?>">
+												<a
+													href="<?php echo base_url($recPrd['slug'] . "/" . 'product_detail/' . base64_encode($recPrd['ProductID'])); ?>">
 													<?php echo $recPrd['ProductName']; ?>
 												</a>
 											</h5>
-											
+
+											<div class="rec-price">
+												<span
+													class="curr-price"><?php echo $all_setting_data['currency']; ?><?php echo number_format($recPrice, 2); ?></span>
+												<?php if ($recOldPrice > $recPrice) { ?>
+													<span
+														class="old-price"><?php echo $all_setting_data['currency']; ?><?php echo number_format($recOldPrice, 2); ?></span>
+												<?php } ?>
+											</div>
+
 											<div class="rec-rating">
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
+												<i class="fa-solid fa-star"></i>
+												<i class="fa-solid fa-star"></i>
+												<i class="fa-solid fa-star"></i>
+												<i class="fa-solid fa-star"></i>
+												<i class="fa-solid fa-star"></i>
 												<span>(128)</span>
 											</div>
-											
-											<div class="rec-price">
-												<span class="curr-price"><?php echo $all_setting_data['currency']; ?><?php echo number_format($recPrice, 2); ?></span>
-												<?php if ($recOldPrice > $recPrice) { ?>
-													<span class="old-price"><?php echo $all_setting_data['currency']; ?><?php echo number_format($recOldPrice, 2); ?></span>
-												<?php } ?>
+
+											<div class="rec-action">
+												<form class="addtocartform" action="<?= base_url('addToCart') ?>" method="POST"
+													style="margin: 0;">
+													<input type="hidden" name="productId"
+														value="<?php echo $recPrd['ProductID']; ?>">
+													<input type="hidden" name="quantity" value="1">
+													<?php if ($recPrd['ProductType'] != 2) { ?>
+														<input type="hidden" name="price"
+															value="<?php echo $recPrd['ProductPrice']; ?>">
+													<?php } else {
+														$variations = new App\Models\Variationmodel();
+														$varia_dt = $variations->where('ProductID', $recPrd['ProductID'])->first();
+														$pricearr = $varia_dt['Sale_VariationPrice'] ?? $varia_dt['VariationPrice'];
+														?>
+														<input type="hidden" name="price" value="<?php echo $pricearr; ?>">
+														<input type="hidden" name="variationId"
+															value="<?php echo $varia_dt['VariationID']; ?>">
+													<?php } ?>
+													<button type="submit" class="rec-add-btn">
+														<i class="fa-solid fa-cart-shopping"></i> Add to Cart
+													</button>
+												</form>
 											</div>
-										</div>
-										
-										<div class="rec-action">
-											<form class="addtocartform" action="<?= base_url('addToCart') ?>" method="POST" style="margin: 0;">
-												<input type="hidden" name="productId" value="<?php echo $recPrd['ProductID']; ?>">
-												<input type="hidden" name="quantity" value="1">
-												<?php if ($recPrd['ProductType'] != 2) { ?>
-													<input type="hidden" name="price" value="<?php echo $recPrd['ProductPrice']; ?>">
-												<?php } else {
-													$variations = new App\Models\Variationmodel();
-													$varia_dt = $variations->where('ProductID', $recPrd['ProductID'])->first();
-													$pricearr = $varia_dt['Sale_VariationPrice'] ?? $varia_dt['VariationPrice'];
-													?>
-													<input type="hidden" name="price" value="<?php echo $pricearr; ?>">
-													<input type="hidden" name="variationId" value="<?php echo $varia_dt['VariationID']; ?>">
-												<?php } ?>
-												<button type="submit" class="rec-add-btn">
-													<i class="fa-solid fa-cart-plus"></i> Add
-												</button>
-											</form>
 										</div>
 									</div>
 									<?php
@@ -1404,18 +1469,18 @@ $all_setting_data = $AllsettingsModel->first();
 							}
 							?>
 						</div>
-						
-						<div class="text-center mt-4">
+
+						<div class="text-left mt-2">
 							<a href="<?php echo base_url('product'); ?>" class="rec-view-more">
-								View All Products <i class="fa-solid fa-arrow-right ml-1"></i>
+								View More Products <i class="fa-solid fa-arrow-right"></i>
 							</a>
 						</div>
 					</div>
 				</div>
 			</div>
-			
+
 		<?php } ?>
-		
+
 	</div>
 </div>
 
@@ -1423,40 +1488,40 @@ $all_setting_data = $AllsettingsModel->first();
 
 <!-- Custom Action Event Listeners & Cart Sync Scripts -->
 <script>
-$(document).ready(function() {
-	// Show All Coupons slide toggle action
-	$('#showCouponsBtn').on('click', function(e) {
-		e.preventDefault();
-		$('.all_copouns').slideToggle(300); 
-		$(this).find('i').toggleClass('fa-chevron-down fa-chevron-up');
-	});
+	$(document).ready(function () {
+		// Show All Coupons slide toggle action
+		$('#showCouponsBtn').on('click', function (e) {
+			e.preventDefault();
+			$('.all_copouns').slideToggle(300);
+			$(this).find('i').toggleClass('fa-chevron-down fa-chevron-up');
+		});
 
-	// Select and apply coupon click action
-	$(document).on('click', '.selectCouponBtn', function(e) {
-		e.preventDefault();
-		var couponCode = $(this).data('coupon-code');
-		$('#couponCode').val(couponCode); 
-		$('.all_copouns').slideUp(200); 
-		$('#apllyCouponForm').submit(); 
-	});
+		// Select and apply coupon click action
+		$(document).on('click', '.selectCouponBtn', function (e) {
+			e.preventDefault();
+			var couponCode = $(this).data('coupon-code');
+			$('#couponCode').val(couponCode);
+			$('.all_copouns').slideUp(200);
+			$('#apllyCouponForm').submit();
+		});
 
-	// Remove coupon action
-	$('.removeCoupon').on('click', function(e) {
-		e.preventDefault();
-		$('#couponCode').val(''); 
-		$('#apllyCouponForm').show(); 
-		$('#removeCouponForm').hide(); 
-	});
+		// Remove coupon action
+		$('.removeCoupon').on('click', function (e) {
+			e.preventDefault();
+			$('#couponCode').val('');
+			$('#apllyCouponForm').show();
+			$('#removeCouponForm').hide();
+		});
 
-	// debounce helper to auto-commit cart quantity changes to the server session
-	var cartUpdateDebounce = null;
-	$(document).on('click', '.btn-number', function() {
-		if (cartUpdateDebounce !== null) {
-			clearTimeout(cartUpdateDebounce);
-		}
-		cartUpdateDebounce = setTimeout(function() {
-			$(".updateCartbtn").trigger("click");
-		}, 800); // Debounce of 800ms
+		// debounce helper to auto-commit cart quantity changes to the server session
+		var cartUpdateDebounce = null;
+		$(document).on('click', '.btn-number', function () {
+			if (cartUpdateDebounce !== null) {
+				clearTimeout(cartUpdateDebounce);
+			}
+			cartUpdateDebounce = setTimeout(function () {
+				$(".updateCartbtn").trigger("click");
+			}, 800); // Debounce of 800ms
+		});
 	});
-});
 </script>

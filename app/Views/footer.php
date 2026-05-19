@@ -1174,30 +1174,36 @@ $(document).on("click", ".removeItem", function (e) {
 
 		//var stripe = Stripe('pk_test_pmq5HsqFgDq4eJVtVqg90w8700Ym4ScYKf');
 		var stripe = Stripe('<?php echo $stripe_public_key; ?>');
-		var elements = stripe.elements();
 		var stripeContainer = document.getElementById('stripe-container');
+		var card;
 
-		// Create an instance of the card Element.
-		//var card = elements.create('card');
-		var card = elements.create('card', {
-			hidePostalCode: true, // Set to true to hide the ZIP code field
-		});
+		if (document.getElementById('card-element')) {
+			var elements = stripe.elements();
+			card = elements.create('card', {
+				hidePostalCode: true, // Set to true to hide the ZIP code field
+			});
 
-		// Add an instance of the card Element into the `card-element` div.
-		card.mount('#card-element');
+			// Add an instance of the card Element into the `card-element` div.
+			card.mount('#card-element');
 
-		// Handle real-time validation errors from the card Element.
-		card.addEventListener('change', function (event) {
-			var displayError = document.getElementById('card-errors');
-			if (event.error) {
-				displayError.textContent = event.error.message;
-			} else {
-				displayError.textContent = '';
-			}
-		});
+			// Handle real-time validation errors from the card Element.
+			card.addEventListener('change', function (event) {
+				var displayError = document.getElementById('card-errors');
+				if (displayError) {
+					if (event.error) {
+						displayError.textContent = event.error.message;
+					} else {
+						displayError.textContent = '';
+					}
+				}
+			});
+		}
+
 		function handleStripePayment() {
 			// Show the Stripe container
-			stripeContainer.style.display = 'block';
+			if (stripeContainer) {
+				stripeContainer.style.display = 'block';
+			}
 		}
 		function removeDynamicElements() {
 			var idInput = document.getElementsByName('stripe_token_id')[0];
@@ -1503,7 +1509,9 @@ $(document).on("click", ".removeItem", function (e) {
 				$("form#checkoutsubmiform").attr('action', '');
 				handleStripePayment();
 			} else {
-				stripeContainer.style.display = 'none';
+				if (stripeContainer) {
+					stripeContainer.style.display = 'none';
+				}
 			}
 			// 			else 
 			// 			{

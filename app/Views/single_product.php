@@ -747,7 +747,7 @@ $all_setting_data = $AllsettingsModel->first();
                 
                 <!-- Action Buttons block -->
                 <div class="purchase-buttons-flex">
-                    <form class="addtocartform" action="/addToCart" method="POST" style="flex-grow: 1; display: flex;">
+                    <form class="addtocartform" action="<?= base_url('addToCart') ?>" method="POST" style="flex-grow: 1; display: flex;">
                         <input type="hidden" name="productId" value="<?php echo $all_product_data['ProductID']; ?>">
                         <input type="hidden" name="quantity" id="quantity" value="1" min="1">
                         <input type="hidden" name="price" id="price" value="" />
