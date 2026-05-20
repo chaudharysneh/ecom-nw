@@ -430,12 +430,12 @@
     }
     .hero-slider .swiper-slide {
         background-color: #f4f1ef !important;
-        min-height: 500px !important;
+        min-height: 380px !important;
         display: flex !important;
         align-items: center !important;
         position: relative !important;
         overflow: hidden !important;
-        padding: 70px 0 !important;
+        padding: 40px 0 !important;
     }
     .hero-slider .hero-content {
         padding-left: 60px !important;
@@ -505,8 +505,8 @@
 
     @media (max-width: 991px) {
         .hero-slider .swiper-slide {
-            padding: 50px 20px !important;
-            min-height: 400px !important;
+            padding: 40px 20px !important;
+            min-height: 350px !important;
             text-align: center !important;
         }
         .hero-slider .hero-content {
@@ -563,11 +563,11 @@ $all_setting_data = $AllsettingsModel->first();
 
 
 <!-- -------------- Hero Slider Area (Dynamic Banners styled like Static Hero Section) ------------- -->
-<section class="hero-slider" style="background-color: #f4f1ef !important; padding: 0 !important; position: relative; overflow: hidden; min-height: 500px; display: flex; align-items: center; z-index: 1;">
+<section class="hero-slider" style="background-color: #f4f1ef !important; padding: 0 !important; position: relative; overflow: hidden; min-height: 380px; display: flex; align-items: center; z-index: 1;">
     <div class="swiper hero-swiper" style="width: 100%; height: 100%;">
         <div class="swiper-wrapper">
             <?php foreach ($banner as $ban) { ?>
-                <div class="swiper-slide" style="background-color: #f4f1ef; min-height: 500px; display: flex; align-items: center; position: relative; overflow: hidden; padding: 70px 0;">
+                <div class="swiper-slide" style="background-color: #f4f1ef; min-height: 380px; display: flex; align-items: center; position: relative; overflow: hidden; padding: 40px 0;">
                     <div class="container-fluid" style="position: relative; z-index: 2; width: 100%;">
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-12 col-12">
@@ -732,7 +732,7 @@ $all_setting_data = $AllsettingsModel->first();
 </div>
 
 <!-- Start Promo Banners Area -->
-<div class="promo-banners-area pb-2">
+<div class="promo-banners-area">
     <div class="container">
         <div class="row">
             <!-- Left Banner: Summer Sale -->
@@ -847,11 +847,10 @@ $all_setting_data = $AllsettingsModel->first();
 <!-- End Promo Banners Area -->
 
 <!-- Start New Arrivals Area -->
-<div class="product-area pt-5 pb-4 new-arrivals-area">
-    <div class="container" style="max-width: 1330px;
-">
-        <div class="row align-items-center mb-4 position-relative">
-            <div class="col-12 text-center">
+<div class="product-area pt-3 pb-4 new-arrivals-area">
+    <div class="container" style="max-width: 1330px;">
+        <div class="row align-items-center position-relative">
+            <div class="col-12">
                 <div class="section-header">
                     <span class="sub-title">Explore</span>
                     <h2 class="main-title">New Arrivals</h2>
@@ -1186,11 +1185,10 @@ document.addEventListener('DOMContentLoaded', function() {
 <!-- End Product Area -->
 
 <!-- Start Best Sellers Area -->
-<div class="product-area pt-4 pb-5 best-sellers-area">
-    <div class="container" style="max-width: 1330px;
-">
-        <div class="row align-items-center mb-4 position-relative">
-            <div class="col-12 text-center">
+<div class="product-area pt-4 pb-3 best-sellers-area">
+    <div class="container" style="max-width: 1330px;">
+        <div class="row align-items-center position-relative">
+            <div class="col-12">
                 <div class="section-header">
                     <span class="sub-title">Explore</span>
                     <h2 class="main-title">Best Sellers</h2>
@@ -1283,7 +1281,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <section class="shop-blog py-4">
     <div class="container">
         <div class="row mb-4">
-            <div class="col-12 text-center">
+            <div class="col-12">
                 <div class="section-header">
                     <span class="sub-title">Explore</span>
                     <h2 class="main-title">From Our Blog</h2>
@@ -1309,6 +1307,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             </div>
                         </div>
                         <div class="blog-content">
+                            <span class="blog-category"><?php echo $bl['CategoryName']; ?></span>
                             <h3 class="blog-title">
                                 <a href="<?php echo $blog_link; ?>"><?php echo $bl['title']; ?></a>
                             </h3>

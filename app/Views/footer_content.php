@@ -70,8 +70,6 @@ $insta = json_decode($links['insta'] ?? '{}', true);
     </section>
 
     <section class="footer-newsletter">
-        <div class="footer-ambient footer-ambient-one"></div>
-        <div class="footer-ambient footer-ambient-two"></div>
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-8 col-lg-10 text-center">
@@ -91,11 +89,6 @@ $insta = json_decode($links['insta'] ?? '{}', true);
                             </div>
                             <p id="msg" class="text-left mt-2"></p>
                         </form>
-                        <div class="newsletter-trust">
-                            <span><i class="fa-solid fa-lock"></i> No spam</span>
-                            <span><i class="fa-solid fa-tag"></i> Exclusive offers</span>
-                            <span><i class="fa-solid fa-box-open"></i> New arrival alerts</span>
-                        </div>
                     </div>
                 </div>
             </div>

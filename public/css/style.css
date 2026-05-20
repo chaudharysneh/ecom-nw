@@ -7778,7 +7778,7 @@ ul#country-list {
 }
 
 .category-main-title .highlight {
-    color: #FF5500;
+    color: #8c4e2d;
 }
 
 .btn-view-all-cats {
@@ -7798,15 +7798,15 @@ ul#country-list {
 }
 
 .btn-view-all-cats i {
-    color: #FF5500;
+    color: #8c4e2d;
     font-size: 12px;
     transition: transform 0.3s ease;
 }
 
 .btn-view-all-cats:hover {
-    border-color: #FF5500;
-    color: #FF5500 !important;
-    box-shadow: 0 4px 12px rgba(255, 85, 0, 0.08);
+    border-color: #8c4e2d;
+    color: #8c4e2d !important;
+    box-shadow: 0 4px 12px rgba(140, 78, 45, 0.08);
 }
 
 .btn-view-all-cats:hover i {
@@ -8211,26 +8211,104 @@ ul#country-list {
 }
 
 /* --- Modern Product Card Styles --- */
+.position-absolute-view-all {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
 .btn-view-all {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 8px 18px;
-    background: #f8f8f8;
-    color: #4a3427 !important;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: 600;
+    padding: 10px 24px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 50px;
+    color: #2d3748 !important;
+    font-size: 13.5px;
+    font-weight: 700;
     text-decoration: none !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
     transition: all 0.3s ease;
-    border: 1px solid #eee;
+}
+
+.btn-view-all i {
+    color: #8c4e2d;
+    font-size: 14px;
+    transition: transform 0.3s ease;
 }
 
 .btn-view-all:hover {
-    background: #754024;
-    color: #fff !important;
-    transform: translateX(3px);
+    border-color: #8c4e2d;
+    color: #8c4e2d !important;
+    box-shadow: 0 4px 12px rgba(140, 78, 45, 0.08);
+    background: #ffffff;
 }
+
+.btn-view-all:hover i {
+    transform: translateX(4px);
+}
+
+@media (max-width: 767px) {
+    .position-absolute-view-all {
+        position: static;
+        transform: none;
+        text-align: left;
+        margin-top: 15px;
+        width: 100%;
+        display: block;
+    }
+}
+
+/* --- Modern Section Header Styles --- */
+.section-header {
+    text-align: left;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.section-header .sub-title {
+    display: block;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #8c4e2d; /* Premium Clay Brown accent */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 6px;
+}
+
+.section-header .main-title {
+    font-size: 30px;
+    font-weight: 800;
+    color: #1a202c;
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.section-header .section-desc {
+    font-size: 14.5px;
+    color: #718096;
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+/* Add padding on desktop when absolute-positioned pill is present to avoid overlapping */
+.row.position-relative .section-header {
+    padding-right: 150px;
+}
+
+@media (max-width: 767px) {
+    .section-header {
+        text-align: left;
+    }
+    .row.position-relative .section-header {
+        padding-right: 0;
+    }
+}
+
 
 .modern-product-card {
     background: #fff;
@@ -8757,62 +8835,76 @@ ul#country-list {
 
 /* Modern Blog Cards */
 .modern-blog-card {
-    background: #fff;
-    border-radius: 15px;
+    background: #ffffff;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03), 0 1px 2px rgba(0,0,0,0.01);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     height: 100%;
     display: flex;
     flex-direction: column;
-    border: 1px solid #f0f0f0;
+    border: 1px solid #f1f5f9;
+    position: relative;
 }
 
 .modern-blog-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    border-color: rgba(140, 78, 45, 0.15);
+    box-shadow: 0 20px 40px rgba(140, 78, 45, 0.08), 0 1px 3px rgba(0,0,0,0.02);
 }
 
 .blog-img-wrap {
     position: relative;
-    height: 220px;
+    height: 230px;
     overflow: hidden;
+    border-top-left-radius: 19px;
+    border-top-right-radius: 19px;
 }
 
 .blog-img-wrap img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .modern-blog-card:hover .blog-img-wrap img {
-    transform: scale(1.1);
+    transform: scale(1.06);
 }
 
 .blog-date {
     position: absolute;
-    top: 15px;
-    left: 15px;
-    background: #4a3427;
-    color: #fff;
-    padding: 8px 12px;
-    border-radius: 10px;
+    top: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #1a202c;
+    padding: 10px 14px;
+    border-radius: 12px;
     text-align: center;
-    line-height: 1;
-    box-shadow: 0 5px 15px rgba(74, 52, 39, 0.3);
+    line-height: 1.1;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    font-weight: 700;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .blog-date span {
     display: block;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 800;
+    color: #8c4e2d; /* Premium Clay Brown */
 }
 
 .blog-date small {
+    display: block;
     font-size: 10px;
     text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #718096;
     font-weight: 600;
+    margin-top: 2px;
 }
 
 .blog-content {
@@ -8822,26 +8914,45 @@ ul#country-list {
     flex-direction: column;
 }
 
-.blog-title {
-    font-size: 18px;
+.blog-category {
+    display: inline-block;
+    font-size: 11px;
     font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #8c4e2d;
+    background: rgba(140, 78, 45, 0.07);
+    padding: 4px 12px;
+    border-radius: 50px;
+    margin-bottom: 12px;
+    width: fit-content;
+    transition: all 0.3s ease;
+}
+
+.modern-blog-card:hover .blog-category {
+    background: rgba(140, 78, 45, 0.12);
+}
+
+.blog-title {
+    font-size: 19px;
+    font-weight: 800;
     line-height: 1.4;
     margin-bottom: 12px;
 }
 
 .blog-title a {
-    color: #333;
+    color: #1a202c;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .blog-title a:hover {
-    color: #4a3427;
+    color: #8c4e2d;
 }
 
 .blog-excerpt {
-    font-size: 14px;
-    color: #777;
+    font-size: 14.5px;
+    color: #4a5568;
     line-height: 1.6;
     margin-bottom: 20px;
     display: -webkit-box;
@@ -8852,9 +8963,9 @@ ul#country-list {
 
 .btn-read-more {
     margin-top: auto;
-    color: #4a3427;
+    color: #8c4e2d;
     font-weight: 700;
-    font-size: 13px;
+    font-size: 13.5px;
     text-decoration: none !important;
     display: inline-flex;
     align-items: center;
@@ -8868,11 +8979,11 @@ ul#country-list {
 }
 
 .btn-read-more:hover {
-    color: #f7941d;
+    color: #68361e;
 }
 
 .btn-read-more:hover i {
-    transform: translateX(5px);
+    transform: translateX(6px);
 }
 
 /* Modern Footer */
@@ -9003,7 +9114,7 @@ ul#country-list {
     content: '';
     position: absolute;
     inset: 18px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: none;
     pointer-events: none;
     z-index: -1;
 }
@@ -10321,7 +10432,7 @@ table.dataTable tbody td:last-child {
     background: #09090b !important;
     border-radius: 20px !important;
     padding: 30px 220px 30px 40px !important;
-    min-height: 160px !important;
+    height: 100% !important;
     display: flex !important;
     align-items: center !important;
     overflow: visible !important;
@@ -10760,7 +10871,7 @@ table.dataTable tbody td:last-child {
 /* --- Premium Shop Blog Area Layout & Alignment --- */
 .shop-blog {
     padding-top: 15px !important;
-    padding-bottom: 30px !important;
+    padding-bottom: 0px !important;
 }
 
 .shop-blog .container {
