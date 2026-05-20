@@ -527,7 +527,7 @@ $all_setting_data = $AllsettingsModel->first();
                 <div class="cat-button-next"><i class="fa-solid fa-chevron-right"></i></div>
 
                 <div class="swiper cat-swiper">
-                    <div class="swiper-wrapper pt-2 pb-3">
+                    <div class="swiper-wrapper pt-2 pb-1">
                         <?php foreach ($category as $index => $cat) { 
                             $catNameLower = strtolower($cat['CategoryName']);
                             
@@ -636,7 +636,120 @@ $all_setting_data = $AllsettingsModel->first();
     </div>
 </div>
 
+<!-- Start Promo Banners Area -->
+<div class="promo-banners-area pb-5">
+    <div class="container">
+        <div class="row">
+            <!-- Left Banner: Summer Sale -->
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="promo-banner-card promo-banner-summer" style="background: #fdf1e5;">
+                    <div class="promo-banner-content">
+                        <span class="promo-badge summer-badge">Summer Sale</span>
+                        <h3 class="promo-title">Up to 50% Off</h3>
+                        <p class="promo-subtitle">On Selected Items</p>
+                        <a href="<?php echo base_url('shop'); ?>" class="btn-promo btn-promo-summer">
+                            Shop Now <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="promo-banner-image">
+                        <img src="<?php echo base_url('public/images/modern/promo_armchair-removebg-preview.png'); ?>" alt="Summer Sale Armchair">
+                    </div>
+                </div>
+            </div>
 
+            <!-- Middle Banner: New Arrivals -->
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="promo-banner-card promo-banner-arrivals" style="background: #f0e6fe;">
+                    <div class="promo-banner-content">
+                        <span class="promo-badge arrivals-badge">New Arrivals</span>
+                        <h3 class="promo-title">Explore New</h3>
+                        <p class="promo-subtitle">Check out the latest trends this week.</p>
+                        <a href="<?php echo base_url('new-arrivals'); ?>" class="btn-promo btn-promo-arrivals">
+                            Explore Now <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="promo-banner-image">
+                        <img src="<?php echo base_url('public/images/modern/promo_headphones-removebg-preview.png'); ?>" alt="New Arrivals Headphones">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Banner: Deal of the Day -->
+            <div class="col-lg-4 col-md-12 col-12">
+                <div class="promo-banner-card promo-banner-deals" style="background: #fee8e8;">
+                    <div class="promo-banner-content">
+                        <span class="promo-badge deals-badge">Deal of the Day</span>
+                        <h3 class="promo-title">Special Offer</h3>
+                        <p class="promo-subtitle">Special price on best selling items</p>
+                        <a href="<?php echo base_url('shop'); ?>" class="btn-promo btn-promo-deals">
+                            Shop Deals <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="promo-banner-image">
+                        <img src="<?php echo base_url('public/images/modern/promo_clock-removebg-preview.png'); ?>" alt="Deal of the Day Alarm Clock">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Promo Features Row -->
+        <div class="row promo-features-row">
+            <!-- Feature 1: Top Picks -->
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="promo-feature-card promo-feature-picks">
+                    <div class="promo-feature-icon">
+                        <i class="fa-solid fa-gift"></i>
+                    </div>
+                    <div class="promo-feature-info">
+                        <h4 class="promo-feature-title">Top Picks</h4>
+                        <p class="promo-feature-desc">Curated just for you</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2: Best Sellers -->
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="promo-feature-card promo-feature-sellers">
+                    <div class="promo-feature-icon">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                    <div class="promo-feature-info">
+                        <h4 class="promo-feature-title">Best Sellers</h4>
+                        <p class="promo-feature-desc">Shop our most loved</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3: New Launches -->
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="promo-feature-card promo-feature-launches">
+                    <div class="promo-feature-icon">
+                        <i class="fa-solid fa-rocket"></i>
+                    </div>
+                    <div class="promo-feature-info">
+                        <h4 class="promo-feature-title">New Launches</h4>
+                        <p class="promo-feature-desc">Fresh products daily</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 4: Clearance Sale -->
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="promo-feature-card promo-feature-clearance">
+                    <div class="promo-feature-icon clearance-icon-wrap">
+                        <i class="fa-solid fa-certificate"></i>
+                        <span class="clearance-percent">%</span>
+                    </div>
+                    <div class="promo-feature-info">
+                        <h4 class="promo-feature-title">Clearance Sale</h4>
+                        <p class="promo-feature-desc">Grab before it's gone</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Promo Banners Area -->
 
 <!-- Start New Arrivals Area -->
 <div class="product-area pt-5 pb-4 new-arrivals-area">
