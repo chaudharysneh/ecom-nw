@@ -5080,6 +5080,10 @@
   margin-top: 30px;
 }
 
+.shop-blog .container {
+    max-width: min(1380px, calc(100vw - 36px)) !important;
+}
+
 .shop-blog .shop-single-blog {
   text-align: center;
   -webkit-transition: all 0.4s ease;
