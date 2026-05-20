@@ -430,10 +430,10 @@ $all_setting_data = $AllsettingsModel->first();
 
 <!-- -------------- Static Hero Section ------------- -->
 <section class="hero-static-area" style="background-color: #f4f1ef; position: relative; overflow: hidden; padding: 70px 0; min-height: 500px; display: flex; align-items: center;">
-    <div class="container-fluid">
-        <div class="row align-items-center position-relative">
+    <div class="container-fluid" style="position: relative; z-index: 2;">
+        <div class="row align-items-center">
             <div class="col-lg-6 col-md-12 col-12">
-                <div class="hero-content pl-md-5 pl-3" style="z-index: 10; position: relative;">
+                <div class="hero-content pl-md-5 pl-3">
                     <span class="sub-title" style="color: #8c4e2d; font-weight: bold; font-size: 13px; letter-spacing: 2px; text-transform: uppercase;">MODERN LIVING</span>
                     <h1 class="main-title" style="font-size: 46px; font-weight: 800; color: #2d2a26; margin-top: 15px; margin-bottom: 25px; line-height: 1.1;">Quality Products, Better<br>Living</h1>
                     <p class="description" style="color: #666; font-size: 16px; margin-bottom: 35px; max-width: 450px; line-height: 1.6;">Discover a wide range of handpicked products that bring convenience, style, and value to your everyday life.</p>
@@ -444,14 +444,14 @@ $all_setting_data = $AllsettingsModel->first();
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-12 col-12 d-none d-lg-block" style="position: absolute; right: 0; top: -70px; height: calc(100% + 140px); width: 55%; z-index: 1;">
-                <div class="hero-img-wrap" style="height: 100%; width: 100%;">
-                    <img src="<?php echo base_url('admin/public/upload_images/modern_hero_products.png'); ?>" 
-                         alt="Hero Quality Products" 
-                         style="width: 100%; height: 100%; object-fit: cover; object-position: center; mask-image: linear-gradient(to right, transparent 0%, black 30%); -webkit-mask-image: linear-gradient(to right, transparent 0%, black 30%);">
-                </div>
-            </div>
         </div>
+    </div>
+    
+    <!-- Flush Background Image Layer -->
+    <div class="d-none d-lg-block" style="position: absolute; right: 0; top: 0; height: 100%; width: 55%; z-index: 1;">
+        <img src="<?php echo base_url('admin/public/upload_images/modern_hero_products.png'); ?>" 
+             alt="Hero Quality Products" 
+             style="width: 100%; height: 100%; object-fit: cover; object-position: center; mask-image: linear-gradient(to right, transparent 0%, black 25%); -webkit-mask-image: linear-gradient(to right, transparent 0%, black 25%);">
     </div>
 </section>
 
@@ -566,19 +566,21 @@ $all_setting_data = $AllsettingsModel->first();
                             ?>
                                 <div class="swiper-slide">
                                     <div class="category-card" style="--category-accent: <?php echo $color; ?>;">
-                                        <div class="category-image-wrap">
-                                            <a href="<?php echo base_url('category/' . base64_encode($cat['CategoryID'])); ?>" class="category-img-link">
-                                                <?php if (!empty($cat['Catagoryimage'])) { ?>
-                                                    <img src="<?php echo base_url(); ?>admin/public/upload_images/<?php echo $cat['Catagoryimage']; ?>" alt="<?php echo $cat['CategoryName']; ?>">
-                                                <?php } else { ?>
-                                                    <img src="<?php echo base_url(); ?>admin/public/upload_images/no_category.webp" alt="<?php echo $cat['CategoryName']; ?>">
-                                                <?php } ?>
-                                            </a>
+                                        <div class="category-image-container" style="position: relative;">
+                                            <div class="category-image-wrap">
+                                                <a href="<?php echo base_url('category/' . base64_encode($cat['CategoryID'])); ?>" class="category-img-link">
+                                                    <?php if (!empty($cat['Catagoryimage'])) { ?>
+                                                        <img src="<?php echo base_url(); ?>admin/public/upload_images/<?php echo $cat['Catagoryimage']; ?>" alt="<?php echo $cat['CategoryName']; ?>">
+                                                    <?php } else { ?>
+                                                        <img src="<?php echo base_url(); ?>admin/public/upload_images/no_category.webp" alt="<?php echo $cat['CategoryName']; ?>">
+                                                    <?php } ?>
+                                                </a>
+                                            </div>
                                             <div class="category-icon-badge" style="background-color: <?php echo $color; ?>;">
                                                 <i class="fa-solid <?php echo $icon; ?>"></i>
                                             </div>
                                         </div>
-                                        <div class="category-info text-center mt-4">
+                                        <div class="category-info text-center mt-5">
                                             <h3 class="category-title">
                                                 <a href="<?php echo base_url('category/' . base64_encode($cat['CategoryID'])); ?>">
                                                     <?php echo $cat['CategoryName']; ?>

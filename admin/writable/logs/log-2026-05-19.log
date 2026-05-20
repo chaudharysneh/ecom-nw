@@ -793,3 +793,957 @@ WARNING - 2026-05-19 13:44:56 --> [DEPRECATED] Creation of dynamic property App\
  2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2026-05-19 13:56:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-05-19 13:56:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$user_model is deprecated in APPPATH\Controllers\Home.php on line 35.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 13:56:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$BlogModel is deprecated in APPPATH\Controllers\Home.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 13:56:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$EnquiryModel is deprecated in APPPATH\Controllers\Home.php on line 44.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 13:56:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$Allsettingsmodel is deprecated in APPPATH\Controllers\Home.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 13:59:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$user_model is deprecated in APPPATH\Controllers\Home.php on line 35.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 13:59:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$BlogModel is deprecated in APPPATH\Controllers\Home.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 13:59:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$EnquiryModel is deprecated in APPPATH\Controllers\Home.php on line 44.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 13:59:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$Allsettingsmodel is deprecated in APPPATH\Controllers\Home.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2026-05-19 13:59:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-19 13:59:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-05-19 13:59:43 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$user_model is deprecated in APPPATH\Controllers\Home.php on line 35.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 13:59:43 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$BlogModel is deprecated in APPPATH\Controllers\Home.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 13:59:43 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$EnquiryModel is deprecated in APPPATH\Controllers\Home.php on line 44.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 13:59:43 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$Allsettingsmodel is deprecated in APPPATH\Controllers\Home.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2026-05-19 14:00:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-05-19 14:00:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$session is deprecated in APPPATH\Controllers\Products.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:00:00 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2026-05-19 14:00:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$catagory is deprecated in APPPATH\Controllers\Products.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:00:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$variation is deprecated in APPPATH\Controllers\Products.php on line 34.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:00:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$variationtype is deprecated in APPPATH\Controllers\Products.php on line 35.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:00:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$subcategory is deprecated in APPPATH\Controllers\Products.php on line 36.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:00:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$product is deprecated in APPPATH\Controllers\Products.php on line 37.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:00:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$tags is deprecated in APPPATH\Controllers\Products.php on line 38.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:00:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$shippingmethod is deprecated in APPPATH\Controllers\Products.php on line 39.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:00:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$optionvalue is deprecated in APPPATH\Controllers\Products.php on line 40.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:00:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$brand is deprecated in APPPATH\Controllers\Products.php on line 41.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:00:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Allsettings is deprecated in APPPATH\Controllers\Products.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:00:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Orderitemmodel is deprecated in APPPATH\Controllers\Products.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:00:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Ordermodel is deprecated in APPPATH\Controllers\Products.php on line 44.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:00:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$CartModel is deprecated in APPPATH\Controllers\Products.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:00:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Reviewmodel is deprecated in APPPATH\Controllers\Products.php on line 46.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:00:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$TaxesclassModel is deprecated in APPPATH\Controllers\Products.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:00:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$cms is deprecated in APPPATH\Controllers\Products.php on line 48.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2026-05-19 14:02:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-05-19 14:02:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$session is deprecated in APPPATH\Controllers\Products.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:02:33 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2026-05-19 14:02:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$catagory is deprecated in APPPATH\Controllers\Products.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:02:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$variation is deprecated in APPPATH\Controllers\Products.php on line 34.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:02:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$variationtype is deprecated in APPPATH\Controllers\Products.php on line 35.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:02:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$subcategory is deprecated in APPPATH\Controllers\Products.php on line 36.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:02:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$product is deprecated in APPPATH\Controllers\Products.php on line 37.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:02:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$tags is deprecated in APPPATH\Controllers\Products.php on line 38.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:02:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$shippingmethod is deprecated in APPPATH\Controllers\Products.php on line 39.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:02:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$optionvalue is deprecated in APPPATH\Controllers\Products.php on line 40.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:02:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$brand is deprecated in APPPATH\Controllers\Products.php on line 41.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:02:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Allsettings is deprecated in APPPATH\Controllers\Products.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:02:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Orderitemmodel is deprecated in APPPATH\Controllers\Products.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:02:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Ordermodel is deprecated in APPPATH\Controllers\Products.php on line 44.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:02:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$CartModel is deprecated in APPPATH\Controllers\Products.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:02:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Reviewmodel is deprecated in APPPATH\Controllers\Products.php on line 46.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:02:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$TaxesclassModel is deprecated in APPPATH\Controllers\Products.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:02:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$cms is deprecated in APPPATH\Controllers\Products.php on line 48.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2026-05-19 14:04:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-05-19 14:04:08 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$session is deprecated in APPPATH\Controllers\Products.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:08 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2026-05-19 14:04:08 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$catagory is deprecated in APPPATH\Controllers\Products.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:08 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$variation is deprecated in APPPATH\Controllers\Products.php on line 34.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:08 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$variationtype is deprecated in APPPATH\Controllers\Products.php on line 35.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:08 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$subcategory is deprecated in APPPATH\Controllers\Products.php on line 36.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:08 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$product is deprecated in APPPATH\Controllers\Products.php on line 37.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:08 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$tags is deprecated in APPPATH\Controllers\Products.php on line 38.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:08 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$shippingmethod is deprecated in APPPATH\Controllers\Products.php on line 39.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:08 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$optionvalue is deprecated in APPPATH\Controllers\Products.php on line 40.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:08 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$brand is deprecated in APPPATH\Controllers\Products.php on line 41.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:08 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Allsettings is deprecated in APPPATH\Controllers\Products.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:08 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Orderitemmodel is deprecated in APPPATH\Controllers\Products.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:08 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Ordermodel is deprecated in APPPATH\Controllers\Products.php on line 44.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:08 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$CartModel is deprecated in APPPATH\Controllers\Products.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:08 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Reviewmodel is deprecated in APPPATH\Controllers\Products.php on line 46.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:08 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$TaxesclassModel is deprecated in APPPATH\Controllers\Products.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:08 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$cms is deprecated in APPPATH\Controllers\Products.php on line 48.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2026-05-19 14:04:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-05-19 14:04:15 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$session is deprecated in APPPATH\Controllers\Products.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:15 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2026-05-19 14:04:15 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$catagory is deprecated in APPPATH\Controllers\Products.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:15 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$variation is deprecated in APPPATH\Controllers\Products.php on line 34.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:15 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$variationtype is deprecated in APPPATH\Controllers\Products.php on line 35.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:15 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$subcategory is deprecated in APPPATH\Controllers\Products.php on line 36.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:15 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$product is deprecated in APPPATH\Controllers\Products.php on line 37.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:15 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$tags is deprecated in APPPATH\Controllers\Products.php on line 38.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:15 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$shippingmethod is deprecated in APPPATH\Controllers\Products.php on line 39.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:15 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$optionvalue is deprecated in APPPATH\Controllers\Products.php on line 40.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:15 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$brand is deprecated in APPPATH\Controllers\Products.php on line 41.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:15 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Allsettings is deprecated in APPPATH\Controllers\Products.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:15 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Orderitemmodel is deprecated in APPPATH\Controllers\Products.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:15 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Ordermodel is deprecated in APPPATH\Controllers\Products.php on line 44.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:15 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$CartModel is deprecated in APPPATH\Controllers\Products.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:15 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Reviewmodel is deprecated in APPPATH\Controllers\Products.php on line 46.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:15 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$TaxesclassModel is deprecated in APPPATH\Controllers\Products.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:15 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$cms is deprecated in APPPATH\Controllers\Products.php on line 48.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2026-05-19 14:04:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-05-19 14:04:21 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$session is deprecated in APPPATH\Controllers\Products.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:21 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2026-05-19 14:04:22 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$catagory is deprecated in APPPATH\Controllers\Products.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:22 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$variation is deprecated in APPPATH\Controllers\Products.php on line 34.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:22 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$variationtype is deprecated in APPPATH\Controllers\Products.php on line 35.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:22 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$subcategory is deprecated in APPPATH\Controllers\Products.php on line 36.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:22 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$product is deprecated in APPPATH\Controllers\Products.php on line 37.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:22 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$tags is deprecated in APPPATH\Controllers\Products.php on line 38.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:22 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$shippingmethod is deprecated in APPPATH\Controllers\Products.php on line 39.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:22 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$optionvalue is deprecated in APPPATH\Controllers\Products.php on line 40.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:22 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$brand is deprecated in APPPATH\Controllers\Products.php on line 41.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:22 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Allsettings is deprecated in APPPATH\Controllers\Products.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:22 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Orderitemmodel is deprecated in APPPATH\Controllers\Products.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:22 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Ordermodel is deprecated in APPPATH\Controllers\Products.php on line 44.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:22 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$CartModel is deprecated in APPPATH\Controllers\Products.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:22 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Reviewmodel is deprecated in APPPATH\Controllers\Products.php on line 46.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:22 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$TaxesclassModel is deprecated in APPPATH\Controllers\Products.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:22 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$cms is deprecated in APPPATH\Controllers\Products.php on line 48.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2026-05-19 14:04:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-05-19 14:04:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$session is deprecated in APPPATH\Controllers\Products.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:24 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2026-05-19 14:04:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$catagory is deprecated in APPPATH\Controllers\Products.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$variation is deprecated in APPPATH\Controllers\Products.php on line 34.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$variationtype is deprecated in APPPATH\Controllers\Products.php on line 35.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$subcategory is deprecated in APPPATH\Controllers\Products.php on line 36.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$product is deprecated in APPPATH\Controllers\Products.php on line 37.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$tags is deprecated in APPPATH\Controllers\Products.php on line 38.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$shippingmethod is deprecated in APPPATH\Controllers\Products.php on line 39.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$optionvalue is deprecated in APPPATH\Controllers\Products.php on line 40.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$brand is deprecated in APPPATH\Controllers\Products.php on line 41.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Allsettings is deprecated in APPPATH\Controllers\Products.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Orderitemmodel is deprecated in APPPATH\Controllers\Products.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Ordermodel is deprecated in APPPATH\Controllers\Products.php on line 44.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$CartModel is deprecated in APPPATH\Controllers\Products.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Reviewmodel is deprecated in APPPATH\Controllers\Products.php on line 46.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$TaxesclassModel is deprecated in APPPATH\Controllers\Products.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:04:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$cms is deprecated in APPPATH\Controllers\Products.php on line 48.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2026-05-19 14:06:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-05-19 14:06:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$session is deprecated in APPPATH\Controllers\Products.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:06:54 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2026-05-19 14:06:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$catagory is deprecated in APPPATH\Controllers\Products.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:06:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$variation is deprecated in APPPATH\Controllers\Products.php on line 34.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:06:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$variationtype is deprecated in APPPATH\Controllers\Products.php on line 35.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:06:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$subcategory is deprecated in APPPATH\Controllers\Products.php on line 36.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:06:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$product is deprecated in APPPATH\Controllers\Products.php on line 37.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:06:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$tags is deprecated in APPPATH\Controllers\Products.php on line 38.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:06:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$shippingmethod is deprecated in APPPATH\Controllers\Products.php on line 39.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:06:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$optionvalue is deprecated in APPPATH\Controllers\Products.php on line 40.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:06:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$brand is deprecated in APPPATH\Controllers\Products.php on line 41.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:06:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Allsettings is deprecated in APPPATH\Controllers\Products.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:06:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Orderitemmodel is deprecated in APPPATH\Controllers\Products.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:06:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Ordermodel is deprecated in APPPATH\Controllers\Products.php on line 44.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:06:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$CartModel is deprecated in APPPATH\Controllers\Products.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:06:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Reviewmodel is deprecated in APPPATH\Controllers\Products.php on line 46.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:06:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$TaxesclassModel is deprecated in APPPATH\Controllers\Products.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:06:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$cms is deprecated in APPPATH\Controllers\Products.php on line 48.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2026-05-19 14:07:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-05-19 14:07:20 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$session is deprecated in APPPATH\Controllers\Products.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:20 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2026-05-19 14:07:20 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$catagory is deprecated in APPPATH\Controllers\Products.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:20 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$variation is deprecated in APPPATH\Controllers\Products.php on line 34.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:20 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$variationtype is deprecated in APPPATH\Controllers\Products.php on line 35.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:20 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$subcategory is deprecated in APPPATH\Controllers\Products.php on line 36.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:20 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$product is deprecated in APPPATH\Controllers\Products.php on line 37.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:20 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$tags is deprecated in APPPATH\Controllers\Products.php on line 38.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:20 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$shippingmethod is deprecated in APPPATH\Controllers\Products.php on line 39.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:20 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$optionvalue is deprecated in APPPATH\Controllers\Products.php on line 40.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:20 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$brand is deprecated in APPPATH\Controllers\Products.php on line 41.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:20 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Allsettings is deprecated in APPPATH\Controllers\Products.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:20 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Orderitemmodel is deprecated in APPPATH\Controllers\Products.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:20 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Ordermodel is deprecated in APPPATH\Controllers\Products.php on line 44.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:20 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$CartModel is deprecated in APPPATH\Controllers\Products.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:20 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Reviewmodel is deprecated in APPPATH\Controllers\Products.php on line 46.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:20 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$TaxesclassModel is deprecated in APPPATH\Controllers\Products.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:20 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$cms is deprecated in APPPATH\Controllers\Products.php on line 48.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2026-05-19 14:07:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-05-19 14:07:23 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$session is deprecated in APPPATH\Controllers\Products.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:23 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2026-05-19 14:07:23 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$catagory is deprecated in APPPATH\Controllers\Products.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:23 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$variation is deprecated in APPPATH\Controllers\Products.php on line 34.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:23 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$variationtype is deprecated in APPPATH\Controllers\Products.php on line 35.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:23 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$subcategory is deprecated in APPPATH\Controllers\Products.php on line 36.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:23 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$product is deprecated in APPPATH\Controllers\Products.php on line 37.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:23 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$tags is deprecated in APPPATH\Controllers\Products.php on line 38.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:23 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$shippingmethod is deprecated in APPPATH\Controllers\Products.php on line 39.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:23 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$optionvalue is deprecated in APPPATH\Controllers\Products.php on line 40.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:23 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$brand is deprecated in APPPATH\Controllers\Products.php on line 41.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:23 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Allsettings is deprecated in APPPATH\Controllers\Products.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:23 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Orderitemmodel is deprecated in APPPATH\Controllers\Products.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:23 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Ordermodel is deprecated in APPPATH\Controllers\Products.php on line 44.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:23 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$CartModel is deprecated in APPPATH\Controllers\Products.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:23 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Reviewmodel is deprecated in APPPATH\Controllers\Products.php on line 46.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:23 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$TaxesclassModel is deprecated in APPPATH\Controllers\Products.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:23 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$cms is deprecated in APPPATH\Controllers\Products.php on line 48.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2026-05-19 14:07:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-05-19 14:07:29 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$session is deprecated in APPPATH\Controllers\Products.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:29 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2026-05-19 14:07:29 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$catagory is deprecated in APPPATH\Controllers\Products.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:29 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$variation is deprecated in APPPATH\Controllers\Products.php on line 34.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:29 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$variationtype is deprecated in APPPATH\Controllers\Products.php on line 35.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:29 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$subcategory is deprecated in APPPATH\Controllers\Products.php on line 36.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:29 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$product is deprecated in APPPATH\Controllers\Products.php on line 37.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:29 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$tags is deprecated in APPPATH\Controllers\Products.php on line 38.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:29 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$shippingmethod is deprecated in APPPATH\Controllers\Products.php on line 39.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:29 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$optionvalue is deprecated in APPPATH\Controllers\Products.php on line 40.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:29 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$brand is deprecated in APPPATH\Controllers\Products.php on line 41.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:29 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Allsettings is deprecated in APPPATH\Controllers\Products.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:29 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Orderitemmodel is deprecated in APPPATH\Controllers\Products.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:29 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Ordermodel is deprecated in APPPATH\Controllers\Products.php on line 44.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:29 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$CartModel is deprecated in APPPATH\Controllers\Products.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:29 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$Reviewmodel is deprecated in APPPATH\Controllers\Products.php on line 46.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:29 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$TaxesclassModel is deprecated in APPPATH\Controllers\Products.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:29 --> [DEPRECATED] Creation of dynamic property App\Controllers\Products::$cms is deprecated in APPPATH\Controllers\Products.php on line 48.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Products->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2026-05-19 14:07:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-05-19 14:07:47 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$user_model is deprecated in APPPATH\Controllers\Home.php on line 35.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:47 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$BlogModel is deprecated in APPPATH\Controllers\Home.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:47 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$EnquiryModel is deprecated in APPPATH\Controllers\Home.php on line 44.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+WARNING - 2026-05-19 14:07:47 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$Allsettingsmodel is deprecated in APPPATH\Controllers\Home.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
