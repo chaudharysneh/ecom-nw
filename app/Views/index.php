@@ -422,14 +422,120 @@
             display: block !important;
         }
     }
+
+    /* Premium Dynamic Hero Slider style overrides to match Static Hero Section */
+    .hero-slider {
+        padding: 0 !important;
+        background: #f4f1ef !important;
+    }
+    .hero-slider .swiper-slide {
+        background-color: #f4f1ef !important;
+        min-height: 500px !important;
+        display: flex !important;
+        align-items: center !important;
+        position: relative !important;
+        overflow: hidden !important;
+        padding: 70px 0 !important;
+    }
+    .hero-slider .hero-content {
+        padding-left: 60px !important;
+        text-align: left !important;
+    }
+    .hero-slider .hero-content .sub-title {
+        color: #8c4e2d !important;
+        font-weight: bold !important;
+        font-size: 13px !important;
+        letter-spacing: 2px !important;
+        text-transform: uppercase !important;
+        display: block !important;
+        margin-bottom: 15px !important;
+    }
+    .hero-slider .hero-content .main-title {
+        font-size: 46px !important;
+        font-weight: 800 !important;
+        color: #2d2a26 !important;
+        margin-top: 15px !important;
+        margin-bottom: 25px !important;
+        line-height: 1.1 !important;
+    }
+    .hero-slider .hero-content .description {
+        color: #666 !important;
+        font-size: 16px !important;
+        margin-bottom: 35px !important;
+        max-width: 450px !important;
+        line-height: 1.6 !important;
+    }
+    .hero-slider .hero-button .btn-shop-now {
+        background-color: #8c4e2d !important;
+        color: white !important;
+        padding: 14px 34px !important;
+        border-radius: 8px !important;
+        font-weight: 600 !important;
+        font-size: 15px !important;
+        text-decoration: none !important;
+        transition: all 0.3s ease !important;
+        box-shadow: 0 4px 15px rgba(140, 78, 45, 0.2) !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+    }
+    .hero-slider .hero-button .btn-shop-now:hover {
+        background-color: #754024 !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 8px 20px rgba(74, 52, 39, 0.3) !important;
+    }
+    .hero-slider .hero-button .btn-shop-now i {
+        transition: transform 0.3s ease !important;
+    }
+    .hero-slider .hero-button .btn-shop-now:hover i {
+        transform: translateX(3px) !important;
+    }
+    .hero-swiper .swiper-button-next,
+    .hero-swiper .swiper-button-prev {
+        color: #8c4e2d !important;
+    }
+    .hero-swiper .swiper-button-next:hover,
+    .hero-swiper .swiper-button-prev:hover {
+        background: #8c4e2d !important;
+        color: #fff !important;
+    }
+    .hero-swiper .swiper-pagination-bullet-active {
+        background: #8c4e2d !important;
+    }
+
+    @media (max-width: 991px) {
+        .hero-slider .swiper-slide {
+            padding: 50px 20px !important;
+            min-height: 400px !important;
+            text-align: center !important;
+        }
+        .hero-slider .hero-content {
+            padding-left: 0 !important;
+            text-align: center !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+        }
+        .hero-slider .hero-content .main-title {
+            font-size: 32px !important;
+            margin-bottom: 15px !important;
+        }
+        .hero-slider .hero-content .description {
+            font-size: 15px !important;
+            margin-bottom: 25px !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+    }
 </style>
 <?php
 $AllsettingsModel = new \App\Models\Allsettingsmodel();
 $all_setting_data = $AllsettingsModel->first();
 ?>
 
-<!-- -------------- Static Hero Section ------------- -->
-<section class="hero-static-area" style="background-color: #f4f1ef; position: relative; overflow: hidden; padding: 70px 0; min-height: 500px; display: flex; align-items: center;">
+<!-- -------------- Static Hero Section (Commented Out as requested) ------------- -->
+
+<!-- <section class="hero-static-area" style="background-color: #f4f1ef; position: relative; overflow: hidden; padding: 70px 0; min-height: 500px; display: flex; align-items: center;">
     <div class="container-fluid" style="position: relative; z-index: 2;">
         <div class="row align-items-center">
             <div class="col-lg-6 col-md-12 col-12">
@@ -445,67 +551,56 @@ $all_setting_data = $AllsettingsModel->first();
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     
     <!-- Flush Background Image Layer -->
-    <div class="d-none d-lg-block" style="position: absolute; right: 0; top: 0; height: 100%; width: 55%; z-index: 1;">
+    <!-- <div class="d-none d-lg-block" style="position: absolute; right: 0; top: 0; height: 100%; width: 55%; z-index: 1;">
         <img src="<?php echo base_url('admin/public/upload_images/modern_hero_products.png'); ?>" 
              alt="Hero Quality Products" 
              style="width: 100%; height: 100%; object-fit: cover; object-position: center; mask-image: linear-gradient(to right, transparent 0%, black 25%); -webkit-mask-image: linear-gradient(to right, transparent 0%, black 25%);">
     </div>
-</section>
+</section> -->
 
-<!-- Old Slider Area (Commented Out as requested) -->
-<!-- 
-<section class="hero-slider">
-    <div class="swiper hero-swiper">
+
+<!-- -------------- Hero Slider Area (Dynamic Banners styled like Static Hero Section) ------------- -->
+<section class="hero-slider" style="background-color: #f4f1ef !important; padding: 0 !important; position: relative; overflow: hidden; min-height: 500px; display: flex; align-items: center; z-index: 1;">
+    <div class="swiper hero-swiper" style="width: 100%; height: 100%;">
         <div class="swiper-wrapper">
-            <?php
-            foreach ($banner as $ban) {
-                ?>
-                <div class="swiper-slide">
-                    <div class="hero-slide-item">
-                        <div class="container-fluid">
-                            <div class="row align-items-center">
-                                <div class="col-lg-6 col-md-12 col-12">
-                                    <div class="hero-content">
-                                        <span class="sub-title">MODERN LIVING</span>
-                                        <h1 class="main-title"><?php echo $ban['BannerTitle']; ?></h1>
-                                        <p class="description"><?php echo $ban['BannerText']; ?></p>
-                                        <?php if (!empty($ban['BannerUrl'])) { ?>
-                                            <div class="hero-button">
-                                                <a href="<?php echo $ban['BannerUrl']; ?>" class="btn-shop-now">
-                                                    Shop Now <i class="fa-solid fa-arrow-right"></i>
-                                                </a>
-                                            </div>
-                                        <?php } ?>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-12 col-12 d-none d-lg-block">
-                                    <div class="hero-img-wrap">
-                                        <img src="<?php echo base_url("admin/public/upload_images/" . $ban['BannerImg']); ?>"
-                                            alt="">
-                                        <div class="sale-badge">
-                                            <span class="up-to">UP TO</span>
-                                            <span class="percent">40%</span>
-                                            <span class="off">OFF</span>
+            <?php foreach ($banner as $ban) { ?>
+                <div class="swiper-slide" style="background-color: #f4f1ef; min-height: 500px; display: flex; align-items: center; position: relative; overflow: hidden; padding: 70px 0;">
+                    <div class="container-fluid" style="position: relative; z-index: 2; width: 100%;">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 col-md-12 col-12">
+                                <div class="hero-content pl-md-5 pl-3">
+                                    <span class="sub-title" style="color: #8c4e2d; font-weight: bold; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; display: block;">MODERN LIVING</span>
+                                    <h1 class="main-title" style="font-size: 46px; font-weight: 800; color: #2d2a26; margin-top: 15px; margin-bottom: 25px; line-height: 1.1;"><?php echo $ban['BannerTitle']; ?></h1>
+                                    <p class="description" style="color: #666; font-size: 16px; margin-bottom: 35px; max-width: 450px; line-height: 1.6;"><?php echo $ban['BannerText']; ?></p>
+                                    <?php if (!empty($ban['BannerUrl'])) { ?>
+                                        <div class="hero-button">
+                                            <a href="<?php echo $ban['BannerUrl']; ?>" class="btn-shop-now" style="background-color: #8c4e2d; color: white; padding: 14px 34px; border-radius: 8px; font-weight: 600; font-size: 15px; text-decoration: none; transition: background 0.3s ease; box-shadow: 0 4px 15px rgba(140, 78, 45, 0.2); display: inline-flex; align-items: center; gap: 8px;">
+                                                Shop Now <i class="fa-solid fa-arrow-right"></i>
+                                            </a>
                                         </div>
-                                    </div>
+                                    <?php } ?>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    
+                    <!-- Flush Background Image Layer -->
+                    <div class="d-none d-lg-block" style="position: absolute; right: 0; top: 0; height: 100%; width: 55%; z-index: 1;">
+                        <img src="<?php echo base_url("admin/public/upload_images/" . $ban['BannerImg']); ?>" 
+                             alt="<?php echo $ban['BannerTitle']; ?>" 
+                             style="width: 100%; height: 100%; object-fit: cover; object-position: center; mask-image: linear-gradient(to right, transparent 0%, black 25%); -webkit-mask-image: linear-gradient(to right, transparent 0%, black 25%);">
+                    </div>
                 </div>
-                <?php
-            }
-            ?>
+            <?php } ?>
         </div>
         <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev" style="color: #8c4e2d;"></div>
+        <div class="swiper-button-next" style="color: #8c4e2d;"></div>
     </div>
 </section>
--->
 <!--/ End Slider Area -->
 
 <!-- -------------- Categories ------------- -->
@@ -753,7 +848,8 @@ $all_setting_data = $AllsettingsModel->first();
 
 <!-- Start New Arrivals Area -->
 <div class="product-area pt-5 pb-4 new-arrivals-area">
-    <div class="container">
+    <div class="container" style="max-width: 1330px;
+">
         <div class="row align-items-center mb-4 position-relative">
             <div class="col-12 text-center">
                 <div class="section-header">
@@ -1091,7 +1187,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <!-- Start Best Sellers Area -->
 <div class="product-area pt-4 pb-5 best-sellers-area">
-    <div class="container">
+    <div class="container" style="max-width: 1330px;
+">
         <div class="row align-items-center mb-4 position-relative">
             <div class="col-12 text-center">
                 <div class="section-header">
@@ -2666,7 +2763,7 @@ if (!empty($paymentgateway)) {
 
         var productSwiper = new Swiper(".product-swiper", {
             slidesPerView: 1,
-            spaceBetween: 25,
+            spaceBetween: 15,
             navigation: {
                 nextEl: ".prod-button-next",
                 prevEl: ".prod-button-prev",
@@ -2675,13 +2772,13 @@ if (!empty($paymentgateway)) {
                 576: { slidesPerView: 2 },
                 768: { slidesPerView: 3 },
                 992: { slidesPerView: 4 },
-                1200: { slidesPerView: 4 },
+                1200: { slidesPerView: 5 },
             },
         });
 
         var bestSwiper = new Swiper(".best-swiper", {
             slidesPerView: 1,
-            spaceBetween: 25,
+            spaceBetween: 15,
             navigation: {
                 nextEl: ".best-button-next",
                 prevEl: ".best-button-prev",
@@ -2690,7 +2787,7 @@ if (!empty($paymentgateway)) {
                 576: { slidesPerView: 2 },
                 768: { slidesPerView: 3 },
                 992: { slidesPerView: 4 },
-                1200: { slidesPerView: 4 },
+                1200: { slidesPerView: 5 },
             },
         });
 
