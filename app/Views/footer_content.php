@@ -20,42 +20,48 @@ $insta = json_decode($links['insta'] ?? '{}', true);
 ?>
 
 <footer class="footer modern-footer">
-    <section class="shop-services pt-5 pb-5">
+    <section class="shop-services pb-4">
         <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6">
-                    <div class="modern-service-item">
-                        <div class="service-icon"><i class="fa-solid fa-truck-fast"></i></div>
-                        <div class="service-text">
-                            <h4>Free Shipping</h4>
-                            <p>Orders over <?php echo $all_setting_data['currency']; ?>100</p>
+            <div class="shop-services-banner">
+                <div class="shop-services-row">
+                    <!-- Column 1: 100% Genuine Products -->
+                    <div class="col-lg-3 col-md-6 service-col">
+                        <div class="modern-service-item">
+                            <div class="service-icon"><i class="fa-solid fa-certificate"></i></div>
+                            <div class="service-text">
+                                <h4>100% Genuine Products</h4>
+                                <p>Authentic & Quality Assured</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="modern-service-item">
-                        <div class="service-icon"><i class="fa-solid fa-arrow-rotate-left"></i></div>
-                        <div class="service-text">
-                            <h4>Free Return</h4>
-                            <p>Within 30 days returns</p>
+                    <!-- Column 2: Secure Checkout -->
+                    <div class="col-lg-3 col-md-6 service-col">
+                        <div class="modern-service-item">
+                            <div class="service-icon"><i class="fa-regular fa-credit-card"></i></div>
+                            <div class="service-text">
+                                <h4>Secure Checkout</h4>
+                                <p>Multiple Payment Options</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="modern-service-item">
-                        <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                        <div class="service-text">
-                            <h4>Secure Payment</h4>
-                            <p>100% secure payment</p>
+                    <!-- Column 3: Easy Returns -->
+                    <div class="col-lg-3 col-md-6 service-col">
+                        <div class="modern-service-item">
+                            <div class="service-icon"><i class="fa-solid fa-rotate-left"></i></div>
+                            <div class="service-text">
+                                <h4>Easy Returns</h4>
+                                <p>Hassle-Free Returns</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="modern-service-item">
-                        <div class="service-icon"><i class="fa-solid fa-gem"></i></div>
-                        <div class="service-text">
-                            <h4>Best Piece</h4>
-                            <p>Guaranteed price</p>
+                    <!-- Column 4: On-Time Delivery -->
+                    <div class="col-lg-3 col-md-6 service-col">
+                        <div class="modern-service-item">
+                            <div class="service-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                            <div class="service-text">
+                                <h4>On-Time Delivery</h4>
+                                <p>Fast & Reliable Shipping</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -71,8 +77,8 @@ $insta = json_decode($links['insta'] ?? '{}', true);
                 <div class="col-xl-8 col-lg-10 text-center">
                     <div class="newsletter-content footer-reveal">
                         <span class="newsletter-kicker">Fresh drops, early access, better deals</span>
-                        <h2 class="text-white mb-3">Join Our Newsletter</h2>
-                        <p class="text-white-50 mb-4">Get curated offers, new arrivals, and limited-time furniture deals before everyone else.</p>
+                        <h2 class="text-white mb-2">Join Our Newsletter</h2>
+                        <p class="text-white-50 my-2">Get curated offers, new arrivals, and limited-time furniture deals before everyone else.</p>
                         <form id="add_subscribe" method="post" class="modern-newsletter-form">
                             <input type="hidden" name="baseurl" value="<?php echo base_url(); ?>">
                             <div class="newsletter-input-wrap mb-2">

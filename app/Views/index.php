@@ -637,7 +637,7 @@ $all_setting_data = $AllsettingsModel->first();
 </div>
 
 <!-- Start Promo Banners Area -->
-<div class="promo-banners-area pb-5">
+<div class="promo-banners-area pb-2">
     <div class="container">
         <div class="row">
             <!-- Left Banner: Summer Sale -->
@@ -779,7 +779,7 @@ $all_setting_data = $AllsettingsModel->first();
                             <div class="swiper-slide">
                                 <div class="modern-product-card">
                                     <div class="product-header">
-                                        <span class="badge-new">NEW</span>
+                                        <!-- <span class="badge-new">NEW</span> -->
                                         <div class="wishlist-action">
                                             <?php $user_id = session()->get('user_id');
                                             if (empty($user_id)) { ?>
@@ -843,9 +843,141 @@ $all_setting_data = $AllsettingsModel->first();
     </div>
 </div>
 
+<!-- Start Flash Sale & Trusted Brands Area -->
+<div class="flash-sale-brands-area">
+    <div class="container">
+        <div class="flash-sale-brands-row">
+            <!-- Left Banner: Flash Sale -->
+            <div class="col-lg-8">
+                <div class="flash-sale-card">
+                    <div class="flash-sale-content">
+                        <div class="flash-sale-left">
+                            <span class="fs-title-accent">Flash Sale</span>
+                            <h3 class="fs-title-main">Limited Time Offer!</h3>
+                        </div>
+                        
+                        <div class="flash-sale-timer-wrap">
+                            <div class="flash-sale-timer-panel">
+                                <div class="countdown-box">
+                                    <span class="countdown-num" id="cd-hours">02</span>
+                                    <span class="countdown-label">Hours</span>
+                                </div>
+                                <div class="countdown-box">
+                                    <span class="countdown-num" id="cd-mins">45</span>
+                                    <span class="countdown-label">Mins</span>
+                                </div>
+                                <div class="countdown-box">
+                                    <span class="countdown-num" id="cd-secs">30</span>
+                                    <span class="countdown-label">Secs</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flash-sale-right">
+                            <span class="fs-discount-text">Up to 70% OFF on selected products</span>
+                            <a href="<?php echo base_url('product'); ?>" class="btn-fs-shop">
+                                Shop Now <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <img src="<?php echo base_url('public/images/modern/promo_headphones-removebg-preview.png'); ?>" alt="Flash Sale Headphones" class="flash-sale-headphones">
+                </div>
+            </div>
+
+            <!-- Right Banner: Trusted Brands -->
+            <div class="col-lg-4">
+                <div class="trusted-brands-card">
+                    <div class="trusted-brands-header">
+                        <h4 class="tb-title">Trusted Brands</h4>
+                        <p class="tb-subtitle">Top brands, top quality</p>
+                    </div>
+                    <div class="brands-grid-wrap">
+                        <!-- Nike -->
+                        <div class="brand-logo-card">
+                            <svg class="brand-svg" viewBox="0 0 24 24" fill="currentColor" style="height: 15px; color: #000000; width: auto;">
+                                <path d="M21.572 6.023c-.347-.396-1.127-.123-2.185.705-1.583 1.242-4.524 3.738-7.514 5.37-2.616 1.425-4.877 1.83-5.918 1.83-.348 0-.547-.024-.547-.11 0-.173.348-.68 1.093-1.606 2.057-2.553 5.485-5.938 9.176-8.23.82-.51.62-.973-.422-.729-3.92 0.925-8.812 4.137-12.28 7.397-1.39 1.31-2.482 2.766-2.88 3.69-.174.413-.025.705.546.462 2.977-1.265 9.761-4.717 15.545-9.155 3.327-2.553 4.298-4.256 2.392-5.624z"/>
+                            </svg>
+                        </div>
+                        <!-- Adidas -->
+                        <div class="brand-logo-card">
+                            <svg class="brand-svg" viewBox="0 0 24 24" fill="currentColor" style="height: 20px; color: #000000; width: auto;">
+                                <path d="M8.244 18.244l-2.072-3.582h-2.164l3.125 5.405h2.164zm4.843 0l-4.144-7.164h-2.165l5.197 9h2.164zm4.843 0l-6.216-10.746h-2.164l7.27 12.582h2.164z"/>
+                            </svg>
+                        </div>
+                        <!-- Apple -->
+                        <div class="brand-logo-card">
+                            <i class="fa-brands fa-apple" style="font-size: 20px; color: #000000;"></i>
+                        </div>
+                        <!-- Samsung -->
+                        <div class="brand-logo-card">
+                            <span style="font-family: 'Inter', 'Helvetica Neue', sans-serif; font-weight: 850; font-size: 10px; color: #0A0A0A; letter-spacing: -0.2px;">SAMSUNG</span>
+                        </div>
+                        <!-- Sony -->
+                        <div class="brand-logo-card">
+                            <span style="font-family: 'Georgia', 'Times New Roman', serif; font-weight: 700; font-size: 11px; color: #000000; letter-spacing: 0.5px;">SONY</span>
+                        </div>
+                        <!-- boAt -->
+                        <div class="brand-logo-card">
+                            <span style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 12.5px; color: #000000; letter-spacing: -0.5px;">bo<span style="color: #FF2E2E;">At</span></span>
+                        </div>
+                        <!-- View All Brands -->
+                        <a href="<?php echo base_url('brands'); ?>" class="brand-view-all">
+                            View All Brands <i class="fa-solid fa-arrow-right" style="color: #FF5500;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var countdownKey = 'flash_sale_countdown_target';
+    var targetTime = localStorage.getItem(countdownKey);
+    
+    if (!targetTime) {
+        var now = new Date().getTime();
+        targetTime = now + (2 * 60 * 60 * 1000) + (45 * 60 * 1000) + (30 * 1000);
+        localStorage.setItem(countdownKey, targetTime);
+    } else {
+        targetTime = parseInt(targetTime, 10);
+    }
+    
+    function updateCountdown() {
+        var now = new Date().getTime();
+        var distance = targetTime - now;
+        
+        if (distance < 0) {
+            targetTime = now + (2 * 60 * 60 * 1000) + (45 * 60 * 1000) + (30 * 1000);
+            localStorage.setItem(countdownKey, targetTime);
+            distance = targetTime - now;
+        }
+        
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        var hStr = hours < 10 ? '0' + hours : hours;
+        var mStr = minutes < 10 ? '0' + minutes : minutes;
+        var sStr = seconds < 10 ? '0' + seconds : seconds;
+        
+        var hEl = document.getElementById('cd-hours');
+        var mEl = document.getElementById('cd-mins');
+        var sEl = document.getElementById('cd-secs');
+        
+        if (hEl) hEl.textContent = hStr;
+        if (mEl) mEl.textContent = mStr;
+        if (sEl) sEl.textContent = sStr;
+    }
+    
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+});
+</script>
 
 <!-- Start Trending Items Area -->
-<div class="product-area pt-4 pb-5">
+<!-- <div class="product-area pt-4 pb-5">
     <div class="container">
         <div class="row mb-4">
             <div class="col-12 text-center">
@@ -954,7 +1086,7 @@ $all_setting_data = $AllsettingsModel->first();
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- End Product Area -->
 
 <!-- Start Best Sellers Area -->
@@ -985,7 +1117,7 @@ $all_setting_data = $AllsettingsModel->first();
                             <div class="swiper-slide">
                                 <div class="modern-product-card">
                                     <div class="product-header">
-                                        <span class="badge-new" style="background: #f7941d;">HOT</span>
+                                        <!-- <span class="badge-new" style="background: #f7941d;">HOT</span> -->
                                         <div class="wishlist-action">
                                             <?php $user_id = session()->get('user_id');
                                             if (empty($user_id)) { ?>
