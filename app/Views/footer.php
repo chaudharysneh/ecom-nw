@@ -140,8 +140,8 @@ $all_setting_data = $AllsettingsModel->first();
                 <div class="col-xl-8 col-lg-10 text-center">
                     <div class="newsletter-content footer-reveal">
                         <span class="newsletter-kicker">Fresh drops, early access, better deals</span>
-                        <h2 class="text-white mb-3">Join Our Newsletter</h2>
-                        <p class="text-white-50 mb-4">Get curated offers, new arrivals, and limited-time furniture deals before everyone else.</p>
+                        <h2 class="text-white mb-2">Join Our Newsletter</h2>
+                        <p class="text-white-50 my-2">Get curated offers, new arrivals, and limited-time furniture deals before everyone else.</p>
                         <form id="add_subscribe" method="post" class="modern-newsletter-form">
                             <input type="hidden" name="baseurl" value="<?php echo base_url(); ?>">
                             <div class="newsletter-input-wrap mb-2">
