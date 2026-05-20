@@ -511,92 +511,124 @@ $all_setting_data = $AllsettingsModel->first();
 <!-- -------------- Categories ------------- -->
 <div class="category-area">
     <div class="container">
-        <div class="category-section-container">
-            <div class="row align-items-center mb-4 position-relative">
-                <div class="col-lg-8 col-md-10 col-12 text-center mx-auto">
-                    <div class="section-header">
-                        <span class="sub-title">SHOP BY CATEGORIES</span>
-                        <h2 class="main-title">Explore Popular Categories</h2>
-                        <p class="section-desc">Find everything you need from your favorite categories</p>
-                    </div>
-                </div>
-                <!-- Navigation controls positioned absolute/floated to match mockup -->
-                <div class="category-nav-wrap">
-                    <div class="cat-button-prev"><i class="fa-solid fa-chevron-left"></i></div>
-                    <div class="cat-button-next"><i class="fa-solid fa-chevron-right"></i></div>
-                </div>
+        <div class="category-section-container position-relative">
+            <!-- Header Wrap: Left Title, Right View All Pill -->
+            <div class="category-header-wrap d-flex justify-content-between align-items-center mb-4">
+                <h2 class="category-main-title">Shop by <span class="highlight">Category</span></h2>
+                <a href="<?php echo base_url('shop'); ?>" class="btn-view-all-cats">
+                    View All Categories <i class="fa-solid fa-arrow-right"></i>
+                </a>
             </div>
 
-            <div class="row">
-                <div class="col-12 position-relative">
-                    <div class="swiper cat-swiper">
-                        <div class="swiper-wrapper pt-2 pb-3">
-                            <?php foreach ($category as $index => $cat) { 
-                                $catNameLower = strtolower($cat['CategoryName']);
-                                $color = '#4a3427';
-                                $icon = 'fa-puzzle-piece';
+            <!-- Swiper Slider wrapper with outer floating arrows -->
+            <div class="category-slider-outer-wrap position-relative">
+                <!-- Navigation controls centered on left/right outer edges -->
+                <div class="cat-button-prev"><i class="fa-solid fa-chevron-left"></i></div>
+                <div class="cat-button-next"><i class="fa-solid fa-chevron-right"></i></div>
 
-                                if (strpos($catNameLower, 'toy') !== false || strpos($catNameLower, 'kid') !== false || strpos($catNameLower, 'baby') !== false) {
-                                    $color = '#4a3427'; 
-                                    $icon = 'fa-puzzle-piece';
-                                } else if (strpos($catNameLower, 'watch') !== false || strpos($catNameLower, 'clock') !== false || strpos($catNameLower, 'access') !== false) {
-                                    $color = '#ff4757'; 
-                                    $icon = 'fa-clock';
-                                } else if (strpos($catNameLower, 'cloth') !== false || strpos($catNameLower, 'wear') !== false || strpos($catNameLower, 'fashion') !== false || strpos($catNameLower, 'shirt') !== false) {
-                                    $color = '#8e44ad'; 
-                                    $icon = 'fa-shirt';
-                                } else if (strpos($catNameLower, 'shoe') !== false || strpos($catNameLower, 'foot') !== false || strpos($catNameLower, 'sneaker') !== false) {
-                                    $color = '#2ecc71'; 
-                                    $icon = 'fa-shoe-prints';
-                                } else if (strpos($catNameLower, 'laptop') !== false || strpos($catNameLower, 'comput') !== false) {
-                                    $color = '#3498db'; 
-                                    $icon = 'fa-laptop';
-                                } else if (strpos($catNameLower, 'phone') !== false || strpos($catNameLower, 'mobile') !== false || strpos($catNameLower, 'smart') !== false) {
-                                    $color = '#e84393'; 
-                                    $icon = 'fa-mobile-screen-button';
-                                } else {
-                                    $fallbackColors = ['#4a3427', '#ff6b6b', '#9b59b6', '#26de81', '#3498db', '#fd79a8'];
-                                    $fallbackIcons = ['fa-shirt', 'fa-shoe-prints', 'fa-laptop', 'fa-mobile-screen-button', 'fa-headphones', 'fa-gamepad'];
-                                    $color = $fallbackColors[$index % count($fallbackColors)];
-                                    $icon = $fallbackIcons[$index % count($fallbackIcons)];
-                                }
+                <div class="swiper cat-swiper">
+                    <div class="swiper-wrapper pt-2 pb-3">
+                        <?php foreach ($category as $index => $cat) { 
+                            $catNameLower = strtolower($cat['CategoryName']);
+                            
+                            // Initialize default fallback values (Toys theme values as base fallback)
+                            $color = '#FFA800'; 
+                            $colorRgb = '255, 168, 0';
+                            $icon = 'fa-shapes';
+                            $gradient = 'radial-gradient(circle, #FFEFE2 0%, #FFDFCA 100%)';
 
-                                $seed = intval($cat['CategoryID']);
-                                $prodCount = (120 + ($seed * 37) % 240) . '+ Products';
-                            ?>
-                                <div class="swiper-slide">
-                                    <div class="category-card" style="--category-accent: <?php echo $color; ?>;">
-                                        <div class="category-image-container" style="position: relative;">
-                                            <div class="category-image-wrap">
-                                                <a href="<?php echo base_url('category/' . base64_encode($cat['CategoryID'])); ?>" class="category-img-link">
-                                                    <?php if (!empty($cat['Catagoryimage'])) { ?>
-                                                        <img src="<?php echo base_url(); ?>admin/public/upload_images/<?php echo $cat['Catagoryimage']; ?>" alt="<?php echo $cat['CategoryName']; ?>">
-                                                    <?php } else { ?>
-                                                        <img src="<?php echo base_url(); ?>admin/public/upload_images/no_category.webp" alt="<?php echo $cat['CategoryName']; ?>">
-                                                    <?php } ?>
-                                                </a>
+                            if (strpos($catNameLower, 'toy') !== false || strpos($catNameLower, 'kid') !== false || strpos($catNameLower, 'baby') !== false) {
+                                $color = '#FFA800'; 
+                                $colorRgb = '255, 168, 0';
+                                $icon = 'fa-shapes';
+                                $gradient = 'radial-gradient(circle, #FFEFE2 0%, #FFDFCA 100%)';
+                            } else if (strpos($catNameLower, 'watch') !== false || strpos($catNameLower, 'clock') !== false) {
+                                $color = '#0F7D3A'; 
+                                $colorRgb = '15, 125, 58';
+                                $icon = 'fa-clock';
+                                $gradient = 'radial-gradient(circle, #EDF8F1 0%, #D1ECD9 100%)';
+                            } else if (strpos($catNameLower, 'cloth') !== false || strpos($catNameLower, 'wear') !== false || strpos($catNameLower, 'fashion') !== false || strpos($catNameLower, 'shirt') !== false) {
+                                $color = '#7C3AED'; 
+                                $colorRgb = '124, 58, 237';
+                                $icon = 'fa-shirt';
+                                $gradient = 'radial-gradient(circle, #F5EFFE 0%, #E3D1FC 100%)';
+                            } else if (strpos($catNameLower, 'shoe') !== false || strpos($catNameLower, 'foot') !== false || strpos($catNameLower, 'sneaker') !== false) {
+                                $color = '#FF5500'; 
+                                $colorRgb = '255, 85, 0';
+                                $icon = 'fa-shoe-prints';
+                                $gradient = 'radial-gradient(circle, #FFF4EE 0%, #FFDEC9 100%)';
+                            } else if (strpos($catNameLower, 'laptop') !== false || strpos($catNameLower, 'comput') !== false) {
+                                $color = '#8B5CF6'; 
+                                $colorRgb = '139, 92, 246';
+                                $icon = 'fa-laptop';
+                                $gradient = 'radial-gradient(circle, #F1F0FF 0%, #D8D6FF 100%)';
+                            } else if (strpos($catNameLower, 'phone') !== false || strpos($catNameLower, 'mobile') !== false || strpos($catNameLower, 'smart') !== false) {
+                                $color = '#2563EB'; 
+                                $colorRgb = '37, 99, 235';
+                                $icon = 'fa-mobile-screen-button';
+                                $gradient = 'radial-gradient(circle, #EEF2FF 0%, #C7D2FE 100%)';
+                            } else if (strpos($catNameLower, 'access') !== false || strpos($catNameLower, 'bag') !== false || strpos($catNameLower, 'purse') !== false) {
+                                $color = '#C2410C'; 
+                                $colorRgb = '194, 65, 12';
+                                $icon = 'fa-bag-shopping';
+                                $gradient = 'radial-gradient(circle, #FAF2EE 0%, #EFE0D5 100%)';
+                            } else if (strpos($catNameLower, 'beauty') !== false || strpos($catNameLower, 'cosmet') !== false || strpos($catNameLower, 'spa') !== false) {
+                                $color = '#EC4899'; 
+                                $colorRgb = '236, 72, 153';
+                                $icon = 'fa-wand-magic-sparkles';
+                                $gradient = 'radial-gradient(circle, #FFF0F5 0%, #FCD4E2 100%)';
+                            } else if (strpos($catNameLower, 'game') !== false || strpos($catNameLower, 'console') !== false || strpos($catNameLower, 'play') !== false) {
+                                $color = '#EC4899'; 
+                                $colorRgb = '236, 72, 153';
+                                $icon = 'fa-gamepad';
+                                $gradient = 'radial-gradient(circle, #FFF0F5 0%, #FCD4E2 100%)';
+                            } else {
+                                // Fallback styling cycle through the 8 premium themes based on index
+                                $themes = [
+                                    ['#FFA800', '255, 168, 0', 'fa-shapes', 'radial-gradient(circle, #FFEFE2 0%, #FFDFCA 100%)'],
+                                    ['#0F7D3A', '15, 125, 58', 'fa-clock', 'radial-gradient(circle, #EDF8F1 0%, #D1ECD9 100%)'],
+                                    ['#7C3AED', '124, 58, 237', 'fa-shirt', 'radial-gradient(circle, #F5EFFE 0%, #E3D1FC 100%)'],
+                                    ['#FF5500', '255, 85, 0', 'fa-shoe-prints', 'radial-gradient(circle, #FFF4EE 0%, #FFDEC9 100%)'],
+                                    ['#8B5CF6', '139, 92, 246', 'fa-laptop', 'radial-gradient(circle, #F1F0FF 0%, #D8D6FF 100%)'],
+                                    ['#2563EB', '37, 99, 235', 'fa-mobile-screen-button', 'radial-gradient(circle, #EEF2FF 0%, #C7D2FE 100%)'],
+                                    ['#C2410C', '194, 65, 12', 'fa-bag-shopping', 'radial-gradient(circle, #FAF2EE 0%, #EFE0D5 100%)'],
+                                    ['#EC4899', '236, 72, 153', 'fa-wand-magic-sparkles', 'radial-gradient(circle, #FFF0F5 0%, #FCD4E2 100%)']
+                                ];
+                                $theme = $themes[$index % count($themes)];
+                                $color = $theme[0];
+                                $colorRgb = $theme[1];
+                                $icon = $theme[2];
+                                $gradient = $theme[3];
+                            }
+
+                            $seed = intval($cat['CategoryID']);
+                            $prodCount = (120 + ($seed * 37) % 240) . '+ Products';
+                        ?>
+                            <div class="swiper-slide">
+                                <div class="category-card" style="--category-accent: <?php echo $color; ?>; --category-accent-rgb: <?php echo $colorRgb; ?>;">
+                                    <a href="<?php echo base_url('category/' . base64_encode($cat['CategoryID'])); ?>" class="category-card-link">
+                                        <div class="category-image-container">
+                                            <div class="category-image-wrap" style="background: <?php echo $gradient; ?>;">
+                                                <?php if (!empty($cat['Catagoryimage'])) { ?>
+                                                    <img src="<?php echo base_url(); ?>admin/public/upload_images/<?php echo $cat['Catagoryimage']; ?>" alt="<?php echo $cat['CategoryName']; ?>">
+                                                <?php } else { ?>
+                                                    <img src="<?php echo base_url(); ?>admin/public/upload_images/no_category.webp" alt="<?php echo $cat['CategoryName']; ?>">
+                                                <?php } ?>
                                             </div>
                                             <div class="category-icon-badge" style="background-color: <?php echo $color; ?>;">
                                                 <i class="fa-solid <?php echo $icon; ?>"></i>
                                             </div>
                                         </div>
-                                        <div class="category-info text-center mt-5">
+                                        <div class="category-info text-center">
                                             <h3 class="category-title">
-                                                <a href="<?php echo base_url('category/' . base64_encode($cat['CategoryID'])); ?>">
-                                                    <?php echo $cat['CategoryName']; ?>
-                                                </a>
+                                                <?php echo $cat['CategoryName']; ?>
                                             </h3>
                                             <p class="product-count"><?php echo $prodCount; ?></p>
-                                            <div class="btn-explore-wrap">
-                                                <a href="<?php echo base_url('category/' . base64_encode($cat['CategoryID'])); ?>" class="btn-explore">
-                                                    Explore Now <i class="fa-solid fa-arrow-right"></i>
-                                                </a>
-                                            </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
-                            <?php } ?>
-                        </div>
+                            </div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
@@ -2357,24 +2389,32 @@ if (!empty($paymentgateway)) {
         });
 
         var swiper = new Swiper(".cat-swiper", {
-            slidesPerView: 6,
-            spaceBetween: 20,
+            slidesPerView: 8,
+            spaceBetween: 16,
             navigation: {
                 nextEl: ".cat-button-next",
                 prevEl: ".cat-button-prev",
             },
             breakpoints: {
                 0: {
-                    slidesPerView: 2,
-                    spaceBetween: 15,
+                    slidesPerView: 2.2,
+                    spaceBetween: 12,
+                },
+                480: {
+                    slidesPerView: 3.2,
+                    spaceBetween: 14,
                 },
                 768: {
-                    slidesPerView: 4,
-                    spaceBetween: 18,
+                    slidesPerView: 5,
+                    spaceBetween: 16,
                 },
-                1024: {
+                992: {
                     slidesPerView: 6,
-                    spaceBetween: 20,
+                    spaceBetween: 16,
+                },
+                1200: {
+                    slidesPerView: 8,
+                    spaceBetween: 16,
                 },
             },
         });
