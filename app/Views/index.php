@@ -1183,7 +1183,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <!-- End Most Popular Area -->
 
 <!-- Start Shop Blog Area -->
-<section class="shop-blog pt-4 pb-5">
+<section class="shop-blog py-4">
     <div class="container">
         <div class="row mb-4">
             <div class="col-12 text-center">
