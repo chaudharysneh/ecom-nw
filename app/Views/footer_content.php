@@ -21,7 +21,7 @@ $insta = json_decode($links['insta'] ?? '{}', true);
 
 <footer class="footer modern-footer">
     <section class="shop-services pb-4">
-        <div class="container">
+        <div class="container-fluid" style="padding: 0 30px;">
             <div class="shop-services-banner">
                 <div class="shop-services-row">
                     <!-- Column 1: 100% Genuine Products -->
@@ -70,7 +70,7 @@ $insta = json_decode($links['insta'] ?? '{}', true);
     </section>
 
     <section class="footer-newsletter">
-        <div class="container">
+        <div class="container-fluid" style="padding: 0 30px;">
             <div class="row justify-content-center">
                 <div class="col-xl-8 col-lg-10 text-center">
                     <div class="newsletter-content footer-reveal">
@@ -96,7 +96,7 @@ $insta = json_decode($links['insta'] ?? '{}', true);
     </section>
 
     <div class="footer-top">
-        <div class="container">
+        <div class="container-fluid" style="padding: 0 30px;">
             <div class="row g-4 gx-lg-5 align-items-stretch">
                 <div class="col-lg-4 col-md-6">
                     <div class="footer-widget about-widget footer-reveal footer-reveal-delay-1">
@@ -177,7 +177,7 @@ $insta = json_decode($links['insta'] ?? '{}', true);
     </div>
 
     <div class="footer-copyright">
-        <div class="container">
+        <div class="container-fluid" style="padding: 0 30px;">
             <div class="row align-items-center">
                 <div class="col-md-6 text-center text-md-start">
                     <p class="mb-0">&copy; <?php echo date('Y'); ?> <strong><?= $all_setting_data['Title'] ?? 'FurniLife'; ?></strong>. All Rights Reserved.</p>

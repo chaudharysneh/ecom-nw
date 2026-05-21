@@ -2712,7 +2712,7 @@ if (!empty($paymentgateway)) {
             loop: true,
             speed: 800,
             autoplay: {
-                delay: 50000,
+                delay: 5000,
                 disableOnInteraction: false,
             },
             effect: 'fade',

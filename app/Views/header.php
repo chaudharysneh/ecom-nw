@@ -200,47 +200,50 @@ $all_setting_data = $AllsettingsModel->first();
                                         <a href="<?php echo base_url('cart'); ?>">View Cart</a>
                                     </div>
                                     <?php
-                                    //  print_r($totalCartItem);
-                                    // die;
-                                    
                                     if ($totalCartItem > 0) {
                                         ?>
-                                        <ul class="shopping-list">
-                                            <?php
-
-                                            foreach ($cart as $item) {
-                                                // 			print_r($cart);
-                                                $imgurl = ($item['ProductImage']) ? ($item['ProductImage']) : ('');
-                                                ?>
-                                                <li id="<?php echo $item['id']; ?>">
-                                                    <a href="javascript:void(0)" class="remove removeItem"
-                                                        data-id="<?php echo $item['id']; ?>" title="Remove this item"><i
-                                                            class="fa fa-remove"></i></a>
-                                                    <a class="cart-img border border-0" href="javascript:void(0)"><img
-                                                            src="<?php echo $imgurl; ?>" alt="javascript:void(0)"></a>
-                                                    <h4><a
-                                                            href="<?php echo base_url($item['slug'] . "/" . 'product_detail/' . base64_encode($item['id'])); ?>"><?php echo $item['name']; ?></a>
-                                                    </h4>
-                                                    <p class="quantity"><?php echo $item['quantity']; ?>x - <span
-                                                            class="amount"><?php echo $all_setting_data['currency']; ?><?php echo $item['unit_price']; ?></span>
-                                                    </p>
-                                                </li>
-                                                <?php
-                                            }
-                                            ?>
-
-
-                                        </ul>
+                                         <ul class="shopping-list">
+                                             <?php
+                                             $visibleCart = array_slice($cart, 0, 3);
+                                             foreach ($visibleCart as $item) {
+                                                 $imgurl = ($item['ProductImage']) ? ($item['ProductImage']) : ('');
+                                                 ?>
+                                                 <li id="<?php echo $item['id']; ?>" class="modern-cart-item">
+                                                     <a class="cart-img border border-0" href="javascript:void(0)"><img
+                                                             src="<?php echo $imgurl; ?>" alt="Product Image"></a>
+                                                     <div class="cart-item-info">
+                                                         <h4 class="cart-item-title"><a
+                                                                 href="<?php echo base_url($item['slug'] . "/" . 'product_detail/' . base64_encode($item['id'])); ?>"><?php echo $item['name']; ?></a>
+                                                         </h4>
+                                                         <p class="quantity"><?php echo $item['quantity']; ?>x <span class="quantity-multiplier">×</span> <span
+                                                                 class="amount"><?php echo $all_setting_data['currency']; ?><?php echo $item['unit_price']; ?></span>
+                                                         </p>
+                                                     </div>
+                                                     <a href="javascript:void(0)" class="remove removeItem"
+                                                         data-id="<?php echo $item['id']; ?>" title="Remove this item"><i
+                                                             class="fa-solid fa-trash-can"></i></a>
+                                                 </li>
+                                                 <?php
+                                             }
+                                             if ($totalCartItem > 3) {
+                                                 ?>
+                                                 <li class="text-center py-2 text-muted" style="font-size: 11px; font-family: 'Poppins', sans-serif; border-bottom: none !important; opacity: 0.85;">
+                                                     + <?php echo ($totalCartItem - 3); ?> more item<?php echo ($totalCartItem - 3 > 1) ? 's' : ''; ?> in cart
+                                                 </li>
+                                                 <?php
+                                             }
+                                             ?>
+                                         </ul>
                                         <?php
                                     } else {
                                         ?>
-                                        <ul class="shopping-list">
-                                            <li>
-                                                <h4 class="text-center"><a href="javascript:void(0)">cart is empty</a></h4>
-
-                                            </li>
-
-                                        </ul>
+                                        <div class="empty-cart-state text-center py-4">
+                                            <div class="empty-cart-icon mb-3">
+                                                <i class="fa-solid fa-basket-shopping" style="font-size: 32px; color: #C8BFB8;"></i>
+                                            </div>
+                                            <h5 class="empty-cart-title" style="font-family: 'Outfit', sans-serif; font-size: 14px; font-weight: 600; color: #7E7975; margin-bottom: 4px;">Your cart is empty</h5>
+                                            <p style="font-family: 'Poppins', sans-serif; font-size: 12px; color: #C8BFB8; margin: 0;">Add items to get started!</p>
+                                        </div>
                                         <?php
                                     }
                                     ?>
@@ -257,14 +260,14 @@ $all_setting_data = $AllsettingsModel->first();
                                                 <span
                                                     class="total-amount"><?php echo $all_setting_data['currency']; ?><?php echo $CartTotals->subtotal; ?></span>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-md-6 ">
+                                            <div class="row g-2">
+                                                <div class="col-6">
                                                     <a href="<?php echo base_url('cart'); ?>"
-                                                        class="btn animate rounded">Cart</a>
+                                                        class="btn-cart-premium">Cart</a>
                                                 </div>
-                                                <div class="col-md-6">
+                                                <div class="col-6">
                                                     <a href="<?php echo base_url('checkout'); ?>"
-                                                        class="btn animate rounded">Checkout</a>
+                                                        class="btn-checkout-premium">Checkout</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -288,62 +291,160 @@ $all_setting_data = $AllsettingsModel->first();
                     <div class="row align-items-center">
                         <div class="col-lg-2 col-12">
                             <div class="all-category-v2">
-                                <h3 class="cat-heading p-0"><i class="fa fa-bars"></i>Categories <i
-                                        class="fa fa-angle-down"></i></h3>
-                                <ul class="main-category">
-                                    <?php
-                                    foreach ($catdata as $cate) {
+                                <button class="cat-heading-btn">
+                                    <span class="btn-left">
+                                        <i class="bi bi-grid"></i>
+                                        Categories
+                                    </span>
+                                    <i class="fa-solid fa-chevron-down caret-icon"></i>
+                                </button>
+                                
+                                <div class="mega-dropdown-menu">
+                                    <ul class="categories-list">
+                                        <?php
+                                        // Category icon mapping helper
+                                        $getIcon = function($catName) {
+                                            $name = strtolower($catName);
+                                            if (strpos($name, 'furniture') !== false) return 'fa-couch';
+                                            if (strpos($name, 'sofa') !== false || strpos($name, 'chair') !== false) return 'fa-couch';
+                                            if (strpos($name, 'table') !== false) return 'fa-table';
+                                            if (strpos($name, 'bed') !== false) return 'fa-bed';
+                                            if (strpos($name, 'kitchen') !== false || strpos($name, 'dining') !== false) return 'fa-utensils';
+                                            if (strpos($name, 'lighting') !== false || strpos($name, 'lamp') !== false) return 'fa-lightbulb';
+                                            if (strpos($name, 'decor') !== false) return 'fa-house';
+                                            if (strpos($name, 'outdoor') !== false || strpos($name, 'garden') !== false) return 'fa-tree';
+                                            if (strpos($name, 'office') !== false) return 'fa-briefcase';
+                                            if (strpos($name, 'cloth') !== false || strpos($name, 'shirt') !== false || strpos($name, 'men') !== false || strpos($name, 'women') !== false) return 'fa-shirt';
+                                            if (strpos($name, 'toy') !== false) return 'fa-shapes';
+                                            if (strpos($name, 'watch') !== false || strpos($name, 'clock') !== false) return 'fa-clock';
+                                            if (strpos($name, 'shoe') !== false || strpos($name, 'footwear') !== false) return 'fa-shoe-prints';
+                                            if (strpos($name, 'laptop') !== false || strpos($name, 'computer') !== false) return 'fa-laptop';
+                                            if (strpos($name, 'phone') !== false || strpos($name, 'mobile') !== false) return 'fa-mobile-screen-button';
+                                            if (strpos($name, 'accessory') !== false || strpos($name, 'accessories') !== false || strpos($name, 'gem') !== false) return 'fa-gem';
+                                            if (strpos($name, 'game') !== false || strpos($name, 'gaming') !== false) return 'fa-gamepad';
+                                            return 'fa-tag';
+                                        };
+
+                                        // Track first category to render it active by default
+                                        $first = true;
+                                        foreach ($catdata as $cate) {
+                                            $iconClass = $getIcon($cate['CategoryName']);
+                                            ?>
+                                            <li class="category-item <?php echo $first ? 'default-active' : ''; ?>">
+                                                <a href="#" class="category-link">
+                                                    <span class="link-left">
+                                                        <i class="fa-solid <?php echo $iconClass; ?>"></i>
+                                                        <?php echo $cate['CategoryName']; ?>
+                                                    </span>
+                                                    <i class="fa-solid fa-chevron-right link-caret"></i>
+                                                </a>
+                                                
+                                                <!-- Subcategories / Content Panel occupying the right part of mega dropdown -->
+                                                <div class="category-content-panel">
+                                                    <!-- Column 1: Shop by Category -->
+                                                    <div class="panel-col">
+                                                        <h4 class="col-title">Shop by Category</h4>
+                                                        <ul class="col-links">
+                                                            <?php
+                                                            if (count($subdata[$cate['CategoryID']]) > 0) {
+                                                                foreach ($subdata[$cate['CategoryID']] as $subdt) {
+                                                                    $sub_name = $subdt['sub_category'];
+                                                                    $make_slug = str_replace(' ', '-', $sub_name);
+                                                                    ?>
+                                                                    <li>
+                                                                        <a href="<?php echo base_url($make_slug . "/" . 'subcategory/' . base64_encode($subdt['sub_category_id'])) ?>">
+                                                                            <?php echo $subdt['sub_category']; ?>
+                                                                        </a>
+                                                                    </li>
+                                                                    <?php
+                                                                }
+                                                            } else {
+                                                                ?>
+                                                                <li class="empty-sub">No subcategories available</li>
+                                                                <?php
+                                                            }
+                                                            ?>
+                                                        </ul>
+                                                    </div>
+                                                    
+                                                    <!-- Column 2: Shop by Style -->
+                                                    <div class="panel-col">
+                                                        <h4 class="col-title">Shop by Style</h4>
+                                                        <ul class="col-links">
+                                                            <li><a href="<?php echo base_url('product?style=modern'); ?>">Modern</a></li>
+                                                            <li><a href="<?php echo base_url('product?style=minimalist'); ?>">Minimalist</a></li>
+                                                            <li><a href="<?php echo base_url('product?style=scandinavian'); ?>">Scandinavian</a></li>
+                                                            <li><a href="<?php echo base_url('product?style=industrial'); ?>">Industrial</a></li>
+                                                            <li><a href="<?php echo base_url('product?style=vintage'); ?>">Vintage</a></li>
+                                                            <li><a href="<?php echo base_url('product?style=boho'); ?>">Boho</a></li>
+                                                            <li><a href="<?php echo base_url('product?style=mid-century'); ?>">Mid-Century</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    
+                                                    <!-- Column 3: Top Picks -->
+                                                    <div class="panel-col col-picks">
+                                                        <h4 class="col-title">Top Picks</h4>
+                                                        <div class="picks-list">
+                                                            <a href="<?php echo base_url('product?filter=best-sellers'); ?>" class="pick-item">
+                                                                <div class="pick-icon-wrap bg-pick-1">
+                                                                    <i class="fa-solid fa-crown"></i>
+                                                                </div>
+                                                                <div class="pick-text">
+                                                                    <span class="pick-heading">Best Sellers</span>
+                                                                    <span class="pick-desc">Most loved products</span>
+                                                                </div>
+                                                            </a>
+                                                            <a href="<?php echo base_url('new-arrivals'); ?>" class="pick-item">
+                                                                 <div class="pick-icon-wrap bg-pick-2">
+                                                                     <i class="fa-solid fa-star"></i>
+                                                                 </div>
+                                                                <div class="pick-text">
+                                                                    <span class="pick-heading">New Arrivals</span>
+                                                                    <span class="pick-desc">Fresh picks for you</span>
+                                                                </div>
+                                                            </a>
+                                                            <a href="<?php echo base_url('product?filter=trending'); ?>" class="pick-item">
+                                                                <div class="pick-icon-wrap bg-pick-3">
+                                                                    <i class="fa-solid fa-fire"></i>
+                                                                </div>
+                                                                <div class="pick-text">
+                                                                    <span class="pick-heading">Trending Now</span>
+                                                                    <span class="pick-desc">Popular this season</span>
+                                                                </div>
+                                                            </a>
+                                                            <a href="<?php echo base_url('product?filter=sale'); ?>" class="pick-item">
+                                                                <div class="pick-icon-wrap bg-pick-4">
+                                                                    <i class="fa-solid fa-percent"></i>
+                                                                </div>
+                                                                <div class="pick-text">
+                                                                    <span class="pick-heading">Sale</span>
+                                                                    <span class="pick-desc">Up to 50% off</span>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <!-- Column 4: Promo Card -->
+                                                    <div class="panel-col col-promo">
+                                                        <div class="promo-card-premium">
+                                                            <div class="promo-image-wrap"></div>
+                                                            <div class="promo-card-info">
+                                                                <h4 class="promo-card-title">Transform Your Space</h4>
+                                                                <p class="promo-card-desc">Discover furniture that blends style, comfort & functionality.</p>
+                                                                <a href="<?php echo base_url('product'); ?>" class="btn-promo-explore">
+                                                                    Explore Now <i class="fa-solid fa-arrow-right"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <?php
+                                            $first = false;
+                                        }
                                         ?>
-                                        <li>
-                                            <a href="#"><?php echo $cate['CategoryName']; ?>
-                                                <?php
-
-                                                if (count($subdata[$cate['CategoryID']]) > 0)
-                                                //   if (count($cate['CategoryID']) > 0)
-                                                {
-                                                    ?>
-                                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
-                                                    <?php
-                                                }
-                                                ?>
-                                            </a>
-                                            <?php
-
-                                            if (count($subdata[$cate['CategoryID']]) > 0)
-                                            // if (count($cate['CategoryID']) > 0)
-                                            {
-                                                ?>
-
-                                                <ul class="sub-category">
-                                                    <?php
-                                                    foreach ($subdata[$cate['CategoryID']] as $key => $subdt)
-                                                    // 		foreach ($cate['CategoryID'] as $subdt) 
-                                                    {
-                                                        $sub_name = $subdt['sub_category'];
-                                                        $make_slug = str_replace(' ', '-', $sub_name);
-                                                        if ($subdt['sub_category'] == 'Clothes for Men') {
-                                                            echo '<li><a href="base_url(' . $make_slug . '"/subcategory/"' . base64_encode($subdt['sub_category_id']) . '")" class="title-link">' . $subdt['sub_category'] . '</a></li>';
-
-                                                        }
-                                                        ?>
-                                                        <li>
-                                                            <a href="<?php echo base_url($make_slug . "/" . 'subcategory/' . base64_encode($subdt['sub_category_id'])) ?>"
-                                                                class="title-link"><?php echo $subdt['sub_category']; ?></a>
-                                                        </li>
-                                                    <?php } ?>
-                                                </ul>
-                                            <?php }
-                                            //else { 
-                                            ?>
-                                            <?php
-                                            //   }
-                                            ?>
-
-                                        </li>
-                                    <?php }
-                                    ?>
-
-                                </ul>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
 
